@@ -1,0 +1,1749 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=6.0.6" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/avatar.ico?v=6.0.6">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/avatar.ico?v=6.0.6">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/avatar.ico?v=6.0.6">
+
+
+  <link rel="mask-icon" href="/avatar.ico?v=6.0.6" color="#222">
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '6.0.6',
+    sidebar: {"position":"left","display":"always","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="GDOI2018">
+<meta property="og:type" content="article">
+<meta property="og:title" content="GDOI2018">
+<meta property="og:url" content="http://zory.cf/2018-04/GDOI2018.html">
+<meta property="og:site_name" content="Zory的个人博客">
+<meta property="og:description" content="GDOI2018">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-06-24T13:57:10.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="GDOI2018">
+<meta name="twitter:description" content="GDOI2018">
+
+
+
+
+
+
+  <link rel="canonical" href="http://zory.cf/2018-04/GDOI2018.html"/>
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>GDOI2018 | Zory的个人博客</title>
+  
+
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?6c38ba8648d29103b8d122f998787d71";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> 
+
+<div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Zory的个人博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">人生即使没有最短路，也是连通图</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+          
+  <li class="menu-item menu-item-home">
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页Home</a>
+</li>
+
+      
+        
+        
+          
+  <li class="menu-item menu-item-archives">
+    <a href="/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />历程Archives</a>
+</li>
+
+      
+        
+        
+          
+  <li class="menu-item menu-item-categories">
+    <a href="/categories/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-th"></i> <br />分类Categories</a>
+</li>
+
+      
+        
+        
+          
+  <li class="menu-item menu-item-tags">
+    <a href="/tags/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签Tags</a>
+</li>
+
+      
+        
+        
+          
+  <li class="menu-item menu-item-about">
+    <a href="/about/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于About</a>
+</li>
+
+      
+        
+        
+          
+  <li class="menu-item menu-item-template">
+    <a href="/categories/OI之路" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-telegram"></i> <br />OI之路</a>
+</li>
+
+      
+        
+        
+          
+  <li class="menu-item menu-item-problems">
+    <a href="/categories/刷题" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-list-alt"></i> <br />刷题Problems</a>
+</li>
+
+      
+        
+        
+          
+  <li class="menu-item menu-item-friends">
+    <a href="/friends/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-user-circle"></i> <br />友链Friends</a>
+</li>
+
+      
+        
+        
+          
+  <li class="menu-item menu-item-english">
+    <a href="/English/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-etsy"></i> <br />English知识体系</a>
+</li>
+
+      
+        
+        
+          
+  <li class="menu-item menu-item-top">
+    <a href="/top/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-signal"></i> <br />排行榜Hot</a>
+</li>
+
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />强烈建议使用滴-搜索！Search</a>
+        </li>
+      
+    </ul>
+  
+
+  
+    
+
+    
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+    
+
+  
+
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="这个搜索超级好用哦！找文章必备！" spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+  
+
+
+
+ </div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://zory.cf/2018-04/GDOI2018.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Zory">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Zory的个人博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">GDOI2018</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-27T17:41:00+08:00">2018-04-27</time>
+            
+
+            
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/竞赛历程/" itemprop="url" rel="index"><span itemprop="name">竞赛历程</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018-04/GDOI2018.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018-04/GDOI2018.html" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2018-04/GDOI2018.html" class="leancloud_visitors" data-flag-title="GDOI2018">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">热度&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+			 <span>℃</span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>GDOI2018<br><a id="more"></a></p>
+<p>这篇文章……或许并没有什么用处<br>只是一个半退役选手的满口胡言乱语罢了</p>
+<h1 id="GDOI2017-思考录-day-1"><a href="#GDOI2017-思考录-day-1" class="headerlink" title="GDOI2017 思考录 day-1"></a>GDOI2017 思考录 day-1</h1><p>2018.4.27<br>借koi发的绿册子看去年的题目<br>只会前面两道题</p>
+<h3 id="d1t1"><a href="#d1t1" class="headerlink" title="d1t1"></a>d1t1</h3><p>题意：字符串查找替换<br>kmp裸题，O(N^2*L)<br>忽然想起刚学的时候做字符串都是直接用stl的，特无耻</p>
+<h3 id="d1t2"><a href="#d1t2" class="headerlink" title="d1t2"></a>d1t2</h3><p>感觉自己就是个大傻叉，看错题目了，狂问师兄<br>题意：给一棵树，求对于每个点，除了子树外其他点的mex（对于一个集合，在非负整数中没出现的最小值）<br>对于每种颜色，求出其lca（两两求就好），然后对于lca到root间的点，<br>它都是【没有在其他地方出现的值】，所以维护一下最小值就好了，O(N)</p>
+<h1 id="GDKOI2014-模拟赛（三个半小时）-day0"><a href="#GDKOI2014-模拟赛（三个半小时）-day0" class="headerlink" title="GDKOI2014 模拟赛（三个半小时） day0"></a>GDKOI2014 模拟赛（三个半小时） day0</h1><p>早上用以前的原题做模拟赛，就我们竞赛室的几个人小测一下，据hz说又是很简单<br>然后第一题manacher水题<br>第二题网络流，但是数据有误<br>第三题暴力50分</p>
+<h1 id="GDOI2018-游记"><a href="#GDOI2018-游记" class="headerlink" title="GDOI2018 游记"></a>GDOI2018 游记</h1><p>初中oi生涯要结束了<br>哎前面说的看起来很简单，但gdkoi2018是真的懵逼啊……<br>话说今年可是我们主场呀<br>然后顺带一提,我们几个竞赛室的约定：有谁进了day3就请另外两个人吃饭</p>
+<h2 id="day1"><a href="#day1" class="headerlink" title="day1"></a>day1</h2><h4 id="T1"><a href="#T1" class="headerlink" title="T1"></a>T1</h4><p>二分水题，nlogn</p>
+<h4 id="T2"><a href="#T2" class="headerlink" title="T2"></a>T2</h4><p>打了个bfs拿暴力分，然后搞了搞m=2的暴力<br>中午听ozy大爷讲题：</p>
+<ol>
+<li>先差分一波，然后现在目标就是把所有的数变成【m的倍数】</li>
+<li>计算出当前数与上下两个【m的倍数】的距离a、b</li>
+<li>然后就听不懂了<br>讲课：</li>
+<li>通过差分,让区间操作变成一个数+1,一个数-1,而且因为可加可减</li>
+<li>那么这个时候，每个数字的顺序已经无关紧要了，可以先排个序</li>
+<li>然后有一个显然的性质：一个数没有必要既增加又减少，所以必然是有固定决策的</li>
+<li>记录决策的和，线性扫描一遍，枚举两个数中间作为中介点，当左右两侧的和相同（总有这样的位置，因为题目必然有解），则这个和就是最优解「这一步刚开始有点问题，原来是忘记最后一位的差分了，请教了rose」<br>时间复杂度：nlogn<br>UP：在知乎上找到了原题：<a href="密码锁.html">51nod1357-密码锁</a><h4 id="T3"><a href="#T3" class="headerlink" title="T3"></a>T3</h4>暴力10分和链10分<br>akc大爷：二维线段树<br>rose大爷：四维KD-tree<br>讲课：乱七八糟，但rose被卡了，跑了70分.<br>在打球之前听akc大爷讲：</li>
+<li>询问：「dfn1,dfn2」和「t+deprt-1,INF」</li>
+<li>修改：「dfnx」和「t+depx-1」</li>
+<li>维护双区间，但是如果直接两个树状数组需要n^2的空间，其实完全可以动态开点，改成线段树，<br>然后这样的话，修改是一条链，空间复杂度nlogn，时间复杂度nlognlogn</li>
+</ol>
+<h4 id="T4"><a href="#T4" class="headerlink" title="T4"></a>T4</h4><p>完全不会<br>讲课：还是不会<br>UP：在知乎上找到了原题：<a href="http://uoj.ac/contest/25/problem/181" target="_blank" rel="noopener">Uoj#12-B</a></p>
+<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><p>期望总分：100+30+20+0=150<br>实际得分：100+20+10+0=130<br>两道题都是case打wa了，不知原因，毕竟是暴力也不好复评</p>
+<p>描述一下心路历程吧<br>开始半个小时看完题目，把t1切了，感觉难度不对劲，此时九点半<br>然后看第二题，没思路，但是部分分还是可以的，然后就写了bfs和m=2和3的情况<br>十点半点了，第三题感觉很难处理掉落的情况啊，没什么思路，感觉考虑深度，也推不上去啊<br>把小数据和链的分拿了，此时已经十一点半了<br>回头搞第二题，发现有m=3的大数据错了，然后打对拍，调策略，直到最后检查一下其他题目后继续搞……<br>比赛结束前忽然又拍出错误，发现我解决不了……（然后原来出题人也没有什么想法woc）</p>
+<p>那么如今回顾一下，感觉前面三题真的不难，大概是一场noip+模拟赛难度，也似乎确实有人ak了<br>第二题其实就是个经典套路——差分，然后再贪贪心，但是因为没怎么用差分，所以没想过，而且这个贪心策略也不是那么好想的，似乎有非常多巨佬也被卡炸了……<br>第三题，其实打链的情况的时候也想过这个深度的关系，但是没想到「把dfs序静态化」，所以非常不可做，如今看来，其实只要把条件转化一下，然后推推关系式，发现是双区间而且互不影响，树状数组维护一波即可</p>
+<p>那么完美的策略：<br>看题目：30min<br>T1：思考10min，实现10min<br>T2：思考40min，实现20min<br>T3：思考1h，实现40min<br>T4：挂机……因为我不会期望<br>剩余检查时间：30min</p>
+<p>然而这场考试，重在求稳，任何一道题，如果翻车就会非常麻烦（虽然我并没有高分经验）<br>那么这场考试前面三题的最高预备知识是很简单的：树状数组<br>但是其灵活的命题，非常考验对套路的熟练使用</p>
+<p>这场比赛，我考得相当差，<br>一部分原因是缺乏经验和自信，感觉难度会和koi一样，是那种ac一题就很好的那种<br>第二点是做题太少，整天做脑残noip题目，所以我决定接下来的一年，我的刷题量要增加500题！</p>
+<p>总之，保持自信，相信自己，争取明天翻盘吧！目标：进day3</p>
+<h2 id="day2"><a href="#day2" class="headerlink" title="day2"></a>day2</h2><h4 id="T1-1"><a href="#T1-1" class="headerlink" title="T1"></a>T1</h4><p>杠了三个小时……打了个60分的O(nm)，虽然加了个素数优化10的常数，但本机跑了7秒……<br>而且我居然忘记了大样例输出文件的存在？？？也就是说我只知道时间，却忘记看正确答案输出了<br>打了个对拍，但是很sb地测1000，直接wa，然后只是去检查公式？<br>居然没有自己出个小的数据，或者拍小的数据<br>然后推了一个小时分块，没退出来，因为太久没用了，<br>其实就是n/(n/t)，正确性其实很显然，因为整除是向下的，分母小，必然得到的最大t<br>总之不知道多少分，可能0，也可能60、70</p>
+<p>总而言之，这道题不算特别难，算是莫反的一个裸题吧，<br>或许对于别人来说的签到题，我却耗费了大量时间，原因？<br>可能还是要怪中途去做noip这种玩意吧，<br>不知道教练口中那个进了省队刷noip的师兄是怎么想的，<br>或许是时代在变化吧</p>
+<p>讲课：莫比乌斯反演<br>我是真的不自量力，看着题目限制没有下限，然后因为最近没用过莫比乌斯反演<br>所以想着yy一种替代做法，就是用总量-不互质的数对的贡献<br>然而当时过了非常小的样例就以为没问题了<br>其实稍微用个6这样的多个素因子的数字，就会发现算重复了</p>
+<p>如今看来，其实不会也可以跳过的</p>
+<h4 id="T2-1"><a href="#T2-1" class="headerlink" title="T2"></a>T2</h4><p>暴力5分<br>听说其实k=1不在乎顺序的时候可以组合数学乱搞，有点亏<br>讲课：不会</p>
+<h4 id="T3-1"><a href="#T3-1" class="headerlink" title="T3"></a>T3</h4><p>暴力10分<br>讲课：好像是有单调性什么的，居然最高只用了链表？？不是很懂</p>
+<h4 id="T4-1"><a href="#T4-1" class="headerlink" title="T4"></a>T4</h4><p>题意：找出一个点所在的最小环<br>完全不会，然后因为感觉后面会比前面难，所以也没怎么看题目<br>讲课：好像floyd可以搞？</p>
+<h4 id="总结-1"><a href="#总结-1" class="headerlink" title="总结"></a>总结</h4><p>感觉初中oi就这么结束了吧<br>凉凉的感觉<br>期望分数：0+5+10+0<br>实际分数：0+5+0+0<br>暴力分又炸了<br>怎么老是这样，不知不觉，加起来丢了30分，但是又不知道原因</p>
+<p>现在感觉，这两天，还是第一天比较友好，但是错失良机了<br>然后在省选前，专题没有完整搞定，去做noip之类的，真的是自寻死路<br>第一天被简单题目拉了差距，第二天又拿不到分</p>
+<p>结束了<br>后面，也没我什么事了<br>准备了这么久，并没有明显的收获吧</p>
+<h2 id="day3"><a href="#day3" class="headerlink" title="day3"></a>day3</h2><p>上午听了网络流的讲座，还好吧<br>然后把d1t2切了<br>开始回到noip状态，打算快速做完以后开始搞数论<br>好像说我们可以延迟退役，等丰山的课程，又可以苟延残喘一会了</p>
+<h2 id="day4"><a href="#day4" class="headerlink" title="day4"></a>day4</h2><p>上午颁奖仪式，最精彩的部分就是省队选手的颁奖了<br>那一刻，虽然说名单早就公布，依然全场安静，<br>所有的教练都站了起来，或许心中都带着某种骄傲之情？<br>有一天，我会站在那上面吗？</p>
+<h2 id="总结-2"><a href="#总结-2" class="headerlink" title="总结"></a>总结</h2><p>我能感受到自己在变强，然而大家也在变强，可能唯一的优势就是我不怎么颓废？<br>还记得有天早上老妈跟我说：你的实力，其实很可能进不了省队<br>我：但除此之外我也不知道我能干什么了。不进省队也可以搞搞降分的吧<br>（然而其实心中依然对进省队抱有期望……）</p>
+<h2 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h2><p>hz大佬的blog:<br><a href="https://blog.hz2016.cn/gdoi2018%e4%b8%ba%e4%ba%86%e4%b8%8d%e8%83%bd%e5%ae%9e%e7%8e%b0%e7%9a%84%e8%af%ba%e8%a8%80/" target="_blank" rel="noopener">here</a></p>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+    
+	
+	
+		<div>
+				<p id="div-border-left-purple">
+			   <b>本文基于<a target="_blank" title="Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)" href="http://creativecommons.org/licenses/by-sa/4.0/deed.zh"> 知识共享署名-相同方式共享 4.0 </a>国际许可协议发布</b><br/>
+				<span>
+				<b>本文地址：</b><a href="/2018-04/GDOI2018.html" title="GDOI2018">http://zory.cf/2018-04/GDOI2018.html</a><br/><b>转载请注明出处，谢谢！</b>
+				</span>
+				</p>
+		</div>
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>哪怕是一杯奶茶，也将鼓励我继续创作！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.png" alt="Zory 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018-04/数字配对.html" rel="prev" title="【Sdoi2016】数字配对">
+                <i class="fa fa-chevron-left"></i> 【Sdoi2016】数字配对
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018-04/动态树.html" rel="next" title="【模板】动态树">
+                【模板】动态树 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+		<a href="/" class="site-author-image" rel="start" style="border:none">
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.png"
+                alt="Zory" />
+        </a>
+            
+              <p class="site-author-name" itemprop="name">Zory</p>
+              <p class="site-description motion-element" itemprop="description">人生即使没有最短路，也是连通图</p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">305</span>
+                    <span class="site-state-item-name">文章</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">4</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">111</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+          
+
+          
+          
+		  
+		  
+			
+		  
+          <br><br>
+
+<a href="http://info.flagcounter.com/pNr7">
+<img src="//s05.flagcounter.com/countxl/pNr7/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_12/viewers_0/labels_1/pageviews_0/flags_0/percent_0/" alt="Flag Counter" border="0">
+</a>
+
+<br><br>
+
+
+<p class="abc" id="hitokoto">:D 获取中...</p>
+<script>
+  fetch('https://v1.hitokoto.cn')
+    .then(function (res)
+    {
+      return res.json();
+    })
+    .then(function (data)
+    {
+      var hitokoto = document.getElementById('hitokoto');
+      var from = document.getElementById('from');
+      hitokoto.innerText = '「'+data.hitokoto+'」';
+    })
+    .catch(function (err)
+    {
+      console.error(err);
+    })
+</script>
+
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#GDOI2017-思考录-day-1"><span class="nav-text">GDOI2017 思考录 day-1</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#d1t1"><span class="nav-text">d1t1</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#d1t2"><span class="nav-text">d1t2</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#GDKOI2014-模拟赛（三个半小时）-day0"><span class="nav-text">GDKOI2014 模拟赛（三个半小时） day0</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#GDOI2018-游记"><span class="nav-text">GDOI2018 游记</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#day1"><span class="nav-text">day1</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#T1"><span class="nav-text">T1</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#T2"><span class="nav-text">T2</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#T3"><span class="nav-text">T3</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#T4"><span class="nav-text">T4</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#总结"><span class="nav-text">总结</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#day2"><span class="nav-text">day2</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#T1-1"><span class="nav-text">T1</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#T2-1"><span class="nav-text">T2</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#T3-1"><span class="nav-text">T3</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#T4-1"><span class="nav-text">T4</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#总结-1"><span class="nav-text">总结</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#day3"><span class="nav-text">day3</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#day4"><span class="nav-text">day4</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结-2"><span class="nav-text">总结</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#附录"><span class="nav-text">附录</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2017 &mdash; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Zory</span>
+
+  
+
+  
+</div>
+
+
+  
+
+
+
+
+
+
+
+
+
+  <div class="footer-custom">Hosted by <a target="_blank" rel="external nofollow" href="https://pages.coding.me"><b>Coding Pages</b></a> <a href="http://www.liuliangshua.cn/" title="流量刷" target="_blank">流量刷</a></div>
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.0.6"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.0.6"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.0.6"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.0.6"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.0.6"></script>
+
+
+
+  
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  
+  
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail';
+    guest = guest.split(',').filter(function (item) {
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: true,
+        appId: 'zMDFLwV3WMlWrOYhJ7tOad3M-gzGzoHsz',
+        appKey: 'cJDLxDoNgzq0JJUWQFmpCRdw',
+        placeholder: '对这篇文章有什么看法？大胆地说出来吧',
+        avatar:'wavatar',
+        guest_info:guest,
+        pageSize:'20' || 10,
+    });
+  </script>
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('2');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("zMDFLwV3WMlWrOYhJ7tOad3M-gzGzoHsz", "cJDLxDoNgzq0JJUWQFmpCRdw");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            
+            counter.save(null, {
+              success: function(counter) {
+                
+                  var $element = $(document.getElementById(url));
+                  $element.find('.leancloud-visitors-count').text(counter.get('time'));
+                
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            
+              var newcounter = new Counter();
+              /* Set ACL */
+              var acl = new AV.ACL();
+              acl.setPublicReadAccess(true);
+              acl.setPublicWriteAccess(true);
+              newcounter.setACL(acl);
+              /* End Set ACL */
+              newcounter.set("title", title);
+              newcounter.set("url", url);
+              newcounter.set("time", 1);
+              newcounter.save(null, {
+                success: function(newcounter) {
+                  var $element = $(document.getElementById(url));
+                  $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+                },
+                error: function(newcounter, error) {
+                  console.log('Failed to create');
+                }
+              });
+            
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+
+  
+  
+
+  
+
+
+  
+  
+
+  
+
+  
+  <script type="text/javascript" src="/js/src/js.cookie.js?v=6.0.6"></script>
+  <script type="text/javascript" src="/js/src/scroll-cookie.js?v=6.0.6"></script>
+
+
+  
+
+  
+
+</body>
+</html>

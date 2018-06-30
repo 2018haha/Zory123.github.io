@@ -118,7 +118,7 @@
 <meta property="og:site_name" content="Zory的个人博客">
 <meta property="og:description" content="Source and JudgeNOIP2012 提高组 D1T2Luogu1080Caioj1552">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-06-28T12:15:36.000Z">
+<meta property="og:updated_time" content="2018-06-30T02:56:40.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【Luogu1080】国王游戏">
 <meta name="twitter:description" content="Source and JudgeNOIP2012 提高组 D1T2Luogu1080Caioj1552">
@@ -549,7 +549,10 @@
 
 <h2 id="Record"><a href="#Record" class="headerlink" title="Record"></a>Record</h2><p>1h</p>
 <h2 id="Analysis"><a href="#Analysis" class="headerlink" title="Analysis"></a>Analysis</h2><div><div class="fold_hider"><div class="close hider_title">请先思考</div></div><div class="fold">
-<p>我们研究一下任意两个人之间的关系，就会豁然开朗（还是没想到）</p>
+<p>根据贪心，我们可以证明用每个人左右手乘积从小到大排序，是最优解。</p>
+<hr>
+<p>证明：<br>贪心有种证明方式叫做微扰<br>就是说证明，对于任意两个相邻的元素，最优解中，把他们交换可能得到更坏的结果。</p>
+<p>那么在本题中就是，设大臣1和大臣2，他们是相邻的</p>
 <table>
 <thead>
 <tr>
@@ -566,7 +569,7 @@
 </tr>
 <tr>
 <td style="text-align:center">……</td>
-<td style="text-align:center">（省略到a0）</td>
+<td style="text-align:center">（乘积省略到a0中）</td>
 <td style="text-align:center">……</td>
 </tr>
 <tr>
@@ -591,22 +594,18 @@
 </tr>
 </tbody>
 </table>
-<p>则有两种方案：</p>
-<p>①大臣1在前：$A=\frac{a0}{b1}$ $B=XXX\times a0\times \frac{a1}{b2}$ $ANS1=max(A,B)$</p>
-<p>②大臣2在前：$C=\frac{a0}{b2}$ $D=XXX\times a0 \times \frac{a2}{b1}$ $ANS2=max(C,D)$</p>
-<p>那么什么情况下①更优呢？</p>
-<p>$$<br>\left{<br>\begin{aligned}<br>C&lt;B&lt;D\\<br>A&lt;D\\<br>\end{aligned}<br>\right.<br>$$</p>
-<p>代换回去，并且把公共的a0和XXX消除，可得：$\frac{a1}{b2}&lt;\frac{a2}{b1}​$</p>
-<p>也就是：$a1\times b1&lt;a2\times b2$</p>
-<p>然后我们刚才是留了一手的，两人前、中间、后的可以有任意的人，所以可以基于这个排序。</p>
-<p><del>然而我并没有相通：交换是会影响到其他的点的呀</del></p>
-<p>UP 2018.4.12 4:11：</p>
-<p>感谢这位大佬<a href="https://www.luogu.org/space/show?uid=20601" target="_blank" rel="noopener">League丶翎</a>的耐心解释，我理解了这个问题</p>
-<p>其实就是</p>
-<p><strong>如上文所示，我们证明了相邻的两个大臣，必定是乘积小的在前面，也就是证明了其有序性</strong></p>
-<p><strong>既然如此，我们就可以用快排来实现排序</strong></p>
-<p>然后极限是$10000^{1000}$，即4000个位……</p>
-<p>所以要写高精度的乘和除（还好是与单精度的，不然真的不会）</p>
+<p>则有两种方案：<br>方案① 大臣1在前：<br>$A=\frac{a0}{b1}$<br>$B=XXX\times a0\times \frac{a1}{b2}$<br>$ANS1=max(A,B)$</p>
+<p>方案② 大臣2在前：<br>$C=\frac{a0}{b2}$<br>$D=XXX\times a0 \times \frac{a2}{b1}$<br>$ANS2=max(C,D)$</p>
+<p>选择小的那个方案就是最优解</p>
+<hr>
+<p>由于都是正整数，已知<br>$A\leq D$<br>$C\leq B$<br>关于A和B的大小关系，又有两种情况<br>情况①<br> $A&lt;B$，则$A,C \leq B,D$，根据B,D大小决策<br>【等价于左右手乘积小的在前面】<br>情况②<br> $A\geq B$，则$C \leq B \leq A \leq D$，可以直接选择方案②</p>
+<hr>
+<p>但现在有两种决策方案，显然不利于实现<br>我们可以把情况②看作情况①的一部分<br>因为如果按照乘积比较的话，能得到同样的结果</p>
+<hr>
+<p>综上所述，对于相邻的两个元素，乘积小的应该在前面<br>那么根据冒泡排序，我们可以通过交换相邻元素去消除逆序对<br>当逆序对数=0时是最优的，也就是可以通过排序得到最优解。</p>
+<p>然后极限是$10000^{1000}$，即4000个位……<br>所以要写高精度的乘和除（还好是与单精度的，不然真的不会）</p>
+<hr>
+<p>最后，感谢这位大佬<a href="https://www.luogu.org/space/show?uid=20601" target="_blank" rel="noopener">League丶翎</a>在我解题过程中的耐心解释</p>
 
 </div></div>
 <h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><div><div class="fold_hider"><div class="close hider_title">请先思考</div></div><div class="fold">

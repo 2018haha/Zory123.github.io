@@ -521,41 +521,6 @@
 
       <h3 class="post-title">
         
-            <a class="post-title-link" href="/2018-06/The_Pilots_Brothers.html" itemprop="url">
-              
-                <span itemprop="name">【NOIP17 D1T3】逛公园</span>
-              
-            </a>
-        
-      </h3>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-06-27T18:14:00+08:00"
-              content="2018-06-27" >
-          06-27
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-       
-       
-       
- 
-       
-       
-	   
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h3 class="post-title">
-        
             <a class="post-title-link" href="/2018-05/子串.html" itemprop="url">
               
                 <span itemprop="name">【NOIP15 D2T2】 子串</span>
@@ -701,7 +666,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">306</span>
+                    <span class="site-state-item-count">307</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -1693,7 +1658,24 @@
 
 </body>
 </html>
-     })
+         resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
             };
             if (keywords.length === 1 && keywords[0] === "") {
               resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'

@@ -2,6 +2,15 @@
 
 
 
+
+
+
+
+
+
+
+
+
   
 
 
@@ -60,19 +69,19 @@
 
 <link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=6.0.6" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=6.3.0" rel="stylesheet" type="text/css" />
 
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/avatar.ico?v=6.0.6">
+  <link rel="apple-touch-icon" sizes="180x180" href="/avatar.ico?v=6.3.0">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/avatar.ico?v=6.0.6">
+  <link rel="icon" type="image/png" sizes="32x32" href="/avatar.ico?v=6.3.0">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/avatar.ico?v=6.0.6">
+  <link rel="icon" type="image/png" sizes="16x16" href="/avatar.ico?v=6.3.0">
 
 
-  <link rel="mask-icon" href="/avatar.ico?v=6.0.6" color="#222">
+  <link rel="mask-icon" href="/avatar.ico?v=6.3.0" color="#222">
 
 
 
@@ -87,7 +96,7 @@
   var CONFIG = {
     root: '/',
     scheme: 'Mist',
-    version: '6.0.6',
+    version: '6.3.0',
     sidebar: {"position":"left","display":"always","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
     fancybox: true,
     fastclick: false,
@@ -111,7 +120,7 @@
 
 
   <meta name="description" content="简介快速傅里叶变换(Fast Fourier Transform),简称FFTOI中主要要来加速多项式乘法">
-<meta name="keywords" content="快速傅里叶变换">
+<meta name="keywords" content="快速傅里叶变换,原创精华">
 <meta property="og:type" content="article">
 <meta property="og:title" content="【OI之路】11更高级数论-4快速傅里叶变换">
 <meta property="og:url" content="http://zory.cf/2003-01/【OI之路】11更高级数论-4快速傅里叶变换.html">
@@ -122,7 +131,7 @@
 <meta property="og:image" content="http://zory.cf/images/OI之路/快速傅里叶变换/1.png">
 <meta property="og:image" content="http://img.blog.csdn.net/20140401085322937?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvaWFtemt5/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
 <meta property="og:image" content="http://zory.cf/images/OI之路/快速傅里叶变换/1.png">
-<meta property="og:updated_time" content="2018-07-01T11:09:02.000Z">
+<meta property="og:updated_time" content="2018-07-04T08:38:20.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【OI之路】11更高级数论-4快速傅里叶变换">
 <meta name="twitter:description" content="简介快速傅里叶变换(Fast Fourier Transform),简称FFTOI中主要要来加速多项式乘法">
@@ -204,9 +213,7 @@
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"> 
-
-<div class="site-brand-wrapper">
+      <div class="header-inner"><div class="site-brand-wrapper">
   <div class="site-meta ">
     
 
@@ -217,9 +224,11 @@
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
+    
       
         <h1 class="site-subtitle" itemprop="description">人生即使没有最短路，也是连通图</h1>
       
+    
   </div>
 
   <div class="site-nav-toggle">
@@ -231,110 +240,101 @@
   </div>
 </div>
 
-<nav class="site-nav">
-  
 
+
+<nav class="site-nav">
   
     <ul id="menu" class="menu">
       
         
         
+        
           
-  <li class="menu-item menu-item-home">
+          <li class="menu-item menu-item-home">
     <a href="/" rel="section">
       <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页Home</a>
-</li>
-
-      
+  </li>
+        
         
         
           
-  <li class="menu-item menu-item-archives">
+          <li class="menu-item menu-item-archives">
     <a href="/archives/" rel="section">
       <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />历程Archives</a>
-</li>
-
-      
+  </li>
+        
         
         
           
-  <li class="menu-item menu-item-categories">
+          <li class="menu-item menu-item-categories">
     <a href="/categories/" rel="section">
       <i class="menu-item-icon fa fa-fw fa-th"></i> <br />分类Categories</a>
-</li>
-
-      
+  </li>
+        
         
         
           
-  <li class="menu-item menu-item-tags">
+          <li class="menu-item menu-item-tags">
     <a href="/tags/" rel="section">
       <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签Tags</a>
-</li>
-
-      
+  </li>
+        
         
         
           
-  <li class="menu-item menu-item-about">
+          <li class="menu-item menu-item-about">
     <a href="/about/" rel="section">
       <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于About</a>
-</li>
-
-      
+  </li>
+        
         
         
           
-  <li class="menu-item menu-item-template">
+          <li class="menu-item menu-item-template">
     <a href="/categories/OI之路" rel="section">
       <i class="menu-item-icon fa fa-fw fa-telegram"></i> <br />OI之路</a>
-</li>
-
-      
+  </li>
+        
         
         
           
-  <li class="menu-item menu-item-problems">
+          <li class="menu-item menu-item-problems">
     <a href="/categories/刷题" rel="section">
       <i class="menu-item-icon fa fa-fw fa-list-alt"></i> <br />刷题Problems</a>
-</li>
-
-      
+  </li>
+        
         
         
           
-  <li class="menu-item menu-item-friends">
+          <li class="menu-item menu-item-friends">
     <a href="/friends/" rel="section">
       <i class="menu-item-icon fa fa-fw fa-user-circle"></i> <br />友链Friends</a>
-</li>
-
-      
+  </li>
+        
         
         
           
-  <li class="menu-item menu-item-english">
+          <li class="menu-item menu-item-english">
     <a href="/English/" rel="section">
       <i class="menu-item-icon fa fa-fw fa-etsy"></i> <br />English知识体系</a>
-</li>
-
-      
+  </li>
+        
         
         
           
-  <li class="menu-item menu-item-top">
+          <li class="menu-item menu-item-top">
     <a href="/top/" rel="section">
       <i class="menu-item-icon fa fa-fw fa-signal"></i> <br />排行榜Hot</a>
-</li>
+  </li>
 
       
-
       
         <li class="menu-item menu-item-search">
           
             <a href="javascript:;" class="popup-trigger">
           
             
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />强烈建议使用滴-搜索！Search</a>
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />找文章强烈建议使用-搜索Search</a>
         </li>
       
     </ul>
@@ -342,43 +342,6 @@
 
   
     
-
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
 
   
 
@@ -409,11 +372,12 @@
 </nav>
 
 
+
   
 
 
 
- </div>
+</div>
     </header>
 
     
@@ -446,7 +410,7 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Zory">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content="人生即使没有最短路，也是连通图">
       <meta itemprop="image" content="/images/avatar.png">
     </span>
 
@@ -459,11 +423,19 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">【OI之路】11更高级数论-4快速傅里叶变换</h2>
+          <h2 class="post-title" itemprop="name headline">【OI之路】11更高级数论-4快速傅里叶变换
+              
+            
+          </h2>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -471,12 +443,30 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2003-01-22T00:11:04+08:00">2003-01-22</time>
+
+              
+                
+              
+
+              <time title="创建于：2003-01-22 00:11:04" itemprop="dateCreated datePublished" datetime="2003-01-22T00:11:04+08:00">2003-01-22</time>
             
 
             
-            
+              
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改于：2018-07-04 16:38:20" itemprop="dateModified" datetime="2018-07-04T16:38:20+08:00">2018-07-04</time>
+              
             
           </span>
 
@@ -508,7 +498,7 @@
                   <i class="fa fa-comment-o"></i>
                 </span>
                 <a href="/2003-01/【OI之路】11更高级数论-4快速傅里叶变换.html#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2003-01/【OI之路】11更高级数论-4快速傅里叶变换.html" itemprop="commentCount"></span>
+                  <span class="post-meta-item-text">评论：</span> <span class="post-comments-count valine-comment-count" data-xid="/2003-01/【OI之路】11更高级数论-4快速傅里叶变换.html" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -522,10 +512,9 @@
                  <i class="fa fa-eye"></i>
                </span>
                
-                 <span class="post-meta-item-text">热度&#58;</span>
+                 <span class="post-meta-item-text">热度：</span>
                
                  <span class="leancloud-visitors-count"></span>
-			 <span>℃</span>
              </span>
           
 
@@ -602,7 +591,7 @@
 <p>接下来就是预处理出i对应的翻转值了，有这样一个优美的方法：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;=n<span class="number">-1</span>;i++) R[i]= (R[i&gt;&gt;<span class="number">1</span>]&gt;&gt;<span class="number">1</span>) | ( (i&amp;<span class="number">1</span>)&lt;&lt;(l<span class="number">-1</span>) );</div><div class="line"><span class="comment">//位运算DP求翻转，l=logn</span></div></pre></td></tr></table></figure></p>
 <p>FFT中：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;=n<span class="number">-1</span>;i++) <span class="keyword">if</span>(i&lt;R[i]) swap(a[i],a[R[i]]);</div><div class="line"><span class="comment">//注意判断大小不然又换回来了</span></div></pre></td></tr></table></figure></p>
 <p>其实归根结底就是把递归中调用自己的部分的前面部分即偶数奇数分离预处理出，而后再层层合并上去。</p>
-<h2 id="非递归版代码"><a href="#非递归版代码" class="headerlink" title="非递归版代码"></a>非递归版代码</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//Zory-2017</span></div><div class="line"><span class="comment">//*******************头文件*******************</span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cmath&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"><span class="comment">//*******************全局常量*******************</span></div><div class="line"><span class="keyword">const</span> <span class="keyword">double</span> PI=<span class="built_in">acos</span>(<span class="number">-1.0</span>);</div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> MAXN=<span class="number">4</span>*<span class="number">100000</span>;</div><div class="line"><span class="comment">//*******************全局定义*******************</span></div><div class="line"><span class="keyword">struct</span> <span class="keyword">complex</span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">double</span> r,i;<span class="comment">//real,imag</span></div><div class="line">    <span class="keyword">complex</span>() &#123;r=i=<span class="number">0</span>;&#125;</div><div class="line">    <span class="keyword">complex</span>(<span class="keyword">double</span> rr,<span class="keyword">double</span> ii) &#123;r=rr;i=ii;&#125;</div><div class="line">    <span class="keyword">complex</span> <span class="keyword">operator</span> + (<span class="keyword">complex</span> b) &#123;<span class="keyword">return</span> <span class="keyword">complex</span>(r+b.r,i+b.i);&#125;</div><div class="line">    <span class="keyword">complex</span> <span class="keyword">operator</span> - (<span class="keyword">complex</span> b) &#123;<span class="keyword">return</span> <span class="keyword">complex</span>(r-b.r,i-b.i);&#125;</div><div class="line">    <span class="keyword">complex</span> <span class="keyword">operator</span> * (<span class="keyword">complex</span> b) &#123;<span class="keyword">return</span> <span class="keyword">complex</span>(r*b.r-i*b.i,r*b.i+i*b.r);&#125;</div><div class="line">    <span class="comment">//(a+bi)(c+di)=ac+adi+bci+bdi^2=(ac-bd)+(ad+bc)i</span></div><div class="line">    <span class="comment">//baike.baidu.com/item/复数运算法则</span></div><div class="line">&#125;;</div><div class="line"><span class="comment">//*******************实现*******************</span></div><div class="line"><span class="keyword">int</span> R[MAXN+<span class="number">10</span>];</div><div class="line"><span class="keyword">complex</span> omega[MAXN+<span class="number">10</span>];</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">CalcOmega</span><span class="params">(<span class="keyword">int</span> n,<span class="keyword">int</span> op)</span></div><div class="line"></span>&#123;</div><div class="line">    <span class="keyword">double</span> t=<span class="number">2</span>*PI*op/n;</div><div class="line">    omega[<span class="number">0</span>]=<span class="keyword">complex</span>(<span class="number">1</span>,<span class="number">0</span>);</div><div class="line">    omega[<span class="number">1</span>]=<span class="keyword">complex</span>(<span class="built_in">cos</span>(t),<span class="built_in">sin</span>(t));</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> k=<span class="number">2</span>;k&lt;=n/<span class="number">2</span><span class="number">-1</span>;k++) omega[k]=omega[k<span class="number">-1</span>]*omega[<span class="number">1</span>];</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">FFT</span><span class="params">(<span class="keyword">complex</span> *a,<span class="keyword">int</span> n,<span class="keyword">int</span> op)</span></div><div class="line"></span>&#123;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;=n<span class="number">-1</span>;i++) <span class="keyword">if</span>(i&lt;R[i]) swap(a[i],a[R[i]]);</div><div class="line">    <span class="comment">//注意判断大小不然又换回来了</span></div><div class="line">    </div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> L=<span class="number">1</span>;L&lt;=n/<span class="number">2</span>;L*=<span class="number">2</span>)<span class="comment">//合并前长度</span></div><div class="line">    &#123;</div><div class="line">        CalcOmega(L*<span class="number">2</span>,op);</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;=n<span class="number">-1</span>;j+=L*<span class="number">2</span>)<span class="comment">//开头,长度=L*2</span></div><div class="line">        &#123;</div><div class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> k=<span class="number">0</span>;k&lt;=L<span class="number">-1</span>;k++)</div><div class="line">            &#123;</div><div class="line">                <span class="keyword">complex</span> x=a[j+k];</div><div class="line">                <span class="keyword">complex</span> y=omega[k]*a[j+L+k];</div><div class="line">                a[j+k]=x+y;</div><div class="line">                a[j+L+k]=x-y;</div><div class="line">                <span class="comment">//蝴蝶操作</span></div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    <span class="keyword">if</span>(op==<span class="number">-1</span>) <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;=n<span class="number">-1</span>;i++) a[i].r=a[i].r/<span class="keyword">double</span>(n);</div><div class="line">&#125;</div><div class="line"><span class="comment">//*******************主函数*******************</span></div><div class="line"><span class="keyword">complex</span> a[MAXN+<span class="number">10</span>],b[MAXN+<span class="number">10</span>];</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></div><div class="line"></span>&#123;</div><div class="line">    <span class="keyword">int</span> n,m;<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;n,&amp;m);</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;=n;i++) <span class="built_in">scanf</span>(<span class="string">"%lf"</span>,&amp;a[i].r);</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;=m;i++) <span class="built_in">scanf</span>(<span class="string">"%lf"</span>,&amp;b[i].r);</div><div class="line">    </div><div class="line">    m=n+m+<span class="number">1</span>;<span class="keyword">int</span> <span class="built_in">log</span>=<span class="number">0</span>;n=<span class="number">1</span>;</div><div class="line">    <span class="keyword">while</span>(n&lt;m) n*=<span class="number">2</span>,<span class="built_in">log</span>++;</div><div class="line">    </div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;=n<span class="number">-1</span>;i++) R[i]=( R[i&gt;&gt;<span class="number">1</span>]&gt;&gt;<span class="number">1</span> ) | ( (i&amp;<span class="number">1</span>)&lt;&lt;(<span class="built_in">log</span><span class="number">-1</span>) );</div><div class="line">    <span class="comment">//nlogn翻转二进制</span></div><div class="line">    </div><div class="line">    FFT(a,n,<span class="number">1</span>);FFT(b,n,<span class="number">1</span>);<span class="comment">//求值</span></div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;=n<span class="number">-1</span>;i++) a[i]=a[i]*b[i];<span class="comment">//点值乘法</span></div><div class="line">    FFT(a,n,<span class="number">-1</span>);<span class="comment">//插值</span></div><div class="line">    </div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;=m<span class="number">-1</span>;i++)</div><div class="line">        <span class="built_in">printf</span>(<span class="string">"%d "</span>,<span class="keyword">int</span>(a[i].r+<span class="number">0.5</span>));</div><div class="line">        <span class="comment">//输出系数(四舍五入后的实数部分)</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="非递归版代码"><a href="#非递归版代码" class="headerlink" title="非递归版代码"></a>非递归版代码</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//Zory-2017</span></div><div class="line"><span class="comment">//*******************头文件*******************</span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cmath&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"><span class="comment">//*******************全局常量*******************</span></div><div class="line"><span class="keyword">const</span> <span class="keyword">double</span> PI=<span class="built_in">acos</span>(<span class="number">-1.0</span>);</div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> MAXN=<span class="number">4</span>*<span class="number">100000</span>;</div><div class="line"><span class="comment">//*******************全局定义*******************</span></div><div class="line"><span class="keyword">struct</span> <span class="keyword">complex</span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">double</span> r,i;<span class="comment">//real,imag</span></div><div class="line">    <span class="keyword">complex</span>() &#123;r=i=<span class="number">0</span>;&#125;</div><div class="line">    <span class="keyword">complex</span>(<span class="keyword">double</span> rr,<span class="keyword">double</span> ii) &#123;r=rr;i=ii;&#125;</div><div class="line">    <span class="keyword">complex</span> <span class="keyword">operator</span> + (<span class="keyword">complex</span> b) &#123;<span class="keyword">return</span> <span class="keyword">complex</span>(r+b.r,i+b.i);&#125;</div><div class="line">    <span class="keyword">complex</span> <span class="keyword">operator</span> - (<span class="keyword">complex</span> b) &#123;<span class="keyword">return</span> <span class="keyword">complex</span>(r-b.r,i-b.i);&#125;</div><div class="line">    <span class="keyword">complex</span> <span class="keyword">operator</span> * (<span class="keyword">complex</span> b) &#123;<span class="keyword">return</span> <span class="keyword">complex</span>(r*b.r-i*b.i,r*b.i+i*b.r);&#125;</div><div class="line">    <span class="comment">//(a+bi)(c+di)=ac+adi+bci+bdi^2=(ac-bd)+(ad+bc)i</span></div><div class="line">    <span class="comment">//baike.baidu.com/item/复数运算法则</span></div><div class="line">&#125;;</div><div class="line"><span class="comment">//*******************实现*******************</span></div><div class="line"><span class="keyword">int</span> R[MAXN+<span class="number">10</span>];</div><div class="line"><span class="keyword">complex</span> omega[MAXN+<span class="number">10</span>];</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">CalcOmega</span><span class="params">(<span class="keyword">int</span> n,<span class="keyword">int</span> op)</span></div><div class="line"></span>&#123;</div><div class="line">    <span class="keyword">double</span> t=<span class="number">2</span>*PI*op/n;</div><div class="line">    omega[<span class="number">0</span>]=<span class="keyword">complex</span>(<span class="number">1</span>,<span class="number">0</span>);</div><div class="line">    omega[<span class="number">1</span>]=<span class="keyword">complex</span>(<span class="built_in">cos</span>(t),<span class="built_in">sin</span>(t));</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> k=<span class="number">2</span>;k&lt;=n/<span class="number">2</span><span class="number">-1</span>;k++) omega[k]=omega[k<span class="number">-1</span>]*omega[<span class="number">1</span>];</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">FFT</span><span class="params">(<span class="keyword">complex</span> *a,<span class="keyword">int</span> n,<span class="keyword">int</span> op)</span></div><div class="line"></span>&#123;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;=n<span class="number">-1</span>;i++) <span class="keyword">if</span>(i&lt;R[i]) swap(a[i],a[R[i]]);</div><div class="line">    <span class="comment">//注意判断大小不然又换回来了</span></div><div class="line"></div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> L=<span class="number">1</span>;L&lt;=n/<span class="number">2</span>;L*=<span class="number">2</span>)<span class="comment">//合并前长度</span></div><div class="line">    &#123;</div><div class="line">        CalcOmega(L*<span class="number">2</span>,op);</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;=n<span class="number">-1</span>;j+=L*<span class="number">2</span>)<span class="comment">//开头,长度=L*2</span></div><div class="line">        &#123;</div><div class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> k=<span class="number">0</span>;k&lt;=L<span class="number">-1</span>;k++)</div><div class="line">            &#123;</div><div class="line">                <span class="keyword">complex</span> x=a[j+k];</div><div class="line">                <span class="keyword">complex</span> y=omega[k]*a[j+L+k];</div><div class="line">                a[j+k]=x+y;</div><div class="line">                a[j+L+k]=x-y;</div><div class="line">                <span class="comment">//蝴蝶操作</span></div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">if</span>(op==<span class="number">-1</span>) <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;=n<span class="number">-1</span>;i++) a[i].r=a[i].r/<span class="keyword">double</span>(n);</div><div class="line">&#125;</div><div class="line"><span class="comment">//*******************主函数*******************</span></div><div class="line"><span class="keyword">complex</span> a[MAXN+<span class="number">10</span>],b[MAXN+<span class="number">10</span>];</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></div><div class="line"></span>&#123;</div><div class="line">    <span class="keyword">int</span> n,m;<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;n,&amp;m);</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;=n;i++) <span class="built_in">scanf</span>(<span class="string">"%lf"</span>,&amp;a[i].r);</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;=m;i++) <span class="built_in">scanf</span>(<span class="string">"%lf"</span>,&amp;b[i].r);</div><div class="line"></div><div class="line">    m=n+m+<span class="number">1</span>;<span class="keyword">int</span> <span class="built_in">log</span>=<span class="number">0</span>;n=<span class="number">1</span>;</div><div class="line">    <span class="keyword">while</span>(n&lt;m) n*=<span class="number">2</span>,<span class="built_in">log</span>++;</div><div class="line"></div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;=n<span class="number">-1</span>;i++) R[i]=( R[i&gt;&gt;<span class="number">1</span>]&gt;&gt;<span class="number">1</span> ) | ( (i&amp;<span class="number">1</span>)&lt;&lt;(<span class="built_in">log</span><span class="number">-1</span>) );</div><div class="line">    <span class="comment">//nlogn翻转二进制</span></div><div class="line"></div><div class="line">    FFT(a,n,<span class="number">1</span>);FFT(b,n,<span class="number">1</span>);<span class="comment">//求值</span></div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;=n<span class="number">-1</span>;i++) a[i]=a[i]*b[i];<span class="comment">//点值乘法</span></div><div class="line">    FFT(a,n,<span class="number">-1</span>);<span class="comment">//插值</span></div><div class="line"></div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;=m<span class="number">-1</span>;i++)</div><div class="line">        <span class="built_in">printf</span>(<span class="string">"%d "</span>,<span class="keyword">int</span>(a[i].r+<span class="number">0.5</span>));</div><div class="line">        <span class="comment">//输出系数(四舍五入后的实数部分)</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h2 id="卷积"><a href="#卷积" class="headerlink" title="卷积"></a>卷积</h2><p>最后再提提这个其实最重要的概念<br>请牢记它，很多FFT的题目都需要将公式转化为这样<br>A、B、C都是系数<br>$C_i=\sum_{k=0}^i A_k \times B_{i-k}$</p>
 <h2 id="推荐好文章"><a href="#推荐好文章" class="headerlink" title="推荐好文章"></a>推荐好文章</h2><p>精品：<br><a href="http://blog.csdn.net/zxn0803/article/details/51361111" target="_blank" rel="noopener">位于CSDN-心若为城</a><br><a href="http://blog.csdn.net/iamzky/article/details/22712347" target="_blank" rel="noopener">位于CSDN-iamzky</a><br><a href="http://pan.baidu.com/s/1sliDCTZ" target="_blank" rel="noopener">位于百度云-Rose</a><br><a href="https://wenku.baidu.com/view/328f77faf18583d0486459a6.html" target="_blank" rel="noopener">位于百度文库-Voiphon</a><br><a href="http://blog.csdn.net/yangyuhao0408/article/details/60476816" target="_blank" rel="noopener">位于CSDN-oiyangyuhao</a><br><a href="https://www.cnblogs.com/Neroysq/archive/2011/10/14/2212584.html" target="_blank" rel="noopener">位于博客园-Neroysq</a><br><a href="http://blog.miskcoo.com/2015/04/polynomial-multiplication-and-fast-fourier-transform" target="_blank" rel="noopener">miskcoo</a><br><a href="http://blog.csdn.net/acdreamers/article/details/39005227" target="_blank" rel="noopener">1-位于CSDN-ACdreamers</a><br><a href="http://blog.csdn.net/acdreamers/article/details/39026505" target="_blank" rel="noopener">2-位于CSDN-ACdreamers</a></p>
 <h2 id="练习"><a href="#练习" class="headerlink" title="练习"></a>练习</h2><p><a href="../2017-12/超大整数乘法.html">【Bzoj2179】【Codevs3123】超大整数乘法</a><br><a href="../2017-12/快速傅立叶之二.html">【Bzoj2194】快速傅立叶之二</a><br><a href="../2017-12/力.html">【Bzoj3527】力</a></p>
@@ -652,7 +641,14 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/2017-12/快速傅立叶之二.html" rel="bookmark">【Bzoj2194】快速傅立叶之二</a></div>
+      <div class="popular-posts-title"><a href="/2017-12/3-idiots.html" rel="bookmark">【Bzoj3527】3-idiots</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="/2017-12/Triple.html" rel="bookmark">【Bzoj3771】Triple</a></div>
       
     </li>
   
@@ -666,7 +662,7 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/2017-12/3-idiots.html" rel="bookmark">【Bzoj3527】3-idiots</a></div>
+      <div class="popular-posts-title"><a href="/2017-12/快速傅立叶之二.html" rel="bookmark">【Bzoj2194】快速傅立叶之二</a></div>
       
     </li>
   
@@ -677,19 +673,11 @@
       
     </li>
   
-    <li class="popular-posts-item">
-      
-      
-      <div class="popular-posts-title"><a href="/2017-12/Triple.html" rel="bookmark">【Bzoj3771】Triple</a></div>
-      
-    </li>
-  
   </ul>
 
 
     
 
-    
     
     
     
@@ -733,11 +721,15 @@
       </div>
     
 
+    
+
     <footer class="post-footer">
       
         <div class="post-tags">
           
-            <a href="/tags/快速傅里叶变换/" rel="tag"> <i class="fa fa-tag"></i> 快速傅里叶变换</a>
+            <a href="/tags/快速傅里叶变换/" rel="tag"># 快速傅里叶变换</a>
+          
+            <a href="/tags/原创精华/" rel="tag"># 原创精华</a>
           
         </div>
       
@@ -750,8 +742,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2003-01/【OI之路】12计算几何-1入门.html" rel="prev" title="【OI之路】12计算几何-1入门">
-                <i class="fa fa-chevron-left"></i> 【OI之路】12计算几何-1入门
+              <a href="/2003-01/【OI之路】11更高级数论-3莫比乌斯反演.html" rel="next" title="【OI之路】11更高级数论-3莫比乌斯反演">
+                <i class="fa fa-chevron-left"></i> 【OI之路】11更高级数论-3莫比乌斯反演
               </a>
             
           </div>
@@ -760,8 +752,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2003-01/【OI之路】11更高级数论-3莫比乌斯反演.html" rel="next" title="【OI之路】11更高级数论-3莫比乌斯反演">
-                【OI之路】11更高级数论-3莫比乌斯反演 <i class="fa fa-chevron-right"></i>
+              <a href="/2003-01/【OI之路】12计算几何-1入门.html" rel="prev" title="【OI之路】12计算几何-1入门">
+                【OI之路】12计算几何-1入门 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -828,11 +820,9 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
-		<a href="/" class="site-author-image" rel="start" style="border:none">
               <img class="site-author-image" itemprop="image"
                 src="/images/avatar.png"
                 alt="Zory" />
-        </a>
             
               <p class="site-author-name" itemprop="name">Zory</p>
               <p class="site-description motion-element" itemprop="description">人生即使没有最短路，也是连通图</p>
@@ -845,7 +835,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">307</span>
+                    <span class="site-state-item-count">310</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -1101,7 +1091,13 @@
                     
                       
                     
-                    <span class="site-state-item-count">111</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">114</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1118,10 +1114,10 @@
 
           
           
-		  
-		  
-			
-		  
+
+          
+            
+          
           <br><br>
 
 <a href="http://info.flagcounter.com/pNr7">
@@ -1149,7 +1145,6 @@
       console.error(err);
     })
 </script>
-
 
         </div>
       </section>
@@ -1185,7 +1180,7 @@
     <footer id="footer" class="footer">
       <div class="footer-inner">
         <div class="copyright">&copy; 2017 &mdash; <span itemprop="copyrightYear">2018</span>
-  <span class="with-love">
+  <span class="with-love" id="animate">
     <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">Zory</span>
@@ -1294,25 +1289,25 @@
   
 
 
-  <script type="text/javascript" src="/js/src/utils.js?v=6.0.6"></script>
+  <script type="text/javascript" src="/js/src/utils.js?v=6.3.0"></script>
 
-  <script type="text/javascript" src="/js/src/motion.js?v=6.0.6"></script>
-
-
-
-  
-  
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.0.6"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=6.0.6"></script>
+  <script type="text/javascript" src="/js/src/motion.js?v=6.3.0"></script>
 
 
 
   
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.3.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.3.0"></script>
 
 
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.0.6"></script>
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.3.0"></script>
 
 
 
@@ -1840,7 +1835,8 @@
         inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
         processEscapes: true,
         skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-      }
+      },
+      TeX: {equationNumbers: { autoNumber: "AMS" }}
     });
 </script>
 
@@ -1864,9 +1860,11 @@
   
 
   
-  <script type="text/javascript" src="/js/src/js.cookie.js?v=6.0.6"></script>
-  <script type="text/javascript" src="/js/src/scroll-cookie.js?v=6.0.6"></script>
+  <script type="text/javascript" src="/js/src/js.cookie.js?v=6.3.0"></script>
+  <script type="text/javascript" src="/js/src/scroll-cookie.js?v=6.3.0"></script>
 
+
+  
 
   
 

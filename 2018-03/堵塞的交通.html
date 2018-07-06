@@ -23,6 +23,10 @@
 
 
 
+  
+  
+  <link rel="stylesheet" href="/lib/needsharebutton/needsharebutton.css">
+
 
 
 
@@ -35,6 +39,10 @@
 
 
 
+
+  
+  
+  <link rel="stylesheet" media="all" href="/lib/Han/dist/han.min.css?v=3.3">
 
 
 
@@ -255,7 +263,7 @@
           
           <li class="menu-item menu-item-archives">
     <a href="/archives/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />历程Archives</a>
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />历程Archives<span class="badge">311</span></a>
   </li>
         
         
@@ -263,7 +271,7 @@
           
           <li class="menu-item menu-item-categories">
     <a href="/categories/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-th"></i> <br />分类Categories</a>
+      <i class="menu-item-icon fa fa-fw fa-th"></i> <br />分类Categories<span class="badge">4</span></a>
   </li>
         
         
@@ -271,15 +279,7 @@
           
           <li class="menu-item menu-item-tags">
     <a href="/tags/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签Tags</a>
-  </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-about">
-    <a href="/about/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于About</a>
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签Tags<span class="badge">114</span></a>
   </li>
         
         
@@ -526,7 +526,7 @@
     
     
     
-    <div class="post-body" itemprop="articleBody">
+    <div class="post-body han-init-context" itemprop="articleBody">
 
       
       
@@ -542,6 +542,22 @@
 <h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//Zory-2018</span></div><div class="line"><span class="comment">//*******************头文件*******************</span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"><span class="comment">//*******************全局常量*******************</span></div><div class="line"><span class="comment">//*******************全局定义*******************</span></div><div class="line"><span class="keyword">struct</span> nod<span class="comment">//连通性信息</span></div><div class="line">&#123;</div><div class="line">	<span class="keyword">bool</span> lb,rb;<span class="comment">//竖</span></div><div class="line">	<span class="keyword">bool</span> h[<span class="number">2</span>][<span class="number">2</span>];<span class="comment">//横、斜</span></div><div class="line">	nod()</div><div class="line">	&#123;</div><div class="line">		lb=rb=<span class="number">0</span>;</div><div class="line">		<span class="built_in">memset</span>(h,<span class="number">0</span>,<span class="keyword">sizeof</span>(h));</div><div class="line">	&#125;</div><div class="line">&#125;;</div><div class="line"><span class="keyword">struct</span> seg<span class="comment">//线段树节点</span></div><div class="line">&#123;</div><div class="line">	<span class="keyword">int</span> l,r;</div><div class="line">	<span class="keyword">int</span> lc,rc;</div><div class="line">	nod f;</div><div class="line">	<span class="keyword">bool</span> tp,bm;<span class="comment">//mid和mid+1之间的信息</span></div><div class="line">&#125;p[<span class="number">410000</span>];</div><div class="line"><span class="comment">//*******************接口*******************</span></div><div class="line"><span class="function">nod <span class="title">merg</span><span class="params">(nod a,<span class="keyword">int</span> tp,<span class="keyword">int</span> bm,nod b)</span></div><div class="line"></span>&#123;</div><div class="line">	nod c;</div><div class="line">	c.lb=a.lb or (a.h[<span class="number">0</span>][<span class="number">0</span>] and tp and b.lb and bm and a.h[<span class="number">1</span>][<span class="number">1</span>]);</div><div class="line">	c.rb=b.rb or (b.h[<span class="number">0</span>][<span class="number">0</span>] and tp and a.rb and bm and b.h[<span class="number">1</span>][<span class="number">1</span>]);</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;=<span class="number">1</span>;i++)</div><div class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;=<span class="number">1</span>;j++)</div><div class="line">		&#123;</div><div class="line">			c.h[i][j] =a.h[i][<span class="number">0</span>] and tp and b.h[<span class="number">0</span>][j];<span class="comment">//上面走</span></div><div class="line">			c.h[i][j]|=a.h[i][<span class="number">1</span>] and bm and b.h[<span class="number">1</span>][j];<span class="comment">//下面走</span></div><div class="line">		&#125;</div><div class="line">	<span class="keyword">return</span> c;</div><div class="line">&#125;</div><div class="line"><span class="keyword">int</span> cnt;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">build</span><span class="params">(<span class="keyword">int</span> l,<span class="keyword">int</span> r)</span></div><div class="line"></span>&#123;</div><div class="line">	<span class="keyword">int</span> t=++cnt;</div><div class="line">	p[t].l=l;p[t].r=r;</div><div class="line">	p[t].tp=p[t].bm=<span class="number">0</span>;</div><div class="line">	<span class="keyword">if</span>(l&lt;r)</div><div class="line">	&#123;</div><div class="line">		<span class="keyword">int</span> mid=(l+r)/<span class="number">2</span>;</div><div class="line">		p[t].lc=build(l,mid);</div><div class="line">		p[t].rc=build(mid+<span class="number">1</span>,r);</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">else</span> p[t].f.h[<span class="number">0</span>][<span class="number">0</span>]=p[t].f.h[<span class="number">1</span>][<span class="number">1</span>]=<span class="number">1</span>;<span class="comment">//单点横向必定可以</span></div><div class="line">	<span class="keyword">return</span> t;</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">change</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> x1,<span class="keyword">int</span> y1,<span class="keyword">int</span> x2,<span class="keyword">int</span> y2,<span class="keyword">bool</span> b)</span></div><div class="line"></span>&#123;</div><div class="line">	<span class="keyword">int</span> lc=p[x].lc,rc=p[x].rc,mid=(p[x].l+p[x].r)/<span class="number">2</span>;</div><div class="line">	</div><div class="line">	<span class="keyword">if</span>(x1==x2 and y1==mid)<span class="comment">//横着，正好中间</span></div><div class="line">	&#123;</div><div class="line">		<span class="keyword">if</span>(x1==<span class="number">0</span>) p[x].tp=b;</div><div class="line">		<span class="keyword">else</span> p[x].bm=b;</div><div class="line">		p[x].f=merg(p[lc].f,p[x].tp,p[x].bm,p[rc].f);</div><div class="line">		<span class="keyword">return</span>;</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">if</span>(p[x].l==p[x].r)<span class="comment">//其他单点</span></div><div class="line">	&#123;</div><div class="line">		p[x].f.h[<span class="number">0</span>][<span class="number">1</span>]=p[x].f.h[<span class="number">1</span>][<span class="number">0</span>]=p[x].f.lb=p[x].f.rb=b;</div><div class="line">		<span class="comment">//tp、bm不需要，作为单点用不到</span></div><div class="line">		<span class="keyword">return</span>;</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="keyword">if</span>(y1&lt;=mid) change(lc,x1,y1,x2,y2,b);</div><div class="line">	<span class="keyword">else</span> change(rc,x1,y1,x2,y2,b);</div><div class="line">	p[x].f=merg(p[lc].f,p[x].tp,p[x].bm,p[rc].f);</div><div class="line">&#125;</div><div class="line"><span class="function">nod <span class="title">ask</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> L,<span class="keyword">int</span> R)</span></div><div class="line"></span>&#123;</div><div class="line">	<span class="keyword">int</span> lc=p[x].lc,rc=p[x].rc,mid=(p[x].l+p[x].r)/<span class="number">2</span>;</div><div class="line">	</div><div class="line">	<span class="keyword">if</span>(p[x].l==L and p[x].r==R) <span class="keyword">return</span> p[x].f;</div><div class="line">	<span class="keyword">if</span>(R&lt;=mid) <span class="keyword">return</span> ask(lc,L,R);</div><div class="line">	<span class="keyword">if</span>(L&gt;mid) <span class="keyword">return</span> ask(rc,L,R);</div><div class="line">	<span class="keyword">return</span> merg(ask(lc,L,mid),p[x].tp,p[x].bm,ask(rc,mid+<span class="number">1</span>,R));</div><div class="line">&#125;</div><div class="line"><span class="comment">//*******************主函数*******************</span></div><div class="line"><span class="keyword">char</span> s[<span class="number">20</span>];</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></div><div class="line"></span>&#123;</div><div class="line">	<span class="keyword">int</span> n;<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;n);</div><div class="line">	cnt=<span class="number">0</span>;build(<span class="number">1</span>,n);</div><div class="line">	<span class="keyword">while</span>(<span class="number">1</span>)</div><div class="line">	&#123;</div><div class="line">		<span class="built_in">scanf</span>(<span class="string">"%s"</span>,s);<span class="keyword">if</span>(s[<span class="number">0</span>]==<span class="string">'E'</span>) <span class="keyword">break</span>;</div><div class="line">		<span class="keyword">int</span> x1,y1,x2,y2;<span class="built_in">scanf</span>(<span class="string">"%d%d%d%d"</span>,&amp;x1,&amp;y1,&amp;x2,&amp;y2);</div><div class="line">		<span class="keyword">if</span>(y1&gt;y2) swap(x1,x2),swap(y1,y2);x1--;x2--;</div><div class="line">		<span class="keyword">if</span>(s[<span class="number">0</span>]==<span class="string">'A'</span>)</div><div class="line">		&#123;</div><div class="line">			nod a,b,c;</div><div class="line">			a=ask(<span class="number">1</span>,<span class="number">1</span>,y1);b=ask(<span class="number">1</span>,y1,y2);c=ask(<span class="number">1</span>,y2,n);</div><div class="line">			<span class="keyword">if</span>(a.rb) b.lb=<span class="number">1</span>;<span class="keyword">if</span>(c.lb) b.rb=<span class="number">1</span>;</div><div class="line">			</div><div class="line">			<span class="keyword">bool</span> bk=<span class="number">0</span>;</div><div class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;=<span class="number">1</span>;i++)</div><div class="line">				<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;=<span class="number">1</span>;j++)</div><div class="line">					<span class="keyword">if</span>(b.h[i][j])</div><div class="line">						<span class="keyword">if</span>( (i==x1 or b.lb)and(j==x2 or b.rb) )</div><div class="line">							bk=<span class="number">1</span>;</div><div class="line">			<span class="keyword">if</span>(bk) <span class="built_in">printf</span>(<span class="string">"Y\n"</span>);</div><div class="line">			<span class="keyword">else</span> <span class="built_in">printf</span>(<span class="string">"N\n"</span>);</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">if</span>(s[<span class="number">0</span>]==<span class="string">'O'</span>) change(<span class="number">1</span>,x1,y1,x2,y2,<span class="number">1</span>);</div><div class="line">		<span class="keyword">if</span>(s[<span class="number">0</span>]==<span class="string">'C'</span>) change(<span class="number">1</span>,x1,y1,x2,y2,<span class="number">0</span>);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
       
     </div>
+
+    
+    
+    
+
+    
+      <div class="post-tags">
+        
+          <a href="/tags/线段树/" rel="tag"># 线段树</a>
+        
+          <a href="/tags/难度4/" rel="tag"># 难度4</a>
+        
+          <a href="/tags/精品题/" rel="tag"># 精品题</a>
+        
+      </div>
+    
 
     
       
@@ -566,14 +582,14 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/2017-09/进攻策略.html" rel="bookmark">【Caioj1086】进攻策略</a></div>
+      <div class="popular-posts-title"><a href="/2017-11/Ideal_Puzzle_Bobble.html" rel="bookmark">【Zoj3435】Ideal Puzzle Bobble</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/2018-03/玩具装箱.html" rel="bookmark">【Bzoj1010】【Luogu3195】玩具装箱</a></div>
+      <div class="popular-posts-title"><a href="/2017-11/城市地平线.html" rel="bookmark">【Bzoj1645】City Horizon城市地平线</a></div>
       
     </li>
   
@@ -589,10 +605,6 @@
 
     
 
-    
-    
-    
-
 	
 		<div>
 				<p id="div-border-left-purple">
@@ -602,6 +614,10 @@
 				</span>
 				</p>
 		</div>
+    
+
+    
+    
     
 
     
@@ -636,18 +652,23 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/线段树/" rel="tag"># 线段树</a>
-          
-            <a href="/tags/难度4/" rel="tag"># 难度4</a>
-          
-            <a href="/tags/精品题/" rel="tag"># 精品题</a>
-          
-        </div>
-      
 
       
+      
+        <div class="post-widgets">
+        
+
+        
+
+        
+          
+          <div id="needsharebutton-postbottom">
+            <span class="btn">
+              <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </span>
+          </div>
+        
+        </div>
       
       
 
@@ -748,7 +769,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">310</span>
+                    <span class="site-state-item-count">311</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -1020,6 +1041,20 @@
 
           
 
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/Zory123" target="_blank" title="GitHub" rel="external nofollow"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="mailto:1134430323@qq.com" target="_blank" title="E-Mail" rel="external nofollow"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  
+                </span>
+              
+            </div>
           
 
           
@@ -1745,8 +1780,34 @@
 
   
   
+  
+  <script src="/lib/needsharebutton/needsharebutton.js"></script>
+
+  <script>
+    
+      pbOptions = {};
+      
+          pbOptions.iconStyle = "box";
+      
+          pbOptions.boxForm = "vertical";
+      
+          pbOptions.position = "bottomCenter";
+      
+          pbOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook,GooglePlus,Evernote,Vkontakte";
+      
+      new needShareButton('#needsharebutton-postbottom', pbOptions);
+    
+    
+  </script>
 
   
+
+  
+  
+  
+  <script src="/lib/pangu/dist/pangu.min.js?v=3.3"></script>
+  <script type="text/javascript">pangu.spacingPage();</script>
+
 
   
   <script type="text/javascript" src="/js/src/js.cookie.js?v=6.3.0"></script>
@@ -1756,8 +1817,86 @@
   
 
   
+  
+  
+  <script src="/lib/bookmark/bookmark.min.js?v=1.0"></script>
+  <script type="text/javascript">
+  
+    bookmark.scrollToMark('auto', "#more");
+  
+  </script>
+
 
   
+  <style>
+    .copy-btn {
+      display: inline-block;
+      padding: 6px 12px;
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 20px;
+      color: #333;
+      white-space: nowrap;
+      vertical-align: middle;
+      cursor: pointer;
+      background-color: #eee;
+      background-image: linear-gradient(#fcfcfc, #eee);
+      border: 1px solid #d5d5d5;
+      border-radius: 3px;
+      user-select: none;
+      outline: 0;
+    }
+
+    .highlight-wrap .copy-btn {
+      transition: opacity .3s ease-in-out;
+      opacity: 0;
+      padding: 2px 6px;
+      position: absolute;
+      right: 4px;
+      top: 8px;
+    }
+
+    .highlight-wrap:hover .copy-btn,
+    .highlight-wrap .copy-btn:focus {
+      opacity: 1
+    }
+
+    .highlight-wrap {
+      position: relative;
+    }
+  </style>
+  <script>
+    $('.highlight').each(function (i, e) {
+      var $wrap = $('<div>').addClass('highlight-wrap')
+      $(e).after($wrap)
+      $wrap.append($('<button>').addClass('copy-btn').append('Copy').on('click', function (e) {
+        var code = $(this).parent().find('.code').find('.line').map(function (i, e) {
+          return $(e).text()
+        }).toArray().join('\n')
+        var ta = document.createElement('textarea')
+        document.body.appendChild(ta)
+        ta.style.position = 'absolute'
+        ta.style.top = '0px'
+        ta.style.left = '0px'
+        ta.value = code
+        ta.select()
+        ta.focus()
+        var result = document.execCommand('copy')
+        document.body.removeChild(ta)
+        
+          if(result)$(this).text('Copied')
+          else $(this).text('Copy failed')
+        
+        $(this).blur()
+      })).on('mouseleave', function (e) {
+        var $b = $(this).find('.copy-btn')
+        setTimeout(function () {
+          $b.text('Copy')
+        }, 300)
+      }).append(e)
+    })
+  </script>
+
 
 </body>
 </html>

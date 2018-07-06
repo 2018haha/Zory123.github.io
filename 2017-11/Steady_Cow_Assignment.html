@@ -23,6 +23,10 @@
 
 
 
+  
+  
+  <link rel="stylesheet" href="/lib/needsharebutton/needsharebutton.css">
+
 
 
 
@@ -35,6 +39,10 @@
 
 
 
+
+  
+  
+  <link rel="stylesheet" media="all" href="/lib/Han/dist/han.min.css?v=3.3">
 
 
 
@@ -255,7 +263,7 @@
           
           <li class="menu-item menu-item-archives">
     <a href="/archives/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />历程Archives</a>
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />历程Archives<span class="badge">311</span></a>
   </li>
         
         
@@ -263,7 +271,7 @@
           
           <li class="menu-item menu-item-categories">
     <a href="/categories/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-th"></i> <br />分类Categories</a>
+      <i class="menu-item-icon fa fa-fw fa-th"></i> <br />分类Categories<span class="badge">4</span></a>
   </li>
         
         
@@ -271,15 +279,7 @@
           
           <li class="menu-item menu-item-tags">
     <a href="/tags/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签Tags</a>
-  </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-about">
-    <a href="/about/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于About</a>
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签Tags<span class="badge">114</span></a>
   </li>
         
         
@@ -526,7 +526,7 @@
     
     
     
-    <div class="post-body" itemprop="articleBody">
+    <div class="post-body han-init-context" itemprop="articleBody">
 
       
       
@@ -543,6 +543,24 @@
 <h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> INF=<span class="number">0x3f3f3f3f</span>;</div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> MAXN=<span class="number">1100</span>,MAXM=<span class="number">61000</span>;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">mymin</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span> </span>&#123;<span class="keyword">return</span> x&lt;y?x:y;&#125;</div><div class="line"></div><div class="line"><span class="keyword">struct</span> pt</div><div class="line">&#123;</div><div class="line">    <span class="keyword">int</span> h;</div><div class="line">    <span class="keyword">int</span> hou;</div><div class="line">&#125;p[MAXN];</div><div class="line"><span class="keyword">struct</span> rod</div><div class="line">&#123;</div><div class="line">    <span class="keyword">int</span> y,c,g;</div><div class="line">    <span class="keyword">int</span> oth;</div><div class="line">&#125;e[MAXM];</div><div class="line"><span class="keyword">int</span> ln;</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">ins</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y,<span class="keyword">int</span> c)</span></div><div class="line"></span>&#123;</div><div class="line">    ln++;</div><div class="line">    e[ln].y=y;e[ln].c=c;</div><div class="line">    e[ln].g=p[x].hou;p[x].hou=ln;</div><div class="line">    </div><div class="line">    ln++;</div><div class="line">    e[ln].y=x;e[ln].c=<span class="number">0</span>;</div><div class="line">    e[ln].g=p[y].hou;p[y].hou=ln;</div><div class="line">    </div><div class="line">    e[ln].oth=ln<span class="number">-1</span>;e[ln<span class="number">-1</span>].oth=ln;</div><div class="line">&#125;</div><div class="line"><span class="keyword">int</span> st,ed;</div><div class="line"><span class="keyword">int</span> lst[MAXN];</div><div class="line"><span class="function"><span class="keyword">bool</span> <span class="title">bfs</span><span class="params">()</span></div><div class="line"></span>&#123;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=ed;i++) p[i].h=<span class="number">0</span>;</div><div class="line">    </div><div class="line">    <span class="keyword">int</span> tou=<span class="number">1</span>,wei=<span class="number">1</span>;</div><div class="line">    lst[<span class="number">1</span>]=st;p[st].h=<span class="number">1</span>;</div><div class="line">    <span class="keyword">while</span>(tou&lt;=wei)</div><div class="line">    &#123;</div><div class="line">        <span class="keyword">int</span> x=lst[tou];</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> k=p[x].hou;k&gt;<span class="number">0</span>;k=e[k].g)</div><div class="line">        &#123;</div><div class="line">            <span class="keyword">int</span> y=e[k].y;</div><div class="line">            <span class="keyword">if</span>(p[y].h==<span class="number">0</span> and e[k].c&gt;<span class="number">0</span>)</div><div class="line">            &#123;</div><div class="line">                p[y].h=p[x].h+<span class="number">1</span>;</div><div class="line">                lst[++wei]=y;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        tou++;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> p[ed].h&gt;<span class="number">0</span>;</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> f)</span></div><div class="line"></span>&#123;</div><div class="line">    <span class="keyword">if</span>(x==ed) <span class="keyword">return</span> f;</div><div class="line">    <span class="keyword">int</span> t=<span class="number">0</span>;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> k=p[x].hou;k&gt;<span class="number">0</span>;k=e[k].g)</div><div class="line">    &#123;</div><div class="line">        <span class="keyword">int</span> y=e[k].y;</div><div class="line">        <span class="keyword">if</span>(p[y].h==p[x].h+<span class="number">1</span> and e[k].c&gt;<span class="number">0</span> and t&lt;f)</div><div class="line">        &#123;</div><div class="line">            <span class="keyword">int</span> tt=dfs(y,mymin(f-t,e[k].c));</div><div class="line">            t+=tt;e[k].c-=tt;e[e[k].oth].c+=tt;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">if</span>(t==<span class="number">0</span>) p[x].h=<span class="number">0</span>;</div><div class="line">    <span class="keyword">return</span> t;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">int</span> n,b;</div><div class="line"><span class="keyword">int</span> lv[MAXN][<span class="number">30</span>];</div><div class="line"><span class="keyword">int</span> ct[<span class="number">30</span>];</div><div class="line"><span class="function"><span class="keyword">bool</span> <span class="title">check</span><span class="params">(<span class="keyword">int</span> ll,<span class="keyword">int</span> rr)</span></div><div class="line"></span>&#123;</div><div class="line">    ln=<span class="number">0</span>;<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=ed;i++) p[i].hou=<span class="number">0</span>;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</div><div class="line">    &#123;</div><div class="line">        ins(st,i,<span class="number">1</span>);</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=ll;j&lt;=rr;j++) ins(i, n+lv[i][j] ,<span class="number">1</span>);</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=b;i++) ins(n+i,ed,ct[i]);</div><div class="line">    </div><div class="line">    <span class="keyword">int</span> ans=<span class="number">0</span>;</div><div class="line">    <span class="keyword">while</span>( bfs() ) ans+=dfs(st,INF);</div><div class="line">    <span class="comment">//printf("-----ll=%d rr=%d ans=%d n=%d\n",ll,rr,ans,n);</span></div><div class="line">    <span class="keyword">return</span> ans==n;</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">getans</span><span class="params">(<span class="keyword">int</span> low)</span></div><div class="line"></span>&#123;</div><div class="line">    <span class="keyword">int</span> l=<span class="number">1</span>,r=b-low+<span class="number">1</span>,ans=<span class="number">-1</span>;</div><div class="line">    <span class="keyword">while</span>(l&lt;=r)</div><div class="line">    &#123;</div><div class="line">        <span class="keyword">int</span> mid=(l+r)&gt;&gt;<span class="number">1</span>;</div><div class="line">        <span class="keyword">if</span>(check(low,low+mid<span class="number">-1</span>)) ans=mid,r=mid<span class="number">-1</span>;</div><div class="line">        <span class="keyword">else</span> l=mid+<span class="number">1</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="comment">//printf("low=%d ans=%d\n",low,ans);</span></div><div class="line">    <span class="keyword">return</span> ans&lt;<span class="number">0</span>?INF:ans;</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></div><div class="line"></span>&#123;</div><div class="line">    <span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;n,&amp;b);</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=b;j++)</div><div class="line">            <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;lv[i][j]);</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=b;i++) <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;ct[i]);</div><div class="line">        </div><div class="line">    st=n+b+<span class="number">1</span>,ed=n+b+<span class="number">2</span>;</div><div class="line">    </div><div class="line">    <span class="keyword">int</span> mi=INF;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=b;i++) mi=mymin(mi, getans(i) );</div><div class="line">    </div><div class="line">    <span class="built_in">printf</span>(<span class="string">"%d"</span>,mi);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
       
     </div>
+
+    
+    
+    
+
+    
+      <div class="post-tags">
+        
+          <a href="/tags/难度4/" rel="tag"># 难度4</a>
+        
+          <a href="/tags/网络流/" rel="tag"># 网络流</a>
+        
+          <a href="/tags/最大流/" rel="tag"># 最大流</a>
+        
+          <a href="/tags/二分/" rel="tag"># 二分</a>
+        
+      </div>
+    
 
     
       
@@ -581,17 +599,13 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/2017-11/Drainage_Ditches.html" rel="bookmark">【Poj1273】网络流模版题Drainage Ditches</a></div>
+      <div class="popular-posts-title"><a href="/2017-11/Dining.html" rel="bookmark">【Poj3281】Dining</a></div>
       
     </li>
   
   </ul>
 
 
-    
-
-    
-    
     
 
 	
@@ -603,6 +617,10 @@
 				</span>
 				</p>
 		</div>
+    
+
+    
+    
     
 
     
@@ -637,20 +655,23 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/难度4/" rel="tag"># 难度4</a>
-          
-            <a href="/tags/网络流/" rel="tag"># 网络流</a>
-          
-            <a href="/tags/最大流/" rel="tag"># 最大流</a>
-          
-            <a href="/tags/二分/" rel="tag"># 二分</a>
-          
-        </div>
-      
 
       
+      
+        <div class="post-widgets">
+        
+
+        
+
+        
+          
+          <div id="needsharebutton-postbottom">
+            <span class="btn">
+              <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </span>
+          </div>
+        
+        </div>
       
       
 
@@ -658,8 +679,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017-11/Ombrophobic_Bovines.html" rel="next" title="【Usaco05Mar】Ombrophobic Bovines">
-                <i class="fa fa-chevron-left"></i> 【Usaco05Mar】Ombrophobic Bovines
+              <a href="/2017-11/Optimal_Milking.html" rel="next" title="【Poj2112】Optimal Milking">
+                <i class="fa fa-chevron-left"></i> 【Poj2112】Optimal Milking
               </a>
             
           </div>
@@ -668,8 +689,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017-11/Optimal_Milking.html" rel="prev" title="【Poj2112】Optimal Milking">
-                【Poj2112】Optimal Milking <i class="fa fa-chevron-right"></i>
+              <a href="/2017-11/善意的投票兼冠军调查.html" rel="prev" title="【Bzoj1934】【Bzoj2768】善意的投票&冠军调查">
+                【Bzoj1934】【Bzoj2768】善意的投票&冠军调查 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -751,7 +772,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">310</span>
+                    <span class="site-state-item-count">311</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -1023,6 +1044,20 @@
 
           
 
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/Zory123" target="_blank" title="GitHub" rel="external nofollow"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="mailto:1134430323@qq.com" target="_blank" title="E-Mail" rel="external nofollow"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  
+                </span>
+              
+            </div>
           
 
           
@@ -1748,8 +1783,34 @@
 
   
   
+  
+  <script src="/lib/needsharebutton/needsharebutton.js"></script>
+
+  <script>
+    
+      pbOptions = {};
+      
+          pbOptions.iconStyle = "box";
+      
+          pbOptions.boxForm = "vertical";
+      
+          pbOptions.position = "bottomCenter";
+      
+          pbOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook,GooglePlus,Evernote,Vkontakte";
+      
+      new needShareButton('#needsharebutton-postbottom', pbOptions);
+    
+    
+  </script>
 
   
+
+  
+  
+  
+  <script src="/lib/pangu/dist/pangu.min.js?v=3.3"></script>
+  <script type="text/javascript">pangu.spacingPage();</script>
+
 
   
   <script type="text/javascript" src="/js/src/js.cookie.js?v=6.3.0"></script>
@@ -1759,8 +1820,86 @@
   
 
   
+  
+  
+  <script src="/lib/bookmark/bookmark.min.js?v=1.0"></script>
+  <script type="text/javascript">
+  
+    bookmark.scrollToMark('auto', "#more");
+  
+  </script>
+
 
   
+  <style>
+    .copy-btn {
+      display: inline-block;
+      padding: 6px 12px;
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 20px;
+      color: #333;
+      white-space: nowrap;
+      vertical-align: middle;
+      cursor: pointer;
+      background-color: #eee;
+      background-image: linear-gradient(#fcfcfc, #eee);
+      border: 1px solid #d5d5d5;
+      border-radius: 3px;
+      user-select: none;
+      outline: 0;
+    }
+
+    .highlight-wrap .copy-btn {
+      transition: opacity .3s ease-in-out;
+      opacity: 0;
+      padding: 2px 6px;
+      position: absolute;
+      right: 4px;
+      top: 8px;
+    }
+
+    .highlight-wrap:hover .copy-btn,
+    .highlight-wrap .copy-btn:focus {
+      opacity: 1
+    }
+
+    .highlight-wrap {
+      position: relative;
+    }
+  </style>
+  <script>
+    $('.highlight').each(function (i, e) {
+      var $wrap = $('<div>').addClass('highlight-wrap')
+      $(e).after($wrap)
+      $wrap.append($('<button>').addClass('copy-btn').append('Copy').on('click', function (e) {
+        var code = $(this).parent().find('.code').find('.line').map(function (i, e) {
+          return $(e).text()
+        }).toArray().join('\n')
+        var ta = document.createElement('textarea')
+        document.body.appendChild(ta)
+        ta.style.position = 'absolute'
+        ta.style.top = '0px'
+        ta.style.left = '0px'
+        ta.value = code
+        ta.select()
+        ta.focus()
+        var result = document.execCommand('copy')
+        document.body.removeChild(ta)
+        
+          if(result)$(this).text('Copied')
+          else $(this).text('Copy failed')
+        
+        $(this).blur()
+      })).on('mouseleave', function (e) {
+        var $b = $(this).find('.copy-btn')
+        setTimeout(function () {
+          $b.text('Copy')
+        }, 300)
+      }).append(e)
+    })
+  </script>
+
 
 </body>
 </html>

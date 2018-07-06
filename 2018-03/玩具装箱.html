@@ -23,6 +23,10 @@
 
 
 
+  
+  
+  <link rel="stylesheet" href="/lib/needsharebutton/needsharebutton.css">
+
 
 
 
@@ -35,6 +39,10 @@
 
 
 
+
+  
+  
+  <link rel="stylesheet" media="all" href="/lib/Han/dist/han.min.css?v=3.3">
 
 
 
@@ -255,7 +263,7 @@
           
           <li class="menu-item menu-item-archives">
     <a href="/archives/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />历程Archives</a>
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />历程Archives<span class="badge">311</span></a>
   </li>
         
         
@@ -263,7 +271,7 @@
           
           <li class="menu-item menu-item-categories">
     <a href="/categories/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-th"></i> <br />分类Categories</a>
+      <i class="menu-item-icon fa fa-fw fa-th"></i> <br />分类Categories<span class="badge">4</span></a>
   </li>
         
         
@@ -271,15 +279,7 @@
           
           <li class="menu-item menu-item-tags">
     <a href="/tags/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签Tags</a>
-  </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-about">
-    <a href="/about/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于About</a>
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签Tags<span class="badge">114</span></a>
   </li>
         
         
@@ -526,7 +526,7 @@
     
     
     
-    <div class="post-body" itemprop="articleBody">
+    <div class="post-body han-init-context" itemprop="articleBody">
 
       
       
@@ -551,6 +551,26 @@
 <h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//Zory-2018</span></div><div class="line"><span class="comment">//*******************头文件*******************</span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cmath&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;queue&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">ifdef</span> WIN32</span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> BIGN <span class="meta-string">"%I64d"</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">else</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> BIGN <span class="meta-string">"%lld"</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</div><div class="line"><span class="function">ll <span class="title">mysqr</span><span class="params">(ll x)</span> </span>&#123;<span class="keyword">return</span> x*x;&#125;</div><div class="line"><span class="comment">//*******************全局常量*******************</span></div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> MAXN=<span class="number">51000</span>;</div><div class="line"><span class="comment">//*******************全局定义*******************</span></div><div class="line"><span class="keyword">int</span> n;<span class="keyword">double</span> L;</div><div class="line"><span class="keyword">double</span> sum[MAXN],s[MAXN];</div><div class="line"><span class="keyword">double</span> f[MAXN];</div><div class="line"><span class="comment">//*******************实现*******************</span></div><div class="line"><span class="function"><span class="keyword">double</span> <span class="title">X</span><span class="params">(<span class="keyword">int</span> x)</span></div><div class="line"></span>&#123;</div><div class="line">	<span class="keyword">return</span> s[x];</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">double</span> <span class="title">Y</span><span class="params">(<span class="keyword">int</span> x)</span></div><div class="line"></span>&#123;</div><div class="line">	<span class="keyword">return</span> f[x]+mysqr(s[x]);</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">double</span> <span class="title">slop</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span></div><div class="line"></span>&#123;</div><div class="line">	<span class="keyword">return</span> ( Y(x)-Y(y) )/( X(x)-X(y) );</div><div class="line">&#125;</div><div class="line"><span class="keyword">int</span> g[MAXN];</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">solve</span><span class="params">()</span></div><div class="line"></span>&#123;</div><div class="line">	<span class="keyword">int</span> tou=<span class="number">1</span>,wei=<span class="number">1</span>;g[<span class="number">1</span>]=<span class="number">0</span>;f[<span class="number">0</span>]=<span class="number">0</span>;</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</div><div class="line">	&#123;</div><div class="line">		<span class="keyword">while</span>(tou&lt;wei and slop(g[tou],g[tou+<span class="number">1</span>])&lt;=<span class="number">2</span>*(s[i]-L)) tou++;</div><div class="line">		<span class="keyword">int</span> j=g[tou];f[i]=f[j]+mysqr(s[i]-s[j]-L);</div><div class="line">		<span class="keyword">while</span>(tou&lt;wei and slop(g[wei<span class="number">-1</span>],g[wei])&gt;slop(g[wei],i)) wei--;</div><div class="line">		g[++wei]=i;</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"><span class="comment">//*******************主函数*******************</span></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></div><div class="line"></span>&#123;</div><div class="line">	<span class="built_in">scanf</span>(<span class="string">"%d%lf"</span>,&amp;n,&amp;L);L+=<span class="number">1.0</span>;</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</div><div class="line">	&#123;</div><div class="line">		<span class="keyword">double</span> t;<span class="built_in">scanf</span>(<span class="string">"%lf"</span>,&amp;t);</div><div class="line">		sum[i]=sum[i<span class="number">-1</span>]+t;</div><div class="line">		s[i]=sum[i]+i;</div><div class="line">	&#125;</div><div class="line">	solve();</div><div class="line">	<span class="built_in">printf</span>(<span class="string">"%.0lf"</span>,f[n]);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
       
     </div>
+
+    
+    
+    
+
+    
+      <div class="post-tags">
+        
+          <a href="/tags/难度4/" rel="tag"># 难度4</a>
+        
+          <a href="/tags/DP/" rel="tag"># DP</a>
+        
+          <a href="/tags/精品题/" rel="tag"># 精品题</a>
+        
+          <a href="/tags/单调队列/" rel="tag"># 单调队列</a>
+        
+          <a href="/tags/斜率优化/" rel="tag"># 斜率优化</a>
+        
+      </div>
+    
 
     
       
@@ -582,24 +602,20 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/2018-03/特别行动队.html" rel="bookmark">【Bzoj1911】【Luogu3628】特别行动队</a></div>
+      <div class="popular-posts-title"><a href="/2017-09/进攻策略.html" rel="bookmark">【Caioj1086】进攻策略</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/2017-09/进攻策略.html" rel="bookmark">【Caioj1086】进攻策略</a></div>
+      <div class="popular-posts-title"><a href="/2018-04/引水入城.html" rel="bookmark">【Luogu1514】引水入城</a></div>
       
     </li>
   
   </ul>
 
 
-    
-
-    
-    
     
 
 	
@@ -611,6 +627,10 @@
 				</span>
 				</p>
 		</div>
+    
+
+    
+    
     
 
     
@@ -645,22 +665,23 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/难度4/" rel="tag"># 难度4</a>
-          
-            <a href="/tags/DP/" rel="tag"># DP</a>
-          
-            <a href="/tags/精品题/" rel="tag"># 精品题</a>
-          
-            <a href="/tags/单调队列/" rel="tag"># 单调队列</a>
-          
-            <a href="/tags/斜率优化/" rel="tag"># 斜率优化</a>
-          
-        </div>
-      
 
       
+      
+        <div class="post-widgets">
+        
+
+        
+
+        
+          
+          <div id="needsharebutton-postbottom">
+            <span class="btn">
+              <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </span>
+          </div>
+        
+        </div>
       
       
 
@@ -761,7 +782,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">310</span>
+                    <span class="site-state-item-count">311</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -1033,6 +1054,20 @@
 
           
 
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/Zory123" target="_blank" title="GitHub" rel="external nofollow"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="mailto:1134430323@qq.com" target="_blank" title="E-Mail" rel="external nofollow"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  
+                </span>
+              
+            </div>
           
 
           
@@ -1758,8 +1793,34 @@
 
   
   
+  
+  <script src="/lib/needsharebutton/needsharebutton.js"></script>
+
+  <script>
+    
+      pbOptions = {};
+      
+          pbOptions.iconStyle = "box";
+      
+          pbOptions.boxForm = "vertical";
+      
+          pbOptions.position = "bottomCenter";
+      
+          pbOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook,GooglePlus,Evernote,Vkontakte";
+      
+      new needShareButton('#needsharebutton-postbottom', pbOptions);
+    
+    
+  </script>
 
   
+
+  
+  
+  
+  <script src="/lib/pangu/dist/pangu.min.js?v=3.3"></script>
+  <script type="text/javascript">pangu.spacingPage();</script>
+
 
   
   <script type="text/javascript" src="/js/src/js.cookie.js?v=6.3.0"></script>
@@ -1769,8 +1830,86 @@
   
 
   
+  
+  
+  <script src="/lib/bookmark/bookmark.min.js?v=1.0"></script>
+  <script type="text/javascript">
+  
+    bookmark.scrollToMark('auto', "#more");
+  
+  </script>
+
 
   
+  <style>
+    .copy-btn {
+      display: inline-block;
+      padding: 6px 12px;
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 20px;
+      color: #333;
+      white-space: nowrap;
+      vertical-align: middle;
+      cursor: pointer;
+      background-color: #eee;
+      background-image: linear-gradient(#fcfcfc, #eee);
+      border: 1px solid #d5d5d5;
+      border-radius: 3px;
+      user-select: none;
+      outline: 0;
+    }
+
+    .highlight-wrap .copy-btn {
+      transition: opacity .3s ease-in-out;
+      opacity: 0;
+      padding: 2px 6px;
+      position: absolute;
+      right: 4px;
+      top: 8px;
+    }
+
+    .highlight-wrap:hover .copy-btn,
+    .highlight-wrap .copy-btn:focus {
+      opacity: 1
+    }
+
+    .highlight-wrap {
+      position: relative;
+    }
+  </style>
+  <script>
+    $('.highlight').each(function (i, e) {
+      var $wrap = $('<div>').addClass('highlight-wrap')
+      $(e).after($wrap)
+      $wrap.append($('<button>').addClass('copy-btn').append('Copy').on('click', function (e) {
+        var code = $(this).parent().find('.code').find('.line').map(function (i, e) {
+          return $(e).text()
+        }).toArray().join('\n')
+        var ta = document.createElement('textarea')
+        document.body.appendChild(ta)
+        ta.style.position = 'absolute'
+        ta.style.top = '0px'
+        ta.style.left = '0px'
+        ta.value = code
+        ta.select()
+        ta.focus()
+        var result = document.execCommand('copy')
+        document.body.removeChild(ta)
+        
+          if(result)$(this).text('Copied')
+          else $(this).text('Copy failed')
+        
+        $(this).blur()
+      })).on('mouseleave', function (e) {
+        var $b = $(this).find('.copy-btn')
+        setTimeout(function () {
+          $b.text('Copy')
+        }, 300)
+      }).append(e)
+    })
+  </script>
+
 
 </body>
 </html>

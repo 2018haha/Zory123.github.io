@@ -23,6 +23,10 @@
 
 
 
+  
+  
+  <link rel="stylesheet" href="/lib/needsharebutton/needsharebutton.css">
+
 
 
 
@@ -35,6 +39,10 @@
 
 
 
+
+  
+  
+  <link rel="stylesheet" media="all" href="/lib/Han/dist/han.min.css?v=3.3">
 
 
 
@@ -255,7 +263,7 @@
           
           <li class="menu-item menu-item-archives">
     <a href="/archives/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />历程Archives</a>
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />历程Archives<span class="badge">311</span></a>
   </li>
         
         
@@ -263,7 +271,7 @@
           
           <li class="menu-item menu-item-categories">
     <a href="/categories/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-th"></i> <br />分类Categories</a>
+      <i class="menu-item-icon fa fa-fw fa-th"></i> <br />分类Categories<span class="badge">4</span></a>
   </li>
         
         
@@ -271,15 +279,7 @@
           
           <li class="menu-item menu-item-tags">
     <a href="/tags/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签Tags</a>
-  </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-about">
-    <a href="/about/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于About</a>
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签Tags<span class="badge">114</span></a>
   </li>
         
         
@@ -526,7 +526,7 @@
     
     
     
-    <div class="post-body" itemprop="articleBody">
+    <div class="post-body han-init-context" itemprop="articleBody">
 
       
       
@@ -541,6 +541,20 @@
 <h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div><div class="line">143</div><div class="line">144</div><div class="line">145</div><div class="line">146</div><div class="line">147</div><div class="line">148</div><div class="line">149</div><div class="line">150</div><div class="line">151</div><div class="line">152</div><div class="line">153</div><div class="line">154</div><div class="line">155</div><div class="line">156</div><div class="line">157</div><div class="line">158</div><div class="line">159</div><div class="line">160</div><div class="line">161</div><div class="line">162</div><div class="line">163</div><div class="line">164</div><div class="line">165</div><div class="line">166</div><div class="line">167</div><div class="line">168</div><div class="line">169</div><div class="line">170</div><div class="line">171</div><div class="line">172</div><div class="line">173</div><div class="line">174</div><div class="line">175</div><div class="line">176</div><div class="line">177</div><div class="line">178</div><div class="line">179</div><div class="line">180</div><div class="line">181</div><div class="line">182</div><div class="line">183</div><div class="line">184</div><div class="line">185</div><div class="line">186</div><div class="line">187</div><div class="line">188</div><div class="line">189</div><div class="line">190</div><div class="line">191</div><div class="line">192</div><div class="line">193</div><div class="line">194</div><div class="line">195</div><div class="line">196</div><div class="line">197</div><div class="line">198</div><div class="line">199</div><div class="line">200</div><div class="line">201</div><div class="line">202</div><div class="line">203</div><div class="line">204</div><div class="line">205</div><div class="line">206</div><div class="line">207</div><div class="line">208</div><div class="line">209</div><div class="line">210</div><div class="line">211</div><div class="line">212</div><div class="line">213</div><div class="line">214</div><div class="line">215</div><div class="line">216</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> MAXN=<span class="number">80000</span>;</div><div class="line"><span class="keyword">int</span> hh[MAXN+<span class="number">10</span>];</div><div class="line"><span class="comment">//**********************************************</span></div><div class="line"><span class="keyword">struct</span> pt</div><div class="line">&#123;</div><div class="line">	<span class="keyword">int</span> son[<span class="number">2</span>],f;</div><div class="line">	<span class="keyword">int</span> d,c,n;</div><div class="line">	pt()</div><div class="line">	&#123;</div><div class="line">		son[<span class="number">0</span>]=son[<span class="number">1</span>]=<span class="number">-1</span>;</div><div class="line">		f=<span class="number">0</span>;</div><div class="line">		d=<span class="number">0</span>;</div><div class="line">		c=n=<span class="number">1</span>;</div><div class="line">	&#125;</div><div class="line">&#125;p[MAXN+<span class="number">10</span>];</div><div class="line"><span class="comment">//**********************************************</span></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">update</span><span class="params">(<span class="keyword">int</span> x)</span></div><div class="line"></span>&#123;</div><div class="line">	p[x].c=p[x].n;</div><div class="line">	<span class="keyword">int</span> lc=p[x].son[<span class="number">0</span>],rc=p[x].son[<span class="number">1</span>];</div><div class="line">	<span class="keyword">if</span>(lc&gt;<span class="number">0</span>) p[x].c+=p[lc].c;</div><div class="line">	<span class="keyword">if</span>(rc&gt;<span class="number">0</span>) p[x].c+=p[rc].c;</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">rotate</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> w)</span></div><div class="line"></span>&#123;</div><div class="line">	<span class="keyword">int</span> f=p[x].f,ff=p[f].f;</div><div class="line">	</div><div class="line">	<span class="keyword">int</span> xson=p[x].son[w];</div><div class="line">	<span class="keyword">if</span>(xson&gt;<span class="number">0</span>) p[xson].f=f;</div><div class="line">	p[f].son[<span class="number">1</span>-w]=xson;</div><div class="line">	</div><div class="line">	     <span class="keyword">if</span>(p[ff].son[<span class="number">0</span>]==f) p[ff].son[<span class="number">0</span>]=x;</div><div class="line">	<span class="keyword">else</span> <span class="keyword">if</span>(p[ff].son[<span class="number">1</span>]==f) p[ff].son[<span class="number">1</span>]=x;</div><div class="line">	p[x].f=ff;</div><div class="line">	</div><div class="line">	p[x].son[w]=f;</div><div class="line">	p[f].f=x;</div><div class="line">	</div><div class="line">	update(f);</div><div class="line">	update(x);</div><div class="line">&#125;</div><div class="line"><span class="keyword">int</span> root;</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">splay</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> rt)</span></div><div class="line"></span>&#123;</div><div class="line">	<span class="keyword">while</span>(p[x].f!=rt)</div><div class="line">	&#123;</div><div class="line">		<span class="keyword">int</span> f=p[x].f,ff=p[f].f;</div><div class="line">		<span class="keyword">if</span>(ff==rt)</div><div class="line">		&#123;</div><div class="line">			     <span class="keyword">if</span>(p[f].son[<span class="number">0</span>]==x) rotate(x,<span class="number">1</span>);</div><div class="line">			<span class="keyword">else</span> <span class="keyword">if</span>(p[f].son[<span class="number">1</span>]==x) rotate(x,<span class="number">0</span>);</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">else</span></div><div class="line">		&#123;</div><div class="line">			     <span class="keyword">if</span>(p[ff].son[<span class="number">0</span>]==f and p[f].son[<span class="number">0</span>]==x) rotate(f,<span class="number">1</span>),rotate(x,<span class="number">1</span>);</div><div class="line">			<span class="keyword">else</span> <span class="keyword">if</span>(p[ff].son[<span class="number">0</span>]==f and p[f].son[<span class="number">1</span>]==x) rotate(x,<span class="number">0</span>),rotate(x,<span class="number">1</span>);</div><div class="line">			<span class="keyword">else</span> <span class="keyword">if</span>(p[ff].son[<span class="number">1</span>]==f and p[f].son[<span class="number">0</span>]==x) rotate(x,<span class="number">1</span>),rotate(x,<span class="number">0</span>);</div><div class="line">			<span class="keyword">else</span> <span class="keyword">if</span>(p[ff].son[<span class="number">1</span>]==f and p[f].son[<span class="number">1</span>]==x) rotate(f,<span class="number">0</span>),rotate(x,<span class="number">0</span>);</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">if</span>(rt==<span class="number">0</span>) root=x;</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">findip</span><span class="params">(<span class="keyword">int</span> d)</span></div><div class="line"></span>&#123;</div><div class="line">	<span class="keyword">int</span> x=root;</div><div class="line">	<span class="keyword">while</span>(p[x].d!=d)</div><div class="line">	&#123;</div><div class="line">		<span class="keyword">if</span>(d&gt;p[x].d)</div><div class="line">		&#123;</div><div class="line">			<span class="keyword">int</span> lc=p[x].son[<span class="number">0</span>];</div><div class="line">			<span class="keyword">if</span>(lc&lt;<span class="number">0</span>) <span class="keyword">return</span> x;</div><div class="line">			x=lc;</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">else</span></div><div class="line">		&#123;</div><div class="line">			<span class="keyword">int</span> rc=p[x].son[<span class="number">1</span>];</div><div class="line">			<span class="keyword">if</span>(rc&lt;<span class="number">0</span>) <span class="keyword">return</span> x;</div><div class="line">			x=rc;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">return</span> x;</div><div class="line">&#125;</div><div class="line"><span class="keyword">int</span> len;</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> f,<span class="keyword">int</span> d)</span></div><div class="line"></span>&#123;</div><div class="line">	len++;p[len].f=f;</div><div class="line">	p[len].son[<span class="number">0</span>]=p[len].son[<span class="number">1</span>]=<span class="number">-1</span>;</div><div class="line">	p[len].c=p[len].n=<span class="number">1</span>;p[len].d=d;</div><div class="line">	<span class="keyword">if</span>(d&gt;p[f].d) p[f].son[<span class="number">0</span>]=len;</div><div class="line">	<span class="keyword">else</span> p[f].son[<span class="number">1</span>]=len;</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">addnum</span><span class="params">(<span class="keyword">int</span> hk,<span class="keyword">int</span> d)</span></div><div class="line"></span>&#123;</div><div class="line">	<span class="keyword">if</span>(root==<span class="number">0</span>)</div><div class="line">	&#123;</div><div class="line">		root=++len;p[len].f=<span class="number">0</span>;</div><div class="line">		p[len].son[<span class="number">0</span>]=p[len].son[<span class="number">1</span>]=<span class="number">-1</span>;</div><div class="line">		p[len].c=p[len].n=<span class="number">1</span>;p[len].d=d;</div><div class="line">		hh[hk]=len;<span class="comment">//</span></div><div class="line">	&#125;</div><div class="line">	<span class="keyword">else</span></div><div class="line">	&#123;</div><div class="line">		<span class="keyword">int</span> x=findip(d);</div><div class="line">		<span class="keyword">if</span>(p[x].d==d)</div><div class="line">		&#123;</div><div class="line">			p[x].n++;</div><div class="line">			update(x);</div><div class="line">			hh[hk]=x;<span class="comment">//</span></div><div class="line">		&#125;</div><div class="line">		<span class="keyword">else</span></div><div class="line">		&#123;</div><div class="line">			add(x,d);</div><div class="line">			update(x);</div><div class="line">			hh[hk]=len;<span class="comment">//</span></div><div class="line">		&#125;</div><div class="line">		splay(x,<span class="number">0</span>);</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">del</span><span class="params">(<span class="keyword">int</span> d)</span></div><div class="line"></span>&#123;</div><div class="line">	<span class="keyword">int</span> x=findip(d);</div><div class="line">	<span class="keyword">if</span>(p[x].n&gt;<span class="number">1</span>)</div><div class="line">	&#123;</div><div class="line">		p[x].n--;</div><div class="line">		update(x);</div><div class="line">		splay(x,<span class="number">0</span>);</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">else</span></div><div class="line">	&#123;</div><div class="line">		splay(x,<span class="number">0</span>);</div><div class="line">		<span class="keyword">if</span>(p[x].son[<span class="number">0</span>]==<span class="number">-1</span> and p[x].son[<span class="number">1</span>]==<span class="number">-1</span>)</div><div class="line">		&#123;</div><div class="line">			len=<span class="number">0</span>;root=<span class="number">0</span>;</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">else</span> <span class="keyword">if</span>(p[x].son[<span class="number">0</span>]&gt;<span class="number">0</span> and p[x].son[<span class="number">1</span>]==<span class="number">-1</span>)</div><div class="line">		&#123;</div><div class="line">			root=p[x].son[<span class="number">0</span>];</div><div class="line">			p[root].f=<span class="number">0</span>;</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">else</span> <span class="keyword">if</span>(p[x].son[<span class="number">0</span>]==<span class="number">-1</span> and p[x].son[<span class="number">1</span>]&gt;<span class="number">0</span>)</div><div class="line">		&#123;</div><div class="line">			root=p[x].son[<span class="number">1</span>];</div><div class="line">			p[root].f=<span class="number">0</span>;</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">else</span></div><div class="line">		&#123;</div><div class="line">			<span class="keyword">int</span> k=p[x].son[<span class="number">0</span>];</div><div class="line">			<span class="keyword">while</span>(p[k].son[<span class="number">1</span>]&gt;<span class="number">0</span>) k=p[k].son[<span class="number">1</span>];</div><div class="line">			p[k].son[<span class="number">1</span>]=p[x].son[<span class="number">1</span>];</div><div class="line">			p[p[x].son[<span class="number">0</span>]].f=<span class="number">0</span>;</div><div class="line">			p[p[x].son[<span class="number">1</span>]].f=k;</div><div class="line">			update(k);splay(k,<span class="number">0</span>);</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"><span class="comment">//**********************************************</span></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">asknum</span><span class="params">(<span class="keyword">int</span> k)</span></div><div class="line"></span>&#123;</div><div class="line">	<span class="keyword">int</span> x=root;</div><div class="line">	<span class="keyword">if</span>(k&gt;p[x].c) <span class="keyword">return</span> <span class="number">-1</span>;</div><div class="line">	<span class="keyword">while</span>(x&gt;<span class="number">0</span>)</div><div class="line">	&#123;</div><div class="line">		<span class="keyword">int</span> lc=p[x].son[<span class="number">0</span>];</div><div class="line">		<span class="keyword">int</span> lcc=lc&gt;<span class="number">0</span>?p[lc].c:<span class="number">0</span>;</div><div class="line">		<span class="keyword">if</span>(k&lt;=lcc) x=lc;</div><div class="line">		<span class="keyword">else</span> <span class="keyword">if</span>(k&gt;lcc+p[x].n) k-=lcc+p[x].n,x=p[x].son[<span class="number">1</span>];</div><div class="line">		<span class="keyword">else</span></div><div class="line">		&#123;</div><div class="line">			splay(x,<span class="number">0</span>);</div><div class="line">			<span class="keyword">return</span> p[x].d;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">return</span> <span class="number">-2</span>;</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">solve1</span><span class="params">(<span class="keyword">int</span> k,<span class="keyword">int</span> a)</span><span class="comment">//-</span></div><div class="line"></span>&#123;</div><div class="line">	<span class="keyword">int</span> d=p[ hh[k] ].d;</div><div class="line">	del(d);</div><div class="line">	<span class="keyword">if</span>(d-a&gt;<span class="number">0</span>) addnum(k,d-a);</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">solve2</span><span class="params">(<span class="keyword">int</span> k,<span class="keyword">int</span> a)</span><span class="comment">//+</span></div><div class="line"></span>&#123;</div><div class="line">	<span class="keyword">int</span> d=p[ hh[k] ].d;</div><div class="line">	del(d);</div><div class="line">	addnum(k,d+a);</div><div class="line">&#125;</div><div class="line"><span class="comment">//**********************************************</span></div><div class="line"><span class="keyword">char</span> s[<span class="number">10</span>];</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></div><div class="line"></span>&#123;</div><div class="line">	len=<span class="number">0</span>;root=<span class="number">0</span>;</div><div class="line">	<span class="keyword">int</span> n;<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;n);</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</div><div class="line">	&#123;</div><div class="line">		<span class="keyword">int</span> t;</div><div class="line">		<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;t);</div><div class="line">		addnum(i,t);</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">int</span> m;<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;m);</div><div class="line">	<span class="keyword">while</span>(m--)</div><div class="line">	&#123;</div><div class="line">		<span class="keyword">int</span> a;<span class="built_in">scanf</span>(<span class="string">"%s%d"</span>,s,&amp;a);</div><div class="line">		<span class="keyword">if</span>(s[<span class="number">0</span>]==<span class="string">'Q'</span>) <span class="built_in">printf</span>(<span class="string">"%d\n"</span>,asknum(a));</div><div class="line">		<span class="keyword">else</span></div><div class="line">		&#123;</div><div class="line">			<span class="keyword">int</span> b;<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;b);</div><div class="line">			<span class="keyword">if</span>(s[<span class="number">0</span>]==<span class="string">'A'</span>) solve1(a,b);</div><div class="line">			<span class="keyword">else</span> solve2(a,b);</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	<span class="built_in">printf</span>(<span class="string">"%d"</span>,p[root].c);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
       
     </div>
+
+    
+    
+    
+
+    
+      <div class="post-tags">
+        
+          <a href="/tags/难度5/" rel="tag"># 难度5</a>
+        
+          <a href="/tags/伸展树/" rel="tag"># 伸展树</a>
+        
+      </div>
+    
 
     
       
@@ -565,31 +579,27 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/2018-03/Two_Sequences.html" rel="bookmark">【ARC092-D】Two Sequences</a></div>
-      
-    </li>
-  
-    <li class="popular-posts-item">
-      
-      
-      <div class="popular-posts-title"><a href="/2017-11/GCD-莫比乌斯2.html" rel="bookmark">【Bzoj2818】GCD-莫比乌斯2</a></div>
-      
-    </li>
-  
-    <li class="popular-posts-item">
-      
-      
       <div class="popular-posts-title"><a href="/2017-11/Problem_b.html" rel="bookmark">【Bzoj2301】【Luogu2522】Problem_b</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="/2017-11/GCD-莫比乌斯1.html" rel="bookmark">【Hdu1695】GCD(莫比乌斯1)</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="/2017-11/仪仗队.html" rel="bookmark">【Bzoj2190】仪仗队</a></div>
       
     </li>
   
   </ul>
 
 
-    
-
-    
-    
     
 
 	
@@ -601,6 +611,10 @@
 				</span>
 				</p>
 		</div>
+    
+
+    
+    
     
 
     
@@ -635,16 +649,23 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/难度5/" rel="tag"># 难度5</a>
-          
-            <a href="/tags/伸展树/" rel="tag"># 伸展树</a>
-          
-        </div>
-      
 
       
+      
+        <div class="post-widgets">
+        
+
+        
+
+        
+          
+          <div id="needsharebutton-postbottom">
+            <span class="btn">
+              <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </span>
+          </div>
+        
+        </div>
       
       
 
@@ -745,7 +766,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">310</span>
+                    <span class="site-state-item-count">311</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -1017,6 +1038,20 @@
 
           
 
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/Zory123" target="_blank" title="GitHub" rel="external nofollow"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="mailto:1134430323@qq.com" target="_blank" title="E-Mail" rel="external nofollow"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  
+                </span>
+              
+            </div>
           
 
           
@@ -1742,8 +1777,34 @@
 
   
   
+  
+  <script src="/lib/needsharebutton/needsharebutton.js"></script>
+
+  <script>
+    
+      pbOptions = {};
+      
+          pbOptions.iconStyle = "box";
+      
+          pbOptions.boxForm = "vertical";
+      
+          pbOptions.position = "bottomCenter";
+      
+          pbOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook,GooglePlus,Evernote,Vkontakte";
+      
+      new needShareButton('#needsharebutton-postbottom', pbOptions);
+    
+    
+  </script>
 
   
+
+  
+  
+  
+  <script src="/lib/pangu/dist/pangu.min.js?v=3.3"></script>
+  <script type="text/javascript">pangu.spacingPage();</script>
+
 
   
   <script type="text/javascript" src="/js/src/js.cookie.js?v=6.3.0"></script>
@@ -1753,8 +1814,86 @@
   
 
   
+  
+  
+  <script src="/lib/bookmark/bookmark.min.js?v=1.0"></script>
+  <script type="text/javascript">
+  
+    bookmark.scrollToMark('auto', "#more");
+  
+  </script>
+
 
   
+  <style>
+    .copy-btn {
+      display: inline-block;
+      padding: 6px 12px;
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 20px;
+      color: #333;
+      white-space: nowrap;
+      vertical-align: middle;
+      cursor: pointer;
+      background-color: #eee;
+      background-image: linear-gradient(#fcfcfc, #eee);
+      border: 1px solid #d5d5d5;
+      border-radius: 3px;
+      user-select: none;
+      outline: 0;
+    }
+
+    .highlight-wrap .copy-btn {
+      transition: opacity .3s ease-in-out;
+      opacity: 0;
+      padding: 2px 6px;
+      position: absolute;
+      right: 4px;
+      top: 8px;
+    }
+
+    .highlight-wrap:hover .copy-btn,
+    .highlight-wrap .copy-btn:focus {
+      opacity: 1
+    }
+
+    .highlight-wrap {
+      position: relative;
+    }
+  </style>
+  <script>
+    $('.highlight').each(function (i, e) {
+      var $wrap = $('<div>').addClass('highlight-wrap')
+      $(e).after($wrap)
+      $wrap.append($('<button>').addClass('copy-btn').append('Copy').on('click', function (e) {
+        var code = $(this).parent().find('.code').find('.line').map(function (i, e) {
+          return $(e).text()
+        }).toArray().join('\n')
+        var ta = document.createElement('textarea')
+        document.body.appendChild(ta)
+        ta.style.position = 'absolute'
+        ta.style.top = '0px'
+        ta.style.left = '0px'
+        ta.value = code
+        ta.select()
+        ta.focus()
+        var result = document.execCommand('copy')
+        document.body.removeChild(ta)
+        
+          if(result)$(this).text('Copied')
+          else $(this).text('Copy failed')
+        
+        $(this).blur()
+      })).on('mouseleave', function (e) {
+        var $b = $(this).find('.copy-btn')
+        setTimeout(function () {
+          $b.text('Copy')
+        }, 300)
+      }).append(e)
+    })
+  </script>
+
 
 </body>
 </html>

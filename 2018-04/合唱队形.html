@@ -135,7 +135,7 @@
 <meta property="og:site_name" content="Zory的个人博客">
 <meta property="og:description" content="Source and JudgeNOIP2004 提高组 T3Luogu1091Caioj1518">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-07-01T11:08:52.000Z">
+<meta property="og:updated_time" content="2018-07-09T01:31:34.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【Luogu1091】合唱队形">
 <meta name="twitter:description" content="Source and JudgeNOIP2004 提高组 T3Luogu1091Caioj1518">
@@ -263,7 +263,7 @@
           
           <li class="menu-item menu-item-archives">
     <a href="/archives/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />历程Archives<span class="badge">311</span></a>
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />历程Archives<span class="badge">312</span></a>
   </li>
         
         
@@ -460,7 +460,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改于：2018-07-01 19:08:52" itemprop="dateModified" datetime="2018-07-01T19:08:52+08:00">2018-07-01</time>
+                <time title="修改于：2018-07-09 09:31:34" itemprop="dateModified" datetime="2018-07-09T09:31:34+08:00">2018-07-09</time>
               
             
           </span>
@@ -537,11 +537,11 @@
 <h2 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h2><p id="div-border-top-green"><strong>【Brief description】</strong><br>N位同学站成一排，音乐老师要请其中的(N-K)位同学出列，使得剩下的K位同学排成合唱队形。<br>剩下的k个同学，要求顺序不变的情况下，身高从低到高再到低。<br>已知所有N位同学的身高，计算最少需要几位同学出列。<br><strong>【Input】</strong><br>第一行是一个整数N，表示同学的总数。<br>第一行有n个整数，用空格分隔，第i个整数Ti是第i位同学的身高(厘米)。<br><strong>【Output】</strong><br>一个整数，就是最少需要几位同学出列<br><strong>【Limited conditions】</strong><br>2&lt;=N&lt;=100<br>130&lt;=Ti&lt;=230<br><strong>【Sample input】</strong><br>8<br>186 186 150 200 160 130 197 220<br><strong>【Sample output】</strong><br>4<br><strong>【Sample explanation】</strong><br>无<br></p>
 
 <h2 id="Record"><a href="#Record" class="headerlink" title="Record"></a>Record</h2><p>20min</p>
-<h2 id="Analysis"><a href="#Analysis" class="headerlink" title="Analysis"></a>Analysis</h2><div><div class="fold_hider"><div class="close hider_title">请先思考</div></div><div class="fold">
+<h2 id="Analysis"><a href="#Analysis" class="headerlink" title="Analysis"></a>Analysis</h2><div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
 <p>相当于求最长上升子序列和最长下降子序列</p>
 
 </div></div>
-<h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><div><div class="fold_hider"><div class="close hider_title">请先思考</div></div><div class="fold">
+<h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//Zory-2018</span></div><div class="line"><span class="comment">//****************头文件****************</span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cmath&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;queue&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;vector&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;set&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;map&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">ifdef</span> WIN32</span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> BIGN <span class="meta-string">"%I64d"</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">else</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> BIGN <span class="meta-string">"%lld"</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">mymax</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span> </span>&#123;<span class="keyword">return</span> x&gt;y?x:y;&#125;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">mymin</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span> </span>&#123;<span class="keyword">return</span> x&lt;y?x:y;&#125;</div><div class="line"><span class="comment">//****************全局常量****************</span></div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> MAXN=<span class="number">310</span>,MAXM=<span class="number">91000</span>;</div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> INF=<span class="number">0x3f3f3f3f</span>;</div><div class="line"><span class="comment">//****************全局定义****************</span></div><div class="line"><span class="keyword">int</span> a[<span class="number">110</span>];</div><div class="line"><span class="keyword">int</span> f1[<span class="number">110</span>],f2[<span class="number">110</span>];</div><div class="line"><span class="comment">//****************实现****************</span></div><div class="line"></div><div class="line"><span class="comment">//****************主函数****************</span></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></div><div class="line"></span>&#123;</div><div class="line">	<span class="keyword">int</span> n;<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;n);</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;a[i]);</div><div class="line">	</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</div><div class="line">	&#123;</div><div class="line">		f1[i]=<span class="number">1</span>;</div><div class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=i<span class="number">-1</span>;j++) <span class="keyword">if</span>(a[j]&lt;a[i]) f1[i]=mymax(f1[i],f1[j]+<span class="number">1</span>);</div><div class="line">	&#125;</div><div class="line">		</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=n;i&gt;=<span class="number">1</span>;i--)</div><div class="line">	&#123;</div><div class="line">		f2[i]=<span class="number">1</span>;</div><div class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> j=n;j&gt;=i+<span class="number">1</span>;j--) <span class="keyword">if</span>(a[i]&gt;a[j]) f2[i]=mymax(f2[i],f2[j]+<span class="number">1</span>);</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="keyword">int</span> ans=<span class="number">0</span>;</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) ans=mymax(ans,f1[i]+f2[i]<span class="number">-1</span>);</div><div class="line">	<span class="built_in">printf</span>(<span class="string">"%d"</span>,n-ans);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
 </div></div>
@@ -689,8 +689,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018-04/等价表达式.html" rel="prev" title="【Luogu1054】等价表达式">
-                【Luogu1054】等价表达式 <i class="fa fa-chevron-right"></i>
+              <a href="/2018-04/虫食算.html" rel="prev" title="【Luogu1092】虫食算">
+                【Luogu1092】虫食算 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -772,7 +772,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">311</span>
+                    <span class="site-state-item-count">312</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>

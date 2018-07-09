@@ -137,7 +137,7 @@
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://loj.ac/problem/2318/testdata/download/tmp1.png">
 <meta property="og:image" content="https://loj.ac/problem/2318/testdata/download/tmp2.png">
-<meta property="og:updated_time" content="2018-07-01T11:09:04.000Z">
+<meta property="og:updated_time" content="2018-07-09T01:31:36.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【NOIP17 D2T1】宝藏">
 <meta name="twitter:description" content="Source and JudgeNOIP2017 提高组 D2T1Loj2318Luogu3959">
@@ -266,7 +266,7 @@
           
           <li class="menu-item menu-item-archives">
     <a href="/archives/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />历程Archives<span class="badge">311</span></a>
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />历程Archives<span class="badge">312</span></a>
   </li>
         
         
@@ -463,7 +463,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改于：2018-07-01 19:09:04" itemprop="dateModified" datetime="2018-07-01T19:09:04+08:00">2018-07-01</time>
+                <time title="修改于：2018-07-09 09:31:36" itemprop="dateModified" datetime="2018-07-09T09:31:36+08:00">2018-07-09</time>
               
             
           </span>
@@ -539,12 +539,12 @@
 <h2 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h2><p id="div-border-top-blue"><strong>【Description】</strong><br>参与考古挖掘的小明得到了一份藏宝图，藏宝图上标出了 nnn 个深埋在地下的宝藏屋，也给出了这 n 个宝藏屋之间可供开发的 m 条道路和它们的长度。<br><br>小明决心亲自前往挖掘所有宝藏屋中的宝藏。但是，每个宝藏屋距离地面都很远，也就是说，从地面打通一条到某个宝藏屋的道路是很困难的，而开发宝藏屋之间的道路则相对容易很多。<br><br>小明的决心感动了考古挖掘的赞助商， 赞助商决定免费赞助他打通一条从地面到某个宝藏屋的通道，通往哪个宝藏屋则由小明来决定。<br><br>在此基础上， 小明还需要考虑如何开凿宝藏屋之间的道路。已经开凿出的道路可以任意通行不消耗代价。每开凿出一条新道路，小明就会与考古队一起挖掘出由该条道路所能到达的宝藏屋的宝藏。另外，小明不想开发无用道路，即两个已经被挖掘过的宝藏屋之间的道路无需再开发。<br><br>新开发一条道路的代价是：<br><br>这条道路的长度 ×从赞助商帮你打通的宝藏屋到这条道路起点的宝藏屋所经过的宝藏屋的数量<br>（包括赞助商帮你打通的宝藏屋和这条道路起点的宝藏屋）。<br><br>请你编写程序为小明选定由赞助商打通的宝藏屋和之后开凿的道路，使得工程总代价最小，并输出这个最小值。<br><strong>【Input】</strong><br>第一行两个用空格分离的正整数 n 和 m，代表宝藏屋的个数和道路数。<br><br>接下来 m 行，每行三个用空格分离的正整数，分别是由一条道路连接的两个宝藏屋的编号（编号为 1~n），和这条道路的长度 v。<br><strong>【Output】</strong><br>输出共一行，一个正整数，表示最小的总代价。<br><strong>【Limited conditions】</strong><br>1≤n≤12，0≤m≤1000，v≤500000。<br><strong>【Sample input 1】</strong><br>4 5<br>1 2 1<br>1 3 3<br>1 4 1<br>2 3 4<br>3 4 1<br><strong>【Sample output 1】</strong><br>4<br><strong>【Sample input 2】</strong><br>4 5<br>1 2 1<br>1 3 3<br>1 4 1<br>2 3 4<br>3 4 2<br><strong>【Sample output 2】</strong><br>5<br><strong>【Sample explanation】</strong><br><img src="https://loj.ac/problem/2318/testdata/download/tmp1.png" alt=""><br><img src="https://loj.ac/problem/2318/testdata/download/tmp2.png" alt=""><br></p>
 
 <h2 id="Record"><a href="#Record" class="headerlink" title="Record"></a>Record</h2><p>1h</p>
-<h2 id="Analysis"><a href="#Analysis" class="headerlink" title="Analysis"></a>Analysis</h2><div><div class="fold_hider"><div class="close hider_title">请先思考</div></div><div class="fold">
+<h2 id="Analysis"><a href="#Analysis" class="headerlink" title="Analysis"></a>Analysis</h2><div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
 <p>比赛后故事详见：<a href="../2017-11/NOIP2017游记.html">这里</a><br>这是错误数据：<br>5 5<br>1 2 500000<br>2 3 10<br>2 4 100<br>3 4 1<br>4 5 10000<br>教训：在贪心前仔细思考，贪心后对拍</p>
 <p>留坑……</p>
 
 </div></div>
-<h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><div><div class="fold_hider"><div class="close hider_title">请先思考</div></div><div class="fold">
+<h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div></pre></td></tr></table></figure>
 
 </div></div>
@@ -602,7 +602,7 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/2018-04/Diverging_Directions.html" rel="bookmark">【CF838-B】Diverging Directions</a></div>
+      <div class="popular-posts-title"><a href="/2018-03/关系运算图.html" rel="bookmark">【Vijos1094】关系运算图</a></div>
       
     </li>
   
@@ -775,7 +775,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">311</span>
+                    <span class="site-state-item-count">312</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>

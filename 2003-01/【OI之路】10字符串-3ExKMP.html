@@ -139,7 +139,8 @@
 <meta property="og:image" content="http://zory.cf/images/OI之路/KMP/4.png">
 <meta property="og:image" content="http://zory.cf/images/OI之路/KMP/5.png">
 <meta property="og:image" content="http://zory.cf/images/OI之路/KMP/6.png">
-<meta property="og:updated_time" content="2018-07-01T11:09:02.000Z">
+<meta property="og:image" content="http://zory.cf/images/OI之路/KMP/10.png">
+<meta property="og:updated_time" content="2018-07-09T07:40:24.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【OI之路】10字符串-3ExKMP算法">
 <meta name="twitter:description" content="一句精辟的话：字符串相关算法就是用来偷懒的 ——scy更详细地解释：Manacher、莫队、fft、后缀数组、exkmp等各种算法，本质上都是尽量地利用子信息、残留信息本文思路和图片大致来自于师兄cys大佬的论文本文会用相同颜色分别表示图片中某段的相等性">
@@ -268,7 +269,7 @@
           
           <li class="menu-item menu-item-archives">
     <a href="/archives/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />历程Archives<span class="badge">311</span></a>
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />历程Archives<span class="badge">312</span></a>
   </li>
         
         
@@ -465,7 +466,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改于：2018-07-01 19:09:02" itemprop="dateModified" datetime="2018-07-01T19:09:02+08:00">2018-07-01</time>
+                <time title="修改于：2018-07-09 15:40:24" itemprop="dateModified" datetime="2018-07-09T15:40:24+08:00">2018-07-09</time>
               
             
           </span>
@@ -540,16 +541,17 @@
         <p><strong>一句精辟的话：字符串相关算法就是用来偷懒的 ——scy</strong><br>更详细地解释：Manacher、莫队、fft、后缀数组、exkmp等各种算法，本质上都是尽量地利用子信息、残留信息<br>本文思路和图片大致来自于师兄cys大佬的论文<br>本文会用相同颜色分别表示图片中某段的相等性<br><a id="more"></a></p>
 <h2 id="一、定义"><a href="#一、定义" class="headerlink" title="一、定义"></a>一、定义</h2><p>KMP：$str(1,nxt[i])=str(i-nxt[i]+1,i)$<br>exKMP：$str(1,ext[i])=str(i,i+ext[i]-1)$<br>然后接下来的过程中，思路和manacher是非常类似的，各种分类讨论继承</p>
 <h2 id="二、求ext数组"><a href="#二、求ext数组" class="headerlink" title="二、求ext数组"></a>二、求ext数组</h2><p>$ext[1]=lenb$（显而易见）<br>因为ext[1]这个是具有一定性，所以我们基本把这东西废掉……<br>那么我们就直接从ext[2]开始求。</p>
-<p>A. <span id="big2">k表示在当前搜索过的范围以内,rx=k+ext[k]-1最远</span>（与manacher很像）<br>故<span id="purple2">st(1,ext[k])=st(k,rx)</span><br>因为$rx=k+ext[k]-1$，又得：$ext[k]=rx-k+1$<br>代换变成：<span id="purple2">st(1,rx-k+1)=st(k,rx)</span><br>因为现在要求ext[i]，截取<span id="green2">st(i-k+1,rx-k+1)=st(i,rx)</span><br><img src="../images/OI之路/KMP/3.png" alt=""></p>
-<p>B. 设$L=ext[i-k+1]$，又得：<span id="blue2">str(1,L)=st(i-k+1,i-k+L)</span><br><img src="../images/OI之路/KMP/4.png" alt=""><br>接下来尝试合并。因为L的不定性，需要考虑$i-k+L$和$p-k+1$的大小</p>
-<p><span id="big2">（1）i-k+L&lt;rx-k+1</span><br>因为<span id="blue2">st(1,L)=st(i-k+1,i-k+L)</span>，<span id="green2">st(i-k+1,rx-k+1)=st(i,rx)</span><br>所以在<span id="green2">st(i,rx)</span>中<span id="blue2">st(i,i+L-1)=st(1,L)</span><br><img src="../images/OI之路/KMP/5.png" alt=""><br>因为<span id="green2">st(i-k+1,rx-k+1)=st(i,rx)</span>，得：<br><span id="yellow22">st[i-k+L+1]=st[i+L]</span><br>而因为<span id="blue2">ext[i-k+1]</span>的定义，所以<span id="brown2">st[L+1]</span>!=<span id="yellow2">st[i-k+L+1]</span>，<br>得：<span id="yellow2">st[i+L]</span>!=<span id="brown2">st[L+1]</span>，那么$ext[i]=L$<br>小总结：主要利用【$i-k+L+1$已经扫描过】</p>
-<p><span id="big2">（2）i-k+L&gt;=rx-k+1</span><br><img src="../images/OI之路/KMP/6.png" alt=""><br><span id="blue2">st(1,L)=st(i-k+1,i-k+L)</span><br>所以<span id="green2">st(1,rx-i+1)=st(i-k+1,rx-k+1)</span><br>因为ext[k]的意义，所以<span id="yellow2">st[rx+1]</span>!=<span id="brown2">st[rx-k+2]</span><br>又有可能st[rx-i+2]!=st[rx-k+2]（与rx-i+1与L的大小关系有关），那么就会得到：st[rx-i+2]!=<span id="yellow2">st[rx+1]</span>，所以$ext[i]\geq rx-i+1\geq ext[i-k+1]$</p>
+<p>A. <span id="big2">k表示在当前搜索过的范围以内,rx=k+ext[k]-1最远</span>（与manacher很像）<br>故<span id="purple2">str(1,ext[k])=str(k,rx)</span><br>因为$rx=k+ext[k]-1$，又得：$ext[k]=rx-k+1$<br>代换变成：<span id="purple2">str(1,rx-k+1)=str(k,rx)</span><br>因为现在要求ext[i]，截取<span id="green2">str(i-k+1,rx-k+1)=str(i,rx)</span><br><img src="../images/OI之路/KMP/3.png" alt=""></p>
+<p>B. 设$L=ext[i-k+1]$，又得：<span id="blue2">str(1,L)=str(i-k+1,i-k+L)</span><br><img src="../images/OI之路/KMP/4.png" alt=""><br>接下来尝试合并。因为L的不定性，需要考虑$i-k+L$和$rx-k+1$的大小</p>
+<p><span id="big2">（1）i-k+L&lt;rx-k+1</span><br>因为<span id="blue2">str(1,L)=str(i-k+1,i-k+L)</span>，<span id="green2">str(i-k+1,rx-k+1)=str(i,rx)</span><br>所以在<span id="green2">str(i,rx)</span>中<span id="blue2">str(i,i+L-1)=str(1,L)</span><br><img src="../images/OI之路/KMP/5.png" alt=""><br>因为<span id="green2">str(i-k+1,rx-k+1)=str(i,rx)</span>，得：<br><span id="yellow22">str[i-k+L+1]=str[i+L]</span><br>而因为<span id="blue2">ext[i-k+1]</span>的定义，所以<span id="brown2">str[L+1]</span>!=<span id="yellow2">str[i-k+L+1]</span>，<br>得：<span id="yellow2">str[i+L]</span>!=<span id="brown2">str[L+1]</span>，那么$ext[i]=L$<br>小总结：主要利用【$i-k+L+1$已经扫描过】</p>
+<p><span id="big2">（2）i-k+L&gt;=rx-k+1</span><br><img src="../images/OI之路/KMP/6.png" alt=""><br><span id="blue2">str(1,L)=str(i-k+1,i-k+L)</span><br>所以<span id="green2">str(1,rx-i+1)=str(i-k+1,rx-k+1)</span><br>因为ext[k]的意义，所以<span id="yellow2">str[rx+1]</span>!=<span id="brown2">str[rx-k+2]</span><br>又有可能str[rx-i+2]!=str[rx-k+2]（与rx-i+1与L的大小关系有关），那么就会得到：str[rx-i+2]!=<span id="yellow2">str[rx+1]</span>，所以$ext[i]\geq rx-i+1\geq ext[i-k+1]$</p>
 <p>总结：<br>当$i-k+L&lt;rx-k+1$，$ext[i]=L$<br>当$i-k+L\geq rx-k+1$，$ext[i]\geq ext[i-k+1]$</p>
 <h2 id="三、用ext数组"><a href="#三、用ext数组" class="headerlink" title="三、用ext数组"></a>三、用ext数组</h2><p>好啦我们要开始匹配A串（母串）和B串了<br>定义ex数组，$B(1,ex[i])=A(i,i+ex[i]-1)$<br>即A中每个后缀与B的最长公共前缀长度<br>某种理解：<br>将i-k+1看作i的对应点，将串B和串A放在同一条线上，<br>前面用ext，后面用ex，则L为ext[i的对应点]</p>
 <h2 id="四、总结"><a href="#四、总结" class="headerlink" title="四、总结"></a>四、总结</h2><p>让我们再次对比一下kmp与exkmp<br>KMP：$str(1,nxt[i])=str(i-nxt[i]+1,i)$<br>exKMP：$str(1,ext[i])=str(i,i+ext[i]-1)$<br>对于kmp，当i向后时，利用前面的信息是非常简单的，一个比较即可；<br>而对于exkmp，前后的i之间并没有较紧密的联系，需要较复杂地分情况讨论</p>
 <p>那么这个“牺牲”为我们带来了什么呢？<br>如ex一样的字符串局部信息，并且能够有从i开始的信息。</p>
 <h2 id="五、例题"><a href="#五、例题" class="headerlink" title="五、例题"></a>五、例题</h2><p><a href="../2018-04/最长共同前缀长度.html">最长共同前缀长度</a><br><a href="../2018-04/回文串.html">回文串</a><br><a href="../2018-04/字符串的相似度.html">字符串的相似度</a></p>
 <h2 id="六、练习题"><a href="#六、练习题" class="headerlink" title="六、练习题"></a>六、练习题</h2><p><a href="../tags/exkmp/">Tag-exkmp</a></p>
+<h2 id="七、一张图快速复习exkmp"><a href="#七、一张图快速复习exkmp" class="headerlink" title="七、一张图快速复习exkmp"></a>七、一张图快速复习exkmp</h2><p><img src="../images/OI之路/KMP/10.png" alt=""></p>
 
       
     </div>
@@ -736,7 +738,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">311</span>
+                    <span class="site-state-item-count">312</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -1074,7 +1076,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、定义"><span class="nav-text">一、定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、求ext数组"><span class="nav-text">二、求ext数组</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、用ext数组"><span class="nav-text">三、用ext数组</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#四、总结"><span class="nav-text">四、总结</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#五、例题"><span class="nav-text">五、例题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#六、练习题"><span class="nav-text">六、练习题</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、定义"><span class="nav-text">一、定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、求ext数组"><span class="nav-text">二、求ext数组</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、用ext数组"><span class="nav-text">三、用ext数组</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#四、总结"><span class="nav-text">四、总结</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#五、例题"><span class="nav-text">五、例题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#六、练习题"><span class="nav-text">六、练习题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#七、一张图快速复习exkmp"><span class="nav-text">七、一张图快速复习exkmp</span></a></li></ol></div>
             
 
           </div>

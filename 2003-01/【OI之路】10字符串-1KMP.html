@@ -138,7 +138,10 @@
 <meta property="og:image" content="http://zory.cf/images/OI之路/KMP/0.png">
 <meta property="og:image" content="http://zory.cf/images/OI之路/KMP/1.png">
 <meta property="og:image" content="http://zory.cf/images/OI之路/KMP/2.png">
-<meta property="og:updated_time" content="2018-07-04T08:38:14.000Z">
+<meta property="og:image" content="http://zory.cf/images/OI之路/KMP/7.png">
+<meta property="og:image" content="http://zory.cf/images/OI之路/KMP/8.png">
+<meta property="og:image" content="http://zory.cf/images/OI之路/KMP/9.png">
+<meta property="og:updated_time" content="2018-07-08T08:43:26.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【OI之路】10字符串-1KMP">
 <meta name="twitter:description" content="一句精辟的话：字符串相关算法就是用来偷懒的——scy更详细地解释：Manacher、莫队、fft、后缀数组、exkmp等各种算法，本质上都是尽量地利用子信息、残留信息">
@@ -233,7 +236,7 @@
     </div>
     
       
-        <h1 class="site-subtitle" itemprop="description">人生即使没有最短路，也是连通图</h1>
+        <h1 class="site-subtitle" itemprop="description">人生即使不是最短路，但必是连通图</h1>
       
     
   </div>
@@ -409,7 +412,7 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Zory">
-      <meta itemprop="description" content="人生即使没有最短路，也是连通图">
+      <meta itemprop="description" content="人生即使不是最短路，但必是连通图">
       <meta itemprop="image" content="/images/avatar.png">
     </span>
 
@@ -464,7 +467,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改于：2018-07-04 16:38:14" itemprop="dateModified" datetime="2018-07-04T16:38:14+08:00">2018-07-04</time>
+                <time title="修改于：2018-07-08 16:43:26" itemprop="dateModified" datetime="2018-07-08T16:43:26+08:00">2018-07-08</time>
               
             
           </span>
@@ -715,7 +718,14 @@
 <h2 id="七、代码"><a href="#七、代码" class="headerlink" title="七、代码"></a>七、代码</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//*******************定义*******************</span></div><div class="line"><span class="keyword">int</span> p[<span class="number">11100</span>],lenb;<span class="keyword">char</span> b[<span class="number">11000</span>];</div><div class="line"><span class="comment">//*******************实现*******************</span></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">calcb</span><span class="params">(<span class="keyword">void</span>)</span></div><div class="line"></span>&#123;</div><div class="line">    lenb=<span class="built_in">strlen</span>(b+<span class="number">1</span>);</div><div class="line">    <span class="keyword">int</span> j=<span class="number">0</span>;p[<span class="number">1</span>]=<span class="number">0</span>;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">2</span>;i&lt;=lenb;i++)</div><div class="line">    &#123;</div><div class="line">        <span class="keyword">while</span>(j&gt;<span class="number">0</span> and b[j+<span class="number">1</span>!=b[i]]) j=p[j];</div><div class="line">        <span class="keyword">if</span>(b[i]==b[j+<span class="number">1</span>]) p[i]=++j;</div><div class="line">        <span class="keyword">else</span> p[i]=<span class="number">0</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">KMP</span><span class="params">(<span class="keyword">char</span> a[])</span></div><div class="line"></span>&#123;</div><div class="line">    <span class="keyword">int</span> lena=<span class="built_in">strlen</span>(a+<span class="number">1</span>);</div><div class="line">    <span class="keyword">int</span> j=<span class="number">0</span>;<span class="keyword">int</span> ans=<span class="number">0</span>;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=lena;i++)</div><div class="line">    &#123;</div><div class="line">        <span class="keyword">while</span>(j&gt;<span class="number">0</span> and a[i]!=b[j+<span class="number">1</span>]) j=p[j];</div><div class="line">        <span class="keyword">if</span>(a[i]==b[j+<span class="number">1</span>]) j++;</div><div class="line">        <span class="keyword">if</span>(j==lenb) ans++,j=<span class="number">0</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> ans;</div><div class="line">&#125;</div><div class="line"><span class="comment">//*******************主函数*******************</span></div><div class="line"><span class="keyword">char</span> a[<span class="number">11000</span>];</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> *argv[])</span></div><div class="line"></span>&#123;</div><div class="line">    <span class="keyword">int</span> n;<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;n);</div><div class="line">    <span class="keyword">while</span>(n--)</div><div class="line">    &#123;</div><div class="line">        <span class="built_in">scanf</span>(<span class="string">"%s"</span>,b+<span class="number">1</span>);</div><div class="line">        calcb();</div><div class="line">        <span class="built_in">scanf</span>(<span class="string">"%s"</span>,a+<span class="number">1</span>);</div><div class="line">        <span class="built_in">printf</span>(<span class="string">"%d\n"</span>,KMP(a));</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p><strong>检验数据：</strong><br><strong>Input</strong><br>alkdfj<br>haljhdgelqigljafiehiqhroug<br>sgs<br>sgsgijosgsjeswsgjjiigj</p>
 <p><strong>Output</strong><br>0<br>2</p>
-<h2 id="八、练习"><a href="#八、练习" class="headerlink" title="八、练习"></a>八、练习</h2><p>嗯暂时没发现有难度的练习题</p>
+<h2 id="八、练习"><a href="#八、练习" class="headerlink" title="八、练习"></a>八、练习</h2><p><a href="../2018-04/陶陶的名字.html">陶陶的名字</a><br>（可以重叠的最小覆盖）</p>
+<h2 id="九、kmp与最小覆盖"><a href="#九、kmp与最小覆盖" class="headerlink" title="九、kmp与最小覆盖"></a>九、kmp与最小覆盖</h2><p>参考文献：<a href="https://blog.csdn.net/fjsd155/article/details/6866991" target="_blank" rel="noopener">FarmerJohn</a></p>
+<p>定义：<br>对于一个字符串，一个长度最小的满足<br>【复制自己多次（不重叠，与陶陶的名字不同）后可以覆盖原串】的子串</p>
+<p>结论：<br>长度=n-next[n]</p>
+<p>证明：<br>先证明它是覆盖子串<br>①next[n]&lt;=n-next[n]<br><img src="../images/OI之路/KMP/7.png" alt=""><br>显而易见覆盖</p>
+<p>②next[n]&gt;n-next[n]<br><img src="../images/OI之路/KMP/8.png" alt=""></p>
+<p>然后它也是最小的<br>这里用反证法，假设存在一个比n-next[n]更小的T，然后截取掉<br><img src="../images/OI之路/KMP/9.png" alt=""><br>这样的话，黄色部分比next[n]更长，不满足next[n]是最长这个定义</p>
+<p>Q.E.D.</p>
 
       
     </div>
@@ -936,7 +946,7 @@
                 alt="Zory" />
             
               <p class="site-author-name" itemprop="name">Zory</p>
-              <p class="site-description motion-element" itemprop="description">人生即使没有最短路，也是连通图</p>
+              <p class="site-description motion-element" itemprop="description">人生即使不是最短路，但必是连通图</p>
           </div>
 
           
@@ -1284,7 +1294,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、说在正文前的小声明"><span class="nav-text">一、说在正文前的小声明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、定义"><span class="nav-text">二、定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、利用Next数组求解KMP"><span class="nav-text">三、利用Next数组求解KMP</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、Next数组"><span class="nav-text">三、Next数组</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#四、Next的角度1"><span class="nav-text">四、Next的角度1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#五、Next的角度2"><span class="nav-text">五、Next的角度2</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#六、Next的角度3"><span class="nav-text">六、Next的角度3</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#七、代码"><span class="nav-text">七、代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#八、练习"><span class="nav-text">八、练习</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、说在正文前的小声明"><span class="nav-text">一、说在正文前的小声明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、定义"><span class="nav-text">二、定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、利用Next数组求解KMP"><span class="nav-text">三、利用Next数组求解KMP</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、Next数组"><span class="nav-text">三、Next数组</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#四、Next的角度1"><span class="nav-text">四、Next的角度1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#五、Next的角度2"><span class="nav-text">五、Next的角度2</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#六、Next的角度3"><span class="nav-text">六、Next的角度3</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#七、代码"><span class="nav-text">七、代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#八、练习"><span class="nav-text">八、练习</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#九、kmp与最小覆盖"><span class="nav-text">九、kmp与最小覆盖</span></a></li></ol></div>
             
 
           </div>

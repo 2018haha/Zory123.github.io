@@ -103,8 +103,8 @@
         <category>刷题</category>
       </categories>
       <tags>
-        <tag>难度4</tag>
         <tag>最短路</tag>
+        <tag>难度4</tag>
         <tag>拓扑</tag>
         <tag>dp</tag>
         <tag>分层</tag>
@@ -179,8 +179,8 @@
         <category>刷题</category>
       </categories>
       <tags>
-        <tag>难度5</tag>
         <tag>树链剖分</tag>
+        <tag>难度5</tag>
       </tags>
   </entry>
   <entry>
@@ -198,18 +198,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[【NOIP15 D2T1】 跳石头]]></title>
-    <url>%2F2018-05%2F%E8%B7%B3%E7%9F%B3%E5%A4%B4.html</url>
-    <content type="text"><![CDATA[Source and JudgeNOIP2015 提高组 D2T1Luogu2678Caioj1572 Problem【Description】一年一度的“跳石头”比赛又要开始了!这项比赛将在一条笔直的河道中进行,河道中分布着一些巨大岩石。组委会已经选择好了两块岩石作为比赛起点和终点。在起点和终点之间,有 N 块岩石(不含起点和终 点的岩石)。在比赛过程中,选手们将从起点出发,每一步跳向相邻的岩石,直至到达 终点。为了提高比赛难度,组委会计划移走一些岩石,使得选手们在比赛过程中的最短跳跃距离尽可能长。由于预算限制,组委会至多从起点和终点之间移走 M 块岩石(不能 移走起点和终点的岩石)。【Input】 输入第一行包含三个整数 L，N，M，分别表示起点到终点的距离，起点和终点之间的岩石数，以及组委会至多移走的岩石数。接下来 N 行，每行一个整数，第 i 行的整数 Di（0&lt;Di&lt;L）表示第 i 块岩石与 起点的距离。这些岩石按与起点距离从小到大的顺序给出，且不会有两个岩石出现在同 一个位置。【Output】输出只包含一个整数，即最短跳跃距离的最大值。【Limited conditions】对于 20%的数据,0 ≤ M ≤ N ≤ 10。 对于50%的数据,0 ≤ M ≤ N ≤ 100。对于 100%的数据,0 ≤ M ≤ N ≤ 50,000,1 ≤ L ≤ 1,000,000,000。【Sample input】25 5 2211141721【Sample output】4【Sample explanation】将与起点距离为 2 和 14 的两个岩石移走后,最短的跳跃距离为 4(从与起点距离 17 的岩石跳到距离 21 的岩石,或者从距离 21 的岩石跳到终点)。 Record20min Analysis1请先思考后再展开 首先，看到最值的最值问题，应该先想到二分答案：例如目标答案是A，那么所有距离都要大于等于A 然后就dp转移，f[i]表示到i位置合法的，移动石子的最小值（显然单调递增）然后logn转移即可 这样的复杂度是O(nlognlogn) Code1请先思考后再展开 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354//Zory in 2018//*******************头文件*******************#include&lt;cstdio&gt;#include&lt;cstring&gt;#include&lt;cmath&gt;#include&lt;queue&gt;#include&lt;vector&gt;#include&lt;set&gt;#include&lt;string&gt;#include&lt;queue&gt;#include&lt;algorithm&gt;#include&lt;iostream&gt;using namespace std;int mymin(int x,int y) &#123;return x&lt;y?x:y;&#125;int mymax(int x,int y) &#123;return x&gt;y?x:y;&#125;//*******************全局常量*******************const int MAXN=210000;const int INF=0x3f3f3f3f;//*******************全局定义*******************int n,m;int d[MAXN];int f[MAXN];//*******************实现*******************bool check(int mid)&#123; for(int i=1;i&lt;=n;i++) &#123; //if(mid==1 and i==n) if(d[i]&lt;mid) f[i]=INF; else &#123; int t=upper_bound(d+1,d+i+1,d[i]-mid)-d-1;//&lt;= f[i]=mymin(f[t]+mymax(i-t-1,0),i-1); &#125; &#125; //printf("mid=%d f[n]=%d\n",mid,f[n]); return f[n]&lt;=m;&#125;//*******************主函数*******************int main()&#123; int L;scanf("%d%d%d",&amp;L,&amp;n,&amp;m); for(int i=1;i&lt;=n;i++) scanf("%d",&amp;d[i]); n++;d[n]=L; int l=1,r=1000000000,ans=-1; while(l&lt;=r) &#123; int mid=(l+r)&gt;&gt;1; if(check(mid)) ans=mid,l=mid+1; else r=mid-1; &#125; printf("%d",ans);&#125; Analysis2请先思考后再展开 上面的做法其实还算快，因为出题人并没有去卡然鹅其实可以更快的原谅我脑残了如果从起点开始，找到下一个能跳的地方，跳过去，就好了……这样就省掉了一个log]]></content>
-      <categories>
-        <category>刷题</category>
-      </categories>
-      <tags>
-        <tag>难度4</tag>
-        <tag>二分答案</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[【NOIP15 D2T2】 子串]]></title>
     <url>%2F2018-05%2F%E5%AD%90%E4%B8%B2.html</url>
     <content type="text"><![CDATA[Source and JudgeNOIP2015 提高组 D2T2Luogu2679Caioj1573 Problem【Description】 有两个仅包含小写英文字母的字符串 A 和 B。现在要从字符串 A 中取出 k 个 互不重叠 的非空子串， 然后把这 k 个子串按照其在字符串 A 中出现的顺序依次连接起来得到一个新的字符串，请问有多少种方案可以使得这个新串与字符串 B 相等？ 注意：子串取出的位置不同也认为是不同的方案。【Input】第一行是三个正整数 n，m，k，分别表示字符串 A 的长度，字符串 B 的长度，以及问题描述中所提到的 k，每两个整数之间用一个空格隔开。第二行包含一个长度为 n 的字符串，表示字符串 A。 第三行包含一个长度为 m 的字符串，表示字符串 B。【Output】输出共一行，包含一个整数，表示所求方案数。(由于答案可能很大，所以这里要求输 出答案对 1,000,000,007 取模的结果。【Limited conditions】对于第 1 组数据:1≤n≤500,1≤m≤50,k=1;对于第 2 组至第 3 组数据:1≤n≤500,1≤m≤50,k=2;对于第 4 组至第 5 组数据:1≤n≤500,1≤m≤50,k=m;对于第 1 组至第 7 组数据:1≤n≤500,1≤m≤50,1≤k≤m;对于第 1 组至第 9 组数据:1≤n≤1000,1≤m≤100,1≤k≤m;对于所有 10 组数据:1≤n≤1000,1≤m≤200,1≤k≤m。【Sample input 1】6 3 1aabaabaab【Sample output 1】2【Sample input 2】6 3 2aabaabaab【Sample output 2】7【Sample input 3】6 3 3aabaabaab【Sample output 3】7【Sample explanation】 Record40min Analysis请先思考后再展开 提高组的字符串……八成是dp那么设$f[i][j][k]=用到A_i，填充到B_j，用了k个段的方案数$然后？？然后就蒙逼了 其实这是因为我们的决策需要把用了$A_i$的和没用的方案数分开来$g[i][j][k]表示用到A_i，填充到B_j，用了k个段的方案数$$f[i][j][k]表示到A_i为止（不一定用），填充到B_j，用了k个段的方案数$那么一下子就可以搞出递推式了： $$g[i][j][k]=\left{\begin{matrix}f[i-1][j-1][k-1]+g[i-1][j-1][k] &amp;(A[i-1]=B[j-1])\0 &amp; (A[i-1] \neq B[j-1])\end{matrix}\right.$$ 然后累计$f[i][j][k]=f[i-1][j][k]+g[i][j][k]$ 但这样会mle哒循环数组就好了 Code请先思考后再展开 12345678910111213141516171819202122232425262728293031323334353637383940414243444546//Zory in 2018//*******************头文件*******************#include&lt;cstdio&gt;#include&lt;cstring&gt;#include&lt;cmath&gt;#include&lt;queue&gt;#include&lt;vector&gt;#include&lt;set&gt;#include&lt;string&gt;#include&lt;queue&gt;#include&lt;algorithm&gt;#include&lt;iostream&gt;using namespace std;int mymin(int x,int y) &#123;return x&lt;y?x:y;&#125;int mymax(int x,int y) &#123;return x&gt;y?x:y;&#125;//*******************全局常量*******************const int MAXN=1100,MAXM=210;const int MOD=1000000007;const int INF=0x3f3f3f3f;//*******************全局定义*******************char a[MAXN],b[MAXM];int f[2][MAXM][MAXM],g[2][MAXM][MAXM];//*******************实现*******************//*******************主函数*******************int main()&#123; int n,m,k;scanf("%d%d%d",&amp;n,&amp;m,&amp;k); scanf("%s%s",a+1,b+1); int pre=0,now=1; f[pre][0][0]=1; for(int i=1;i&lt;=n;i++) &#123; f[now][0][0]=1;//debug for(int j=1;j&lt;=m;j++) for(int kk=1;kk&lt;=k;kk++) &#123; if(a[i]==b[j]) g[now][j][kk]=(f[pre][j-1][kk-1]+g[pre][j-1][kk])%MOD; else g[now][j][kk]=0; f[now][j][kk]=(f[pre][j][kk]+g[now][j][kk])%MOD; &#125; swap(pre,now); &#125; printf("%d",f[pre][m][k]);&#125;]]></content>
@@ -219,6 +207,18 @@
       <tags>
         <tag>难度4</tag>
         <tag>dp</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[【NOIP15 D2T1】 跳石头]]></title>
+    <url>%2F2018-05%2F%E8%B7%B3%E7%9F%B3%E5%A4%B4.html</url>
+    <content type="text"><![CDATA[Source and JudgeNOIP2015 提高组 D2T1Luogu2678Caioj1572 Problem【Description】一年一度的“跳石头”比赛又要开始了!这项比赛将在一条笔直的河道中进行,河道中分布着一些巨大岩石。组委会已经选择好了两块岩石作为比赛起点和终点。在起点和终点之间,有 N 块岩石(不含起点和终 点的岩石)。在比赛过程中,选手们将从起点出发,每一步跳向相邻的岩石,直至到达 终点。为了提高比赛难度,组委会计划移走一些岩石,使得选手们在比赛过程中的最短跳跃距离尽可能长。由于预算限制,组委会至多从起点和终点之间移走 M 块岩石(不能 移走起点和终点的岩石)。【Input】 输入第一行包含三个整数 L，N，M，分别表示起点到终点的距离，起点和终点之间的岩石数，以及组委会至多移走的岩石数。接下来 N 行，每行一个整数，第 i 行的整数 Di（0&lt;Di&lt;L）表示第 i 块岩石与 起点的距离。这些岩石按与起点距离从小到大的顺序给出，且不会有两个岩石出现在同 一个位置。【Output】输出只包含一个整数，即最短跳跃距离的最大值。【Limited conditions】对于 20%的数据,0 ≤ M ≤ N ≤ 10。 对于50%的数据,0 ≤ M ≤ N ≤ 100。对于 100%的数据,0 ≤ M ≤ N ≤ 50,000,1 ≤ L ≤ 1,000,000,000。【Sample input】25 5 2211141721【Sample output】4【Sample explanation】将与起点距离为 2 和 14 的两个岩石移走后,最短的跳跃距离为 4(从与起点距离 17 的岩石跳到距离 21 的岩石,或者从距离 21 的岩石跳到终点)。 Record20min Analysis1请先思考后再展开 首先，看到最值的最值问题，应该先想到二分答案：例如目标答案是A，那么所有距离都要大于等于A 然后就dp转移，f[i]表示到i位置合法的，移动石子的最小值（显然单调递增）然后logn转移即可 这样的复杂度是O(nlognlogn) Code1请先思考后再展开 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354//Zory in 2018//*******************头文件*******************#include&lt;cstdio&gt;#include&lt;cstring&gt;#include&lt;cmath&gt;#include&lt;queue&gt;#include&lt;vector&gt;#include&lt;set&gt;#include&lt;string&gt;#include&lt;queue&gt;#include&lt;algorithm&gt;#include&lt;iostream&gt;using namespace std;int mymin(int x,int y) &#123;return x&lt;y?x:y;&#125;int mymax(int x,int y) &#123;return x&gt;y?x:y;&#125;//*******************全局常量*******************const int MAXN=210000;const int INF=0x3f3f3f3f;//*******************全局定义*******************int n,m;int d[MAXN];int f[MAXN];//*******************实现*******************bool check(int mid)&#123; for(int i=1;i&lt;=n;i++) &#123; //if(mid==1 and i==n) if(d[i]&lt;mid) f[i]=INF; else &#123; int t=upper_bound(d+1,d+i+1,d[i]-mid)-d-1;//&lt;= f[i]=mymin(f[t]+mymax(i-t-1,0),i-1); &#125; &#125; //printf("mid=%d f[n]=%d\n",mid,f[n]); return f[n]&lt;=m;&#125;//*******************主函数*******************int main()&#123; int L;scanf("%d%d%d",&amp;L,&amp;n,&amp;m); for(int i=1;i&lt;=n;i++) scanf("%d",&amp;d[i]); n++;d[n]=L; int l=1,r=1000000000,ans=-1; while(l&lt;=r) &#123; int mid=(l+r)&gt;&gt;1; if(check(mid)) ans=mid,l=mid+1; else r=mid-1; &#125; printf("%d",ans);&#125; Analysis2请先思考后再展开 上面的做法其实还算快，因为出题人并没有去卡然鹅其实可以更快的原谅我脑残了如果从起点开始，找到下一个能跳的地方，跳过去，就好了……这样就省掉了一个log]]></content>
+      <categories>
+        <category>刷题</category>
+      </categories>
+      <tags>
+        <tag>难度4</tag>
+        <tag>二分答案</tag>
       </tags>
   </entry>
   <entry>
@@ -324,19 +324,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[【SCOI2013】【Bzoj3325】【Luogu3279】密码]]></title>
-    <url>%2F2018-04%2F%E5%AF%86%E7%A0%81.html</url>
-    <content type="text"><![CDATA[Source and JudgeSCOI2013Bzoj3325Luogu3279 Problem【Description】已知一个字符串的：1. 长度为N。2. 仅含小写字母。3. 以每一个字符为中心的最长回文串长度。4. 以每两个相邻字符的间隙为中心的最长回文串长度。输出满足条件的字符串中字典序最小的。【Input】输入由三行组成。第一行仅含一个整数N，表示长度。第二行包含N 个整数，表示以每个字符为中心的最长回文串长度。第三行包含N - 1 个整数，表示每两个相邻字符的间隙为中心的最长回文串长度。【Output】输出答案，保证有解【Limited conditions】对于20% 的数据，1 &lt;= n &lt;= 100。另有30% 的数据，1 &lt;= n &lt;= 1000。最后50% 的数据，1 &lt;= n &lt;= 10^5。【Sample input 1】31 1 10 0【Sample output 1】abc【Sample input 2】31 3 10 0【Sample output 2】aba【Sample input 3】31 3 12 2【Sample output 3】aaa【Sample explanation】无 Record2h Analysis请先思考后再展开 一开始想贪心乱搞，然后显然是不可靠の玄学的怎样稳一点呢？相等性和互斥性，而且不是二分图，那不就是并查集了嘛！但是我们并不能单单处理相同的，然后去合并，也不能像某些二分图的时候那样拆成两个对立点，把所有对立的合并起来，因为字母不只2个。有种非常妙的办法：建边！把与该点所在集合存在互斥关系的集合连上边，然后分配的时候，因为要求字典序最小，则必须选择一个【没有被在前面的，与当前互斥】的字母。注意一定要从整个集合来看，网上有人直接从当前点出发，显然是不正确的，虽然说数据比较水这样，我们就有50分辣！激动吗？（雾 首先，通常来说，如果一个正规比赛题面有非常类似某个算法的裸题的描述的话，通常来说其实不是用这种算法。。。然鹅今天连做两道题都是要用到那个算法。。（另一个是动物园。。kmp）所以我们还是要借鉴一下manacher的神奇线性做法滴 例如这种情况，就造成了重复，虽然并不是那么直观。manacher的跳过，是不需要验证相同。这道题的跳过，是不需要使它们相同。操作的类似使复杂度也是O(n)的。 Code请先思考后再展开 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081//Zory in 2018//*******************头文件*******************#include&lt;cstdio&gt;#include&lt;cstring&gt;#include&lt;cmath&gt;#include&lt;queue&gt;#include&lt;vector&gt;#include&lt;set&gt;#include&lt;string&gt;#include&lt;queue&gt;#include&lt;algorithm&gt;#include&lt;iostream&gt;using namespace std;typedef long long ll;typedef unsigned long long ull;int mymax(int x,int y) &#123;return x&gt;y?x:y;&#125;int mymin(int x,int y) &#123;return x&lt;y?x:y;&#125;int myabs(int x) &#123;return x&gt;0?x:-x;&#125;void chmax(int &amp;x,int y) &#123;if(x&lt;y) x=y;&#125;void chmin(int &amp;x,int y) &#123;if(x&gt;y) x=y;&#125;//*******************全局常量*******************const int MAXN=210000;//*******************全局定义*******************int n;int ma[MAXN],g[MAXN];int v[30];//时间戳int c[MAXN];//分配//*******************实现*******************int fa[MAXN];int findfa(int x) &#123;return (x==fa[x])?x:fa[x]=findfa(fa[x]);&#125;void merg(int x,int y)&#123; int fx=findfa(x),fy=findfa(y); if(fx!=fy) fa[fx]=fy;&#125;int hou[MAXN];struct Edge&#123; int y,g;&#125;e[MAXN*2];//互斥关系int ln=0;void ins(int x,int y)&#123; if(!(1&lt;=x and x&lt;=n)) return; if(!(1&lt;=y and y&lt;=n)) return; e[++ln]=(Edge)&#123;y,hou[x]&#125;;hou[x]=ln; e[++ln]=(Edge)&#123;x,hou[y]&#125;;hou[y]=ln;&#125;//*******************主函数*******************int main()&#123; scanf("%d",&amp;n); for(int i=1;i&lt;=n;i++) scanf("%d",&amp;g[2*i]),++g[2*i]; for(int i=1;i&lt;=n-1;i++) scanf("%d",&amp;g[2*i+1]),++g[2*i+1]; n=n*2;ma[1]=1; for(int i=1;i&lt;=n;i++) fa[i]=i;//debug 在后面 int md=1,rx=md+ma[md]-1; for(int i=2;i&lt;=n;i++) &#123; ma[i]=(i&gt;rx)?1:mymin(ma[2*md-i],rx-i+1); for(;ma[i]&lt;g[i];ma[i]++) merg(i-ma[i],i+ma[i]); //ins(i-g[i],i+g[i]);//必须不同 if(i+ma[i]-1&gt;rx) md=i,rx=md+ma[md]-1; &#125; for(int i=2;i&lt;=n;i++) ins(findfa(i-g[i]),findfa(i+g[i]));//必须不同 //奇数位已经无意义 for(int i=2;i&lt;=n;i+=2) &#123; int fx=findfa(i); if(!c[fx])//不能占用0…… &#123; for(int k=hou[fx];k&gt;0;k=e[k].g) v[ c[findfa(e[k].y)] ]=i; for(int j=1;j&lt;=26;j++) if(v[j]&lt;i) &#123;c[fx]=j;break;&#125; &#125; putchar('a'+c[fx]-1); &#125;&#125;]]></content>
-      <categories>
-        <category>刷题</category>
-      </categories>
-      <tags>
-        <tag>难度4</tag>
-        <tag>并查集</tag>
-        <tag>manacher</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[【AHOI2005】【CQOI2014】病毒检测/通配符匹配]]></title>
     <url>%2F2018-04%2F%E7%97%85%E6%AF%92%E6%A3%80%E6%B5%8B.html</url>
     <content type="text"><![CDATA[Source and JudgeAHOI2005 病毒检测Bzoj1966Luogu2536CQOI2014 通配符匹配Bzoj3507Luogu3167 Problem【Description】给出通配符字符串，其中 * 的意思是可以匹配上0个或任意多个字符，而 ? 的意思是匹配上任意一个字母，询问给出字符串是否能匹配。【Input】如题目描述【Output】如题目描述【Limited conditions】0&lt;N&lt;100通配符字符串的长度不超过100000询问字符串的长度不超过500通配符个数不超过10【Sample input 1】123**ASD*ASDASD*A?SD?*AS?D*SAD?A?D*?1ASDASDASDADSDASSDASDDDSADAASDAAAAS【Sample output 1】0【Sample input 2】1234567*a*5asdasdddasssdd【Sample output 2】2【Sample explanation】无 Record10h话说我的心路历程可真有意思：ac机=》Here=》贪心比它还长……虽然都没有打代码233 Analysis请先思考后再展开 这道题……栋老师跟Claris学，我跟栋老师学…… 前置知识：Hash 通配符就是本题最关键的部分对于星号，连长度都是任意的，是有很高自由度的，也是最高优先级的，所以要以其为分割点分成一个个段。对于问号，虽然说没有星号这么bt，好歹限制了长度，但其作用并非万能字符那么简单。 咱们先从一些显然的事实开始入手： 如果没有星号，直接匹配 对于第一个星号左边的，必须匹配；最后一个星号后面的部分同理 剩下的段，如果每一个都尽量地偏前面匹配，显然是最优的（或者说，否则不会更优）如果不计算匹配的话，以上过程最坏是O(q*星号数量*n)=1kw 然而要怎么匹配呢？如果可以常数级别那当然是极好的那验证相同性……当然要祭出hash不过可别忽略问号哦，所以按照问号拆分开来就好了因为通配符数量的保证，复杂度是常数级别的。 然后就没有然后了。。。。 Code1CQOI2014请先思考后再展开 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687//Zory in 2018//*******************头文件*******************#include&lt;cstdio&gt;#include&lt;cstring&gt;#include&lt;cmath&gt;#include&lt;queue&gt;#include&lt;vector&gt;#include&lt;set&gt;#include&lt;string&gt;#include&lt;queue&gt;#include&lt;algorithm&gt;#include&lt;iostream&gt;using namespace std;typedef long long ll;typedef unsigned long long ull;int mymax(int x,int y) &#123;return x&gt;y?x:y;&#125;int mymin(int x,int y) &#123;return x&lt;y?x:y;&#125;int myabs(int x) &#123;return x&gt;0?x:-x;&#125;void chmax(int &amp;x,int y) &#123;if(x&lt;y) x=y;&#125;void chmin(int &amp;x,int y) &#123;if(x&gt;y) x=y;&#125;//*******************全局常量*******************const int MAXN=110000;const int MXCNT=15;const ull base=13331;//*******************全局定义*******************ull bs[MAXN];char s[MAXN];int ln;int cnt,pos[MXCNT];int num[MXCNT],sum[MXCNT][MXCNT];//数量，每个小段数量ull ha[MXCNT][MXCNT];//每个小段hash值//*******************实现*******************bool cmp(char a,char b) &#123;return (a=='?' or b=='?')?1:(a==b);&#125;ull hb[MAXN];//Hashull gethash(int l,int r) &#123; return hb[r]-hb[l-1]*bs[r-l+1]; &#125;bool check(int k,int l)&#123; for(int i=0;i&lt;=num[k-1];i++) &#123; if(sum[k-1][i]==0) &#123;l++;continue;&#125; if(ha[k-1][i]!=gethash(l,l+sum[k-1][i]-1)) return false; l+=sum[k-1][i]+1;//注意+1，因为问号 &#125; return true;&#125;char s2[MAXN];bool solve()&#123; scanf("%s",s2+1);int ln2=strlen(s2+1); if(!cnt)//无星号 &#123; if(ln!=ln2) return false; for(int i=1;i&lt;=ln;i++) if(!cmp(s[i],s2[i])) return false; &#125; else &#123; for(int i=1;i&lt;pos[1];i++) if(!cmp(s[i],s2[i])) return false; for(int i=1;i&lt;=ln-pos[cnt];i++) if(!cmp(s[ln-i+1],s2[ln2-i+1])) return false; int l=pos[1],r=ln2-(ln-pos[cnt])+1;//对于s2 for(int i=l;i&lt;=r;i++) hb[i]=hb[i-1]*base+s2[i]; for(int k=2;k&lt;=cnt;k++) &#123; for(;l&lt;=r;l++) if(check(k,l)) break; l+=pos[k]-pos[k-1]-1; if(l&gt;r) return false; &#125; &#125; return true;&#125;//*******************主函数*******************int main()&#123; bs[0]=1;for(int i=1;i&lt;MAXN;i++) bs[i]=bs[i-1]*base; scanf("%s",s+1);ln=strlen(s+1); cnt=0; for(int i=1;i&lt;=ln;i++) if(s[i]=='*') pos[++cnt]=i; else if(s[i]=='?') ++num[cnt]; else sum[cnt][num[cnt]]++,ha[cnt][num[cnt]]=ha[cnt][num[cnt]]*base+s[i]; int q;scanf("%d",&amp;q); while(q--) solve()?puts("YES"):puts("NO");&#125; Code2AHOI2005请先思考后再展开 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283848586878889//Zory in 2018//*******************头文件*******************#include&lt;cstdio&gt;#include&lt;cstring&gt;#include&lt;cmath&gt;#include&lt;queue&gt;#include&lt;vector&gt;#include&lt;set&gt;#include&lt;string&gt;#include&lt;queue&gt;#include&lt;algorithm&gt;#include&lt;iostream&gt;using namespace std;typedef long long ll;typedef unsigned long long ull;int mymax(int x,int y) &#123;return x&gt;y?x:y;&#125;int mymin(int x,int y) &#123;return x&lt;y?x:y;&#125;int myabs(int x) &#123;return x&gt;0?x:-x;&#125;void chmax(int &amp;x,int y) &#123;if(x&lt;y) x=y;&#125;void chmin(int &amp;x,int y) &#123;if(x&gt;y) x=y;&#125;//*******************全局常量*******************const int MAXN=1100;const int MXCNT=2100;const ull base=13331;//*******************全局定义*******************ull bs[MAXN];char s[MAXN];int ln;int cnt,pos[MXCNT];int num[MXCNT],sum[MXCNT][MXCNT];//数量，每个小段数量ull ha[MXCNT][MXCNT];//每个小段hash值//*******************实现*******************bool cmp(char a,char b) &#123;return (a=='?' or b=='?')?1:(a==b);&#125;ull hb[MAXN];//前缀Hashull gethash(int l,int r) &#123; return hb[r]-hb[l-1]*bs[r-l+1]; &#125;bool check(int k,int l)&#123; for(int i=0;i&lt;=num[k-1];i++) &#123; if(sum[k-1][i]==0) &#123;l++;continue;&#125; if(ha[k-1][i]!=gethash(l,l+sum[k-1][i]-1)) return false; l+=sum[k-1][i]+1;//注意+1，因为问号 &#125; return true;&#125;char s2[MAXN];bool solve()&#123; scanf("%s",s2+1);int ln2=strlen(s2+1); if(!cnt)//无星号 &#123; if(ln!=ln2) return false; for(int i=1;i&lt;=ln;i++) if(!cmp(s[i],s2[i])) return false; &#125; else &#123; for(int i=1;i&lt;pos[1];i++) if(!cmp(s[i],s2[i])) return false; for(int i=1;i&lt;=ln-pos[cnt];i++) if(!cmp(s[ln-i+1],s2[ln2-i+1])) return false; int l=pos[1],r=ln2-(ln-pos[cnt])+1;//对于s2 for(int i=l;i&lt;=r;i++) hb[i]=hb[i-1]*base+s2[i]; for(int k=2;k&lt;=cnt;k++) &#123; for(;l&lt;=r;l++) if(check(k,l)) break; l+=pos[k]-pos[k-1]-1; if(l&gt;r) return false; &#125; &#125; return true;&#125;//*******************主函数*******************int main()&#123; bs[0]=1;for(int i=1;i&lt;MAXN;i++) bs[i]=bs[i-1]*base; scanf("%s",s+1);ln=strlen(s+1); cnt=0; for(int i=1;i&lt;=ln;i++) if(s[i]=='*') pos[++cnt]=i; else if(s[i]=='?') ++num[cnt]; else sum[cnt][num[cnt]]++,ha[cnt][num[cnt]]=ha[cnt][num[cnt]]*base+s[i]; int q;scanf("%d",&amp;q); int ans=0; while(q--) ans+=!solve(); printf("%d",ans);&#125;]]></content>
@@ -348,6 +335,19 @@
         <tag>精品题</tag>
         <tag>贪心</tag>
         <tag>哈希</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[【SCOI2013】【Bzoj3325】【Luogu3279】密码]]></title>
+    <url>%2F2018-04%2F%E5%AF%86%E7%A0%81.html</url>
+    <content type="text"><![CDATA[Source and JudgeSCOI2013Bzoj3325Luogu3279 Problem【Description】已知一个字符串的：1. 长度为N。2. 仅含小写字母。3. 以每一个字符为中心的最长回文串长度。4. 以每两个相邻字符的间隙为中心的最长回文串长度。输出满足条件的字符串中字典序最小的。【Input】输入由三行组成。第一行仅含一个整数N，表示长度。第二行包含N 个整数，表示以每个字符为中心的最长回文串长度。第三行包含N - 1 个整数，表示每两个相邻字符的间隙为中心的最长回文串长度。【Output】输出答案，保证有解【Limited conditions】对于20% 的数据，1 &lt;= n &lt;= 100。另有30% 的数据，1 &lt;= n &lt;= 1000。最后50% 的数据，1 &lt;= n &lt;= 10^5。【Sample input 1】31 1 10 0【Sample output 1】abc【Sample input 2】31 3 10 0【Sample output 2】aba【Sample input 3】31 3 12 2【Sample output 3】aaa【Sample explanation】无 Record2h Analysis请先思考后再展开 一开始想贪心乱搞，然后显然是不可靠の玄学的怎样稳一点呢？相等性和互斥性，而且不是二分图，那不就是并查集了嘛！但是我们并不能单单处理相同的，然后去合并，也不能像某些二分图的时候那样拆成两个对立点，把所有对立的合并起来，因为字母不只2个。有种非常妙的办法：建边！把与该点所在集合存在互斥关系的集合连上边，然后分配的时候，因为要求字典序最小，则必须选择一个【没有被在前面的，与当前互斥】的字母。注意一定要从整个集合来看，网上有人直接从当前点出发，显然是不正确的，虽然说数据比较水这样，我们就有50分辣！激动吗？（雾 首先，通常来说，如果一个正规比赛题面有非常类似某个算法的裸题的描述的话，通常来说其实不是用这种算法。。。然鹅今天连做两道题都是要用到那个算法。。（另一个是动物园。。kmp）所以我们还是要借鉴一下manacher的神奇线性做法滴 例如这种情况，就造成了重复，虽然并不是那么直观。manacher的跳过，是不需要验证相同。这道题的跳过，是不需要使它们相同。操作的类似使复杂度也是O(n)的。 Code请先思考后再展开 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081//Zory in 2018//*******************头文件*******************#include&lt;cstdio&gt;#include&lt;cstring&gt;#include&lt;cmath&gt;#include&lt;queue&gt;#include&lt;vector&gt;#include&lt;set&gt;#include&lt;string&gt;#include&lt;queue&gt;#include&lt;algorithm&gt;#include&lt;iostream&gt;using namespace std;typedef long long ll;typedef unsigned long long ull;int mymax(int x,int y) &#123;return x&gt;y?x:y;&#125;int mymin(int x,int y) &#123;return x&lt;y?x:y;&#125;int myabs(int x) &#123;return x&gt;0?x:-x;&#125;void chmax(int &amp;x,int y) &#123;if(x&lt;y) x=y;&#125;void chmin(int &amp;x,int y) &#123;if(x&gt;y) x=y;&#125;//*******************全局常量*******************const int MAXN=210000;//*******************全局定义*******************int n;int ma[MAXN],g[MAXN];int v[30];//时间戳int c[MAXN];//分配//*******************实现*******************int fa[MAXN];int findfa(int x) &#123;return (x==fa[x])?x:fa[x]=findfa(fa[x]);&#125;void merg(int x,int y)&#123; int fx=findfa(x),fy=findfa(y); if(fx!=fy) fa[fx]=fy;&#125;int hou[MAXN];struct Edge&#123; int y,g;&#125;e[MAXN*2];//互斥关系int ln=0;void ins(int x,int y)&#123; if(!(1&lt;=x and x&lt;=n)) return; if(!(1&lt;=y and y&lt;=n)) return; e[++ln]=(Edge)&#123;y,hou[x]&#125;;hou[x]=ln; e[++ln]=(Edge)&#123;x,hou[y]&#125;;hou[y]=ln;&#125;//*******************主函数*******************int main()&#123; scanf("%d",&amp;n); for(int i=1;i&lt;=n;i++) scanf("%d",&amp;g[2*i]),++g[2*i]; for(int i=1;i&lt;=n-1;i++) scanf("%d",&amp;g[2*i+1]),++g[2*i+1]; n=n*2;ma[1]=1; for(int i=1;i&lt;=n;i++) fa[i]=i;//debug 在后面 int md=1,rx=md+ma[md]-1; for(int i=2;i&lt;=n;i++) &#123; ma[i]=(i&gt;rx)?1:mymin(ma[2*md-i],rx-i+1); for(;ma[i]&lt;g[i];ma[i]++) merg(i-ma[i],i+ma[i]); //ins(i-g[i],i+g[i]);//必须不同 if(i+ma[i]-1&gt;rx) md=i,rx=md+ma[md]-1; &#125; for(int i=2;i&lt;=n;i++) ins(findfa(i-g[i]),findfa(i+g[i]));//必须不同 //奇数位已经无意义 for(int i=2;i&lt;=n;i+=2) &#123; int fx=findfa(i); if(!c[fx])//不能占用0…… &#123; for(int k=hou[fx];k&gt;0;k=e[k].g) v[ c[findfa(e[k].y)] ]=i; for(int j=1;j&lt;=26;j++) if(v[j]&lt;i) &#123;c[fx]=j;break;&#125; &#125; putchar('a'+c[fx]-1); &#125;&#125;]]></content>
+      <categories>
+        <category>刷题</category>
+      </categories>
+      <tags>
+        <tag>并查集</tag>
+        <tag>难度4</tag>
+        <tag>manacher</tag>
       </tags>
   </entry>
   <entry>
@@ -473,8 +473,8 @@
       </categories>
       <tags>
         <tag>难度3</tag>
-        <tag>kmp</tag>
         <tag>哈希</tag>
+        <tag>kmp</tag>
       </tags>
   </entry>
   <entry>
@@ -509,8 +509,8 @@
         <category>刷题</category>
       </categories>
       <tags>
-        <tag>难度4</tag>
         <tag>bfs</tag>
+        <tag>难度4</tag>
         <tag>dp</tag>
       </tags>
   </entry>
@@ -660,8 +660,8 @@
         <category>刷题</category>
       </categories>
       <tags>
-        <tag>难度4</tag>
         <tag>并查集</tag>
+        <tag>难度4</tag>
         <tag>强连通</tag>
       </tags>
   </entry>
@@ -895,8 +895,8 @@
         <category>刷题</category>
       </categories>
       <tags>
-        <tag>难度4</tag>
         <tag>bfs</tag>
+        <tag>难度4</tag>
         <tag>模拟</tag>
       </tags>
   </entry>
@@ -947,8 +947,8 @@
         <category>刷题</category>
       </categories>
       <tags>
-        <tag>难度4</tag>
         <tag>并查集</tag>
+        <tag>难度4</tag>
         <tag>精品题</tag>
         <tag>贪心</tag>
       </tags>
@@ -998,19 +998,19 @@
         <category>刷题</category>
       </categories>
       <tags>
-        <tag>并查集</tag>
         <tag>难度3</tag>
-        <tag>DP</tag>
+        <tag>并查集</tag>
         <tag>最短路</tag>
+        <tag>DP</tag>
         <tag>精品题</tag>
         <tag>模拟</tag>
         <tag>强连通</tag>
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[【Luogu1072】Hankson的趣味题]]></title>
-    <url>%2F2018-04%2FHankson%E7%9A%84%E8%B6%A3%E5%91%B3%E9%A2%98.html</url>
-    <content type="text"><![CDATA[Source and JudgeNOIP2009 提高组 T2Luogu1072Caioj1538 Problem【Brief description】已知正整数 a0,a1,b0,b1，正整数 x 满足：1. gcd(x,a0)=a12. lcm(x,b0)=b1求x的个数【Input】第一行为一个正整数 n，表示有 n 组输入数据。接下来的 n 行每行一组输入数据，为四个正整数 a0，a1，b0，b1，每两个整数之间用一个空格隔开。【Output】共 n 行。每组输入数据的输出结果占一行，为一个整数。对于每组数据：若不存在这样的 x，请输出 0；若存在这样的 x，请输出满足条件的 x 的个数；【Limited conditions】输入数据保证 a0 能被 a1 整除，b1 能被 b0 整除。对于 50%的数据，保证有 1≤a0，a1，b0，b1≤10000 且 n≤100。对于 100%的数据，保证有 1≤a0，a1，b0，b1≤2,000,000,000 且 n≤2000。【Sample input】241 1 96 28895 1 37 1776【Sample output】62【Sample explanation】第一组输入数据，x 可以是 9、18、36、72、144、288，共有 6 个。第二组输入数据，x 可以是 48、1776，共有 2 个。 Record1h Analysis1请先思考后再展开 代码框内内容没有任何卵用123456789101112131415161718192021222324252627首先，显而易见的定理：$\;\;\;\;gcd(a,b)=c$$\Rightarrow gcd(a/c,b/c)=1$那么根据这个定理和lcm的性质$\;\;\;\;lcm(a,b)=c$$\Rightarrow gcd(a,b)=\frac&#123;a\times b&#125;&#123;c&#125;$$\Rightarrow gcd(c/b,c/a)=1$题目：$\;\;\;\;\left\&#123;\begin&#123;aligned&#125;gcd(x,a0)=a1\\lcm(x,b0)=b1\\\end&#123;aligned&#125;\right.$$\Rightarrow\left\&#123;\begin&#123;aligned&#125;gcd(\frac&#123;x&#125;&#123;a1&#125;,\frac&#123;a0&#125;&#123;a1&#125;)=1\\gcd(\frac&#123;b1&#125;&#123;x&#125;,\frac&#123;b1&#125;&#123;b0&#125;)=1\\\end&#123;aligned&#125;\right.$ 代码框内内容没有任何卵用 优雅的暴力：观察式子，不难发现x是a1的倍数，b1的约数枚举b1约数即x，验证即可 时间复杂度：最坏O(n*sqrt(b1)*log2(b1))极限26亿，然而luogu上还是很快的 Code1请先思考后再展开 123456789101112131415161718192021222324252627282930313233343536//Zory in 2018//*******************头文件*******************#include&lt;cstdio&gt;#include&lt;cstring&gt;#include&lt;cmath&gt;#include&lt;queue&gt;#include&lt;vector&gt;#include&lt;set&gt;#include&lt;string&gt;#include&lt;queue&gt;#include&lt;algorithm&gt;#include&lt;iostream&gt;using namespace std;//*******************全局常量*******************const int MAXN=150;//*******************全局定义*******************//*******************实现*******************int gcd(int x,int y) &#123;return (y==0)?x:gcd(y,x%y);&#125;//*******************主函数*******************int main()&#123; int n;scanf("%d",&amp;n); while(n--) &#123; int a0,a1,b0,b1;scanf("%d%d%d%d",&amp;a0,&amp;a1,&amp;b0,&amp;b1); int ans=0; for(int x=1;x*x&lt;=b1;x++) &#123; if(b1%x==0 and x%a1==0 and gcd(x,a0)==a1 and gcd(x,b0)*b1==x*b0) ++ans; int tx=b1/x; if(tx!=x and b1%tx==0 and tx%a1==0 and gcd(tx,a0)==a1 and gcd(tx,b0)*b1==tx*b0) ++ans; &#125; printf("%d\n",ans); &#125;&#125; Analysis2请先思考后再展开 虽然过去了，显然跑得很慢呀正解]]></content>
+    <title><![CDATA[【Luogu1071】潜伏者]]></title>
+    <url>%2F2018-04%2F%E6%BD%9C%E4%BC%8F%E8%80%85.html</url>
+    <content type="text"><![CDATA[Source and JudgeNOIP2009 提高组 T1Luogu1071Caioj1537 Problem【Brief description】R 国和 S 国正陷入战火之中，双方都互派间谍，潜入对方内部，伺机行动。历尽艰险后，潜伏于 S 国的 R 国间谍小 C 终于摸清了 S 国军用密码的编码规则：1. S 国军方内部欲发送的原信息经过加密后在网络上发送，原信息的内容与加密后所得的内容均由大写字母‘A’-‘Z’构成（无空格等其他字符）。2. S 国对于每个字母规定了对应的“密字”。加密的过程就是将原信息中的所有字母替换为其对应的“密字”。3. 每个字母只对应一个唯一的“密字”，不同的字母对应不同的“密字”。“密字”可以和原字母相同。例如，若规定‘A’的密字为‘A’，‘B’的密字为‘C’（其他字母及密字略），则原信息“ABA”被加密为“ACA”。现在，小C通过内线掌握了 S 国网络上发送的一条加密信息及其对应的原信息。小C希望能通过这条信息，破译S国的军用密码。小C的破译过程是这样的：扫描原信息，对于原信息中的字母 x（代表任一大写字母），找到其在加密信息中的对应大写字母 y，并认为在密码里 y 是 x 的密字。如此进行下去直到停止于如下的某个状态：1. 所有信息扫描完毕，‘A’-‘Z’ 所有 26 个字母在原信息中均出现过并获得了相应的“密字”。2. 所有信息扫描完毕，但发现存在某个（或某些）字母在原信息中没有出现。3. 扫描中发现掌握的信息里有明显的自相矛盾或错误（违反 S 国密码的编码规则）。例如某条信息“XYZ”被翻译为“ABA”就违反了“不同字母对应不同密字”的规则。在小C忙得头昏脑涨之际，R国司令部又发来电报，要求他翻译另外一条从S国刚刚截取到的加密信息。现在请你帮助小 C：通过内线掌握的信息，尝试破译密码。然后利用破译的密码，翻译电报中的加密信息。【Input】第 1 行为小 C 掌握的一条加密信息。第 2 行为第 1 行的加密信息所对应的原信息。第 3 行为 R 国司令部要求小 C 翻译的加密信息。输入数据保证所有字符串仅由大写字母‘A’-‘Z’构成，且第 1 行长度与第 2 行相等。【Output】共 1 行。若破译密码停止时出现 2，3 两种情况，请你输出“Failed”（不含引号，注意首字母大写，其它小写）。否则请输出利用密码翻译电报中加密信息后得到的原信息。【Limited conditions】字符串长度在 1 到 100 之间。【Sample input 1】AAABEOWIE【Sample output 1】Failed【Sample input 2】QWERTYUIOPLKJHGFDSAZXCVBNABCDEFGHIJKLMNOPQRSTUVWXYDSLIEWO【Sample output 2】Failed【Sample input 3】MSRTZCJKPFLQYVAWBINXUEDGHOOILSMIJFRCOPPQCEUNYDUMPPYIZSDWAHLNOVFUCERKJXQMGTBPPKOIYKANZWPLLVWMQJFGQYLLFLSO【Sample output 3】NOIP【Sample explanation】【输入输出样例 1 说明】原信息中的字母‘A’和‘B’对应相同的密字，输出“Failed”。【输入输出样例 2 说明】字母‘Z’在原信息中没有出现，输出“Failed”。 Record30min Analysis请先思考后再展开 模拟即可 Code请先思考后再展开 123456789101112131415161718192021222324252627282930313233343536373839404142434445//*******************头文件*******************#include&lt;cstdio&gt;#include&lt;cstring&gt;#include&lt;cmath&gt;#include&lt;queue&gt;#include&lt;vector&gt;#include&lt;stack&gt;#include&lt;algorithm&gt;#ifdef WIN32#define BIGN "%I64d"#else#define BIGN "%lld"#endifusing namespace std;typedef long long ll;int mymax(int x,int y) &#123;return x&gt;y?x:y;&#125;int mymin(int x,int y) &#123;return x&lt;y?x:y;&#125;//*******************全局常量*******************const int INF=0x3f3f3f3f;//*******************全局定义*******************char s1[110],s2[110],s3[110];int to[30];//*******************实现*******************//*******************主函数*******************int main()&#123; scanf("%s%s%s",s1+1,s2+1,s3+1); int ln1=strlen(s1+1),ln3=strlen(s3+1); bool bk=0; for(int i=1;i&lt;=ln1;i++) &#123; if(to[s1[i]-'A'+1]&gt;0 and to[s1[i]-'A'+1]!=s2[i]) bk=1; to[s1[i]-'A'+1]=s2[i]; &#125; for(int i=1;i&lt;=26;i++) if(to[i]==0) bk=1; for(int i=1;i&lt;=25;i++) for(int j=i+1;j&lt;=26;j++) if(to[i]&gt;0 and to[i]==to[j]) bk=1; if(bk) printf("Failed"); else for(int i=1;i&lt;=ln3;i++) putchar( to[s3[i]-'A'+1] );&#125;]]></content>
       <categories>
         <category>刷题</category>
       </categories>
@@ -1020,9 +1020,9 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[【Luogu1071】潜伏者]]></title>
-    <url>%2F2018-04%2F%E6%BD%9C%E4%BC%8F%E8%80%85.html</url>
-    <content type="text"><![CDATA[Source and JudgeNOIP2009 提高组 T1Luogu1071Caioj1537 Problem【Brief description】R 国和 S 国正陷入战火之中，双方都互派间谍，潜入对方内部，伺机行动。历尽艰险后，潜伏于 S 国的 R 国间谍小 C 终于摸清了 S 国军用密码的编码规则：1. S 国军方内部欲发送的原信息经过加密后在网络上发送，原信息的内容与加密后所得的内容均由大写字母‘A’-‘Z’构成（无空格等其他字符）。2. S 国对于每个字母规定了对应的“密字”。加密的过程就是将原信息中的所有字母替换为其对应的“密字”。3. 每个字母只对应一个唯一的“密字”，不同的字母对应不同的“密字”。“密字”可以和原字母相同。例如，若规定‘A’的密字为‘A’，‘B’的密字为‘C’（其他字母及密字略），则原信息“ABA”被加密为“ACA”。现在，小C通过内线掌握了 S 国网络上发送的一条加密信息及其对应的原信息。小C希望能通过这条信息，破译S国的军用密码。小C的破译过程是这样的：扫描原信息，对于原信息中的字母 x（代表任一大写字母），找到其在加密信息中的对应大写字母 y，并认为在密码里 y 是 x 的密字。如此进行下去直到停止于如下的某个状态：1. 所有信息扫描完毕，‘A’-‘Z’ 所有 26 个字母在原信息中均出现过并获得了相应的“密字”。2. 所有信息扫描完毕，但发现存在某个（或某些）字母在原信息中没有出现。3. 扫描中发现掌握的信息里有明显的自相矛盾或错误（违反 S 国密码的编码规则）。例如某条信息“XYZ”被翻译为“ABA”就违反了“不同字母对应不同密字”的规则。在小C忙得头昏脑涨之际，R国司令部又发来电报，要求他翻译另外一条从S国刚刚截取到的加密信息。现在请你帮助小 C：通过内线掌握的信息，尝试破译密码。然后利用破译的密码，翻译电报中的加密信息。【Input】第 1 行为小 C 掌握的一条加密信息。第 2 行为第 1 行的加密信息所对应的原信息。第 3 行为 R 国司令部要求小 C 翻译的加密信息。输入数据保证所有字符串仅由大写字母‘A’-‘Z’构成，且第 1 行长度与第 2 行相等。【Output】共 1 行。若破译密码停止时出现 2，3 两种情况，请你输出“Failed”（不含引号，注意首字母大写，其它小写）。否则请输出利用密码翻译电报中加密信息后得到的原信息。【Limited conditions】字符串长度在 1 到 100 之间。【Sample input 1】AAABEOWIE【Sample output 1】Failed【Sample input 2】QWERTYUIOPLKJHGFDSAZXCVBNABCDEFGHIJKLMNOPQRSTUVWXYDSLIEWO【Sample output 2】Failed【Sample input 3】MSRTZCJKPFLQYVAWBINXUEDGHOOILSMIJFRCOPPQCEUNYDUMPPYIZSDWAHLNOVFUCERKJXQMGTBPPKOIYKANZWPLLVWMQJFGQYLLFLSO【Sample output 3】NOIP【Sample explanation】【输入输出样例 1 说明】原信息中的字母‘A’和‘B’对应相同的密字，输出“Failed”。【输入输出样例 2 说明】字母‘Z’在原信息中没有出现，输出“Failed”。 Record30min Analysis请先思考后再展开 模拟即可 Code请先思考后再展开 123456789101112131415161718192021222324252627282930313233343536373839404142434445//*******************头文件*******************#include&lt;cstdio&gt;#include&lt;cstring&gt;#include&lt;cmath&gt;#include&lt;queue&gt;#include&lt;vector&gt;#include&lt;stack&gt;#include&lt;algorithm&gt;#ifdef WIN32#define BIGN "%I64d"#else#define BIGN "%lld"#endifusing namespace std;typedef long long ll;int mymax(int x,int y) &#123;return x&gt;y?x:y;&#125;int mymin(int x,int y) &#123;return x&lt;y?x:y;&#125;//*******************全局常量*******************const int INF=0x3f3f3f3f;//*******************全局定义*******************char s1[110],s2[110],s3[110];int to[30];//*******************实现*******************//*******************主函数*******************int main()&#123; scanf("%s%s%s",s1+1,s2+1,s3+1); int ln1=strlen(s1+1),ln3=strlen(s3+1); bool bk=0; for(int i=1;i&lt;=ln1;i++) &#123; if(to[s1[i]-'A'+1]&gt;0 and to[s1[i]-'A'+1]!=s2[i]) bk=1; to[s1[i]-'A'+1]=s2[i]; &#125; for(int i=1;i&lt;=26;i++) if(to[i]==0) bk=1; for(int i=1;i&lt;=25;i++) for(int j=i+1;j&lt;=26;j++) if(to[i]&gt;0 and to[i]==to[j]) bk=1; if(bk) printf("Failed"); else for(int i=1;i&lt;=ln3;i++) putchar( to[s3[i]-'A'+1] );&#125;]]></content>
+    <title><![CDATA[【Luogu1072】Hankson的趣味题]]></title>
+    <url>%2F2018-04%2FHankson%E7%9A%84%E8%B6%A3%E5%91%B3%E9%A2%98.html</url>
+    <content type="text"><![CDATA[Source and JudgeNOIP2009 提高组 T2Luogu1072Caioj1538 Problem【Brief description】已知正整数 a0,a1,b0,b1，正整数 x 满足：1. gcd(x,a0)=a12. lcm(x,b0)=b1求x的个数【Input】第一行为一个正整数 n，表示有 n 组输入数据。接下来的 n 行每行一组输入数据，为四个正整数 a0，a1，b0，b1，每两个整数之间用一个空格隔开。【Output】共 n 行。每组输入数据的输出结果占一行，为一个整数。对于每组数据：若不存在这样的 x，请输出 0；若存在这样的 x，请输出满足条件的 x 的个数；【Limited conditions】输入数据保证 a0 能被 a1 整除，b1 能被 b0 整除。对于 50%的数据，保证有 1≤a0，a1，b0，b1≤10000 且 n≤100。对于 100%的数据，保证有 1≤a0，a1，b0，b1≤2,000,000,000 且 n≤2000。【Sample input】241 1 96 28895 1 37 1776【Sample output】62【Sample explanation】第一组输入数据，x 可以是 9、18、36、72、144、288，共有 6 个。第二组输入数据，x 可以是 48、1776，共有 2 个。 Record1h Analysis1请先思考后再展开 代码框内内容没有任何卵用123456789101112131415161718192021222324252627首先，显而易见的定理：$\;\;\;\;gcd(a,b)=c$$\Rightarrow gcd(a/c,b/c)=1$那么根据这个定理和lcm的性质$\;\;\;\;lcm(a,b)=c$$\Rightarrow gcd(a,b)=\frac&#123;a\times b&#125;&#123;c&#125;$$\Rightarrow gcd(c/b,c/a)=1$题目：$\;\;\;\;\left\&#123;\begin&#123;aligned&#125;gcd(x,a0)=a1\\lcm(x,b0)=b1\\\end&#123;aligned&#125;\right.$$\Rightarrow\left\&#123;\begin&#123;aligned&#125;gcd(\frac&#123;x&#125;&#123;a1&#125;,\frac&#123;a0&#125;&#123;a1&#125;)=1\\gcd(\frac&#123;b1&#125;&#123;x&#125;,\frac&#123;b1&#125;&#123;b0&#125;)=1\\\end&#123;aligned&#125;\right.$ 代码框内内容没有任何卵用 优雅的暴力：观察式子，不难发现x是a1的倍数，b1的约数枚举b1约数即x，验证即可 时间复杂度：最坏O(n*sqrt(b1)*log2(b1))极限26亿，然而luogu上还是很快的 Code1请先思考后再展开 123456789101112131415161718192021222324252627282930313233343536//Zory in 2018//*******************头文件*******************#include&lt;cstdio&gt;#include&lt;cstring&gt;#include&lt;cmath&gt;#include&lt;queue&gt;#include&lt;vector&gt;#include&lt;set&gt;#include&lt;string&gt;#include&lt;queue&gt;#include&lt;algorithm&gt;#include&lt;iostream&gt;using namespace std;//*******************全局常量*******************const int MAXN=150;//*******************全局定义*******************//*******************实现*******************int gcd(int x,int y) &#123;return (y==0)?x:gcd(y,x%y);&#125;//*******************主函数*******************int main()&#123; int n;scanf("%d",&amp;n); while(n--) &#123; int a0,a1,b0,b1;scanf("%d%d%d%d",&amp;a0,&amp;a1,&amp;b0,&amp;b1); int ans=0; for(int x=1;x*x&lt;=b1;x++) &#123; if(b1%x==0 and x%a1==0 and gcd(x,a0)==a1 and gcd(x,b0)*b1==x*b0) ++ans; int tx=b1/x; if(tx!=x and b1%tx==0 and tx%a1==0 and gcd(tx,a0)==a1 and gcd(tx,b0)*b1==tx*b0) ++ans; &#125; printf("%d\n",ans); &#125;&#125; Analysis2请先思考后再展开 虽然过去了，显然跑得很慢呀正解]]></content>
       <categories>
         <category>刷题</category>
       </categories>
@@ -1169,9 +1169,9 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[【Luogu1064】金明的预算方案]]></title>
-    <url>%2F2018-04%2F%E9%87%91%E6%98%8E%E7%9A%84%E9%A2%84%E7%AE%97%E6%96%B9%E6%A1%88.html</url>
-    <content type="text"><![CDATA[Source and JudgeNOIP2006 提高组 T2Luogu1064Caioj1526 Problem【Brief description】如果要买归类为附件的物品，必须先买该附件所属的主件。每个主件可以有0个、1个或2个附件。附件不再有从属于自己的附件。金明想买的东西很多，肯定会超过妈妈限定的N元。于是，他把每件物品规定了一个重要度，分为5等：用整数1~5表示，第5等最重要。他还从因特网上查到了每件物品的价格。他希望在不超过N元（可以等于N元）的前提下，使每件物品的价格与重要度的乘积的总和最大。【Input】输入的第1行，为两个正整数，用一个空格隔开：N m （其中N表示总钱数，m为希望购买物品的个数。）从第2行到第m+1行，第j行给出了编号为j-1的物品的基本数据，每行有3个非负整数v p q（其中v表示该物品的价格，p表示该物品的重要度（1~5），q表示该物品是主件还是附件。如果q=0，表示该物品为主件，如果q&gt;0，表示该物品为附件，q是所属主件的编号）【Output】输出只有一个正整数，为不超过总钱数的物品的价格与重要度乘积的总和的最大值（&lt;200000）【Limited conditions】N&lt;32000m&lt;60v&lt;10000物品的价格都是10元的整数倍【Sample input】1000 5800 2 0400 5 1300 5 1400 3 0500 2 0【Sample output】2200【Sample explanation】无 Record30min Analysis请先思考后再展开 这题的关键在于附件的存在，但“附件的个数不超过2”大大降低了难度那么对于每个主件，只有以下情况 只买主件 买主件和附件1 买主件和附件2 买主件和两个附件将输入整理后，就转化成了背包问题中的经典问题：采药 Code请先思考后再展开 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465//Zory-2018//****************头文件****************#include&lt;cstdio&gt;#include&lt;cstring&gt;#include&lt;cmath&gt;#include&lt;queue&gt;#include&lt;vector&gt;#include&lt;set&gt;#include&lt;string&gt;#include&lt;map&gt;#include&lt;iostream&gt;#include&lt;algorithm&gt;#ifdef WIN32#define BIGN "%I64d"#else#define BIGN "%lld"#endifusing namespace std;typedef long long ll;ll mymax(ll x,ll y) &#123;return x&gt;y?x:y;&#125;int mymin(int x,int y) &#123;return x&lt;y?x:y;&#125;//****************全局常量****************const int INF=0x3f3f3f3f;//****************全局定义****************int a[70][3],b[70][3];int f[33000];//****************实现****************//****************主函数****************int main()&#123; int N,m;scanf("%d%d",&amp;N,&amp;m); for(int i=1;i&lt;=m;i++) &#123; int x,y,z;scanf("%d%d%d",&amp;x,&amp;y,&amp;z); if(z==0) a[i][0]=x,b[i][0]=y; else if(b[z][1]==0) a[z][1]=x,b[z][1]=y; else a[z][2]=x,b[z][2]=y; &#125; for(int i=1;i&lt;=m;i++) &#123; for(int j=N;j&gt;=0;j--) &#123; int x,y; x=a[i][0]; y=a[i][0]*b[i][0]; if(j&gt;=x) f[j]=mymax(f[j],f[j-x]+y); x=a[i][0]+a[i][1]; y=a[i][0]*b[i][0]+a[i][1]*b[i][1]; if(j&gt;=x) f[j]=mymax(f[j],f[j-x]+y); x=a[i][0]+a[i][2]; y=a[i][0]*b[i][0]+a[i][2]*b[i][2]; if(j&gt;=x) f[j]=mymax(f[j],f[j-x]+y); x=a[i][0]+a[i][1]+a[i][2]; y=a[i][0]*b[i][0]+a[i][1]*b[i][1]+a[i][2]*b[i][2]; if(j&gt;=x) f[j]=mymax(f[j],f[j-x]+y); &#125; &#125; printf("%d",f[N]);&#125;]]></content>
+    <title><![CDATA[【Luogu1063】能量项链]]></title>
+    <url>%2F2018-04%2F%E8%83%BD%E9%87%8F%E9%A1%B9%E9%93%BE.html</url>
+    <content type="text"><![CDATA[Source and JudgeNOIP2006 提高组 T1Luogu1063Caioj1525 Problem【Brief description】在Mars星球上，每个Mars人都随身佩带着一串能量项链。在项链上有N颗能量珠。能量珠是一颗有头标记与尾标记的珠子，这些标记对应着某个正整数。并且，对于相邻的两颗珠子，前一颗珠子的尾标记一定等于后一颗珠子的头标记。因为只有这样，通过吸盘（吸盘是Mars人吸收能量的一种器官）的作用，这两颗珠子才能聚合成一颗珠子，同时释放出可以被吸盘吸收的能量。如果前一颗能量珠的头标记为m，尾标记为r，后一颗能量珠的头标记为r，尾标记为n，则聚合后释放的能量为m*r*n（Mars单位），新产生的珠子的头标记为m，尾标记为n。需要时，Mars人就用吸盘夹住相邻的两颗珠子，通过聚合得到能量，直到项链上只剩下一颗珠子为止。显然，不同的聚合顺序得到的总能量是不同的，请你设计一个聚合顺序，使一串项链释放出的总能量最大。【Input】输入的第一行是一个正整数N，表示项链上珠子的个数。第二行是N个用空格隔开的正整数，所有的数均不超过1000。第i个数为第i颗珠子的头标记（1≤i≤N），当1≤i&lt;N时，第i颗珠子的尾标记应该等于第i+1颗珠子的头标记。第N颗珠子的尾标记应该等于第1颗珠子的头标记。至于珠子的顺序，你可以这样确定：将项链放到桌面上，不要出现交叉，随意指定第一颗珠子，然后按顺时针方向确定其他珠子的顺序。【Output】一个正整数E，为一个最优聚合顺序所释放的总能量。【Limited conditions】4≤N≤100E≤2.1*10^9【Sample input】42 3 5 10【Sample output】710【Sample explanation】4颗珠子的头标记与尾标记依次为(2，3) (3，5) (5，10) (10，2)。我们用记号⊕表示两颗珠子的聚合操作，(j⊕k)表示第j，k两颗珠子聚合后所释放的能量。则第4、1两颗珠子聚合后释放的能量为：(4⊕1)=10*2*3=60。这一串项链可以得到最优值的一个聚合顺序所释放的总能量为((4⊕1)⊕2)⊕3）=10*2*3+10*3*5+10*5*10=710。 Record30min Analysis请先思考后再展开 首先，这是一个环，经典的套路就是复制一次在后面然后就是一个单纯的DP了 Code请先思考后再展开 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748//Zory-2018//****************头文件****************#include&lt;cstdio&gt;#include&lt;cstring&gt;#include&lt;cmath&gt;#include&lt;queue&gt;#include&lt;vector&gt;#include&lt;set&gt;#include&lt;string&gt;#include&lt;map&gt;#include&lt;iostream&gt;#include&lt;algorithm&gt;#ifdef WIN32#define BIGN "%I64d"#else#define BIGN "%lld"#endifusing namespace std;typedef long long ll;ll mymax(ll x,ll y) &#123;return x&gt;y?x:y;&#125;int mymin(int x,int y) &#123;return x&lt;y?x:y;&#125;//****************全局常量****************const int INF=0x3f3f3f3f;//****************全局定义****************ll a[210];ll f[210][210];//****************实现****************//****************主函数****************int main()&#123; int n;scanf("%d",&amp;n); for(int i=1;i&lt;=n;i++) scanf("%lld",&amp;a[i]),a[n+i]=a[i]; ll ans=0; for(int ln=2;ln&lt;=n;ln++) &#123; for(int st=1;st&lt;=n;st++) &#123; int ed=st+ln-1; for(int k=st;k&lt;=ed-1;k++) f[st][ed]=mymax(f[st][ed],f[st][k]+f[k+1][ed]+a[st]*a[k+1]*a[ed+1]); if(ln==n) ans=mymax(ans,f[st][ed]); &#125; &#125; printf("%lld",ans);&#125;]]></content>
       <categories>
         <category>刷题</category>
       </categories>
@@ -1181,9 +1181,9 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[【Luogu1063】能量项链]]></title>
-    <url>%2F2018-04%2F%E8%83%BD%E9%87%8F%E9%A1%B9%E9%93%BE.html</url>
-    <content type="text"><![CDATA[Source and JudgeNOIP2006 提高组 T1Luogu1063Caioj1525 Problem【Brief description】在Mars星球上，每个Mars人都随身佩带着一串能量项链。在项链上有N颗能量珠。能量珠是一颗有头标记与尾标记的珠子，这些标记对应着某个正整数。并且，对于相邻的两颗珠子，前一颗珠子的尾标记一定等于后一颗珠子的头标记。因为只有这样，通过吸盘（吸盘是Mars人吸收能量的一种器官）的作用，这两颗珠子才能聚合成一颗珠子，同时释放出可以被吸盘吸收的能量。如果前一颗能量珠的头标记为m，尾标记为r，后一颗能量珠的头标记为r，尾标记为n，则聚合后释放的能量为m*r*n（Mars单位），新产生的珠子的头标记为m，尾标记为n。需要时，Mars人就用吸盘夹住相邻的两颗珠子，通过聚合得到能量，直到项链上只剩下一颗珠子为止。显然，不同的聚合顺序得到的总能量是不同的，请你设计一个聚合顺序，使一串项链释放出的总能量最大。【Input】输入的第一行是一个正整数N，表示项链上珠子的个数。第二行是N个用空格隔开的正整数，所有的数均不超过1000。第i个数为第i颗珠子的头标记（1≤i≤N），当1≤i&lt;N时，第i颗珠子的尾标记应该等于第i+1颗珠子的头标记。第N颗珠子的尾标记应该等于第1颗珠子的头标记。至于珠子的顺序，你可以这样确定：将项链放到桌面上，不要出现交叉，随意指定第一颗珠子，然后按顺时针方向确定其他珠子的顺序。【Output】一个正整数E，为一个最优聚合顺序所释放的总能量。【Limited conditions】4≤N≤100E≤2.1*10^9【Sample input】42 3 5 10【Sample output】710【Sample explanation】4颗珠子的头标记与尾标记依次为(2，3) (3，5) (5，10) (10，2)。我们用记号⊕表示两颗珠子的聚合操作，(j⊕k)表示第j，k两颗珠子聚合后所释放的能量。则第4、1两颗珠子聚合后释放的能量为：(4⊕1)=10*2*3=60。这一串项链可以得到最优值的一个聚合顺序所释放的总能量为((4⊕1)⊕2)⊕3）=10*2*3+10*3*5+10*5*10=710。 Record30min Analysis请先思考后再展开 首先，这是一个环，经典的套路就是复制一次在后面然后就是一个单纯的DP了 Code请先思考后再展开 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748//Zory-2018//****************头文件****************#include&lt;cstdio&gt;#include&lt;cstring&gt;#include&lt;cmath&gt;#include&lt;queue&gt;#include&lt;vector&gt;#include&lt;set&gt;#include&lt;string&gt;#include&lt;map&gt;#include&lt;iostream&gt;#include&lt;algorithm&gt;#ifdef WIN32#define BIGN "%I64d"#else#define BIGN "%lld"#endifusing namespace std;typedef long long ll;ll mymax(ll x,ll y) &#123;return x&gt;y?x:y;&#125;int mymin(int x,int y) &#123;return x&lt;y?x:y;&#125;//****************全局常量****************const int INF=0x3f3f3f3f;//****************全局定义****************ll a[210];ll f[210][210];//****************实现****************//****************主函数****************int main()&#123; int n;scanf("%d",&amp;n); for(int i=1;i&lt;=n;i++) scanf("%lld",&amp;a[i]),a[n+i]=a[i]; ll ans=0; for(int ln=2;ln&lt;=n;ln++) &#123; for(int st=1;st&lt;=n;st++) &#123; int ed=st+ln-1; for(int k=st;k&lt;=ed-1;k++) f[st][ed]=mymax(f[st][ed],f[st][k]+f[k+1][ed]+a[st]*a[k+1]*a[ed+1]); if(ln==n) ans=mymax(ans,f[st][ed]); &#125; &#125; printf("%lld",ans);&#125;]]></content>
+    <title><![CDATA[【Luogu1064】金明的预算方案]]></title>
+    <url>%2F2018-04%2F%E9%87%91%E6%98%8E%E7%9A%84%E9%A2%84%E7%AE%97%E6%96%B9%E6%A1%88.html</url>
+    <content type="text"><![CDATA[Source and JudgeNOIP2006 提高组 T2Luogu1064Caioj1526 Problem【Brief description】如果要买归类为附件的物品，必须先买该附件所属的主件。每个主件可以有0个、1个或2个附件。附件不再有从属于自己的附件。金明想买的东西很多，肯定会超过妈妈限定的N元。于是，他把每件物品规定了一个重要度，分为5等：用整数1~5表示，第5等最重要。他还从因特网上查到了每件物品的价格。他希望在不超过N元（可以等于N元）的前提下，使每件物品的价格与重要度的乘积的总和最大。【Input】输入的第1行，为两个正整数，用一个空格隔开：N m （其中N表示总钱数，m为希望购买物品的个数。）从第2行到第m+1行，第j行给出了编号为j-1的物品的基本数据，每行有3个非负整数v p q（其中v表示该物品的价格，p表示该物品的重要度（1~5），q表示该物品是主件还是附件。如果q=0，表示该物品为主件，如果q&gt;0，表示该物品为附件，q是所属主件的编号）【Output】输出只有一个正整数，为不超过总钱数的物品的价格与重要度乘积的总和的最大值（&lt;200000）【Limited conditions】N&lt;32000m&lt;60v&lt;10000物品的价格都是10元的整数倍【Sample input】1000 5800 2 0400 5 1300 5 1400 3 0500 2 0【Sample output】2200【Sample explanation】无 Record30min Analysis请先思考后再展开 这题的关键在于附件的存在，但“附件的个数不超过2”大大降低了难度那么对于每个主件，只有以下情况 只买主件 买主件和附件1 买主件和附件2 买主件和两个附件将输入整理后，就转化成了背包问题中的经典问题：采药 Code请先思考后再展开 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465//Zory-2018//****************头文件****************#include&lt;cstdio&gt;#include&lt;cstring&gt;#include&lt;cmath&gt;#include&lt;queue&gt;#include&lt;vector&gt;#include&lt;set&gt;#include&lt;string&gt;#include&lt;map&gt;#include&lt;iostream&gt;#include&lt;algorithm&gt;#ifdef WIN32#define BIGN "%I64d"#else#define BIGN "%lld"#endifusing namespace std;typedef long long ll;ll mymax(ll x,ll y) &#123;return x&gt;y?x:y;&#125;int mymin(int x,int y) &#123;return x&lt;y?x:y;&#125;//****************全局常量****************const int INF=0x3f3f3f3f;//****************全局定义****************int a[70][3],b[70][3];int f[33000];//****************实现****************//****************主函数****************int main()&#123; int N,m;scanf("%d%d",&amp;N,&amp;m); for(int i=1;i&lt;=m;i++) &#123; int x,y,z;scanf("%d%d%d",&amp;x,&amp;y,&amp;z); if(z==0) a[i][0]=x,b[i][0]=y; else if(b[z][1]==0) a[z][1]=x,b[z][1]=y; else a[z][2]=x,b[z][2]=y; &#125; for(int i=1;i&lt;=m;i++) &#123; for(int j=N;j&gt;=0;j--) &#123; int x,y; x=a[i][0]; y=a[i][0]*b[i][0]; if(j&gt;=x) f[j]=mymax(f[j],f[j-x]+y); x=a[i][0]+a[i][1]; y=a[i][0]*b[i][0]+a[i][1]*b[i][1]; if(j&gt;=x) f[j]=mymax(f[j],f[j-x]+y); x=a[i][0]+a[i][2]; y=a[i][0]*b[i][0]+a[i][2]*b[i][2]; if(j&gt;=x) f[j]=mymax(f[j],f[j-x]+y); x=a[i][0]+a[i][1]+a[i][2]; y=a[i][0]*b[i][0]+a[i][1]*b[i][1]+a[i][2]*b[i][2]; if(j&gt;=x) f[j]=mymax(f[j],f[j-x]+y); &#125; &#125; printf("%d",f[N]);&#125;]]></content>
       <categories>
         <category>刷题</category>
       </categories>
@@ -1206,15 +1206,16 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[【Luogu1052】过河]]></title>
-    <url>%2F2018-04%2F%E8%BF%87%E6%B2%B3.html</url>
-    <content type="text"><![CDATA[Source and JudgeNOIP2005 提高组 T2Luogu1052Caioj1522 Problem【Brief description】在河上有一座独木桥，一只青蛙想沿着独木桥从河的一侧跳到另一侧。在桥上有一些石子，青蛙很讨厌踩在这些石子上。由于桥的长度和青蛙一次跳过的距离都是正整数，我们可以把独木桥上青蛙可能到达的点看成数轴上的一串整点：0，1，……，L（其中L是桥的长度）。坐标为0的点表示桥的起点，坐标为L的点表示桥的终点。青蛙从桥的起点开始，不停的向终点方向跳跃。一次跳跃的距离是S到T之间的任意正整数（包括S,T）。当青蛙跳到或跳过坐标为L的点时，就算青蛙已经跳出了独木桥。题目给出独木桥的长度L，青蛙跳跃的距离范围S,T，桥上石子的位置。你的任务是确定青蛙要想过河，最少需要踩到的石子数。【Input】第一行有一个正整数L，表示独木桥的长度。第二行有三个正整数S，T，M，分别表示青蛙一次跳跃的最小距离，最大距离，及桥上石子的个数。第三行有M个不同的正整数分别表示这M个石子在数轴上的位置（数据保证桥的起点和终点处没有石子）。所有相邻的整数之间用一个空格隔开。【Output】只包括一个整数，表示青蛙过河最少需要踩到的石子数。【Limited conditions】1&lt;=L&lt;=10^91&lt;=S&lt;=T&lt;=10，1&lt;=M&lt;=100【Sample input】102 3 52 3 5 6 7【Sample output】2【Sample explanation】无 Record30min Analysis请先思考后再展开 虽然说s和t都是不固定的，但它们的范围都非常小，一种方案是状压，但代码复杂度较高，而且对新手不友好，按下不表。 其实，既然步数只有可能是1到10，那么由于题目根本不关心具体是怎么走过去的，甚至总步数都不关心，那么对于一段很长的距离，怎么走几乎是随便的。那么其实，无论s和t的取值是什么，对于1到10的最小公倍数2520（有的人会问怎么计算？把所有数字列出来，然后诸如4和8，就只取8，剩下7、8、9、10，那么因为10里面有2,8变成4，于是它们的乘积即2520了）然后根据位置差，排序后压缩路径，用bool数组对点记录即可 Code请先思考后再展开 12345678910111213141516171819202122232425262728293031323334const int INF=0x3f3f3f3f;int a[110],b[110],c[110];int f[610000];bool v[610000];//****************主函数****************int main()&#123; int l,s,t,m;scanf("%d%d%d%d",&amp;l,&amp;s,&amp;t,&amp;m); for(int i=1;i&lt;=m;i++) scanf("%d",&amp;a[i]); sort(a+1,a+1+m); for(int i=1;i&lt;=m;i++) &#123; b[i]=a[i]-a[i-1]; int tmp=b[i]%2520; if(b[i]&gt;=2520 and tmp&lt;=t) tmp+=2520;//确保正确性 c[i]=c[i-1]+tmp; v[ c[i] ]=1; &#125; memset(f,63,sizeof(f));f[0]=0; int tmp=(l-a[m])%2520; if((l-a[m])&gt;=2520 and tmp&lt;=t) tmp+=2520;//确保正确性 l=c[m]+tmp; int ans=INF; for(int i=1;i&lt;=l+t-1;i++) &#123; for(int p=s;p&lt;=t;p++) if(i-p&gt;=0) f[i]=min(f[i],f[i-p]+v[i]); if(i&gt;=l) ans=min(ans,f[i]); &#125; printf("%d",ans);&#125;]]></content>
+    <title><![CDATA[【Luogu1092】虫食算]]></title>
+    <url>%2F2018-04%2F%E8%99%AB%E9%A3%9F%E7%AE%97.html</url>
+    <content type="text"><![CDATA[Source and JudgeNOIP2004 提高组 T4Luogu1092Caioj1519 Problem【Brief description】所谓虫食算，就是原先的算式中有一部分被虫子啃掉了，需要我们根据剩下的数字来判定被啃掉的字母。来看一个简单的例子：123 43#9865#045+ 8468#6633=44445509678其中#号代表被虫子啃掉的数字。根据算式，我们很容易判断：第一行的两个数字分别是5和3，第二行的数字是5。现在，我们对问题做两个限制：首先，我们只考虑加法的虫食算。这里的加法是N进制加法，算式中三个数都有N位，允许有前导的0。其次，虫子把所有的数都啃光了，我们只知道哪些数字是相同的，我们将相同的数字用相同的字母表示，不同的数字用不同的字母表示。如果这个算式是N进制的，我们就取英文字母表的前N个大写字母来表示这个算式中的0到N-1这N个不同的数字,但是这N个字母并不一定顺序地代表0到N-1。输入数据保证N个字母分别至少出现一次。123 BADC+CBDA DCCC上面的算式是一个4进制的算式。很显然，我们只要让ABCD分别代表0123，便可以让这个式子成立了。你的任务是，对于给定的N进制加法算式，求出N个不同的字母分别代表的数字，使得该加法算式成立。输入数据保证有且仅有一组解.【Input】包含四行。第一行有一个正整数N，后面的3行每行有一个由大写字母组成的字符串，分别代表两个加数以及和。这3个字符串左右两端都没有空格，从高位到低位，并且恰好有N位。【Output】包含一行。在这一行中，应当包含唯一的那组解。解是这样表示的：输出N个数字，分别表示A，B，C……所代表的数字，相邻的两个数字用一个空格隔开，不能有多余的空格。【Limited conditions】N&lt;=26【Sample input】5ABCEDBDACEEBBAA【Sample output】1 0 3 4 2【Sample explanation】无 Record1h Analysis1请先思考后再展开 先打了个暴力，想着数据可能水【其实的确没有极限数据】但依然TLE，但已经剪枝了然后跟着题解，发现可以不递推进位，减更多这时候还是差一点，然后就是一个神奇的玄学操作了：重新编号（从后往前），dfs决断的时候编号从大到小我一开始想着，这是为了搞掉首位进位（这个也是跟题解学的）那既然如此编号从前往后，dfs的时候从小到大也一样吧结果差距是几十倍？？ 考场上绝对不能这么玩，会死的很惨 Code1请先思考后再展开 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100101102103104105106107108109//Zory-2018//****************头文件****************#include&lt;cstdio&gt;#include&lt;cstring&gt;#include&lt;cmath&gt;#include&lt;queue&gt;#include&lt;vector&gt;#include&lt;set&gt;#include&lt;string&gt;#include&lt;map&gt;#include&lt;iostream&gt;#include&lt;algorithm&gt;#ifdef WIN32#define BIGN "%I64d"#else#define BIGN "%lld"#endifusing namespace std;typedef long long ll;int mymax(int x,int y) &#123;return x&gt;y?x:y;&#125;int mymin(int x,int y) &#123;return x&lt;y?x:y;&#125;//****************全局常量****************const int INF=0x3f3f3f3f;//****************全局定义****************int n;int a[30];bool used[30];int jia1[30],jia2[30],he[30];//****************实现****************bool finaljudge()&#123; int jw=0; for(int i=1;i&lt;=n;i++) &#123; int x=a[jia1[i]],y=a[jia2[i]],z=a[he[i]]; if( (x+y+jw)%n!=z ) return 0; jw=(x+y+jw)/n; &#125; return 1;&#125;bool check()&#123; if(a[jia1[n]]+a[jia2[n]]&gt;=n) return 0; for(int i=1;i&lt;=n;i++)//从后往前 &#123; int x=a[jia1[i]],y=a[jia2[i]],z=a[he[i]]; if(x&lt;0 or y&lt;0 or z&lt;0) continue;//残缺 if( (x+y)%n!=z and (x+y+1)%n!=z ) return 0; &#125; return 1;&#125;int nxt[30];//新编号-Importantvoid Print()&#123; for(int i=1;i&lt;=n;i++) printf("%d ",a[i]); exit(0);&#125;void dfs(int x)&#123; if(x&gt;n) &#123; if(finaljudge()) Print(); return; &#125; //for(int i=0;i&lt;=n-1;i++) 玄学操作 for(int i=n-1;i&gt;=0;i--) if(used[i]==0) &#123; a[ nxt[x] ]=i; if(check()) &#123; used[i]=1; dfs(x+1); used[i]=0; &#125; a[ nxt[x] ]=-1; &#125;&#125;int cnt=0;//新编号-Importantvoid putnxt(int x)&#123; if(used[x]==0) &#123; used[x]=1;//借用 nxt[++cnt]=x; &#125;&#125;//****************主函数****************char ch[30];int main()&#123; scanf("%d",&amp;n); scanf("%s",ch+1);for(int i=n;i&gt;=1;i--) jia1[n-i+1]=ch[i]-'A'+1; scanf("%s",ch+1);for(int i=n;i&gt;=1;i--) jia2[n-i+1]=ch[i]-'A'+1; scanf("%s",ch+1);for(int i=n;i&gt;=1;i--) he[n-i+1]=ch[i]-'A'+1; for(int i=1;i&lt;=n;i++)//新编号-Important &#123; putnxt(jia1[i]); putnxt(jia2[i]); putnxt(he[i]); &#125; memset(used,0,sizeof(used)); memset(a,-1,sizeof(a)); dfs(1);&#125; Analysis2请先思考后再展开 并没有看懂的正解：https://blog.csdn.net/JeremyGJY/article/details/50611568https://blog.csdn.net/outer_form/article/details/50611820 Code2请先思考后再展开 12]]></content>
       <categories>
         <category>刷题</category>
       </categories>
       <tags>
-        <tag>难度3</tag>
-        <tag>DP</tag>
+        <tag>难度4</tag>
+        <tag>模拟</tag>
+        <tag>坑</tag>
       </tags>
   </entry>
   <entry>
@@ -1242,16 +1243,15 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[【Luogu1092】虫食算]]></title>
-    <url>%2F2018-04%2F%E8%99%AB%E9%A3%9F%E7%AE%97.html</url>
-    <content type="text"><![CDATA[Source and JudgeNOIP2004 提高组 T4Luogu1092Caioj1519 Problem【Brief description】所谓虫食算，就是原先的算式中有一部分被虫子啃掉了，需要我们根据剩下的数字来判定被啃掉的字母。来看一个简单的例子：123 43#9865#045+ 8468#6633=44445509678其中#号代表被虫子啃掉的数字。根据算式，我们很容易判断：第一行的两个数字分别是5和3，第二行的数字是5。现在，我们对问题做两个限制：首先，我们只考虑加法的虫食算。这里的加法是N进制加法，算式中三个数都有N位，允许有前导的0。其次，虫子把所有的数都啃光了，我们只知道哪些数字是相同的，我们将相同的数字用相同的字母表示，不同的数字用不同的字母表示。如果这个算式是N进制的，我们就取英文字母表的前N个大写字母来表示这个算式中的0到N-1这N个不同的数字,但是这N个字母并不一定顺序地代表0到N-1。输入数据保证N个字母分别至少出现一次。123 BADC+CBDA DCCC上面的算式是一个4进制的算式。很显然，我们只要让ABCD分别代表0123，便可以让这个式子成立了。你的任务是，对于给定的N进制加法算式，求出N个不同的字母分别代表的数字，使得该加法算式成立。输入数据保证有且仅有一组解.【Input】包含四行。第一行有一个正整数N，后面的3行每行有一个由大写字母组成的字符串，分别代表两个加数以及和。这3个字符串左右两端都没有空格，从高位到低位，并且恰好有N位。【Output】包含一行。在这一行中，应当包含唯一的那组解。解是这样表示的：输出N个数字，分别表示A，B，C……所代表的数字，相邻的两个数字用一个空格隔开，不能有多余的空格。【Limited conditions】N&lt;=26【Sample input】5ABCEDBDACEEBBAA【Sample output】1 0 3 4 2【Sample explanation】无 Record1h Analysis1请先思考后再展开 先打了个暴力，想着数据可能水【其实的确没有极限数据】但依然TLE，但已经剪枝了然后跟着题解，发现可以不递推进位，减更多这时候还是差一点，然后就是一个神奇的玄学操作了：重新编号（从后往前），dfs决断的时候编号从大到小我一开始想着，这是为了搞掉首位进位（这个也是跟题解学的）那既然如此编号从前往后，dfs的时候从小到大也一样吧结果差距是几十倍？？ 考场上绝对不能这么玩，会死的很惨 Code1请先思考后再展开 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100101102103104105106107108109//Zory-2018//****************头文件****************#include&lt;cstdio&gt;#include&lt;cstring&gt;#include&lt;cmath&gt;#include&lt;queue&gt;#include&lt;vector&gt;#include&lt;set&gt;#include&lt;string&gt;#include&lt;map&gt;#include&lt;iostream&gt;#include&lt;algorithm&gt;#ifdef WIN32#define BIGN "%I64d"#else#define BIGN "%lld"#endifusing namespace std;typedef long long ll;int mymax(int x,int y) &#123;return x&gt;y?x:y;&#125;int mymin(int x,int y) &#123;return x&lt;y?x:y;&#125;//****************全局常量****************const int INF=0x3f3f3f3f;//****************全局定义****************int n;int a[30];bool used[30];int jia1[30],jia2[30],he[30];//****************实现****************bool finaljudge()&#123; int jw=0; for(int i=1;i&lt;=n;i++) &#123; int x=a[jia1[i]],y=a[jia2[i]],z=a[he[i]]; if( (x+y+jw)%n!=z ) return 0; jw=(x+y+jw)/n; &#125; return 1;&#125;bool check()&#123; if(a[jia1[n]]+a[jia2[n]]&gt;=n) return 0; for(int i=1;i&lt;=n;i++)//从后往前 &#123; int x=a[jia1[i]],y=a[jia2[i]],z=a[he[i]]; if(x&lt;0 or y&lt;0 or z&lt;0) continue;//残缺 if( (x+y)%n!=z and (x+y+1)%n!=z ) return 0; &#125; return 1;&#125;int nxt[30];//新编号-Importantvoid Print()&#123; for(int i=1;i&lt;=n;i++) printf("%d ",a[i]); exit(0);&#125;void dfs(int x)&#123; if(x&gt;n) &#123; if(finaljudge()) Print(); return; &#125; //for(int i=0;i&lt;=n-1;i++) 玄学操作 for(int i=n-1;i&gt;=0;i--) if(used[i]==0) &#123; a[ nxt[x] ]=i; if(check()) &#123; used[i]=1; dfs(x+1); used[i]=0; &#125; a[ nxt[x] ]=-1; &#125;&#125;int cnt=0;//新编号-Importantvoid putnxt(int x)&#123; if(used[x]==0) &#123; used[x]=1;//借用 nxt[++cnt]=x; &#125;&#125;//****************主函数****************char ch[30];int main()&#123; scanf("%d",&amp;n); scanf("%s",ch+1);for(int i=n;i&gt;=1;i--) jia1[n-i+1]=ch[i]-'A'+1; scanf("%s",ch+1);for(int i=n;i&gt;=1;i--) jia2[n-i+1]=ch[i]-'A'+1; scanf("%s",ch+1);for(int i=n;i&gt;=1;i--) he[n-i+1]=ch[i]-'A'+1; for(int i=1;i&lt;=n;i++)//新编号-Important &#123; putnxt(jia1[i]); putnxt(jia2[i]); putnxt(he[i]); &#125; memset(used,0,sizeof(used)); memset(a,-1,sizeof(a)); dfs(1);&#125; Analysis2请先思考后再展开 并没有看懂的正解：https://blog.csdn.net/JeremyGJY/article/details/50611568https://blog.csdn.net/outer_form/article/details/50611820 Code2请先思考后再展开 12]]></content>
+    <title><![CDATA[【Luogu1052】过河]]></title>
+    <url>%2F2018-04%2F%E8%BF%87%E6%B2%B3.html</url>
+    <content type="text"><![CDATA[Source and JudgeNOIP2005 提高组 T2Luogu1052Caioj1522 Problem【Brief description】在河上有一座独木桥，一只青蛙想沿着独木桥从河的一侧跳到另一侧。在桥上有一些石子，青蛙很讨厌踩在这些石子上。由于桥的长度和青蛙一次跳过的距离都是正整数，我们可以把独木桥上青蛙可能到达的点看成数轴上的一串整点：0，1，……，L（其中L是桥的长度）。坐标为0的点表示桥的起点，坐标为L的点表示桥的终点。青蛙从桥的起点开始，不停的向终点方向跳跃。一次跳跃的距离是S到T之间的任意正整数（包括S,T）。当青蛙跳到或跳过坐标为L的点时，就算青蛙已经跳出了独木桥。题目给出独木桥的长度L，青蛙跳跃的距离范围S,T，桥上石子的位置。你的任务是确定青蛙要想过河，最少需要踩到的石子数。【Input】第一行有一个正整数L，表示独木桥的长度。第二行有三个正整数S，T，M，分别表示青蛙一次跳跃的最小距离，最大距离，及桥上石子的个数。第三行有M个不同的正整数分别表示这M个石子在数轴上的位置（数据保证桥的起点和终点处没有石子）。所有相邻的整数之间用一个空格隔开。【Output】只包括一个整数，表示青蛙过河最少需要踩到的石子数。【Limited conditions】1&lt;=L&lt;=10^91&lt;=S&lt;=T&lt;=10，1&lt;=M&lt;=100【Sample input】102 3 52 3 5 6 7【Sample output】2【Sample explanation】无 Record30min Analysis请先思考后再展开 虽然说s和t都是不固定的，但它们的范围都非常小，一种方案是状压，但代码复杂度较高，而且对新手不友好，按下不表。 其实，既然步数只有可能是1到10，那么由于题目根本不关心具体是怎么走过去的，甚至总步数都不关心，那么对于一段很长的距离，怎么走几乎是随便的。那么其实，无论s和t的取值是什么，对于1到10的最小公倍数2520（有的人会问怎么计算？把所有数字列出来，然后诸如4和8，就只取8，剩下7、8、9、10，那么因为10里面有2,8变成4，于是它们的乘积即2520了）然后根据位置差，排序后压缩路径，用bool数组对点记录即可 Code请先思考后再展开 12345678910111213141516171819202122232425262728293031323334const int INF=0x3f3f3f3f;int a[110],b[110],c[110];int f[610000];bool v[610000];//****************主函数****************int main()&#123; int l,s,t,m;scanf("%d%d%d%d",&amp;l,&amp;s,&amp;t,&amp;m); for(int i=1;i&lt;=m;i++) scanf("%d",&amp;a[i]); sort(a+1,a+1+m); for(int i=1;i&lt;=m;i++) &#123; b[i]=a[i]-a[i-1]; int tmp=b[i]%2520; if(b[i]&gt;=2520 and tmp&lt;=t) tmp+=2520;//确保正确性 c[i]=c[i-1]+tmp; v[ c[i] ]=1; &#125; memset(f,63,sizeof(f));f[0]=0; int tmp=(l-a[m])%2520; if((l-a[m])&gt;=2520 and tmp&lt;=t) tmp+=2520;//确保正确性 l=c[m]+tmp; int ans=INF; for(int i=1;i&lt;=l+t-1;i++) &#123; for(int p=s;p&lt;=t;p++) if(i-p&gt;=0) f[i]=min(f[i],f[i-p]+v[i]); if(i&gt;=l) ans=min(ans,f[i]); &#125; printf("%d",ans);&#125;]]></content>
       <categories>
         <category>刷题</category>
       </categories>
       <tags>
-        <tag>难度4</tag>
-        <tag>模拟</tag>
-        <tag>坑</tag>
+        <tag>难度3</tag>
+        <tag>DP</tag>
       </tags>
   </entry>
   <entry>
@@ -1408,8 +1408,8 @@
         <category>刷题</category>
       </categories>
       <tags>
-        <tag>难度4</tag>
         <tag>最短路</tag>
+        <tag>难度4</tag>
       </tags>
   </entry>
   <entry>
@@ -1606,8 +1606,8 @@
         <category>刷题</category>
       </categories>
       <tags>
-        <tag>难度5</tag>
         <tag>树链剖分</tag>
+        <tag>难度5</tag>
       </tags>
   </entry>
   <entry>
@@ -1642,9 +1642,9 @@
         <category>刷题</category>
       </categories>
       <tags>
-        <tag>精品题</tag>
         <tag>树链剖分</tag>
         <tag>LCA</tag>
+        <tag>精品题</tag>
         <tag>难度6</tag>
       </tags>
   </entry>
@@ -1751,9 +1751,9 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[【Bzoj1827】【Luogu2986】【Bzoj3743】奶牛大集会]]></title>
-    <url>%2F2018-03%2F%E5%A5%B6%E7%89%9B%E5%A4%A7%E9%9B%86%E4%BC%9A.html</url>
-    <content type="text"><![CDATA[来源和评测点USACO2010 MAR GoldGreat Cow GatheringBzoj1827Luogu2986 双倍经验：Coci2015 KampBzoj3743 题目【题目大意】给出n个点，由n-1条边连接ai和bi，长度为li，形成一棵树，每个点有ci个奶牛。现在要选一个点，使其他点的奶牛到这里距离×数量之和最小。【输入格式】第一行：一个整数N。第二到N+1行：第i+1行有一个整数Ci第N+2到2*N行：第i+N+1行有3个整数：Ai,Bi和Li。【输出格式】最小的距离×数量之和【限定条件】1&lt;=N&lt;=100,0001&lt;=Ai&lt;=N1&lt;=Bi&lt;=N0&lt;=Ci&lt;=1,0001&lt;=Li&lt;=1,000【输入样例】5110021 3 12 3 23 4 34 5 3【输出样例】15【样例解释】 刷题记录30min忘记开long long，WA了一发 分析请先思考后再展开 这道题真心水啊，给之前被DP虐惨的我找回一点点信心……首先一看就是一棵树，那除了树形DP还能是什么~然后用a表示来自父亲的费用，b表示来自儿子的费用a还要容斥一下，还好有样例……$$a_top=(size[rt]-size[x])\times L_fa$$ $$a_brother=b[fa]-b[x]-size[b]\times L_son$$ $$a[x]=a[fa]+a_top+a_brother$$ $$b[x]=\sum b[son]+size[x]\times L_son$$ 然后就是因为方向不同，所以要dfs两次复杂度O(2n)，这n比较小，主要是这出题人把边搞大了 代码请先思考后再展开 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283848586//Zory-2018//*******************头文件*******************#include&lt;cstdio&gt;#include&lt;cstring&gt;#include&lt;cmath&gt;#include&lt;queue&gt;#include&lt;vector&gt;#include&lt;algorithm&gt;#ifdef WIN32#define BIGN "%I64d"#else#define BIGN "%lld"#endifusing namespace std;typedef long long ll;ll mymin(ll x,ll y) &#123;return x&lt;y?x:y;&#125;//*******************全局常量*******************const int MAXN=110000,MAXM=210000;const int INF=0x3f3f3f3f;//*******************全局定义*******************struct nod&#123; int hou; ll a,b; ll size; int fa; nod() &#123; fa=hou=a=b=size=0; &#125;&#125;p[MAXN];struct edge&#123; int y,g; ll c;&#125;e[MAXM];int ln=0;void ins(int x,int y,int c)&#123; ln++; e[ln].y=y;e[ln].c=c; e[ln].g=p[x].hou;p[x].hou=ln;&#125;//*******************实现*******************void dfs1(int x,int fa)//自底向上&#123; p[x].fa=fa; for(int k=p[x].hou;k&gt;0;k=e[k].g) &#123; int y=e[k].y; if(y==fa) continue; dfs1(y,x); p[x].size+=p[y].size; p[x].b+=p[y].b+p[y].size*e[k].c; &#125;&#125;int n;ll ans=ll(INF)*ll(INF);void dfs2(int x)//自上而下&#123; for(int k=p[x].hou;k&gt;0;k=e[k].g) &#123; int y=e[k].y; if(y==p[x].fa) continue; ll top=(p[1].size-p[y].size)*e[k].c; ll brother=p[x].b-p[y].b-p[y].size*e[k].c; p[y].a=p[x].a+top+brother; ans=mymin(ans,p[y].a+p[y].b); dfs2(y); &#125;&#125;//*******************主函数*******************int main()&#123; scanf("%d",&amp;n); for(int i=1;i&lt;=n;i++) scanf("%d",&amp;p[i].size); for(int i=1;i&lt;=n-1;i++) &#123; int x,y,c;scanf("%d%d%d",&amp;x,&amp;y,&amp;c); ins(x,y,c);ins(y,x,c); &#125; dfs1(1,0); dfs2(1); ans=mymin(ans,p[1].b); printf(BIGN,ans);&#125;]]></content>
+    <title><![CDATA[【Bzoj1801】【Luogu2051】中国象棋]]></title>
+    <url>%2F2018-03%2F%E4%B8%AD%E5%9B%BD%E8%B1%A1%E6%A3%8B.html</url>
+    <content type="text"><![CDATA[来源和评测点Ahoi2009 Day2Bzoj1801Luogu2051 题目【题目大意】在一个N行M列的棋盘上，让你放若干个炮（可以是0个），使得没有一个炮可以攻击到另一个炮，请问有多少种放置方法。中国象棋中炮的行走方式是：一个炮攻击到另一个炮，当且仅当它们在同一行或同一列中，且它们之间恰好有一个棋子。【输入格式】一行包含两个整数N，M，之间由一个空格隔开。【输出格式】总共的方案数，由于该值可能很大，只需给出方案数模9999973的结果。【限定条件】30%的数据中N和M均不超过650%的数据中N和M至少有一个数不超过8100%的数据中N和M均不超过100【输入样例】1 3【输出样例】7【样例解释】除了3个格子里都塞满了炮以外，其它方案都是可行的，所以一共有2*2*2-1=7种方案。 刷题记录1h 分析请先思考后再展开 唉我的DP真的菜，打算多做点这道题的状态表示也不是太好想： 列的顺序是无关紧要的 显然每一行、列只能放0~2个棋子那么什么是重要的呢？0~2，这个状态量好像很少，但怎么表示呢？既然顺序不重要，那重要的自然就是内容了，而且内容只有三种情况那我们可以把每一列分类：0个为一类，1个为一类，2个为一类而且这三类的总和是m 想到了这个，基本上问题就迎刃而解了考虑DP状态的转移，以行来递推，f[i][q][w]表示前i行，有q列是有1个棋子的，w列是有2个棋子的，那么当然1个棋子的有(m-q-w)个 什么也不放，状态量有1个，状态值f[i-1][j][k] 放1个在原本棋子数量为0的列，状态量有m-(j-1)-k个，状态值f[i-1][j-1][k] 放1个在原本棋子数量为1的列，状态量有j+1个，状态值f[i-1][j+1][k-1] 放2个在原本棋子数量为0的列，状态量有C(m-(j-1)-k,2)个，状态值f[i-1][j-2][k] 放2个在原本棋子数量为0、1的列，状态量有(m-j-(k-1))*j个，状态值[i-1][j][k-1] 放2个在原本棋子数量为1的列，状态量有C(j+1,2)个，状态值f[i-1][j+2][k-2]出现了组合数呀！n还算挺大的怎么办?之前就卡这里了发现都是选取2个，所以不需要用阶乘的公式了hh直接n*(n-1)/2，爽 代码请先思考后再展开 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253//Zory-2018//*******************头文件*******************#include&lt;cstdio&gt;#include&lt;cstring&gt;#include&lt;cmath&gt;#include&lt;queue&gt;#include&lt;vector&gt;#include&lt;algorithm&gt;#ifdef WIN32#define BIGN "%I64d"#else#define BIGN "%lld"#endifusing namespace std;typedef long long ll;//*******************全局常量*******************const int MOD=9999973;//*******************全局定义*******************int f[110][110][110];//*******************实现*******************ll getf(int i,int q,int w)&#123; if(i&lt;0 or q&lt;0 or w&lt;0) return 0; return f[i][q][w];&#125;int C2(int x)&#123; return x*(x-1)&gt;&gt;1;&#125;//*******************主函数*******************int main()&#123; int n,m;scanf("%d%d",&amp;n,&amp;m); int ans=0;f[0][0][0]=1; for(int i=1;i&lt;=n;i++) &#123; for(int q=0;q&lt;=m;q++) &#123; for(int w=0;w+q&lt;=m;w++) &#123; f[i][q][w]=f[i-1][q][w]; f[i][q][w]=( f[i][q][w]+getf(i-1,q-1,w)*(m-(q-1)-w)%MOD )%MOD; f[i][q][w]=( f[i][q][w]+getf(i-1,q+1,w-1)*(q+1)%MOD )%MOD; f[i][q][w]=( f[i][q][w]+getf(i-1,q-2,w)*C2(m-(q-2)-w)%MOD )%MOD; f[i][q][w]=( f[i][q][w]+getf(i-1,q,w-1)*(m-q-(w-1))%MOD*q%MOD )%MOD; f[i][q][w]=( f[i][q][w]+getf(i-1,q+2,w-2)*C2(q+2)%MOD )%MOD; if(i==n) ans=(ans+getf(i,q,w))%MOD; &#125; &#125; &#125; printf("%d",ans);&#125;]]></content>
       <categories>
         <category>刷题</category>
       </categories>
@@ -1763,9 +1763,9 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[【Bzoj1801】【Luogu2051】中国象棋]]></title>
-    <url>%2F2018-03%2F%E4%B8%AD%E5%9B%BD%E8%B1%A1%E6%A3%8B.html</url>
-    <content type="text"><![CDATA[来源和评测点Ahoi2009 Day2Bzoj1801Luogu2051 题目【题目大意】在一个N行M列的棋盘上，让你放若干个炮（可以是0个），使得没有一个炮可以攻击到另一个炮，请问有多少种放置方法。中国象棋中炮的行走方式是：一个炮攻击到另一个炮，当且仅当它们在同一行或同一列中，且它们之间恰好有一个棋子。【输入格式】一行包含两个整数N，M，之间由一个空格隔开。【输出格式】总共的方案数，由于该值可能很大，只需给出方案数模9999973的结果。【限定条件】30%的数据中N和M均不超过650%的数据中N和M至少有一个数不超过8100%的数据中N和M均不超过100【输入样例】1 3【输出样例】7【样例解释】除了3个格子里都塞满了炮以外，其它方案都是可行的，所以一共有2*2*2-1=7种方案。 刷题记录1h 分析请先思考后再展开 唉我的DP真的菜，打算多做点这道题的状态表示也不是太好想： 列的顺序是无关紧要的 显然每一行、列只能放0~2个棋子那么什么是重要的呢？0~2，这个状态量好像很少，但怎么表示呢？既然顺序不重要，那重要的自然就是内容了，而且内容只有三种情况那我们可以把每一列分类：0个为一类，1个为一类，2个为一类而且这三类的总和是m 想到了这个，基本上问题就迎刃而解了考虑DP状态的转移，以行来递推，f[i][q][w]表示前i行，有q列是有1个棋子的，w列是有2个棋子的，那么当然1个棋子的有(m-q-w)个 什么也不放，状态量有1个，状态值f[i-1][j][k] 放1个在原本棋子数量为0的列，状态量有m-(j-1)-k个，状态值f[i-1][j-1][k] 放1个在原本棋子数量为1的列，状态量有j+1个，状态值f[i-1][j+1][k-1] 放2个在原本棋子数量为0的列，状态量有C(m-(j-1)-k,2)个，状态值f[i-1][j-2][k] 放2个在原本棋子数量为0、1的列，状态量有(m-j-(k-1))*j个，状态值[i-1][j][k-1] 放2个在原本棋子数量为1的列，状态量有C(j+1,2)个，状态值f[i-1][j+2][k-2]出现了组合数呀！n还算挺大的怎么办?之前就卡这里了发现都是选取2个，所以不需要用阶乘的公式了hh直接n*(n-1)/2，爽 代码请先思考后再展开 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253//Zory-2018//*******************头文件*******************#include&lt;cstdio&gt;#include&lt;cstring&gt;#include&lt;cmath&gt;#include&lt;queue&gt;#include&lt;vector&gt;#include&lt;algorithm&gt;#ifdef WIN32#define BIGN "%I64d"#else#define BIGN "%lld"#endifusing namespace std;typedef long long ll;//*******************全局常量*******************const int MOD=9999973;//*******************全局定义*******************int f[110][110][110];//*******************实现*******************ll getf(int i,int q,int w)&#123; if(i&lt;0 or q&lt;0 or w&lt;0) return 0; return f[i][q][w];&#125;int C2(int x)&#123; return x*(x-1)&gt;&gt;1;&#125;//*******************主函数*******************int main()&#123; int n,m;scanf("%d%d",&amp;n,&amp;m); int ans=0;f[0][0][0]=1; for(int i=1;i&lt;=n;i++) &#123; for(int q=0;q&lt;=m;q++) &#123; for(int w=0;w+q&lt;=m;w++) &#123; f[i][q][w]=f[i-1][q][w]; f[i][q][w]=( f[i][q][w]+getf(i-1,q-1,w)*(m-(q-1)-w)%MOD )%MOD; f[i][q][w]=( f[i][q][w]+getf(i-1,q+1,w-1)*(q+1)%MOD )%MOD; f[i][q][w]=( f[i][q][w]+getf(i-1,q-2,w)*C2(m-(q-2)-w)%MOD )%MOD; f[i][q][w]=( f[i][q][w]+getf(i-1,q,w-1)*(m-q-(w-1))%MOD*q%MOD )%MOD; f[i][q][w]=( f[i][q][w]+getf(i-1,q+2,w-2)*C2(q+2)%MOD )%MOD; if(i==n) ans=(ans+getf(i,q,w))%MOD; &#125; &#125; &#125; printf("%d",ans);&#125;]]></content>
+    <title><![CDATA[【Bzoj1827】【Luogu2986】【Bzoj3743】奶牛大集会]]></title>
+    <url>%2F2018-03%2F%E5%A5%B6%E7%89%9B%E5%A4%A7%E9%9B%86%E4%BC%9A.html</url>
+    <content type="text"><![CDATA[来源和评测点USACO2010 MAR GoldGreat Cow GatheringBzoj1827Luogu2986 双倍经验：Coci2015 KampBzoj3743 题目【题目大意】给出n个点，由n-1条边连接ai和bi，长度为li，形成一棵树，每个点有ci个奶牛。现在要选一个点，使其他点的奶牛到这里距离×数量之和最小。【输入格式】第一行：一个整数N。第二到N+1行：第i+1行有一个整数Ci第N+2到2*N行：第i+N+1行有3个整数：Ai,Bi和Li。【输出格式】最小的距离×数量之和【限定条件】1&lt;=N&lt;=100,0001&lt;=Ai&lt;=N1&lt;=Bi&lt;=N0&lt;=Ci&lt;=1,0001&lt;=Li&lt;=1,000【输入样例】5110021 3 12 3 23 4 34 5 3【输出样例】15【样例解释】 刷题记录30min忘记开long long，WA了一发 分析请先思考后再展开 这道题真心水啊，给之前被DP虐惨的我找回一点点信心……首先一看就是一棵树，那除了树形DP还能是什么~然后用a表示来自父亲的费用，b表示来自儿子的费用a还要容斥一下，还好有样例……$$a_top=(size[rt]-size[x])\times L_fa$$ $$a_brother=b[fa]-b[x]-size[b]\times L_son$$ $$a[x]=a[fa]+a_top+a_brother$$ $$b[x]=\sum b[son]+size[x]\times L_son$$ 然后就是因为方向不同，所以要dfs两次复杂度O(2n)，这n比较小，主要是这出题人把边搞大了 代码请先思考后再展开 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283848586//Zory-2018//*******************头文件*******************#include&lt;cstdio&gt;#include&lt;cstring&gt;#include&lt;cmath&gt;#include&lt;queue&gt;#include&lt;vector&gt;#include&lt;algorithm&gt;#ifdef WIN32#define BIGN "%I64d"#else#define BIGN "%lld"#endifusing namespace std;typedef long long ll;ll mymin(ll x,ll y) &#123;return x&lt;y?x:y;&#125;//*******************全局常量*******************const int MAXN=110000,MAXM=210000;const int INF=0x3f3f3f3f;//*******************全局定义*******************struct nod&#123; int hou; ll a,b; ll size; int fa; nod() &#123; fa=hou=a=b=size=0; &#125;&#125;p[MAXN];struct edge&#123; int y,g; ll c;&#125;e[MAXM];int ln=0;void ins(int x,int y,int c)&#123; ln++; e[ln].y=y;e[ln].c=c; e[ln].g=p[x].hou;p[x].hou=ln;&#125;//*******************实现*******************void dfs1(int x,int fa)//自底向上&#123; p[x].fa=fa; for(int k=p[x].hou;k&gt;0;k=e[k].g) &#123; int y=e[k].y; if(y==fa) continue; dfs1(y,x); p[x].size+=p[y].size; p[x].b+=p[y].b+p[y].size*e[k].c; &#125;&#125;int n;ll ans=ll(INF)*ll(INF);void dfs2(int x)//自上而下&#123; for(int k=p[x].hou;k&gt;0;k=e[k].g) &#123; int y=e[k].y; if(y==p[x].fa) continue; ll top=(p[1].size-p[y].size)*e[k].c; ll brother=p[x].b-p[y].b-p[y].size*e[k].c; p[y].a=p[x].a+top+brother; ans=mymin(ans,p[y].a+p[y].b); dfs2(y); &#125;&#125;//*******************主函数*******************int main()&#123; scanf("%d",&amp;n); for(int i=1;i&lt;=n;i++) scanf("%d",&amp;p[i].size); for(int i=1;i&lt;=n-1;i++) &#123; int x,y,c;scanf("%d%d%d",&amp;x,&amp;y,&amp;c); ins(x,y,c);ins(y,x,c); &#125; dfs1(1,0); dfs2(1); ans=mymin(ans,p[1].b); printf(BIGN,ans);&#125;]]></content>
       <categories>
         <category>刷题</category>
       </categories>
@@ -2058,18 +2058,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[【Bzoj1051】受欢迎的牛]]></title>
-    <url>%2F2018-03%2F%E5%8F%97%E6%AC%A2%E8%BF%8E%E7%9A%84%E7%89%9B.html</url>
-    <content type="text"><![CDATA[来源和评测点Bzoj1051 题目【题目大意】每一头牛的愿望就是变成一头最受欢迎的牛。现在有N头牛，给你M对整数(A,B)，表示牛A认为牛B受欢迎。这种关系是具有传递性的，如果A认为B受欢迎，B认为C受欢迎，那么牛A也认为牛C受欢迎。你的任务是求出有多少头牛被所有的牛认为是受欢迎的。【输入格式】第一行两个数N,M。接下来M行，每行两个数A,B，意思是A认为B是受欢迎的（给出的信息有可能重复，即有可能出现多个A,B）N&lt;=10000,M&lt;=50000【输出格式】一个数，即有多少头牛被所有的牛认为是受欢迎的。【输入样例】3 31 22 12 3【输出样例】1 刷题记录30min1WA1AC 分析一开始还乱想到差分约束…… 引用1：由题可得，受欢迎的奶牛只有可能是图中唯一的出度为零的强连通分量中的所有奶牛，所以若出现两个以上出度为0的强连通分量则不存在明星奶牛，因为那几个出度为零的分量的爱慕无法传递出去。那唯一的分量能受到其他分量的爱慕同时在分量内相互传递，所以该分量中的所有奶牛都是明星 引用2：在有向图中，如果有且仅有一个点的出度为0 （没有指向其他点的边），那么该点可以被所有点遍历到；反之，该图中没有可以被所有点遍历到的点。在有向图中，如果一个点可以被所有点遍历到，那么这个点的出度为0。可用反证法证明。 代码123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899//Zory-2018//*******************头文件*******************#include&lt;cstdio&gt;#include&lt;cstring&gt;#include&lt;algorithm&gt;using namespace std;int mymin(int x,int y) &#123;return x&lt;y?x:y;&#125;int mymax(int x,int y) &#123;return x&gt;y?x:y;&#125;//*******************全局常量*******************const int MAXN=21000,MAXM=51000;//*******************全局定义*******************int size[MAXN];int cnt;struct nod&#123; int hou; int dfn,low; bool v; int belg;&#125;p[MAXN];struct edge&#123; int x,y,g;&#125;e[MAXM];int ln;void ins(int x,int y)&#123; ln++; e[ln].x=x; e[ln].y=y; e[ln].g=p[x].hou; p[x].hou=ln;&#125;//*******************实现*******************int sta[MAXN],top;int id;void tarjan(int x)&#123; sta[++top]=x;p[x].v=1; p[x].dfn=p[x].low=++id; for(int k=p[x].hou;k&gt;0;k=e[k].g) &#123; int y=e[k].y; if(p[y].dfn==0) tarjan(y),p[x].low=mymin(p[x].low,p[y].low); else if(p[y].v) p[x].low=mymin(p[x].low,p[y].dfn); &#125; if(p[x].dfn==p[x].low) &#123; cnt++; while(1) &#123; int t=sta[top--]; p[t].belg=cnt; size[cnt]++; p[t].v=0; if(t==x) break; &#125; &#125;&#125;//*******************主函数*******************int out[MAXN];int main()&#123; int T=1;//scanf("%d",&amp;T); while(T--) &#123; memset(p,0,sizeof(p)); memset(size,0,sizeof(size)); cnt=ln=id=0; int n,m;scanf("%d%d",&amp;n,&amp;m); for(int i=1;i&lt;=m;i++) &#123; int x,y; scanf("%d%d",&amp;x,&amp;y); ins(x,y); &#125; top=0; for(int i=1;i&lt;=n;i++) if(p[i].dfn==0) tarjan(i); memset(out,0,sizeof(out)); for(int i=1;i&lt;=ln;i++) &#123; int x=p[e[i].x].belg,y=p[e[i].y].belg; if(x!=y) out[x]++; &#125; int b=0,ans; for(int i=1;i&lt;=cnt;i++) if(out[i]==0) b++,ans=size[i]; if(b!=1) printf("0\n"); else printf("%d\n",ans); &#125;&#125;]]></content>
-      <categories>
-        <category>刷题</category>
-      </categories>
-      <tags>
-        <tag>难度4</tag>
-        <tag>强连通</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[【Bzoj2648】【Bzoj2716】SJY摆棋子]]></title>
     <url>%2F2018-03%2FSJY%E6%91%86%E6%A3%8B%E5%AD%90.html</url>
     <content type="text"><![CDATA[来源和评测点Bzoj2648Bzoj2716 题目【题目大意】在一个棋盘上，有N个黑色棋子。他每次要么放到棋盘上一个黑色棋子，要么放上一个白色棋子。如果是白色棋子，他会找出距离这个白色棋子最近的黑色棋子。此处的距离是 曼哈顿距离 即(|x1-x2|+|y1-y2|) 。现在给出N&lt;=500000个初始棋子和M&lt;=500000个操作。对于每个白色棋子，输出距离这个白色棋子最近的黑色棋子的距离。同一个格子可能有多个棋子。【输入格式】第一行两个数 N M以后N行，每行两个数x y（原题面错误）以后M行，每行3个数 t x y如果t=1 那么放下一个黑色棋子如果t=2 那么放下一个白色棋子【输出格式】对于每个T=2 输出一个最小距离【输入样例】2 31 12 32 1 21 3 32 4 2【输出样例】12 刷题记录1h4WA1AC 分析kdtree 代码123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100101102103104105106107108109110//Zory-2018//*******************头文件*******************#include&lt;cstdio&gt;#include&lt;cstring&gt;#include&lt;algorithm&gt;using namespace std;int mymin(int x,int y) &#123;return x&lt;y?x:y;&#125;int mymax(int x,int y) &#123;return x&gt;y?x:y;&#125;int myabs(int x) &#123;return x&gt;0?x:-x;&#125;//*******************全局常量*******************const int MAXN=1100000;const int INF=0x3f3f3f3f;//*******************全局定义*******************struct nod&#123; int d[2];//自己 int son[2];//左右区间 int mi[2],mx[2];//管理区间 nod() &#123; son[0]=son[1]=0; &#125;&#125;p[MAXN];int root;//*******************kdtree*******************int D;bool cmp(nod a,nod b)&#123; return (a.d[D]&lt;b.d[D]) or (a.d[D]==b.d[D] and a.d[1-D]&lt;b.d[1-D]);&#125;void update(int f,int x)&#123; p[f].mi[0]=mymin(p[f].mi[0],p[x].mi[0]);p[f].mx[0]=mymax(p[f].mx[0],p[x].mx[0]); p[f].mi[1]=mymin(p[f].mi[1],p[x].mi[1]);p[f].mx[1]=mymax(p[f].mx[1],p[x].mx[1]);&#125;int getdis(int t,int x,int y)//估价最好情况&#123; int ans=0;//在内部 if(x&lt;p[t].mi[0]) ans+=p[t].mi[0]-x;//左 if(p[t].mx[0]&lt;x) ans+=x-p[t].mx[0];//右 if(p[t].mx[1]&lt;y) ans+=y-p[t].mx[1];//上 if(y&lt;p[t].mi[1]) ans+=p[t].mi[1]-y;//下 /* 神TM复制的时候忘记改x为y，然后居然水了无数点 ans=mymax(p[t].mi[0]-x,0)+mymax(x-p[t].mx[0],0)+ mymax(p[t].mi[1]-y,0)+mymax(y-p[t].mx[1],0);*/ return ans;&#125;//*******************实现*******************int build(int l,int r,int d)&#123; if(l&gt;r) return 0;//debug int mid=(l+r)/2;D=d;//debug nth_element(p+l,p+mid,p+r+1,cmp);//尽量平衡 p[mid].mi[0]=p[mid].mx[0]=p[mid].d[0]; p[mid].mi[1]=p[mid].mx[1]=p[mid].d[1]; if(l&lt;=mid-1) p[mid].son[0]=build(l,mid-1,1-d),update(mid,p[mid].son[0]); if(mid+1&lt;=r) p[mid].son[1]=build(mid+1,r,1-d),update(mid,p[mid].son[1]); return mid;&#125;int cnt;void insert(int x,int y)&#123; int t=++cnt; p[t].d[0]=p[t].mi[0]=p[t].mx[0]=x; p[t].d[1]=p[t].mi[1]=p[t].mx[1]=y; if(root==0) root=t; else &#123; int f=root; for(D=0;1;D=1-D) &#123; update(f,t); int tx=!cmp(p[t],p[f]); if(p[f].son[tx]==0) &#123; p[f].son[tx]=t; break; &#125; f=p[f].son[tx]; &#125; &#125;&#125;int ans;void ask(int now,int x,int y)&#123; ans=mymin(ans,myabs(p[now].d[0]-x)+myabs(p[now].d[1]-y));//自身 int f[2],lc=p[now].son[0],rc=p[now].son[1]; f[0]=lc?getdis(lc,x,y):INF; f[1]=rc?getdis(rc,x,y):INF; bool tmp=!(f[0]&lt;=f[1]); if(f[tmp]&lt;ans) ask(p[now].son[tmp],x,y); if(f[1-tmp]&lt;ans) ask(p[now].son[1-tmp],x,y);&#125;//*******************主函数*******************int main()&#123; int n,m;scanf("%d%d",&amp;n,&amp;m); for(int i=1;i&lt;=n;i++) scanf("%d%d",&amp;p[i].d[0],&amp;p[i].d[1]); root=build(1,n,0);cnt=n; while(m--) &#123; int op,x,y;scanf("%d%d%d",&amp;op,&amp;x,&amp;y); if(op==1) insert(x,y); else ans=INF,ask(root,x,y),printf("%d\n",ans); &#125;&#125;]]></content>
@@ -2079,6 +2067,18 @@
       <tags>
         <tag>难度4</tag>
         <tag>kdtree</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[【Bzoj1051】受欢迎的牛]]></title>
+    <url>%2F2018-03%2F%E5%8F%97%E6%AC%A2%E8%BF%8E%E7%9A%84%E7%89%9B.html</url>
+    <content type="text"><![CDATA[来源和评测点Bzoj1051 题目【题目大意】每一头牛的愿望就是变成一头最受欢迎的牛。现在有N头牛，给你M对整数(A,B)，表示牛A认为牛B受欢迎。这种关系是具有传递性的，如果A认为B受欢迎，B认为C受欢迎，那么牛A也认为牛C受欢迎。你的任务是求出有多少头牛被所有的牛认为是受欢迎的。【输入格式】第一行两个数N,M。接下来M行，每行两个数A,B，意思是A认为B是受欢迎的（给出的信息有可能重复，即有可能出现多个A,B）N&lt;=10000,M&lt;=50000【输出格式】一个数，即有多少头牛被所有的牛认为是受欢迎的。【输入样例】3 31 22 12 3【输出样例】1 刷题记录30min1WA1AC 分析一开始还乱想到差分约束…… 引用1：由题可得，受欢迎的奶牛只有可能是图中唯一的出度为零的强连通分量中的所有奶牛，所以若出现两个以上出度为0的强连通分量则不存在明星奶牛，因为那几个出度为零的分量的爱慕无法传递出去。那唯一的分量能受到其他分量的爱慕同时在分量内相互传递，所以该分量中的所有奶牛都是明星 引用2：在有向图中，如果有且仅有一个点的出度为0 （没有指向其他点的边），那么该点可以被所有点遍历到；反之，该图中没有可以被所有点遍历到的点。在有向图中，如果一个点可以被所有点遍历到，那么这个点的出度为0。可用反证法证明。 代码123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899//Zory-2018//*******************头文件*******************#include&lt;cstdio&gt;#include&lt;cstring&gt;#include&lt;algorithm&gt;using namespace std;int mymin(int x,int y) &#123;return x&lt;y?x:y;&#125;int mymax(int x,int y) &#123;return x&gt;y?x:y;&#125;//*******************全局常量*******************const int MAXN=21000,MAXM=51000;//*******************全局定义*******************int size[MAXN];int cnt;struct nod&#123; int hou; int dfn,low; bool v; int belg;&#125;p[MAXN];struct edge&#123; int x,y,g;&#125;e[MAXM];int ln;void ins(int x,int y)&#123; ln++; e[ln].x=x; e[ln].y=y; e[ln].g=p[x].hou; p[x].hou=ln;&#125;//*******************实现*******************int sta[MAXN],top;int id;void tarjan(int x)&#123; sta[++top]=x;p[x].v=1; p[x].dfn=p[x].low=++id; for(int k=p[x].hou;k&gt;0;k=e[k].g) &#123; int y=e[k].y; if(p[y].dfn==0) tarjan(y),p[x].low=mymin(p[x].low,p[y].low); else if(p[y].v) p[x].low=mymin(p[x].low,p[y].dfn); &#125; if(p[x].dfn==p[x].low) &#123; cnt++; while(1) &#123; int t=sta[top--]; p[t].belg=cnt; size[cnt]++; p[t].v=0; if(t==x) break; &#125; &#125;&#125;//*******************主函数*******************int out[MAXN];int main()&#123; int T=1;//scanf("%d",&amp;T); while(T--) &#123; memset(p,0,sizeof(p)); memset(size,0,sizeof(size)); cnt=ln=id=0; int n,m;scanf("%d%d",&amp;n,&amp;m); for(int i=1;i&lt;=m;i++) &#123; int x,y; scanf("%d%d",&amp;x,&amp;y); ins(x,y); &#125; top=0; for(int i=1;i&lt;=n;i++) if(p[i].dfn==0) tarjan(i); memset(out,0,sizeof(out)); for(int i=1;i&lt;=ln;i++) &#123; int x=p[e[i].x].belg,y=p[e[i].y].belg; if(x!=y) out[x]++; &#125; int b=0,ans; for(int i=1;i&lt;=cnt;i++) if(out[i]==0) b++,ans=size[i]; if(b!=1) printf("0\n"); else printf("%d\n",ans); &#125;&#125;]]></content>
+      <categories>
+        <category>刷题</category>
+      </categories>
+      <tags>
+        <tag>难度4</tag>
+        <tag>强连通</tag>
       </tags>
   </entry>
   <entry>
@@ -2190,9 +2190,9 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[【Bzoj5072】小A的树]]></title>
-    <url>%2F2018-03%2F%E5%B0%8FA%E7%9A%84%E6%A0%91.html</url>
-    <content type="text"><![CDATA[来源和评测点Lydsy十月月赛Bzoj5072 题目【题目大意】给出一棵n个点的树，每个点有黑白两种颜色。q次询问，每次询问给出x和y，问能否选出一个x个点的联通子图，使得其中黑点数目为y。【输入格式】第一行一个正整数T 表示数据组数。对于每一组数据，第一行有两个用空格隔开的正整数，分别是n 和q，表示树的节点数和询问次数。接下来n-1 行，每行两个用空格隔开的正整数ui和vi，表示ui和vi间有一条边相连。接下来一行有n 个用空格隔开的整数b1,b2,…bn，其中若bi=0，则表示第i个点为白色，否则为黑色。接下来q 行，每行两个用空格隔开的整数和，意义如Problem Statement中描述的x和y。T&lt;=5,n&lt;=5000,q&lt;=10^51&lt;=ui,vi&lt;=n,1&lt;=xi&lt;=n,0&lt;=yi&lt;=n,yi&lt;=xi【输出格式】对于每一组数据，输出q行，每行为“YES”或者“NO”（不含双引号），表示对于给定的和，能否满足小A 的要求。每相邻两组数据的输出之间空一行。【输入样例】19 44 11 51 23 23 66 76 89 60 1 0 1 0 0 1 0 13 27 34 09 5【输出样例】YESYESNONO第一组数据中，可以取子图{6,7,9}。第一组数据中，可以取子图{1,2,3,4,5,6,7,8}。而在第三、四组数据中，不存在符合题意的子图。 刷题记录1h2WA1AC 分析首先，我不会算时间复杂度，别人说是N^2然后有一个结论，我也不会证明，但随便举了个栗子，自以为是比较坏的情况就是：给出一棵树，在某个固定大小的联通块中，如果可以有最少L,最大R个黑点，则之间的也一定可以实现。栗子：R=L+2,m=L+1然后减少2白，增加2黑（删除2白和1黑+添加3黑=减少2白，增加2黑）那么也可以减少1白，增加1黑（删除1白和1黑+添加2黑=减少1白，增加1黑）那我觉得应该结论是对的……然后DP的时候注意一下后效性就好了。 代码1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283//Zory-2018//*******************头文件*******************#include&lt;cstdio&gt;#include&lt;cstring&gt;#include&lt;algorithm&gt;#include&lt;queue&gt;using namespace std;int mymin(int x,int y) &#123;return x&lt;y?x:y;&#125;int mymax(int x,int y) &#123;return x&gt;y?x:y;&#125;//*******************全局常量*******************const int MAXN=5100;//*******************全局定义*******************struct nod&#123; int hou; bool cl; int tot;&#125;p[MAXN];int l[MAXN][MAXN],r[MAXN][MAXN];struct edge&#123; int y,g;&#125;e[MAXN*2];int ln;void ins(int x,int y)&#123; ln++; e[ln].y=y; e[ln].g=p[x].hou; p[x].hou=ln;&#125;//*******************实现*******************void dfs(int x,int fa)&#123; p[x].tot=1;l[x][1]=r[x][1]=p[x].cl; for(int k=p[x].hou;k&gt;0;k=e[k].g) &#123; int y=e[k].y; if(y==fa) continue; dfs(y,x); for(int i=p[x].tot;i&gt;=1;i--)//debug后效性 &#123; for(int j=p[y].tot;j&gt;=1;j--)//debug后效性 &#123; l[x][i+j]=mymin(l[x][i+j],l[x][i]+l[y][j]); r[x][i+j]=mymax(r[x][i+j],r[x][i]+r[y][j]); &#125; &#125; p[x].tot+=p[y].tot; &#125; for(int i=1;i&lt;=p[x].tot;i++) &#123; l[0][i]=mymin(l[0][i],l[x][i]); r[0][i]=mymax(r[0][i],r[x][i]); &#125;&#125;//*******************主函数*******************int main()&#123; int T;scanf("%d",&amp;T); while(T--) &#123; memset(l,63,sizeof(l)); memset(r,-63,sizeof(r)); int n,q;scanf("%d%d",&amp;n,&amp;q); ln=0;for(int i=1;i&lt;=n;i++) p[i].hou=0; for(int i=1;i&lt;=n-1;i++) &#123; int x,y;scanf("%d%d",&amp;x,&amp;y); ins(x,y);ins(y,x); &#125; for(int i=1;i&lt;=n;i++) scanf("%d",&amp;p[i].cl); dfs(1,0); while(q--) &#123; int x,y;scanf("%d%d",&amp;x,&amp;y); if(l[0][x]&lt;=y and y&lt;=r[0][x]) printf("YES\n"); else printf("NO\n"); &#125; printf("\n"); &#125;&#125;]]></content>
+    <title><![CDATA[【ARC063-E】木と整数]]></title>
+    <url>%2F2018-03%2F%E6%9C%A8%E3%81%A8%E6%95%B4%E6%95%B0.html</url>
+    <content type="text"><![CDATA[来源和评测点ARC063-E 题目【题目大意】给出一棵N个节点的数，标号从1到N，第i(1≦i≦N−1)条边连接Ai和Bi。Takahashi给K个节点填上数字，其它节点留空。Aoki想把剩下的节点填好，并满足以下条件：任意两个由一条边直接连接的节点，上面的数字差是1。如果有多个解，输出一个即可。Aoki填上的数字可能是负数或者比10^6大。【输入格式】NA1 B1A2 B2:AN−1 BN−1KV1 P1V2 P2:VK PK【约束条件】1≦N≦10^51≦K≦N1≦Ai,Bi≦N (1≦i≦N−1)1≦Vj≦N (1≦j≦K)0≦Pj≦10^5 (1≦j≦K)给出的图一定是树。所有vj不重复。【输出格式】用Yes或No表示是否有解。如果有，输出N行，表示那个节点的某个合法值。【输入样例】51 23 14 33 522 65 7【输出样例】Yes56657 刷题记录1h2RE1AC 分析维护一个有效的范围和奇偶性，树形DP即可然后数组漏了个0是什么鬼…… 代码123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100101102103104105106107108109110111112113114115116117118119120121122//Zory-2018//*******************头文件*******************#include&lt;cstdio&gt;#include&lt;cstring&gt;#include&lt;algorithm&gt;#include&lt;queue&gt;using namespace std;int mymax(int x,int y) &#123;return x&gt;y?x:y;&#125;int mymin(int x,int y) &#123;return x&lt;y?x:y;&#125;//*******************全局常量*******************const int MAXN=110000;const int INF=0x3f3f3f3f;//*******************全局定义*******************struct nod&#123; int hou; int val; int mi,mx; int jo;//-1,0,1&#125;p[MAXN];struct edge&#123; int y,g;&#125;e[2*MAXN];//*******************实现*******************int ln=0;void ins(int x,int y)&#123; ln++; e[ln].y=y; e[ln].g=p[x].hou; p[x].hou=ln;&#125;bool bk=1;void dfs(int x,int fa)&#123; if(bk==0) return; for(int k=p[x].hou;k&gt;0;k=e[k].g) &#123; int y=e[k].y; if(y==fa) continue; dfs(y,x); if(p[x].jo!=-1 and p[x].jo==p[y].jo) &#123; bk=0; return; &#125;//本来相邻或者递推得来 p[x].mi=mymax(p[x].mi,p[y].mi-1); p[x].mx=mymin(p[x].mx,p[y].mx+1); if(p[y].jo!=-1) p[x].jo=p[y].jo^1;//信息的合并 &#125; if(p[x].jo!=-1 and p[x].mi==p[x].mx and p[x].mi%2!=p[x].jo) &#123; bk=0; return; &#125;//检查 if(p[x].mi&gt;p[x].mx) &#123; bk=0; return; &#125;&#125;void dfs2(int x,int fa)&#123; if(p[x].val==-1) &#123; if(fa==0) &#123; if(p[x].mi%2==p[x].jo) p[x].val=p[x].mi; else p[x].val=p[x].mi+1; &#125; else &#123; if(p[x].mi&lt;=p[fa].val-1 and p[fa].val-1&lt;=p[x].mx) p[x].val=p[fa].val-1;//debug else p[x].val=p[fa].val+1; &#125; &#125; for(int k=p[x].hou;k&gt;0;k=e[k].g) &#123; int y=e[k].y; if(y==fa) continue; dfs2(y,x); &#125;&#125;//*******************主函数*******************int main()&#123; int n;scanf("%d",&amp;n); for(int i=1;i&lt;=n;i++) &#123; p[i].hou=0; p[i].val=-1; p[i].mi=-INF;p[i].mx=INF; p[i].jo=-1; &#125; for(int i=1;i&lt;=n-1;i++) &#123; int x,y;scanf("%d%d",&amp;x,&amp;y); ins(x,y);ins(y,x); &#125; int k;scanf("%d",&amp;k); for(int i=1;i&lt;=k;i++) &#123; int a,b; scanf("%d%d",&amp;a,&amp;b); p[a].val=p[a].mi=p[a].mx=b; p[a].jo=b%2; &#125; dfs(1,0);//自下而上 if(bk==0) printf("No\n"); else &#123; printf("Yes\n"); dfs2(1,0);//自上而下 for(int i=1;i&lt;=n;i++) printf("%d\n",p[i].val); &#125;&#125;]]></content>
       <categories>
         <category>刷题</category>
       </categories>
@@ -2202,9 +2202,9 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[【ARC063-E】木と整数]]></title>
-    <url>%2F2018-03%2F%E6%9C%A8%E3%81%A8%E6%95%B4%E6%95%B0.html</url>
-    <content type="text"><![CDATA[来源和评测点ARC063-E 题目【题目大意】给出一棵N个节点的数，标号从1到N，第i(1≦i≦N−1)条边连接Ai和Bi。Takahashi给K个节点填上数字，其它节点留空。Aoki想把剩下的节点填好，并满足以下条件：任意两个由一条边直接连接的节点，上面的数字差是1。如果有多个解，输出一个即可。Aoki填上的数字可能是负数或者比10^6大。【输入格式】NA1 B1A2 B2:AN−1 BN−1KV1 P1V2 P2:VK PK【约束条件】1≦N≦10^51≦K≦N1≦Ai,Bi≦N (1≦i≦N−1)1≦Vj≦N (1≦j≦K)0≦Pj≦10^5 (1≦j≦K)给出的图一定是树。所有vj不重复。【输出格式】用Yes或No表示是否有解。如果有，输出N行，表示那个节点的某个合法值。【输入样例】51 23 14 33 522 65 7【输出样例】Yes56657 刷题记录1h2RE1AC 分析维护一个有效的范围和奇偶性，树形DP即可然后数组漏了个0是什么鬼…… 代码123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100101102103104105106107108109110111112113114115116117118119120121122//Zory-2018//*******************头文件*******************#include&lt;cstdio&gt;#include&lt;cstring&gt;#include&lt;algorithm&gt;#include&lt;queue&gt;using namespace std;int mymax(int x,int y) &#123;return x&gt;y?x:y;&#125;int mymin(int x,int y) &#123;return x&lt;y?x:y;&#125;//*******************全局常量*******************const int MAXN=110000;const int INF=0x3f3f3f3f;//*******************全局定义*******************struct nod&#123; int hou; int val; int mi,mx; int jo;//-1,0,1&#125;p[MAXN];struct edge&#123; int y,g;&#125;e[2*MAXN];//*******************实现*******************int ln=0;void ins(int x,int y)&#123; ln++; e[ln].y=y; e[ln].g=p[x].hou; p[x].hou=ln;&#125;bool bk=1;void dfs(int x,int fa)&#123; if(bk==0) return; for(int k=p[x].hou;k&gt;0;k=e[k].g) &#123; int y=e[k].y; if(y==fa) continue; dfs(y,x); if(p[x].jo!=-1 and p[x].jo==p[y].jo) &#123; bk=0; return; &#125;//本来相邻或者递推得来 p[x].mi=mymax(p[x].mi,p[y].mi-1); p[x].mx=mymin(p[x].mx,p[y].mx+1); if(p[y].jo!=-1) p[x].jo=p[y].jo^1;//信息的合并 &#125; if(p[x].jo!=-1 and p[x].mi==p[x].mx and p[x].mi%2!=p[x].jo) &#123; bk=0; return; &#125;//检查 if(p[x].mi&gt;p[x].mx) &#123; bk=0; return; &#125;&#125;void dfs2(int x,int fa)&#123; if(p[x].val==-1) &#123; if(fa==0) &#123; if(p[x].mi%2==p[x].jo) p[x].val=p[x].mi; else p[x].val=p[x].mi+1; &#125; else &#123; if(p[x].mi&lt;=p[fa].val-1 and p[fa].val-1&lt;=p[x].mx) p[x].val=p[fa].val-1;//debug else p[x].val=p[fa].val+1; &#125; &#125; for(int k=p[x].hou;k&gt;0;k=e[k].g) &#123; int y=e[k].y; if(y==fa) continue; dfs2(y,x); &#125;&#125;//*******************主函数*******************int main()&#123; int n;scanf("%d",&amp;n); for(int i=1;i&lt;=n;i++) &#123; p[i].hou=0; p[i].val=-1; p[i].mi=-INF;p[i].mx=INF; p[i].jo=-1; &#125; for(int i=1;i&lt;=n-1;i++) &#123; int x,y;scanf("%d%d",&amp;x,&amp;y); ins(x,y);ins(y,x); &#125; int k;scanf("%d",&amp;k); for(int i=1;i&lt;=k;i++) &#123; int a,b; scanf("%d%d",&amp;a,&amp;b); p[a].val=p[a].mi=p[a].mx=b; p[a].jo=b%2; &#125; dfs(1,0);//自下而上 if(bk==0) printf("No\n"); else &#123; printf("Yes\n"); dfs2(1,0);//自上而下 for(int i=1;i&lt;=n;i++) printf("%d\n",p[i].val); &#125;&#125;]]></content>
+    <title><![CDATA[【Bzoj5072】小A的树]]></title>
+    <url>%2F2018-03%2F%E5%B0%8FA%E7%9A%84%E6%A0%91.html</url>
+    <content type="text"><![CDATA[来源和评测点Lydsy十月月赛Bzoj5072 题目【题目大意】给出一棵n个点的树，每个点有黑白两种颜色。q次询问，每次询问给出x和y，问能否选出一个x个点的联通子图，使得其中黑点数目为y。【输入格式】第一行一个正整数T 表示数据组数。对于每一组数据，第一行有两个用空格隔开的正整数，分别是n 和q，表示树的节点数和询问次数。接下来n-1 行，每行两个用空格隔开的正整数ui和vi，表示ui和vi间有一条边相连。接下来一行有n 个用空格隔开的整数b1,b2,…bn，其中若bi=0，则表示第i个点为白色，否则为黑色。接下来q 行，每行两个用空格隔开的整数和，意义如Problem Statement中描述的x和y。T&lt;=5,n&lt;=5000,q&lt;=10^51&lt;=ui,vi&lt;=n,1&lt;=xi&lt;=n,0&lt;=yi&lt;=n,yi&lt;=xi【输出格式】对于每一组数据，输出q行，每行为“YES”或者“NO”（不含双引号），表示对于给定的和，能否满足小A 的要求。每相邻两组数据的输出之间空一行。【输入样例】19 44 11 51 23 23 66 76 89 60 1 0 1 0 0 1 0 13 27 34 09 5【输出样例】YESYESNONO第一组数据中，可以取子图{6,7,9}。第一组数据中，可以取子图{1,2,3,4,5,6,7,8}。而在第三、四组数据中，不存在符合题意的子图。 刷题记录1h2WA1AC 分析首先，我不会算时间复杂度，别人说是N^2然后有一个结论，我也不会证明，但随便举了个栗子，自以为是比较坏的情况就是：给出一棵树，在某个固定大小的联通块中，如果可以有最少L,最大R个黑点，则之间的也一定可以实现。栗子：R=L+2,m=L+1然后减少2白，增加2黑（删除2白和1黑+添加3黑=减少2白，增加2黑）那么也可以减少1白，增加1黑（删除1白和1黑+添加2黑=减少1白，增加1黑）那我觉得应该结论是对的……然后DP的时候注意一下后效性就好了。 代码1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283//Zory-2018//*******************头文件*******************#include&lt;cstdio&gt;#include&lt;cstring&gt;#include&lt;algorithm&gt;#include&lt;queue&gt;using namespace std;int mymin(int x,int y) &#123;return x&lt;y?x:y;&#125;int mymax(int x,int y) &#123;return x&gt;y?x:y;&#125;//*******************全局常量*******************const int MAXN=5100;//*******************全局定义*******************struct nod&#123; int hou; bool cl; int tot;&#125;p[MAXN];int l[MAXN][MAXN],r[MAXN][MAXN];struct edge&#123; int y,g;&#125;e[MAXN*2];int ln;void ins(int x,int y)&#123; ln++; e[ln].y=y; e[ln].g=p[x].hou; p[x].hou=ln;&#125;//*******************实现*******************void dfs(int x,int fa)&#123; p[x].tot=1;l[x][1]=r[x][1]=p[x].cl; for(int k=p[x].hou;k&gt;0;k=e[k].g) &#123; int y=e[k].y; if(y==fa) continue; dfs(y,x); for(int i=p[x].tot;i&gt;=1;i--)//debug后效性 &#123; for(int j=p[y].tot;j&gt;=1;j--)//debug后效性 &#123; l[x][i+j]=mymin(l[x][i+j],l[x][i]+l[y][j]); r[x][i+j]=mymax(r[x][i+j],r[x][i]+r[y][j]); &#125; &#125; p[x].tot+=p[y].tot; &#125; for(int i=1;i&lt;=p[x].tot;i++) &#123; l[0][i]=mymin(l[0][i],l[x][i]); r[0][i]=mymax(r[0][i],r[x][i]); &#125;&#125;//*******************主函数*******************int main()&#123; int T;scanf("%d",&amp;T); while(T--) &#123; memset(l,63,sizeof(l)); memset(r,-63,sizeof(r)); int n,q;scanf("%d%d",&amp;n,&amp;q); ln=0;for(int i=1;i&lt;=n;i++) p[i].hou=0; for(int i=1;i&lt;=n-1;i++) &#123; int x,y;scanf("%d%d",&amp;x,&amp;y); ins(x,y);ins(y,x); &#125; for(int i=1;i&lt;=n;i++) scanf("%d",&amp;p[i].cl); dfs(1,0); while(q--) &#123; int x,y;scanf("%d%d",&amp;x,&amp;y); if(l[0][x]&lt;=y and y&lt;=r[0][x]) printf("YES\n"); else printf("NO\n"); &#125; printf("\n"); &#125;&#125;]]></content>
       <categories>
         <category>刷题</category>
       </categories>
@@ -2262,19 +2262,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[【Bzoj3343】教主的魔法]]></title>
-    <url>%2F2018-03%2F%E6%95%99%E4%B8%BB%E7%9A%84%E9%AD%94%E6%B3%95.html</url>
-    <content type="text"><![CDATA[来源和评测点Bzoj3343 题目【题目大意】教主最近学会了一种神奇的魔法，能够使人长高。于是他准备演示给XMYZ信息组每个英雄看。于是N个英雄们又一次聚集在了一起，这次他们排成了一列，被编号为1、2、……、N。每个人的身高一开始都是不超过1000的正整数。教主的魔法每次可以把闭区间[L,R]（1≤L≤R≤N）内的英雄的身高全部加上一个整数W。（虽然L=R时并不符合区间的书写规范，但我们可以认为是单独增加第L（R）个英雄的身高）CYZ、光哥和ZJQ等人不信教主的邪，于是他们有时候会问WD闭区间 [L, R] 内有多少英雄身高大于等于C，以验证教主的魔法是否真的有效。WD巨懒，于是他把这个回答的任务交给了你。【输入格式】第1行为两个整数N、Q。Q为问题数与教主的施法数总和。第2行有N个正整数，第i个数代表第i个英雄的身高。第3到第Q+2行每行有一个操作：（1）若第一个字母为“M”，则紧接着有三个数字L、R、W。表示对闭区间 [L, R] 内所有英雄的身高加上W。（2）若第一个字母为“A”，则紧接着有三个数字L、R、C。询问闭区间 [L, R] 内有多少英雄的身高大于等于C。对30%的数据，N≤1000，Q≤1000。对100%的数据，N≤1000000，Q≤3000，1≤W≤1000，1≤C≤1,000,000,000。【输出格式】对每个“A”询问输出一行，仅含一个整数，表示闭区间 [L, R] 内身高大于等于C的英雄数。【输入样例】5 31 2 3 4 5A 1 5 4M 3 5 1A 1 5 4【输出样例】23【样例解释】原先5个英雄身高为1、2、3、4、5，此时[1, 5]间有2个英雄的身高大于等于4。教主施法后变为1、2、4、5、6，此时[1, 5]间有3个英雄的身高大于等于4。 分析普普通通的分块，该说的代码里面有。 代码1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283848586878889909192#include&lt;cstdio&gt;#include&lt;cstring&gt;#include&lt;cmath&gt;#include&lt;algorithm&gt;using namespace std;//*******************定义*******************int a[1100000],b[1100000],ad[1100000],bk[1100000];//a是原本，b是有序int bl[11000],br[11000];int n,m;//*******************实现*******************void reset(int x)&#123; int ll=bl[x],rr=br[x]; for(int i=ll;i&lt;=rr;i++) b[i]=a[i]; sort(b+ll,b+rr+1);&#125;int find(int x,int c)&#123; int l=bl[x],r=br[x],ans=bl[x]-1;//ans表示最后一个比w小的 while(l&lt;=r) &#123; int mid=(l+r)&gt;&gt;1; if(b[mid]&lt;c) l=mid+1,ans=mid; else r=mid-1; &#125; return br[x]-ans;&#125;void change(int x,int y,int c)&#123; int ex=bk[x],ey=bk[y]; if(ex==ey) &#123; for(int i=x;i&lt;=y;i++) a[i]+=c; reset(ex); return; &#125; for(int i=x;i&lt;=br[ex];i++) a[i]+=c;reset(ex); for(int i=bl[ey];i&lt;=y;i++) a[i]+=c;reset(ey); //修改完后立即重构，从而降低时间复杂度 //每次两个，即使很多次也胜过一次查询时更新 for(int i=ex+1;i&lt;=ey-1;i++) ad[i]+=c;&#125;int ask(int x,int y,int c)&#123; int ex=bk[x],ey=bk[y],ans=0; if(ex==ey) &#123; for(int i=x;i&lt;=y;i++) if(a[i]+ad[ex]&gt;=c) ans++; return ans; &#125; for(int i=x;i&lt;=br[ex];i++) if(a[i]+ad[ex]&gt;=c) ans++; for(int i=bl[ey];i&lt;=y;i++) if(a[i]+ad[ey]&gt;=c) ans++; for(int i=ex+1;i&lt;=ey-1;i++) ans+=find(i,c-ad[i]); return ans;&#125;//*******************主函数*******************char s[10];int main(int argc, char *argv[])&#123; int q;scanf("%d%d",&amp;n,&amp;q); m=sqrt(n)*2.0; for(int i=1;i&lt;=n;i++) &#123; scanf("%d",&amp;a[i]); bk[i]=(i-1)/m+1; &#125; int cnt=n/m; for(int i=1;i&lt;=cnt;i++) &#123; bl[i]=(i-1)*m+1; br[i]=i*m; reset(i); &#125; if(n%m&gt;0) &#123; cnt++; bl[cnt]=br[cnt-1]+1; br[cnt]=n; reset(cnt); &#125; while(q--) &#123; int a,b,c;scanf("%s%d%d%d",s,&amp;a,&amp;b,&amp;c); if(s[0]=='M') change(a,b,c); else printf("%d\n",ask(a,b,c)); &#125;&#125;]]></content>
-      <categories>
-        <category>刷题</category>
-      </categories>
-      <tags>
-        <tag>精品题</tag>
-        <tag>难度6</tag>
-        <tag>矩阵乘法</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[【Bzoj1018】【Luogu4246】堵塞的交通]]></title>
     <url>%2F2018-03%2F%E5%A0%B5%E5%A1%9E%E7%9A%84%E4%BA%A4%E9%80%9A.html</url>
     <content type="text"><![CDATA[来源和评测点SHOI2008Bzoj1018Luogu4246 题目【题目大意】给定一张2*n的网格图，多次改变某条边是否可用，多次查询某两个点是否联通【输入格式】第一行只有一个整数C，表示网格的列数。接下来若干行，每行为一条交通信息，以单独的一行“Exit”作为结束。我们假设在一开始所有的道路都是堵塞的。我们保证 C小于等于100000，信息条数小于等于100000。【输出格式】对于每个查询，输出一个“Y”或“N”。【输入样例】2Open 1 1 1 2Open 1 2 2 2Ask 1 1 2 2Ask 2 1 2 2Exit【输出样例】YN 分析其实刚看到这题就觉得LCT然而，这并不是树，只好放弃看到行数是2，但一直想不到好办法于是背着良心膜了波题解 居然是线段树！首先假设询问的时候，只和两个点之间的边有关搞一个结构体，里面存有以下信息：h[2][2]表示四个端点的连通性（横、斜着）lb,rb表示上下节点的连通性（竖着）合并的话自己想，常数级别然后考虑两边，如果[1,L]两个右端点联通，等效于[L,R]两个左端点联通如果[R+1,c]两个左端点联通，等效于[L,R]两个右端点联通 目前见过最有意思的线段树题目。 代码123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100101102103104105106107108109110111112113114115//Zory-2018//*******************头文件*******************#include&lt;cstdio&gt;#include&lt;cstring&gt;#include&lt;algorithm&gt;using namespace std;//*******************全局常量*******************//*******************全局定义*******************struct nod//连通性信息&#123; bool lb,rb;//竖 bool h[2][2];//横、斜 nod() &#123; lb=rb=0; memset(h,0,sizeof(h)); &#125;&#125;;struct seg//线段树节点&#123; int l,r; int lc,rc; nod f; bool tp,bm;//mid和mid+1之间的信息&#125;p[410000];//*******************接口*******************nod merg(nod a,int tp,int bm,nod b)&#123; nod c; c.lb=a.lb or (a.h[0][0] and tp and b.lb and bm and a.h[1][1]); c.rb=b.rb or (b.h[0][0] and tp and a.rb and bm and b.h[1][1]); for(int i=0;i&lt;=1;i++) for(int j=0;j&lt;=1;j++) &#123; c.h[i][j] =a.h[i][0] and tp and b.h[0][j];//上面走 c.h[i][j]|=a.h[i][1] and bm and b.h[1][j];//下面走 &#125; return c;&#125;int cnt;int build(int l,int r)&#123; int t=++cnt; p[t].l=l;p[t].r=r; p[t].tp=p[t].bm=0; if(l&lt;r) &#123; int mid=(l+r)/2; p[t].lc=build(l,mid); p[t].rc=build(mid+1,r); &#125; else p[t].f.h[0][0]=p[t].f.h[1][1]=1;//单点横向必定可以 return t;&#125;void change(int x,int x1,int y1,int x2,int y2,bool b)&#123; int lc=p[x].lc,rc=p[x].rc,mid=(p[x].l+p[x].r)/2; if(x1==x2 and y1==mid)//横着，正好中间 &#123; if(x1==0) p[x].tp=b; else p[x].bm=b; p[x].f=merg(p[lc].f,p[x].tp,p[x].bm,p[rc].f); return; &#125; if(p[x].l==p[x].r)//其他单点 &#123; p[x].f.h[0][1]=p[x].f.h[1][0]=p[x].f.lb=p[x].f.rb=b; //tp、bm不需要，作为单点用不到 return; &#125; if(y1&lt;=mid) change(lc,x1,y1,x2,y2,b); else change(rc,x1,y1,x2,y2,b); p[x].f=merg(p[lc].f,p[x].tp,p[x].bm,p[rc].f);&#125;nod ask(int x,int L,int R)&#123; int lc=p[x].lc,rc=p[x].rc,mid=(p[x].l+p[x].r)/2; if(p[x].l==L and p[x].r==R) return p[x].f; if(R&lt;=mid) return ask(lc,L,R); if(L&gt;mid) return ask(rc,L,R); return merg(ask(lc,L,mid),p[x].tp,p[x].bm,ask(rc,mid+1,R));&#125;//*******************主函数*******************char s[20];int main()&#123; int n;scanf("%d",&amp;n); cnt=0;build(1,n); while(1) &#123; scanf("%s",s);if(s[0]=='E') break; int x1,y1,x2,y2;scanf("%d%d%d%d",&amp;x1,&amp;y1,&amp;x2,&amp;y2); if(y1&gt;y2) swap(x1,x2),swap(y1,y2);x1--;x2--; if(s[0]=='A') &#123; nod a,b,c; a=ask(1,1,y1);b=ask(1,y1,y2);c=ask(1,y2,n); if(a.rb) b.lb=1;if(c.lb) b.rb=1; bool bk=0; for(int i=0;i&lt;=1;i++) for(int j=0;j&lt;=1;j++) if(b.h[i][j]) if( (i==x1 or b.lb)and(j==x2 or b.rb) ) bk=1; if(bk) printf("Y\n"); else printf("N\n"); &#125; if(s[0]=='O') change(1,x1,y1,x2,y2,1); if(s[0]=='C') change(1,x1,y1,x2,y2,0); &#125;&#125;]]></content>
@@ -2285,6 +2272,19 @@
         <tag>线段树</tag>
         <tag>难度4</tag>
         <tag>精品题</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[【Bzoj3343】教主的魔法]]></title>
+    <url>%2F2018-03%2F%E6%95%99%E4%B8%BB%E7%9A%84%E9%AD%94%E6%B3%95.html</url>
+    <content type="text"><![CDATA[来源和评测点Bzoj3343 题目【题目大意】教主最近学会了一种神奇的魔法，能够使人长高。于是他准备演示给XMYZ信息组每个英雄看。于是N个英雄们又一次聚集在了一起，这次他们排成了一列，被编号为1、2、……、N。每个人的身高一开始都是不超过1000的正整数。教主的魔法每次可以把闭区间[L,R]（1≤L≤R≤N）内的英雄的身高全部加上一个整数W。（虽然L=R时并不符合区间的书写规范，但我们可以认为是单独增加第L（R）个英雄的身高）CYZ、光哥和ZJQ等人不信教主的邪，于是他们有时候会问WD闭区间 [L, R] 内有多少英雄身高大于等于C，以验证教主的魔法是否真的有效。WD巨懒，于是他把这个回答的任务交给了你。【输入格式】第1行为两个整数N、Q。Q为问题数与教主的施法数总和。第2行有N个正整数，第i个数代表第i个英雄的身高。第3到第Q+2行每行有一个操作：（1）若第一个字母为“M”，则紧接着有三个数字L、R、W。表示对闭区间 [L, R] 内所有英雄的身高加上W。（2）若第一个字母为“A”，则紧接着有三个数字L、R、C。询问闭区间 [L, R] 内有多少英雄的身高大于等于C。对30%的数据，N≤1000，Q≤1000。对100%的数据，N≤1000000，Q≤3000，1≤W≤1000，1≤C≤1,000,000,000。【输出格式】对每个“A”询问输出一行，仅含一个整数，表示闭区间 [L, R] 内身高大于等于C的英雄数。【输入样例】5 31 2 3 4 5A 1 5 4M 3 5 1A 1 5 4【输出样例】23【样例解释】原先5个英雄身高为1、2、3、4、5，此时[1, 5]间有2个英雄的身高大于等于4。教主施法后变为1、2、4、5、6，此时[1, 5]间有3个英雄的身高大于等于4。 分析普普通通的分块，该说的代码里面有。 代码1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283848586878889909192#include&lt;cstdio&gt;#include&lt;cstring&gt;#include&lt;cmath&gt;#include&lt;algorithm&gt;using namespace std;//*******************定义*******************int a[1100000],b[1100000],ad[1100000],bk[1100000];//a是原本，b是有序int bl[11000],br[11000];int n,m;//*******************实现*******************void reset(int x)&#123; int ll=bl[x],rr=br[x]; for(int i=ll;i&lt;=rr;i++) b[i]=a[i]; sort(b+ll,b+rr+1);&#125;int find(int x,int c)&#123; int l=bl[x],r=br[x],ans=bl[x]-1;//ans表示最后一个比w小的 while(l&lt;=r) &#123; int mid=(l+r)&gt;&gt;1; if(b[mid]&lt;c) l=mid+1,ans=mid; else r=mid-1; &#125; return br[x]-ans;&#125;void change(int x,int y,int c)&#123; int ex=bk[x],ey=bk[y]; if(ex==ey) &#123; for(int i=x;i&lt;=y;i++) a[i]+=c; reset(ex); return; &#125; for(int i=x;i&lt;=br[ex];i++) a[i]+=c;reset(ex); for(int i=bl[ey];i&lt;=y;i++) a[i]+=c;reset(ey); //修改完后立即重构，从而降低时间复杂度 //每次两个，即使很多次也胜过一次查询时更新 for(int i=ex+1;i&lt;=ey-1;i++) ad[i]+=c;&#125;int ask(int x,int y,int c)&#123; int ex=bk[x],ey=bk[y],ans=0; if(ex==ey) &#123; for(int i=x;i&lt;=y;i++) if(a[i]+ad[ex]&gt;=c) ans++; return ans; &#125; for(int i=x;i&lt;=br[ex];i++) if(a[i]+ad[ex]&gt;=c) ans++; for(int i=bl[ey];i&lt;=y;i++) if(a[i]+ad[ey]&gt;=c) ans++; for(int i=ex+1;i&lt;=ey-1;i++) ans+=find(i,c-ad[i]); return ans;&#125;//*******************主函数*******************char s[10];int main(int argc, char *argv[])&#123; int q;scanf("%d%d",&amp;n,&amp;q); m=sqrt(n)*2.0; for(int i=1;i&lt;=n;i++) &#123; scanf("%d",&amp;a[i]); bk[i]=(i-1)/m+1; &#125; int cnt=n/m; for(int i=1;i&lt;=cnt;i++) &#123; bl[i]=(i-1)*m+1; br[i]=i*m; reset(i); &#125; if(n%m&gt;0) &#123; cnt++; bl[cnt]=br[cnt-1]+1; br[cnt]=n; reset(cnt); &#125; while(q--) &#123; int a,b,c;scanf("%s%d%d%d",s,&amp;a,&amp;b,&amp;c); if(s[0]=='M') change(a,b,c); else printf("%d\n",ask(a,b,c)); &#125;&#125;]]></content>
+      <categories>
+        <category>刷题</category>
+      </categories>
+      <tags>
+        <tag>精品题</tag>
+        <tag>难度6</tag>
+        <tag>矩阵乘法</tag>
       </tags>
   </entry>
   <entry>
@@ -2321,8 +2321,8 @@
       </categories>
       <tags>
         <tag>线段树</tag>
-        <tag>精品题</tag>
         <tag>树链剖分</tag>
+        <tag>精品题</tag>
         <tag>难度6</tag>
         <tag>STL</tag>
       </tags>
@@ -3013,8 +3013,8 @@
         <category>刷题</category>
       </categories>
       <tags>
-        <tag>难度2</tag>
         <tag>刷题</tag>
+        <tag>难度2</tag>
       </tags>
   </entry>
   <entry>
@@ -3097,9 +3097,9 @@
         <category>刷题</category>
       </categories>
       <tags>
+        <tag>难度3</tag>
         <tag>宽度优先搜索BFS</tag>
         <tag>并查集</tag>
-        <tag>难度3</tag>
       </tags>
   </entry>
   <entry>
@@ -3110,8 +3110,8 @@
         <category>刷题</category>
       </categories>
       <tags>
-        <tag>线段树</tag>
         <tag>难度2</tag>
+        <tag>线段树</tag>
       </tags>
   </entry>
   <entry>
@@ -3122,8 +3122,8 @@
         <category>刷题</category>
       </categories>
       <tags>
-        <tag>并查集</tag>
         <tag>难度3</tag>
+        <tag>并查集</tag>
       </tags>
   </entry>
   <entry>
@@ -3147,8 +3147,8 @@
         <category>刷题</category>
       </categories>
       <tags>
-        <tag>宽度优先搜索BFS</tag>
         <tag>难度3</tag>
+        <tag>宽度优先搜索BFS</tag>
       </tags>
   </entry>
   <entry>
@@ -3159,9 +3159,9 @@
         <category>刷题</category>
       </categories>
       <tags>
-        <tag>难度3</tag>
         <tag>bfs</tag>
         <tag>dfs</tag>
+        <tag>难度3</tag>
       </tags>
   </entry>
   <entry>
@@ -3320,9 +3320,9 @@
         <category>OI之路</category>
       </categories>
       <tags>
-        <tag>原创精华</tag>
         <tag>字符串</tag>
         <tag>KMP</tag>
+        <tag>原创精华</tag>
       </tags>
   </entry>
   <entry>
@@ -3333,8 +3333,8 @@
         <category>OI之路</category>
       </categories>
       <tags>
-        <tag>原创精华</tag>
         <tag>经典问题</tag>
+        <tag>原创精华</tag>
       </tags>
   </entry>
   <entry>
@@ -3360,17 +3360,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[【OI之路】08暴力的学问-5哈希]]></title>
-    <url>%2F2003-01%2F%E3%80%90OI%E4%B9%8B%E8%B7%AF%E3%80%9108%E6%9A%B4%E5%8A%9B%E7%9A%84%E5%AD%A6%E9%97%AE-5%E5%93%88%E5%B8%8C.html</url>
-    <content type="text"><![CDATA[哈希Hash 前言这东西主要用来验重而且在字符串领域比较常用但其思想的应用才是其精髓所以没有放在字符串分类 正文123456789101112typedef unsigned long long ull;ull gethash(char *s)&#123; int len=strlen(s+1); ull ans=0,p=1; for(int i=1;i&lt;=len;i++) &#123; ans=ans*p+s[i]; p*=13331; &#125; return ans;&#125; 其他应用1. 字符串匹配-kmp例题：poj3461 Oulipo 2. 字符串匹配-ac自动机等价于用kmp搞ac机，不推荐 3. 字符串匹配-manacherO(nlogn)求最大回文子串其实就是枚举中心点，分情况讨论，然后二分长度 4. 字符串匹配-后缀数组O(n log^2⁡ n )在排序的比较函数中，套一个二分，得到最长公共前缀，比较其下一个字符，就能够比较出大小得出排名后，相邻的再同样地二分一次就好了 练习题Tag-哈希]]></content>
-      <categories>
-        <category>OI之路</category>
-      </categories>
-      <tags>
-        <tag>哈希</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[【OI之路】08暴力的学问-4kdtree]]></title>
     <url>%2F2003-01%2F%E3%80%90OI%E4%B9%8B%E8%B7%AF%E3%80%9108%E6%9A%B4%E5%8A%9B%E7%9A%84%E5%AD%A6%E9%97%AE-4kdtree.html</url>
     <content type="text"><![CDATA[kdtree：同样是融合了贪心的某种暴力 好文章K-DTree-n+e.pdf 练习SJY摆棋子最近点对Hide and Seek 练习题Tag-kdtree]]></content>
@@ -3379,6 +3368,17 @@
       </categories>
       <tags>
         <tag>kdtree</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[【OI之路】08暴力的学问-5哈希]]></title>
+    <url>%2F2003-01%2F%E3%80%90OI%E4%B9%8B%E8%B7%AF%E3%80%9108%E6%9A%B4%E5%8A%9B%E7%9A%84%E5%AD%A6%E9%97%AE-5%E5%93%88%E5%B8%8C.html</url>
+    <content type="text"><![CDATA[哈希Hash 前言这东西主要用来验重而且在字符串领域比较常用但其思想的应用才是其精髓所以没有放在字符串分类 正文123456789101112typedef unsigned long long ull;ull gethash(char *s)&#123; int len=strlen(s+1); ull ans=0,p=1; for(int i=1;i&lt;=len;i++) &#123; ans=ans*p+s[i]; p*=13331; &#125; return ans;&#125; 其他应用1. 字符串匹配-kmp例题：poj3461 Oulipo 2. 字符串匹配-ac自动机等价于用kmp搞ac机，不推荐 3. 字符串匹配-manacherO(nlogn)求最大回文子串其实就是枚举中心点，分情况讨论，然后二分长度 4. 字符串匹配-后缀数组O(n log^2⁡ n )在排序的比较函数中，套一个二分，得到最长公共前缀，比较其下一个字符，就能够比较出大小得出排名后，相邻的再同样地二分一次就好了 练习题Tag-哈希]]></content>
+      <categories>
+        <category>OI之路</category>
+      </categories>
+      <tags>
+        <tag>哈希</tag>
       </tags>
   </entry>
   <entry>
@@ -3555,8 +3555,8 @@
         <category>OI之路</category>
       </categories>
       <tags>
-        <tag>C++语法</tag>
         <tag>转载</tag>
+        <tag>C++语法</tag>
       </tags>
   </entry>
   <entry>
@@ -3567,8 +3567,8 @@
         <category>OI之路</category>
       </categories>
       <tags>
-        <tag>C++语法</tag>
         <tag>转载</tag>
+        <tag>C++语法</tag>
       </tags>
   </entry>
   <entry>
@@ -3795,8 +3795,8 @@
         <category>OI之路</category>
       </categories>
       <tags>
-        <tag>欧几里得</tag>
         <tag>原创精华</tag>
+        <tag>欧几里得</tag>
       </tags>
   </entry>
   <entry>

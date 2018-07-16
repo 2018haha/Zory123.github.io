@@ -127,32 +127,24 @@
 
 
 
-  <meta name="description" content="一句精辟的话：字符串相关算法就是用来偷懒的——scy更详细地解释：Manacher、莫队、fft、后缀数组、exkmp等各种算法，本质上都是尽量地利用子信息、残留信息">
-<meta name="keywords" content="原创精华,字符串,KMP">
+  <meta name="description" content="洛谷18年7月月赛比赛总结题目">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【OI之路】10字符串-1KMP">
-<meta property="og:url" content="http://zory.cf/2003-01/【OI之路】10字符串-1KMP.html">
+<meta property="og:title" content="洛谷18年7月月赛比赛总结">
+<meta property="og:url" content="http://zory.cf/2018-07/洛谷18年7月月赛比赛总结.html">
 <meta property="og:site_name" content="Zory的个人博客">
-<meta property="og:description" content="一句精辟的话：字符串相关算法就是用来偷懒的——scy更详细地解释：Manacher、莫队、fft、后缀数组、exkmp等各种算法，本质上都是尽量地利用子信息、残留信息">
+<meta property="og:description" content="洛谷18年7月月赛比赛总结题目">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://zory.cf/images/OI之路/KMP/0.png">
-<meta property="og:image" content="http://zory.cf/images/OI之路/KMP/1.png">
-<meta property="og:image" content="http://zory.cf/images/OI之路/KMP/2.png">
-<meta property="og:image" content="http://zory.cf/images/OI之路/KMP/7.png">
-<meta property="og:image" content="http://zory.cf/images/OI之路/KMP/8.png">
-<meta property="og:image" content="http://zory.cf/images/OI之路/KMP/9.png">
-<meta property="og:updated_time" content="2018-07-09T01:01:14.000Z">
+<meta property="og:updated_time" content="2018-07-16T02:37:20.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="【OI之路】10字符串-1KMP">
-<meta name="twitter:description" content="一句精辟的话：字符串相关算法就是用来偷懒的——scy更详细地解释：Manacher、莫队、fft、后缀数组、exkmp等各种算法，本质上都是尽量地利用子信息、残留信息">
-<meta name="twitter:image" content="http://zory.cf/images/OI之路/KMP/0.png">
+<meta name="twitter:title" content="洛谷18年7月月赛比赛总结">
+<meta name="twitter:description" content="洛谷18年7月月赛比赛总结题目">
 
 
 
 
 
 
-  <link rel="canonical" href="http://zory.cf/2003-01/【OI之路】10字符串-1KMP.html"/>
+  <link rel="canonical" href="http://zory.cf/2018-07/洛谷18年7月月赛比赛总结.html"/>
 
 
 
@@ -162,7 +154,7 @@
   };
 </script>
 
-  <title>【OI之路】10字符串-1KMP | Zory的个人博客</title>
+  <title>洛谷18年7月月赛比赛总结 | Zory的个人博客</title>
   
 
 
@@ -408,7 +400,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://zory.cf/2003-01/【OI之路】10字符串-1KMP.html">
+    <link itemprop="mainEntityOfPage" href="http://zory.cf/2018-07/洛谷18年7月月赛比赛总结.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Zory">
@@ -425,7 +417,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">【OI之路】10字符串-1KMP
+          <h2 class="post-title" itemprop="name headline">洛谷18年7月月赛比赛总结
               
             
           </h2>
@@ -450,7 +442,7 @@
                 
               
 
-              <time title="创建于：2003-01-22 00:10:01" itemprop="dateCreated datePublished" datetime="2003-01-22T00:10:01+08:00">2003-01-22</time>
+              <time title="创建于：2018-07-14 21:51:00" itemprop="dateCreated datePublished" datetime="2018-07-14T21:51:00+08:00">2018-07-14</time>
             
 
             
@@ -467,7 +459,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改于：2018-07-09 09:01:14" itemprop="dateModified" datetime="2018-07-09T09:01:14+08:00">2018-07-09</time>
+                <time title="修改于：2018-07-16 10:37:20" itemprop="dateModified" datetime="2018-07-16T10:37:20+08:00">2018-07-16</time>
               
             
           </span>
@@ -484,7 +476,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/OI之路/" itemprop="url" rel="index"><span itemprop="name">OI之路</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/刷题/" itemprop="url" rel="index"><span itemprop="name">刷题</span></a></span>
 
                 
                 
@@ -499,8 +491,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2003-01/【OI之路】10字符串-1KMP.html#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论：</span> <span class="post-comments-count valine-comment-count" data-xid="/2003-01/【OI之路】10字符串-1KMP.html" itemprop="commentCount"></span>
+                <a href="/2018-07/洛谷18年7月月赛比赛总结.html#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论：</span> <span class="post-comments-count valine-comment-count" data-xid="/2018-07/洛谷18年7月月赛比赛总结.html" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -508,7 +500,7 @@
 
           
           
-             <span id="/2003-01/【OI之路】10字符串-1KMP.html" class="leancloud_visitors" data-flag-title="【OI之路】10字符串-1KMP">
+             <span id="/2018-07/洛谷18年7月月赛比赛总结.html" class="leancloud_visitors" data-flag-title="洛谷18年7月月赛比赛总结">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -539,193 +531,50 @@
       
 
       
-        <p><strong>一句精辟的话：字符串相关算法就是用来偷懒的——scy</strong><br>更详细地解释：Manacher、莫队、fft、后缀数组、exkmp等各种算法，本质上都是尽量地利用子信息、残留信息<br><a id="more"></a></p>
-<h2 id="一、说在正文前的小声明"><a href="#一、说在正文前的小声明" class="headerlink" title="一、说在正文前的小声明"></a>一、说在正文前的小声明</h2><p>网络上有关KMP的文章非常多，本文旨在给初学者一个大致理解，<br>尽量以最简单最直观的方式实现kmp，而不考虑太多有关性能的问题。</p>
-<p>参考文献（或者说建议你看看的东西）：<br><a href="http://blog.csdn.net/theflowerofac/article/details/50788104" target="_blank" rel="noopener">1(并不是他原创，但原文找不到了。。)，用了个图片和例子</a><br><a href="http://www.cnblogs.com/xiaoboCSer/p/4237941.html" target="_blank" rel="noopener">2 例子比较完整，大家有兴趣可以看看，对本文无用</a><br><a href="http://ruanyifeng.com/blog/2013/05/Knuth%E2%80%93Morris%E2%80%93Pratt_algorithm.html" target="_blank" rel="noopener">3 阮一峰，挺好的，用了图片和前后缀角度的看法</a><br><a href="http://blog.csdn.net/v_july_v/article/details/7041827#" target="_blank" rel="noopener">4 v_july_v，太强了，堪称完美，建议理解本文后去这里提高，目前我持膜拜状态</a><br><a href="http://www.matrix67.com/blog/archives/115" target="_blank" rel="noopener">5 matrix67，绝对经典</a></p>
-<h2 id="二、定义"><a href="#二、定义" class="headerlink" title="二、定义"></a>二、定义</h2><p>Knuth-Morris-Pratt字符串查找算法，简称为”KMP算法”，常用于在一个文本串S(母串)内查找一个模式串P(子串)的出现位置，这个算法由Donald Knuth、Vaughan Pratt、James H.Morris三人于1977年联合发表，故取这3人的姓氏命名此算法。<br>KMP算法的主要作用在于，计算出字符串B是否为字符串A的子串及其系列问题。<br>它比简单的暴力算法更优秀的地方在于，当部分匹配失败时，暴力算法一个个字符向前回溯，KMP则通过预先根据字符串B所计算出的”假如我的下一个字符失配，我的新对应位置”（通常用Next数组表示）。由于此预处理过程只是与字符串B有关，所以很适合处理”某个字符串B验证多个字符串A是否是其母串”一类问题。</p>
-<h2 id="三、利用Next数组求解KMP"><a href="#三、利用Next数组求解KMP" class="headerlink" title="三、利用Next数组求解KMP"></a>三、利用Next数组求解KMP</h2><p>Next的性质（你要是想成定义也行）<br>（在实现中，通常把Next用其他更简短的单词表示，本文用p）<br>B[1..p[i]]=B[i-p[i]+1..i]<br>并且要求p[i]最大，从而让移动距离最小，成功可能性更大并且没有漏网之鱼，类似贪心思想</p>
-<p>假设现在字符串A[i-1]匹配成功，字符串B[j]匹配成功<br>伪代码：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">j=<span class="number">0</span>;</div><div class="line"><span class="keyword">for</span> i=<span class="number">1</span> to lenA</div><div class="line">&#123;</div><div class="line">    <span class="keyword">while</span>(j&gt;<span class="number">0</span> and a[i]!=b[j+<span class="number">1</span>]) j=p[j];</div><div class="line">    <span class="comment">//将匹配成功的j的p[j]重新尝试对齐i-1</span></div><div class="line">    <span class="comment">//此举意味着失配时，字符串B相对于字符串A向右移动了j-Next[j]位</span></div><div class="line">    <span class="keyword">if</span>(a[i]==b[j+<span class="number">1</span>]) j++;</div><div class="line">    <span class="comment">//此时j成功匹配</span></div><div class="line">    如果(j==lenb) ans++;</div><div class="line">    <span class="comment">//这句话看情况，目前表示统计的答案数+1（如果想搜出来的不重叠就加上j=0）</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<h2 id="三、Next数组"><a href="#三、Next数组" class="headerlink" title="三、Next数组"></a>三、Next数组</h2><blockquote>
-<ul>
-<li>对称不是中心对称，而是<strong>中心字符块对称</strong>，比如不是abba，而是abab这种对称</li>
-<li>“前缀”指除了最后一个字符以外，一个字符串的<strong>全部</strong>头部组合</li>
-<li>“后缀”指除了最前一个字符以外，一个字符串的<strong>全部</strong>尾部组合</li>
-</ul>
-</blockquote>
-<p>那么Next数组究竟怎么求？这也是网络上有关KMP最大的争议。<br>首先，Next数组有几种定义（这也是为何初学者很容易混淆）。<br>不过殊途同归，next本质上是相同的~</p>
-<h2 id="四、Next的角度1"><a href="#四、Next的角度1" class="headerlink" title="四、Next的角度1"></a>四、Next的角度1</h2><p>“最大长度值”是”前缀”和”后缀”的最长的共有元素的长度。<br>以”ABCDABD”为例。</p>
-<p>(个人认为这个也适合作为性质去记忆而非求法，虽然听老师讲了一遍后开始折服于此)</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">序号</th>
-<th style="text-align:center">1</th>
-<th style="text-align:center">2</th>
-<th style="text-align:center">3</th>
-<th style="text-align:center">4</th>
-<th style="text-align:center">5</th>
-<th style="text-align:center">6</th>
-<th style="text-align:center">7</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">字符</td>
-<td style="text-align:center">A</td>
-<td style="text-align:center">B</td>
-<td style="text-align:center">C</td>
-<td style="text-align:center">D</td>
-<td style="text-align:center">A</td>
-<td style="text-align:center">B</td>
-<td style="text-align:center">D</td>
-</tr>
-<tr>
-<td style="text-align:center">最大长度</td>
-<td style="text-align:center">0</td>
-<td style="text-align:center">0</td>
-<td style="text-align:center">0</td>
-<td style="text-align:center">0</td>
-<td style="text-align:center">1</td>
-<td style="text-align:center">2</td>
-<td style="text-align:center">0</td>
-</tr>
-</tbody>
-</table>
-<p>“A”的前缀和后缀都为空集，共有元素的长度为0；<br>“AB”的前缀为[A]，后缀为[B]，共有元素的长度为0；<br>“ABC”的前缀为[A,AB]，后缀为[BC,C]，共有元素的长度0；<br>“ABCD”的前缀为[A,AB,ABC]，后缀为[BCD,CD,D]，共有元素的长度为0；<br>“ABCDA”的前缀为[A,AB,ABC,ABCD]，后缀为[BCDA,CDA,DA,A]，共有元素为”A”，长度为1；<br>“ABCDAB”的前缀为[A,AB,ABC,ABCD,ABCDA]，后缀为[BCDAB,CDAB,DAB,AB,B]，共有元素为”AB”，长度为2；<br>“ABCDABD”的前缀为[A,AB,ABC,ABCD,ABCDA,ABCDAB]，<br>后缀为[BCDABD,CDABD,DABD,ABD,BD,D]，共有元素的长度为0。</p>
-<p>所以，p[i]可以说是从1到i形成的字符串中的最大长度值。<br>其实与前面说的“s(1,p[i])=s(i-p[i]+1,i)”是一样的</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">2</span>;i&lt;=lenb;i++)<span class="comment">//X2，后缀头不变尾延长</span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">while</span>(j&gt;<span class="number">0</span> and b[j+<span class="number">1</span>]!=b[i]) j=p[j];<span class="comment">//让前缀和后缀同时增长</span></div><div class="line">    <span class="comment">//j是前缀的尾同时也是最大长度值，必然比i小所以其p已经计算出了</span></div><div class="line">	<span class="comment">//失败的时候找更小一点的对称，也就从蓝色转变为红色来延长</span></div><div class="line">    <span class="keyword">if</span>(b[i]==b[j+<span class="number">1</span>]) p[i]=++j; <span class="keyword">else</span> p[i]=<span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>同样的代码，不同的理解方式。</p>
-<p>另一个更贴合本理解的代码<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">2</span>;i&lt;=lenb;i++)<span class="comment">//图片中的X2，后缀头不变尾延长</span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">int</span> j=p[i<span class="number">-1</span>];<span class="comment">//图片中的x1-1，因此蓝色相等</span></div><div class="line">    <span class="keyword">while</span>(j&gt;<span class="number">0</span> and sb[i]!=sb[j+<span class="number">1</span>]) j=p[j];</div><div class="line">    <span class="keyword">if</span>(sb[i]==sb[j+<span class="number">1</span>]) p[i]=j+<span class="number">1</span>; <span class="keyword">else</span> p[i]=<span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>这两份代码可以结合图片理解，i就是x2，j是x1-1<br><img src="../../images/OI之路/KMP/0.png" alt=""></p>
-<h2 id="五、Next的角度2"><a href="#五、Next的角度2" class="headerlink" title="五、Next的角度2"></a>五、Next的角度2</h2><p>Next数组相当于“最大长度值”整体向右移动一位，然后初始值赋为-1</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">序号</th>
-<th style="text-align:center">1</th>
-<th style="text-align:center">2</th>
-<th style="text-align:center">3</th>
-<th style="text-align:center">4</th>
-<th style="text-align:center">5</th>
-<th style="text-align:center">6</th>
-<th style="text-align:center">7</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">字符</td>
-<td style="text-align:center">A</td>
-<td style="text-align:center">B</td>
-<td style="text-align:center">C</td>
-<td style="text-align:center">D</td>
-<td style="text-align:center">A</td>
-<td style="text-align:center">B</td>
-<td style="text-align:center">D</td>
-</tr>
-<tr>
-<td style="text-align:center">最大长度</td>
-<td style="text-align:center">0</td>
-<td style="text-align:center">0</td>
-<td style="text-align:center">0</td>
-<td style="text-align:center">0</td>
-<td style="text-align:center">1</td>
-<td style="text-align:center">2</td>
-<td style="text-align:center">0</td>
-</tr>
-<tr>
-<td style="text-align:center">Next</td>
-<td style="text-align:center">-1</td>
-<td style="text-align:center">0</td>
-<td style="text-align:center">0</td>
-<td style="text-align:center">0</td>
-<td style="text-align:center">0</td>
-<td style="text-align:center">1</td>
-<td style="text-align:center">2</td>
-</tr>
-</tbody>
-</table>
-<p>其实这个角度本质上和上一个一样，只不过这样就能”在j失配时直接对j跳转“而不是”在j+1失配时对j跳转“<br>《最大长度值》字符串B向右移动的位数[已匹配字符位置-失配字符的上一位字符的最大长度值]<br>《Next数组》字符串B向右移动的位数[失配字符的位置-失配字符对应的Next值]<br>上述两个值相等</p>
-<h2 id="六、Next的角度3"><a href="#六、Next的角度3" class="headerlink" title="六、Next的角度3"></a>六、Next的角度3</h2><p>用一个长长的字符串来解释</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">序</th>
-<th style="text-align:center">1</th>
-<th style="text-align:center">2</th>
-<th style="text-align:center">3</th>
-<th style="text-align:center">4</th>
-<th style="text-align:center">5</th>
-<th style="text-align:center">6</th>
-<th style="text-align:center">7</th>
-<th style="text-align:center">8</th>
-<th style="text-align:center">9</th>
-<th style="text-align:center">10</th>
-<th style="text-align:center">11</th>
-<th style="text-align:center">12</th>
-<th style="text-align:center">13</th>
-<th style="text-align:center">14</th>
-<th style="text-align:center">15</th>
-<th style="text-align:center">16</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">符</td>
-<td style="text-align:center">A</td>
-<td style="text-align:center">G</td>
-<td style="text-align:center">C</td>
-<td style="text-align:center">T</td>
-<td style="text-align:center">A</td>
-<td style="text-align:center">G</td>
-<td style="text-align:center">C</td>
-<td style="text-align:center">A</td>
-<td style="text-align:center">G</td>
-<td style="text-align:center">C</td>
-<td style="text-align:center">T</td>
-<td style="text-align:center">A</td>
-<td style="text-align:center">G</td>
-<td style="text-align:center">C</td>
-<td style="text-align:center">T</td>
-<td style="text-align:center">G</td>
-</tr>
-<tr>
-<td style="text-align:center">Ne</td>
-<td style="text-align:center">0</td>
-<td style="text-align:center">0</td>
-<td style="text-align:center">0</td>
-<td style="text-align:center">0</td>
-<td style="text-align:center">1</td>
-<td style="text-align:center">2</td>
-<td style="text-align:center">3</td>
-<td style="text-align:center">1</td>
-<td style="text-align:center">2</td>
-<td style="text-align:center">3</td>
-<td style="text-align:center">4</td>
-<td style="text-align:center">5</td>
-<td style="text-align:center">6</td>
-<td style="text-align:center">7</td>
-<td style="text-align:center">4</td>
-<td style="text-align:center">0</td>
-</tr>
-</tbody>
-</table>
-<p>假设当前字符位置i，子串位置j<br>(1)递推比较<br>把i与j+1进行比较，如果相等，直接继承为上个Next再+1，因为对称程度增加了。<br>如果不相等，跳到(2)，很好理解</p>
-<p>(2)回头来找对称性<br><img src="../../images/OI之路/KMP/1.png" alt=""></p>
-<ul>
-<li>t如果要存在对称性，那么对称程度肯定比前面这个c的对称程度小。要找更小的对称，必然在对称内部还存在子对称，而且这个t必须紧接着在子对称之后。</li>
-<li>可以通过循环j=Next[j]不断找更小对称性<br><img src="../../images/OI之路/KMP/2.png" alt=""><br>个人感觉类似自己匹配自己</li>
-</ul>
-<h2 id="七、代码"><a href="#七、代码" class="headerlink" title="七、代码"></a>七、代码</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//*******************定义*******************</span></div><div class="line"><span class="keyword">int</span> p[<span class="number">11100</span>],lenb;<span class="keyword">char</span> b[<span class="number">11000</span>];</div><div class="line"><span class="comment">//*******************实现*******************</span></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">calcb</span><span class="params">(<span class="keyword">void</span>)</span></div><div class="line"></span>&#123;</div><div class="line">    lenb=<span class="built_in">strlen</span>(b+<span class="number">1</span>);</div><div class="line">    <span class="keyword">int</span> j=<span class="number">0</span>;p[<span class="number">1</span>]=<span class="number">0</span>;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">2</span>;i&lt;=lenb;i++)</div><div class="line">    &#123;</div><div class="line">        <span class="keyword">while</span>(j&gt;<span class="number">0</span> and b[j+<span class="number">1</span>!=b[i]]) j=p[j];</div><div class="line">        <span class="keyword">if</span>(b[i]==b[j+<span class="number">1</span>]) p[i]=++j;</div><div class="line">        <span class="keyword">else</span> p[i]=<span class="number">0</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">KMP</span><span class="params">(<span class="keyword">char</span> a[])</span></div><div class="line"></span>&#123;</div><div class="line">    <span class="keyword">int</span> lena=<span class="built_in">strlen</span>(a+<span class="number">1</span>);</div><div class="line">    <span class="keyword">int</span> j=<span class="number">0</span>;<span class="keyword">int</span> ans=<span class="number">0</span>;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=lena;i++)</div><div class="line">    &#123;</div><div class="line">        <span class="keyword">while</span>(j&gt;<span class="number">0</span> and a[i]!=b[j+<span class="number">1</span>]) j=p[j];</div><div class="line">        <span class="keyword">if</span>(a[i]==b[j+<span class="number">1</span>]) j++;</div><div class="line">        <span class="keyword">if</span>(j==lenb) ans++,j=<span class="number">0</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> ans;</div><div class="line">&#125;</div><div class="line"><span class="comment">//*******************主函数*******************</span></div><div class="line"><span class="keyword">char</span> a[<span class="number">11000</span>];</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> *argv[])</span></div><div class="line"></span>&#123;</div><div class="line">    <span class="keyword">int</span> n;<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;n);</div><div class="line">    <span class="keyword">while</span>(n--)</div><div class="line">    &#123;</div><div class="line">        <span class="built_in">scanf</span>(<span class="string">"%s"</span>,b+<span class="number">1</span>);</div><div class="line">        calcb();</div><div class="line">        <span class="built_in">scanf</span>(<span class="string">"%s"</span>,a+<span class="number">1</span>);</div><div class="line">        <span class="built_in">printf</span>(<span class="string">"%d\n"</span>,KMP(a));</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p><strong>检验数据：</strong><br><strong>Input</strong><br>alkdfj<br>haljhdgelqigljafiehiqhroug<br>sgs<br>sgsgijosgsjeswsgjjiigj</p>
-<p><strong>Output</strong><br>0<br>2</p>
-<h2 id="八、练习"><a href="#八、练习" class="headerlink" title="八、练习"></a>八、练习</h2><p><a href="../2018-04/陶陶的名字.html">陶陶的名字</a><br>（可以重叠的最小覆盖）</p>
-<h2 id="九、kmp与最小覆盖"><a href="#九、kmp与最小覆盖" class="headerlink" title="九、kmp与最小覆盖"></a>九、kmp与最小覆盖</h2><p>参考文献：<a href="https://blog.csdn.net/fjsd155/article/details/6866991" target="_blank" rel="noopener">FarmerJohn</a></p>
-<p>定义：<br>对于一个字符串，一个长度最小的满足<br>【复制自己多次（不重叠，与陶陶的名字不同）后可以覆盖原串】的子串</p>
-<p>结论：<br>长度=n-next[n]</p>
-<p>证明：<br>先证明它是覆盖子串<br>①next[n]&lt;=n-next[n]<br><img src="../images/OI之路/KMP/7.png" alt=""><br>显而易见覆盖</p>
-<p>②next[n]&gt;n-next[n]<br><img src="../images/OI之路/KMP/8.png" alt=""></p>
-<p>然后它也是最小的<br>这里用反证法，假设存在一个比n-next[n]更小的C，然后截取掉<br><img src="../images/OI之路/KMP/9.png" alt=""><br>这样的话，黄色部分比next[n]更长，不满足next[n]是最长这个定义</p>
-<p>Q.E.D.</p>
+        <p>洛谷18年7月月赛比赛总结<br><a href="https://www.luogu.org/contestnew/show/8288" target="_blank" rel="noopener">题目</a><br><a id="more"></a></p>
+<h2 id="比赛经历"><a href="#比赛经历" class="headerlink" title="比赛经历"></a>比赛经历</h2><p>先把第一题做了<br>然后第二题wa了几次，蹲坑的时候忽然灵光一现想到了漏洞……<br>然后就挂机了……和以前没什么区别</p>
+<h2 id="T1-Analysis"><a href="#T1-Analysis" class="headerlink" title="T1_Analysis"></a>T1_Analysis</h2><div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>先离散化一下，统计每个数出现个数<br>如果剩下一个的时候，判断素数即可</p>
+<p>看了题解发现原来我的代码是有漏洞的<br>没有考虑，最后没有数字的情况（没有把t初始化为1），然后居然ac了</p>
+
+</div></div>
+<h2 id="T1-Code-原"><a href="#T1-Code-原" class="headerlink" title="T1_Code_原"></a>T1_Code_原</h2><div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdlib&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cmath&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;queue&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;vector&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;map&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;set&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> MAXN=<span class="number">110000</span>;</div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> INF=<span class="number">0x3f3f3f3f</span>;</div><div class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</div><div class="line"><span class="keyword">typedef</span> <span class="keyword">unsigned</span> <span class="keyword">long</span> <span class="keyword">long</span> ull;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">mymax</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span> </span>&#123;<span class="keyword">return</span> x&gt;y?x:y;&#125;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">mymin</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span> </span>&#123;<span class="keyword">return</span> x&lt;y?x:y;&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">bool</span> <span class="title">isprime</span><span class="params">(ll x)</span></div><div class="line"></span>&#123;</div><div class="line">    <span class="keyword">if</span>(x&lt;=<span class="number">1</span>) <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">    <span class="keyword">if</span>(x==<span class="number">2</span>) <span class="keyword">return</span> <span class="number">1</span>;</div><div class="line">    <span class="keyword">for</span>(ll i=<span class="number">2</span>;i*i&lt;=x;i++) <span class="keyword">if</span>(x%i==<span class="number">0</span>) <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">    <span class="keyword">return</span> <span class="number">1</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">struct</span> Nod</div><div class="line">&#123;</div><div class="line">    ll d;</div><div class="line">    <span class="keyword">int</span> p;</div><div class="line">&#125;a[MAXN*<span class="number">2</span>],b[MAXN*<span class="number">2</span>];</div><div class="line"><span class="function"><span class="keyword">bool</span> <span class="title">cmp</span><span class="params">(Nod x,Nod y)</span> </span>&#123;<span class="keyword">return</span> x.d&lt;y.d;&#125;</div><div class="line">ll yz[MAXN*<span class="number">2</span>];<span class="comment">//old</span></div><div class="line"><span class="keyword">int</span> mx;</div><div class="line"></div><div class="line"><span class="keyword">int</span> n,m;</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">lsh</span><span class="params">()</span></div><div class="line"></span>&#123;</div><div class="line">    <span class="built_in">memcpy</span>(b,a,<span class="keyword">sizeof</span> a);</div><div class="line">    sort(b+<span class="number">1</span>,b+n+m+<span class="number">1</span>,cmp);</div><div class="line">    mx=<span class="number">1</span>;yz[mx]=b[<span class="number">1</span>].d;a[b[<span class="number">1</span>].p].d=mx;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">2</span>;i&lt;=n+m;i++)</div><div class="line">    &#123;</div><div class="line">        <span class="keyword">if</span>(b[i<span class="number">-1</span>].d!=b[i].d) mx++;</div><div class="line">        yz[mx]=b[i].d;a[b[i].p].d=mx;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">int</span> c[MAXN*<span class="number">2</span>];</div><div class="line"><span class="function"><span class="keyword">bool</span> <span class="title">check</span><span class="params">()</span></div><div class="line"></span>&#123;</div><div class="line"></div><div class="line">    <span class="keyword">bool</span> bk=<span class="number">0</span>;</div><div class="line">    ll t;<span class="comment">//这里应该改成1</span></div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=mx;i++)</div><div class="line">    &#123;</div><div class="line">        <span class="keyword">if</span>(c[i]&gt;<span class="number">0</span>)</div><div class="line">        &#123;</div><div class="line">            <span class="keyword">if</span>(bk==<span class="number">0</span>)</div><div class="line">            &#123;</div><div class="line">                <span class="keyword">if</span>(c[i]&gt;<span class="number">1</span>) <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">                bk=<span class="number">1</span>,t=yz[i];</div><div class="line">            &#125;</div><div class="line">            <span class="keyword">else</span> <span class="keyword">if</span>(bk) <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">//printf("mx=%d\n",mx);</span></div><div class="line">    <span class="keyword">return</span> isprime(t);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></div><div class="line"></span>&#123;</div><div class="line">    <span class="keyword">int</span> T;<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;T);</div><div class="line">    <span class="keyword">while</span>(T--)</div><div class="line">    &#123;</div><div class="line">        <span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;n,&amp;m);</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) <span class="built_in">scanf</span>(<span class="string">"%lld"</span>,&amp;a[i].d),a[i].p=i;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=m;i++) <span class="built_in">scanf</span>(<span class="string">"%lld"</span>,&amp;a[n+i].d),a[n+i].p=n+i;</div><div class="line">        lsh();</div><div class="line"></div><div class="line">        <span class="built_in">memset</span>(c,<span class="number">0</span>,<span class="keyword">sizeof</span> c);</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) <span class="keyword">if</span>(yz[a[i].d]&gt;<span class="number">1</span>) c[a[i].d]++;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=n+<span class="number">1</span>;i&lt;=n+m;i++) <span class="keyword">if</span>(yz[a[i].d]&gt;<span class="number">1</span>) c[a[i].d]--;</div><div class="line"></div><div class="line">        <span class="keyword">if</span>(check()) <span class="built_in">puts</span>(<span class="string">"YES"</span>);</div><div class="line">        <span class="keyword">else</span> <span class="built_in">puts</span>(<span class="string">"NO"</span>);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+</div></div>
+<h2 id="T2-Analysis"><a href="#T2-Analysis" class="headerlink" title="T2_Analysis"></a>T2_Analysis</h2><div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>一眼贪心模拟<br>显然碰到连续两个跳过的点，就失败<br>但是一开始写成了【连续两个小段失败】，其实可能只是跳过中间那个点就行<br>还有一个细节漏了，就是不能跳过m-1</p>
+
+</div></div>
+<h2 id="T2-Code-原"><a href="#T2-Code-原" class="headerlink" title="T2_Code_原"></a>T2_Code_原</h2><div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdlib&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cmath&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;queue&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;vector&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;map&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;set&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> MAXN=<span class="number">110000</span>;</div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> INF=<span class="number">0x3f3f3f3f</span>;</div><div class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</div><div class="line"><span class="keyword">typedef</span> <span class="keyword">unsigned</span> <span class="keyword">long</span> <span class="keyword">long</span> ull;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">mymax</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span> </span>&#123;<span class="keyword">return</span> x&gt;y?x:y;&#125;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">mymin</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span> </span>&#123;<span class="keyword">return</span> x&lt;y?x:y;&#125;</div><div class="line"></div><div class="line"><span class="keyword">int</span> n,m,s;</div><div class="line"><span class="keyword">int</span> w[MAXN];</div><div class="line"><span class="keyword">bool</span> v[MAXN];</div><div class="line"><span class="keyword">int</span> ans[MAXN],tot=<span class="number">0</span>;</div><div class="line"><span class="function"><span class="keyword">bool</span> <span class="title">check</span><span class="params">()</span></div><div class="line"></span>&#123;</div><div class="line">    <span class="keyword">int</span> now=<span class="number">0</span>;</div><div class="line">    <span class="keyword">bool</span> fail=<span class="number">0</span>;</div><div class="line">    <span class="keyword">int</span> nx=<span class="number">1</span>;</div><div class="line">    <span class="keyword">while</span>(now&lt;m+<span class="number">1</span>)</div><div class="line">    &#123;</div><div class="line">        <span class="keyword">int</span> dis=w[nx]-w[now];</div><div class="line">        <span class="keyword">if</span>(dis&lt;s)</div><div class="line">        &#123;</div><div class="line">            <span class="keyword">if</span>(nx==m+<span class="number">1</span> or fail) <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line"></div><div class="line">            fail=<span class="number">1</span>;</div><div class="line">            nx++;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">else</span></div><div class="line">        &#123;</div><div class="line">            now=nx;</div><div class="line">            nx++;</div><div class="line">            v[now]=<span class="number">1</span>;</div><div class="line">            ans[++tot]=now;</div><div class="line">            fail=<span class="number">0</span>;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">while</span>(now&gt;<span class="number">0</span>)</div><div class="line">    &#123;</div><div class="line">        <span class="keyword">int</span> nx=now<span class="number">-1</span>;<span class="keyword">while</span>(nx&gt;<span class="number">0</span> and v[nx]) nx--;</div><div class="line">        <span class="keyword">int</span> dis=w[now]-w[nx];</div><div class="line">        <span class="keyword">if</span>(dis&lt;s) <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">        v[nx]=<span class="number">1</span>;</div><div class="line">        now=nx;</div><div class="line">        ans[++tot]=now;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;=m+<span class="number">1</span>;i++) <span class="keyword">if</span>(!v[i]) <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line"></div><div class="line">    <span class="built_in">puts</span>(<span class="string">"YES"</span>);</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=tot;i++) <span class="built_in">printf</span>(<span class="string">"%d "</span>,ans[i]);</div><div class="line">    <span class="keyword">return</span> <span class="number">1</span>;</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></div><div class="line"></span>&#123;</div><div class="line">    <span class="built_in">scanf</span>(<span class="string">"%d%d%d"</span>,&amp;n,&amp;m,&amp;s);</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=m;i++) <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;w[i]);</div><div class="line">    w[<span class="number">0</span>]=<span class="number">0</span>;w[m+<span class="number">1</span>]=n;</div><div class="line">    <span class="keyword">if</span>(!check()) <span class="built_in">puts</span>(<span class="string">"NO"</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+</div></div>
+<h2 id="T3-Analysis"><a href="#T3-Analysis" class="headerlink" title="T3_Analysis"></a>T3_Analysis</h2><div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>当时想了1h都没有思路<br>只是想到通过差分和贪心，面对一个局面时可以线性地判断<br>然后就在想方设法【线性扫时间，通过利用残留信息logn判断】<br>然后就实在想不到什么残留信息可以用……</p>
+<p>强行伏笔：一直奇怪那个r给出来有什么用（可能是用来迷惑人的？）<br>然后题目下面一大堆限制条件，以为只是用来手算范围的<br>其实有一个隐藏的特性：$R_i&gt;=i$<br>所以说一次成功后，后面的都能成功，也就是满足二分性<br>（不一定是一个完美的函数，但最后一定都是成功）<br>（让我联想到化学反应的结束图像）</p>
+<p>实话说我经常会这样害怕毒瘤题面</p>
+
+</div></div>
+<h2 id="T3-Code-std"><a href="#T3-Code-std" class="headerlink" title="T3_Code_std"></a>T3_Code_std</h2><div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cmath&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdlib&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;map&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;set&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;queue&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;deque&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;vector&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bitset&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> MAXN=<span class="number">510000</span>;</div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> INF=<span class="number">0x3f3f3f3f</span>;</div><div class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</div><div class="line"><span class="keyword">typedef</span> <span class="keyword">unsigned</span> <span class="keyword">long</span> <span class="keyword">long</span> ull;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">mymax</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span> </span>&#123;<span class="keyword">return</span> x&gt;y?x:y;&#125;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">mymin</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span> </span>&#123;<span class="keyword">return</span> x&lt;y?x:y;&#125;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">myabs</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;<span class="keyword">return</span> x&gt;<span class="number">0</span>?x:-x;&#125;</div><div class="line"></div><div class="line"><span class="keyword">int</span> n,m,k,mx;</div><div class="line"><span class="keyword">int</span> a[MAXN],c[MAXN];</div><div class="line"><span class="keyword">struct</span> Nod</div><div class="line">&#123;</div><div class="line">    <span class="keyword">int</span> w,x,v;</div><div class="line">&#125;b[MAXN];</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">check</span><span class="params">(<span class="keyword">int</span> mid)</span></div><div class="line"></span>&#123;</div><div class="line">    <span class="built_in">memcpy</span>(c,a,<span class="keyword">sizeof</span> a);</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=mid;i++) c[b[i].x]-=b[i].v,c[b[i].x+<span class="number">1</span>]+=b[i].v;</div><div class="line">    <span class="keyword">int</span> ans=<span class="number">0</span>,tot=<span class="number">0</span>;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</div><div class="line">    &#123;</div><div class="line">        tot+=c[i];</div><div class="line">        <span class="keyword">if</span>(tot&lt;<span class="number">1</span>)</div><div class="line">        &#123;</div><div class="line">            ans+=(<span class="number">1</span>-tot);</div><div class="line">            c[i]+=(<span class="number">1</span>-tot);</div><div class="line">            <span class="keyword">if</span>(i+k&lt;=n) c[i+k]-=(<span class="number">1</span>-tot);<span class="comment">//debug 2分的小细节！</span></div><div class="line">            tot+=(<span class="number">1</span>-tot);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> ans;</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></div><div class="line"></span>&#123;</div><div class="line">    <span class="built_in">scanf</span>(<span class="string">"%d%d%d%d"</span>,&amp;n,&amp;m,&amp;k,&amp;mx);</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;a[i]);</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=n;i&gt;=<span class="number">1</span>;i--) a[i]-=a[i<span class="number">-1</span>];<span class="comment">//差分</span></div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=mx;i++) &#123;<span class="keyword">int</span> t;<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;t);&#125;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=m;i++) <span class="built_in">scanf</span>(<span class="string">"%d%d%d"</span>,&amp;b[i].w,&amp;b[i].x,&amp;b[i].v);</div><div class="line">    b[m+<span class="number">1</span>].w=INF;</div><div class="line"></div><div class="line">    <span class="keyword">int</span> ans;</div><div class="line">    <span class="keyword">int</span> l=<span class="number">0</span>,r=m;</div><div class="line">    <span class="keyword">while</span>(l&lt;=r)</div><div class="line">    &#123;</div><div class="line">        <span class="keyword">int</span> mid=(l+r)/<span class="number">2</span>;</div><div class="line">        <span class="keyword">int</span> tot=check(mid);</div><div class="line">        <span class="keyword">if</span>(tot&gt;=b[mid+<span class="number">1</span>].w) l=mid+<span class="number">1</span>;</div><div class="line">        <span class="keyword">else</span> ans=tot,r=mid<span class="number">-1</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="built_in">printf</span>(<span class="string">"%d"</span>,ans);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+</div></div>
+<h2 id="T4-Analysis"><a href="#T4-Analysis" class="headerlink" title="T4_Analysis"></a>T4_Analysis</h2><div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>有关区间最小值，有这样一个套路:<br>先用一个递减的单调栈，分别从前往后和从后往前，<br>求出l[i]和r[i]表示第一个比a[i]大的位置，<br>则l[i]+1~r[i]-1中间，用到的最大值都是a[i]</p>
+<p>考虑枚举这个最大值位置，然后枚举左右中数量少的那一边的端点<br>这样另一个端点的取值范围就确定了，静态主席树即可，当然树状数组+离散化+二分查找也行。<br>这样做的话读者可能认为复杂度是$O(n^2 log_2 n)$的，<br>无异于【预处理st表+暴力枚举端点】的复杂度</p>
+<p>然而，这种做法的复杂度其实是$O(n log_2^2 n)$的<br>证明：<br>对于每个i，它能够把l[i]+1~r[i]-1分成两半，分出来后，下一层级的j不能跨越出去<br>所以说每次选取少的那一边，$枚举量 \leq log_2 n$</p>
+<p>至于空间，如果用树状数组或者线段树，不离散化的话，复杂度是m<br>至于主席树，因为是静态的，前缀和形式，动态开点则变成nlogm，大大降低</p>
+
+</div></div>
+<h2 id="T4-Code-std"><a href="#T4-Code-std" class="headerlink" title="T4_Code_std"></a>T4_Code_std</h2><div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div></pre></td></tr></table></figure>
+
+</div></div>
+<h2 id="T5-Analysis"><a href="#T5-Analysis" class="headerlink" title="T5_Analysis"></a>T5_Analysis</h2><div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>看到“凸包”两个字就想跑……</p>
+
+</div></div>
 
       
     </div>
@@ -735,59 +584,9 @@
     
 
     
-      <div class="post-tags">
-        
-          <a href="/tags/原创精华/" rel="tag"># 原创精华</a>
-        
-          <a href="/tags/字符串/" rel="tag"># 字符串</a>
-        
-          <a href="/tags/KMP/" rel="tag"># KMP</a>
-        
-      </div>
-    
 
     
       
-
-  <div class="popular-posts-header">相关文章推荐</div>
-  <ul class="popular-posts">
-  
-    <li class="popular-posts-item">
-      
-      
-      <div class="popular-posts-title"><a href="/2003-01/【OI之路】02数论算法-1公约数公倍数与欧几里得.html" rel="bookmark">【OI之路】02数论算法-1公约数公倍数与欧几里得</a></div>
-      
-    </li>
-  
-    <li class="popular-posts-item">
-      
-      
-      <div class="popular-posts-title"><a href="/2003-01/【OI之路】09经典问题-3哈夫曼树.html" rel="bookmark">【OI之路】09经典问题-3哈夫曼树</a></div>
-      
-    </li>
-  
-    <li class="popular-posts-item">
-      
-      
-      <div class="popular-posts-title"><a href="/2003-01/【OI之路】11更高级数论-3莫比乌斯反演.html" rel="bookmark">【OI之路】11更高级数论-3莫比乌斯反演</a></div>
-      
-    </li>
-  
-    <li class="popular-posts-item">
-      
-      
-      <div class="popular-posts-title"><a href="/2018-01/码风与技巧.html" rel="bookmark">【置顶】码风与卡常技巧</a></div>
-      
-    </li>
-  
-    <li class="popular-posts-item">
-      
-      
-      <div class="popular-posts-title"><a href="/2003-01/【OI之路】11更高级数论-4快速傅里叶变换.html" rel="bookmark">【OI之路】11更高级数论-4快速傅里叶变换</a></div>
-      
-    </li>
-  
-  </ul>
 
 
     
@@ -797,7 +596,7 @@
 				<p id="div-border-left-purple">
 			   <b>本文基于<a target="_blank" title="Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)" href="http://creativecommons.org/licenses/by-sa/4.0/deed.zh"> 知识共享署名-相同方式共享 4.0 </a>国际许可协议发布</b><br/>
 				<span>
-				<b>本文地址：</b><a href="/2003-01/【OI之路】10字符串-1KMP.html" title="【OI之路】10字符串-1KMP">http://zory.cf/2003-01/【OI之路】10字符串-1KMP.html</a><br/><b>转载请注明出处，谢谢！</b>
+				<b>本文地址：</b><a href="/2018-07/洛谷18年7月月赛比赛总结.html" title="洛谷18年7月月赛比赛总结">http://zory.cf/2018-07/洛谷18年7月月赛比赛总结.html</a><br/><b>转载请注明出处，谢谢！</b>
 				</span>
 				</p>
 		</div>
@@ -863,8 +662,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2003-01/【OI之路】09经典问题-3哈夫曼树.html" rel="next" title="【OI之路】09经典问题-3哈夫曼树">
-                <i class="fa fa-chevron-left"></i> 【OI之路】09经典问题-3哈夫曼树
+              <a href="/2018-07/灯.html" rel="next" title="【USACO2009 NOV Gold】灯">
+                <i class="fa fa-chevron-left"></i> 【USACO2009 NOV Gold】灯
               </a>
             
           </div>
@@ -872,10 +671,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2003-01/【OI之路】10字符串-2Manacher.html" rel="prev" title="【OI之路】10字符串-2Manacher">
-                【OI之路】10字符串-2Manacher <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -1298,7 +1093,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、说在正文前的小声明"><span class="nav-text">一、说在正文前的小声明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、定义"><span class="nav-text">二、定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、利用Next数组求解KMP"><span class="nav-text">三、利用Next数组求解KMP</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、Next数组"><span class="nav-text">三、Next数组</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#四、Next的角度1"><span class="nav-text">四、Next的角度1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#五、Next的角度2"><span class="nav-text">五、Next的角度2</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#六、Next的角度3"><span class="nav-text">六、Next的角度3</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#七、代码"><span class="nav-text">七、代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#八、练习"><span class="nav-text">八、练习</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#九、kmp与最小覆盖"><span class="nav-text">九、kmp与最小覆盖</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#比赛经历"><span class="nav-text">比赛经历</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#T1-Analysis"><span class="nav-text">T1_Analysis</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#T1-Code-原"><span class="nav-text">T1_Code_原</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#T2-Analysis"><span class="nav-text">T2_Analysis</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#T2-Code-原"><span class="nav-text">T2_Code_原</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#T3-Analysis"><span class="nav-text">T3_Analysis</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#T3-Code-std"><span class="nav-text">T3_Code_std</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#T4-Analysis"><span class="nav-text">T4_Analysis</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#T4-Code-std"><span class="nav-text">T4_Code_std</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#T5-Analysis"><span class="nav-text">T5_Analysis</span></a></li></ol></div>
             
 
           </div>
@@ -1966,6 +1761,30 @@
   
   
 
+  
+    
+      <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      },
+      TeX: {equationNumbers: { autoNumber: "AMS" }}
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/mathjax@2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    
   
 
 

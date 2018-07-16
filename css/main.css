@@ -2055,7 +2055,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #910b1b;
+  background: #4d7311;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3105,7 +3105,7 @@ hr {
   margin: 0px 10px 20px -10px;
 }
 .header {
-  background: url("/images/header_background.jpg");
+  background: url("http://ouk2t1pgs.bkt.clouddn.com/header_background.jpg");
 }
 .site-title {
   font-size: 34px;

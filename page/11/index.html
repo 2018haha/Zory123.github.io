@@ -262,7 +262,7 @@
           
           <li class="menu-item menu-item-archives">
     <a href="/archives/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />历程Archives<span class="badge">316</span></a>
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />历程Archives<span class="badge">317</span></a>
   </li>
         
         
@@ -278,7 +278,7 @@
           
           <li class="menu-item menu-item-tags">
     <a href="/tags/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签Tags<span class="badge">116</span></a>
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签Tags<span class="badge">117</span></a>
   </li>
         
         
@@ -311,6 +311,14 @@
           <li class="menu-item menu-item-english">
     <a href="/English/" rel="section">
       <i class="menu-item-icon fa fa-fw fa-etsy"></i> <br />English知识体系</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-boutique">
+    <a href="/tags/原创精华/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-fa-handshake-o"></i> <br />原创精华</a>
   </li>
         
         
@@ -384,6 +392,412 @@
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://zory.cf/2003-01/【OI之路】02数论算法-7约数个数与和.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Zory">
+      <meta itemprop="description" content="人生即使不能走最短路，依然是连通图">
+      <meta itemprop="image" content="http://ouk2t1pgs.bkt.clouddn.com/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Zory的个人博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2003-01/【OI之路】02数论算法-7约数个数与和.html" itemprop="url">
+                  【OI之路】02数论算法-7约数个数与和
+                </a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建于：2003-01-22 00:02:07" itemprop="dateCreated datePublished" datetime="2003-01-22T00:02:07+08:00">2003-01-22</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改于：2018-07-01 19:08:58" itemprop="dateModified" datetime="2018-07-01T19:08:58+08:00">2018-07-01</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/OI之路/" itemprop="url" rel="index"><span itemprop="name">OI之路</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2003-01/【OI之路】02数论算法-7约数个数与和.html#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论：</span> <span class="post-comments-count valine-comment-count" data-xid="/2003-01/【OI之路】02数论算法-7约数个数与和.html" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2003-01/【OI之路】02数论算法-7约数个数与和.html" class="leancloud_visitors" data-flag-title="【OI之路】02数论算法-7约数个数与和">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">热度：</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>对于数字G<br>$$G=p1^{a1}\times p2^{a2}\times p3^{a3}\times …\times pk^{ak}$$<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2003-01/【OI之路】02数论算法-7约数个数与和.html#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    
+
+    
+
+	
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://zory.cf/2003-01/【OI之路】07动态规划-4数位DP.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Zory">
+      <meta itemprop="description" content="人生即使不能走最短路，依然是连通图">
+      <meta itemprop="image" content="http://ouk2t1pgs.bkt.clouddn.com/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Zory的个人博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2003-01/【OI之路】07动态规划-4数位DP.html" itemprop="url">
+                  【OI之路】07动态规划-4数位DP
+                </a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建于：2003-01-22 00:07:04" itemprop="dateCreated datePublished" datetime="2003-01-22T00:07:04+08:00">2003-01-22</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改于：2018-07-01 19:09:00" itemprop="dateModified" datetime="2018-07-01T19:09:00+08:00">2018-07-01</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/OI之路/" itemprop="url" rel="index"><span itemprop="name">OI之路</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2003-01/【OI之路】07动态规划-4数位DP.html#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论：</span> <span class="post-comments-count valine-comment-count" data-xid="/2003-01/【OI之路】07动态规划-4数位DP.html" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2003-01/【OI之路】07动态规划-4数位DP.html" class="leancloud_visitors" data-flag-title="【OI之路】07动态规划-4数位DP">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">热度：</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>数位DP<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2003-01/【OI之路】07动态规划-4数位DP.html#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    
+
+    
+
+	
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
     
       
 
@@ -603,7 +1017,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://zory.cf/2003-01/【OI之路】07动态规划-3斜率优化.html">
+    <link itemprop="mainEntityOfPage" href="http://zory.cf/2003-01/【OI之路】06树-6主席树.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Zory">
@@ -622,8 +1036,8 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2003-01/【OI之路】07动态规划-3斜率优化.html" itemprop="url">
-                  【OI之路】07动态规划-3斜率优化
+                <a class="post-title-link" href="/2003-01/【OI之路】06树-6主席树.html" itemprop="url">
+                  【OI之路】06树-6主席树
                 </a>
               
             
@@ -649,7 +1063,7 @@
                 
               
 
-              <time title="创建于：2003-01-22 00:07:03" itemprop="dateCreated datePublished" datetime="2003-01-22T00:07:03+08:00">2003-01-22</time>
+              <time title="创建于：2003-01-22 00:06:06" itemprop="dateCreated datePublished" datetime="2003-01-22T00:06:06+08:00">2003-01-22</time>
             
 
             
@@ -698,8 +1112,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2003-01/【OI之路】07动态规划-3斜率优化.html#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论：</span> <span class="post-comments-count valine-comment-count" data-xid="/2003-01/【OI之路】07动态规划-3斜率优化.html" itemprop="commentCount"></span>
+                <a href="/2003-01/【OI之路】06树-6主席树.html#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论：</span> <span class="post-comments-count valine-comment-count" data-xid="/2003-01/【OI之路】06树-6主席树.html" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -707,7 +1121,7 @@
 
           
           
-             <span id="/2003-01/【OI之路】07动态规划-3斜率优化.html" class="leancloud_visitors" data-flag-title="【OI之路】07动态规划-3斜率优化">
+             <span id="/2003-01/【OI之路】06树-6主席树.html" class="leancloud_visitors" data-flag-title="【OI之路】06树-6主席树">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -739,10 +1153,10 @@
 
       
         
-          <p>斜率优化~神奇玩意儿<br>本质上也属于单调队列吧<br>
+          <h2 id="6-6-0-背景"><a href="#6-6-0-背景" class="headerlink" title="6.6.0 背景"></a>6.6.0 背景</h2><p>对于两颗上下界相同的线段树，其结构唯一，节点一一对应。<br><img src="http://caioj.cn/upload/image/20170714/20170714145219_85080.png" alt=""><br>至于主席树来历之类的八卦，请自行上网搜索。<br>某大佬：<a href="http://blog.csdn.net/xgc_woker/article/details/78018297" target="_blank" rel="noopener">http://blog.csdn.net/xgc_woker/article/details/78018297</a></p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2003-01/【OI之路】07动态规划-3斜率优化.html#more" rel="contents">
+            <a class="btn" href="/2003-01/【OI之路】06树-6主席树.html#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1012,7 +1426,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://zory.cf/2003-01/【OI之路】06树-5最近公共祖先.html">
+    <link itemprop="mainEntityOfPage" href="http://zory.cf/2003-01/【OI之路】10字符串-8最小表示法.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Zory">
@@ -1031,8 +1445,8 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2003-01/【OI之路】06树-5最近公共祖先.html" itemprop="url">
-                  【OI之路】06树-5最近公共祖先LCA
+                <a class="post-title-link" href="/2003-01/【OI之路】10字符串-8最小表示法.html" itemprop="url">
+                  【OI之路】10字符串-8最小表示法
                 </a>
               
             
@@ -1058,7 +1472,7 @@
                 
               
 
-              <time title="创建于：2003-01-22 00:06:05" itemprop="dateCreated datePublished" datetime="2003-01-22T00:06:05+08:00">2003-01-22</time>
+              <time title="创建于：2003-01-22 00:10:08" itemprop="dateCreated datePublished" datetime="2003-01-22T00:10:08+08:00">2003-01-22</time>
             
 
             
@@ -1075,7 +1489,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改于：2018-07-01 19:09:00" itemprop="dateModified" datetime="2018-07-01T19:09:00+08:00">2018-07-01</time>
+                <time title="修改于：2018-07-04 11:10:06" itemprop="dateModified" datetime="2018-07-04T11:10:06+08:00">2018-07-04</time>
               
             
           </span>
@@ -1107,8 +1521,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2003-01/【OI之路】06树-5最近公共祖先.html#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论：</span> <span class="post-comments-count valine-comment-count" data-xid="/2003-01/【OI之路】06树-5最近公共祖先.html" itemprop="commentCount"></span>
+                <a href="/2003-01/【OI之路】10字符串-8最小表示法.html#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论：</span> <span class="post-comments-count valine-comment-count" data-xid="/2003-01/【OI之路】10字符串-8最小表示法.html" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -1116,7 +1530,7 @@
 
           
           
-             <span id="/2003-01/【OI之路】06树-5最近公共祖先.html" class="leancloud_visitors" data-flag-title="【OI之路】06树-5最近公共祖先LCA">
+             <span id="/2003-01/【OI之路】10字符串-8最小表示法.html" class="leancloud_visitors" data-flag-title="【OI之路】10字符串-8最小表示法">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -1148,10 +1562,10 @@
 
       
         
-          <h2 id="6-5-0-声明"><a href="#6-5-0-声明" class="headerlink" title="6.5.0 声明"></a>6.5.0 声明</h2><p>本文暂时只有树上倍增算法，另外两种LCA做法可参考此文章：<br><a href="https://www.cnblogs.com/lsdsjy/p/4071041.html" target="_blank" rel="noopener">www.cnblogs.com/lsdsjy/p/4071041.html</a></p>
+          <p>在循环同构的n个字符串中，找出字典序最小的一个，就是最小表示法。</p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2003-01/【OI之路】06树-5最近公共祖先.html#more" rel="contents">
+            <a class="btn" href="/2003-01/【OI之路】10字符串-8最小表示法.html#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1418,209 +1832,6 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://zory.cf/2003-01/【OI之路】10字符串-8最小表示法.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Zory">
-      <meta itemprop="description" content="人生即使不能走最短路，依然是连通图">
-      <meta itemprop="image" content="http://ouk2t1pgs.bkt.clouddn.com/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Zory的个人博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2003-01/【OI之路】10字符串-8最小表示法.html" itemprop="url">
-                  【OI之路】10字符串-8最小表示法
-                </a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建于：2003-01-22 00:10:08" itemprop="dateCreated datePublished" datetime="2003-01-22T00:10:08+08:00">2003-01-22</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改于：2018-07-04 11:10:06" itemprop="dateModified" datetime="2018-07-04T11:10:06+08:00">2018-07-04</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/OI之路/" itemprop="url" rel="index"><span itemprop="name">OI之路</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2003-01/【OI之路】10字符串-8最小表示法.html#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论：</span> <span class="post-comments-count valine-comment-count" data-xid="/2003-01/【OI之路】10字符串-8最小表示法.html" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/2003-01/【OI之路】10字符串-8最小表示法.html" class="leancloud_visitors" data-flag-title="【OI之路】10字符串-8最小表示法">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">热度：</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body han-init-context" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>在循环同构的n个字符串中，找出字典序最小的一个，就是最小表示法。</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2003-01/【OI之路】10字符串-8最小表示法.html#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    
-
-    
-
-	
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://zory.cf/2003-01/【OI之路】09经典问题-3哈夫曼树.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1761,6 +1972,209 @@
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2003-01/【OI之路】09经典问题-3哈夫曼树.html#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    
+
+    
+
+	
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://zory.cf/2017-08/俄罗斯轮盘.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Zory">
+      <meta itemprop="description" content="人生即使不能走最短路，依然是连通图">
+      <meta itemprop="image" content="http://ouk2t1pgs.bkt.clouddn.com/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Zory的个人博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017-08/俄罗斯轮盘.html" itemprop="url">
+                  俄罗斯轮盘
+                </a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建于：2017-08-22 11:09:02" itemprop="dateCreated datePublished" datetime="2017-08-22T11:09:02+08:00">2017-08-22</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改于：2018-07-01 19:09:04" itemprop="dateModified" datetime="2018-07-01T19:09:04+08:00">2018-07-01</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/刷题/" itemprop="url" rel="index"><span itemprop="name">刷题</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017-08/俄罗斯轮盘.html#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论：</span> <span class="post-comments-count valine-comment-count" data-xid="/2017-08/俄罗斯轮盘.html" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2017-08/俄罗斯轮盘.html" class="leancloud_visitors" data-flag-title="俄罗斯轮盘">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">热度：</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>有人知道来源在评论说一声<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017-08/俄罗斯轮盘.html#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -2640,6 +3054,209 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://zory.cf/2003-01/【OI之路】07动态规划-2单调队列.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Zory">
+      <meta itemprop="description" content="人生即使不能走最短路，依然是连通图">
+      <meta itemprop="image" content="http://ouk2t1pgs.bkt.clouddn.com/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Zory的个人博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2003-01/【OI之路】07动态规划-2单调队列.html" itemprop="url">
+                  【OI之路】07动态规划-2单调队列
+                </a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建于：2003-01-22 00:07:02" itemprop="dateCreated datePublished" datetime="2003-01-22T00:07:02+08:00">2003-01-22</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改于：2018-07-01 19:09:00" itemprop="dateModified" datetime="2018-07-01T19:09:00+08:00">2018-07-01</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/OI之路/" itemprop="url" rel="index"><span itemprop="name">OI之路</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2003-01/【OI之路】07动态规划-2单调队列.html#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论：</span> <span class="post-comments-count valine-comment-count" data-xid="/2003-01/【OI之路】07动态规划-2单调队列.html" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2003-01/【OI之路】07动态规划-2单调队列.html" class="leancloud_visitors" data-flag-title="【OI之路】07动态规划-2单调队列">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">热度：</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>单调队列~好东西<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2003-01/【OI之路】07动态规划-2单调队列.html#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    
+
+    
+
+	
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://zory.cf/2003-01/【OI之路】08暴力的学问-5哈希.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -2686,7 +3303,7 @@
                 
               
 
-              <time title="创建于：2003-01-22 00:08:04" itemprop="dateCreated datePublished" datetime="2003-01-22T00:08:04+08:00">2003-01-22</time>
+              <time title="创建于：2003-01-22 00:08:05" itemprop="dateCreated datePublished" datetime="2003-01-22T00:08:05+08:00">2003-01-22</time>
             
 
             
@@ -2703,7 +3320,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改于：2018-07-04 10:04:48" itemprop="dateModified" datetime="2018-07-04T10:04:48+08:00">2018-07-04</time>
+                <time title="修改于：2018-07-17 10:27:42" itemprop="dateModified" datetime="2018-07-17T10:27:42+08:00">2018-07-17</time>
               
             
           </span>
@@ -3236,412 +3853,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://zory.cf/2003-01/【OI之路】07动态规划-1入门.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Zory">
-      <meta itemprop="description" content="人生即使不能走最短路，依然是连通图">
-      <meta itemprop="image" content="http://ouk2t1pgs.bkt.clouddn.com/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Zory的个人博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2003-01/【OI之路】07动态规划-1入门.html" itemprop="url">
-                  【OI之路】07动态规划-1入门
-                </a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建于：2003-01-22 00:07:01" itemprop="dateCreated datePublished" datetime="2003-01-22T00:07:01+08:00">2003-01-22</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改于：2018-07-01 19:09:00" itemprop="dateModified" datetime="2018-07-01T19:09:00+08:00">2018-07-01</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/OI之路/" itemprop="url" rel="index"><span itemprop="name">OI之路</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2003-01/【OI之路】07动态规划-1入门.html#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论：</span> <span class="post-comments-count valine-comment-count" data-xid="/2003-01/【OI之路】07动态规划-1入门.html" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/2003-01/【OI之路】07动态规划-1入门.html" class="leancloud_visitors" data-flag-title="【OI之路】07动态规划-1入门">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">热度：</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body han-init-context" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>动态规划DP<br>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2003-01/【OI之路】07动态规划-1入门.html#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    
-
-    
-
-	
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://zory.cf/2003-01/【OI之路】07动态规划-5概率与期望.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Zory">
-      <meta itemprop="description" content="人生即使不能走最短路，依然是连通图">
-      <meta itemprop="image" content="http://ouk2t1pgs.bkt.clouddn.com/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Zory的个人博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2003-01/【OI之路】07动态规划-5概率与期望.html" itemprop="url">
-                  【OI之路】07动态规划-5概率与期望
-                </a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建于：2003-01-22 00:07:05" itemprop="dateCreated datePublished" datetime="2003-01-22T00:07:05+08:00">2003-01-22</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改于：2018-07-01 19:09:00" itemprop="dateModified" datetime="2018-07-01T19:09:00+08:00">2018-07-01</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/OI之路/" itemprop="url" rel="index"><span itemprop="name">OI之路</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2003-01/【OI之路】07动态规划-5概率与期望.html#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论：</span> <span class="post-comments-count valine-comment-count" data-xid="/2003-01/【OI之路】07动态规划-5概率与期望.html" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/2003-01/【OI之路】07动态规划-5概率与期望.html" class="leancloud_visitors" data-flag-title="【OI之路】07动态规划-5概率与期望">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">热度：</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body han-init-context" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>概率与期望<br>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2003-01/【OI之路】07动态规划-5概率与期望.html#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    
-
-    
-
-	
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -3693,7 +3904,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">316</span>
+                    <span class="site-state-item-count">317</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -3959,7 +4170,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">116</span>
+                      
+                    
+                    <span class="site-state-item-count">117</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -4684,23 +4897,25 @@
   
     
       
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
         
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
       
     
       

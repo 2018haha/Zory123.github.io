@@ -2055,7 +2055,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #91ffd1;
+  background: #fc6b17;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3343,9 +3343,6 @@ days {
 a {
   color: #5073b8;
   border-bottom-color: #5073b8;
-}
-:active {
-  cursor: url("http://zory.cf/link.cur"), auto !important;
 }
 a:hover {
   color: #a166ab;

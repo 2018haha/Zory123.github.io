@@ -135,7 +135,7 @@
 <meta property="og:site_name" content="Zory的个人博客">
 <meta property="og:description" content="Source and JudgeNOIP2005 提高组 T3Luogu1053Caioj1523">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-07-09T01:31:34.000Z">
+<meta property="og:updated_time" content="2018-08-09T08:30:02.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【Luogu1051】篝火晚会">
 <meta name="twitter:description" content="Source and JudgeNOIP2005 提高组 T3Luogu1053Caioj1523">
@@ -263,7 +263,7 @@
           
           <li class="menu-item menu-item-archives">
     <a href="/archives/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />历程Archives<span class="badge">318</span></a>
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />历程Archives<span class="badge">322</span></a>
   </li>
         
         
@@ -279,7 +279,7 @@
           
           <li class="menu-item menu-item-tags">
     <a href="/tags/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签Tags<span class="badge">117</span></a>
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签Tags<span class="badge">120</span></a>
   </li>
         
         
@@ -468,7 +468,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改于：2018-07-09 09:31:34" itemprop="dateModified" datetime="2018-07-09T09:31:34+08:00">2018-07-09</time>
+                <time title="修改于：2018-08-09 16:30:02" itemprop="dateModified" datetime="2018-08-09T16:30:02+08:00">2018-08-09</time>
               
             
           </span>
@@ -548,7 +548,7 @@
 <h2 id="Analysis"><a href="#Analysis" class="headerlink" title="Analysis"></a>Analysis</h2><div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
 <p>首先，假设现在有k个人在错误的位置上，那么最小花费显然就是k【猜结论】<br>那么问题就在于如何判断多少个人错误呢?<br>因为这是一个环，当构造出当前环和目标环后，比较也是要O(n^2)，tle妥妥的</p>
 <p>那么接下来就是求最少错误的，等价于求最多正确的<br>当然这里的错误与正确只是相对的，分离出不同的链就有不同的结果，取得是最多的罢了<br>那么怎么求呢？有个很妙的方法：<br>所谓正确的，在环状态下，其实它们与原位置的偏移量是相同的<br>那么计算出偏移量，选取其中最多的一种方案即可</p>
-<p>不过猜结论还是有点危险啊，因为还要反着跑一遍<br>例子：<br>当前：2 3 4 1<br>目标：4 3 2 1<br>其实目标就是4 1 2 3，也就是反过来<br>那么答案不是2而是0</p>
+<p>不过猜结论还是有点危险啊，因为还要反着跑一遍<br>栗子：<br>当前：2 3 4 1<br>目标：4 3 2 1<br>其实目标就是4 1 2 3，也就是反过来<br>那么答案不是2而是0</p>
 
 </div></div>
 <h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
@@ -691,8 +691,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018-04/虫食算.html" rel="next" title="【Luogu1092】虫食算">
-                <i class="fa fa-chevron-left"></i> 【Luogu1092】虫食算
+              <a href="/2018-04/谁拿了最多奖学金.html" rel="next" title="【Luogu1051】谁拿了最多奖学金">
+                <i class="fa fa-chevron-left"></i> 【Luogu1051】谁拿了最多奖学金
               </a>
             
           </div>
@@ -701,8 +701,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018-04/能量项链.html" rel="prev" title="【Luogu1063】能量项链">
-                【Luogu1063】能量项链 <i class="fa fa-chevron-right"></i>
+              <a href="/2018-04/金明的预算方案.html" rel="prev" title="【Luogu1064】金明的预算方案">
+                【Luogu1064】金明的预算方案 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -784,7 +784,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">318</span>
+                    <span class="site-state-item-count">322</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -1052,7 +1052,13 @@
                     
                       
                     
-                    <span class="site-state-item-count">117</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">120</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>

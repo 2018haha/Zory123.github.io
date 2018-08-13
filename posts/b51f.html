@@ -123,18 +123,18 @@
 
 
 
-  <meta name="description" content="本文并非原创，仅仅只是进行了粗劣的优化另一个版本的优化在文末给出，仅供参考 2.3.1排列（在乎顺序）全排列：n个人全部来排队，队长为n。第一个位置可以选n个，第二个位置可以选n-1个，以此类推得：">
+  <meta name="description" content="本文并非全部原创，仅仅只是进行了粗劣的优化，再加上各种补充另一个版本的优化在文末给出，仅供参考">
 <meta name="keywords" content="二项式定理,组合数学,杨辉三角">
 <meta property="og:type" content="article">
 <meta property="og:title" content="【OI之路】02数论算法-3组合数学">
 <meta property="og:url" content="http://zory.cf/posts/b51f.html">
 <meta property="og:site_name" content="Zory的个人博客">
-<meta property="og:description" content="本文并非原创，仅仅只是进行了粗劣的优化另一个版本的优化在文末给出，仅供参考 2.3.1排列（在乎顺序）全排列：n个人全部来排队，队长为n。第一个位置可以选n个，第二个位置可以选n-1个，以此类推得：">
+<meta property="og:description" content="本文并非全部原创，仅仅只是进行了粗劣的优化，再加上各种补充另一个版本的优化在文末给出，仅供参考">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-08-11T05:23:50.000Z">
+<meta property="og:updated_time" content="2018-08-13T07:31:12.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【OI之路】02数论算法-3组合数学">
-<meta name="twitter:description" content="本文并非原创，仅仅只是进行了粗劣的优化另一个版本的优化在文末给出，仅供参考 2.3.1排列（在乎顺序）全排列：n个人全部来排队，队长为n。第一个位置可以选n个，第二个位置可以选n-1个，以此类推得：">
+<meta name="twitter:description" content="本文并非全部原创，仅仅只是进行了粗劣的优化，再加上各种补充另一个版本的优化在文末给出，仅供参考">
 
 
 
@@ -259,7 +259,7 @@
           
           <li class="menu-item menu-item-archives">
     <a href="/archives/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />历程Archives<span class="badge">323</span></a>
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />历程Archives<span class="badge">326</span></a>
   </li>
         
         
@@ -275,7 +275,7 @@
           
           <li class="menu-item menu-item-tags">
     <a href="/tags/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签Tags<span class="badge">120</span></a>
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签Tags<span class="badge">123</span></a>
   </li>
         
         
@@ -464,7 +464,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改于：2018-08-11 13:23:50" itemprop="dateModified" datetime="2018-08-11T13:23:50+08:00">2018-08-11</time>
+                <time title="修改于：2018-08-13 15:31:12" itemprop="dateModified" datetime="2018-08-13T15:31:12+08:00">2018-08-13</time>
               
             
           </span>
@@ -536,22 +536,27 @@
       
 
       
-        <p>本文并非原创，仅仅只是进行了粗劣的优化<br>另一个版本的优化在文末给出，仅供参考</p>
-<h1 id="2-3-1排列（在乎顺序）"><a href="#2-3-1排列（在乎顺序）" class="headerlink" title="2.3.1排列（在乎顺序）"></a>2.3.1排列（在乎顺序）</h1><p>全排列：n个人全部来排队，队长为n。第一个位置可以选n个，第二个位置可以选n-1个，以此类推得：<br><a id="more"></a><br>$$<br>P(n,n)=n\times (n-1)\times (n-2)……3\times 2\times 1=n! (规定0!=1)<br>$$<br>部分排列：n个人选m个来排队(m&lt;=n)。第一个位置可以选n个，第二位置可以选n-1个，以此类推，第m个（最后一个）可以选(n-m+1)个，得：<br>$$<br>P(n,m)=n\times (n-1)\times (n-2)……(n-m+1)=\frac{n!}{(n-m)!}<br>$$</p>
-<h1 id="2-3-2组合（不在乎顺序）"><a href="#2-3-2组合（不在乎顺序）" class="headerlink" title="2.3.2组合（不在乎顺序）"></a>2.3.2组合（不在乎顺序）</h1><p>n个人m(m&lt;=n)个出来，不排队，不在乎顺序C(n,m)。如果在乎排列那么就是P(n,m)，如果不在乎那么就要除掉重复，那么重复了多少？同样选出的来的m个人，他们还要”全排”得到P(m,m)，所以得:<br>$$<br>C(n,m)=\frac{P(n,m)}{P(m,m)}=\frac{n!}{m!(n-m)!}<br>$$<br>组合数的性质1:<br>$$<br>C(n,m)=C(n-1,m)+C(n-1,m-1)<br>$$<br>组合数的性质2: n&amp;k==k 则c(n,k)为奇数，否则为偶数</p>
-<h1 id="2-3-2-5-组合数与11与杨辉三角与二项式定理（原创）"><a href="#2-3-2-5-组合数与11与杨辉三角与二项式定理（原创）" class="headerlink" title="2.3.2.5 组合数与11与杨辉三角与二项式定理（原创）"></a>2.3.2.5 组合数与11与杨辉三角与二项式定理（原创）</h1><p>（做题碰到二项式定理，然后猜了一些，再上网验证）<br>1<br>1 1<br>1 2 1<br>1 3 3 1<br>1 4 6 4 1<br>1 5 10 10 5 1<br>……<br>这是经典的杨辉三角（Pascal’s Triangle），哪怕是小学时也见过吧<br>然后我从初三学生的角度看看这玩意</p>
+        <p>本文并非全部原创，仅仅只是进行了粗劣的优化，再加上各种补充<br>另一个版本的优化在文末给出，仅供参考<br><a id="more"></a></p>
+<h1 id="普通排列（在乎顺序）"><a href="#普通排列（在乎顺序）" class="headerlink" title="普通排列（在乎顺序）"></a>普通排列（在乎顺序）</h1><p>全排列：n个人全部来排队，队长为n。第一个位置可以选n个，第二个位置可以选n-1个，以此类推得：<br>$$<br>P(n,n)=n\times (n-1)\times (n-2)……3\times 2\times 1=n! (规定0!=1)<br>$$<br>部分排列：n个人选m个来排队(m&lt;=n)。第一个位置可以选n个，第二位置可以选n-1个，以此类推，第m个（最后一个）可以选(n-m+1)个，得：<br>$$<br>P(n,m)=n\times (n-1)\times (n-2)……(n-m+1)=\frac{n!}{(n-m)!}<br>$$</p>
+<h1 id="普通组合（不在乎顺序）"><a href="#普通组合（不在乎顺序）" class="headerlink" title="普通组合（不在乎顺序）"></a>普通组合（不在乎顺序）</h1><p>n个人m(m&lt;=n)个出来，不排队，不在乎顺序C(n,m)。如果在乎排列那么就是P(n,m)，如果不在乎那么就要除掉重复，那么重复了多少？同样选出的来的m个人，他们还要”全排”得到P(m,m)，所以得:<br>$$<br>C(n,m)=\frac{P(n,m)}{P(m,m)}=\frac{n!}{m!(n-m)!}<br>$$<br>组合数的性质1:<br>$$<br>C(n,m)=C(n-1,m)+C(n-1,m-1)<br>$$<br>组合数的性质2: n&amp;k==k 则c(n,k)为奇数，否则为偶数</p>
+<h1 id="组合数与11与杨辉三角与二项式定理（原创）"><a href="#组合数与11与杨辉三角与二项式定理（原创）" class="headerlink" title="组合数与11与杨辉三角与二项式定理（原创）"></a>组合数与11与杨辉三角与二项式定理（原创）</h1><p>（做题碰到二项式定理，然后猜了一些，再上网验证）<br>1<br>1 1<br>1 2 1<br>1 3 3 1<br>1 4 6 4 1<br>1 5 10 10 5 1<br>……<br>这是经典的杨辉三角（Pascal’s Triangle），哪怕是小学时也见过吧<br>然后我从初三学生的角度看看这玩意</p>
 <p>特点：</p>
 <ol>
 <li>对称</li>
-<li>从1开始</li>
+<li>从1开始，在1结束</li>
 <li>第i行第j个（从0开始）=$C(i,j)$</li>
-<li>如果把空格隔开的数看作数字，成为一个无限进制数，则转化为10进制后，<br>第i行=$11^i$</li>
-<li>因为是组合数三角，所以也是二项式定理三角（据说这就是初衷）<br>然后这些事我没想到的：</li>
-<li>第i行数字和为$2^{i-1}$</li>
+<li>如果把空格隔开的数看作数字，成为一个无限进制数，则转化为10进制后，<br>第i行=$11^{i-1}$</li>
+<li>因为是组合数三角，所以也是二项式定理三角（据说这就是初衷）<br>然后这些是我没想到的：</li>
+<li>第i行数字和为$2^{i-1}$ 【这其实就是组合数的和，选和不选两种情况】</li>
 <li>$C(i,j)=C(i-1,j-1)+C(i-1,j)$</li>
 </ol>
-<h1 id="2-3-3其他排列与组合"><a href="#2-3-3其他排列与组合" class="headerlink" title="2.3.3其他排列与组合"></a>2.3.3其他排列与组合</h1><p>(下文不保证正确性，因为我也不会)</p>
-<h2 id="1-圆排列"><a href="#1-圆排列" class="headerlink" title="(1)圆排列"></a>(1)圆排列</h2><p>n个人全部来围成一圈为Q(n,n)，其中已经排好的一圈，从不同位置断开，又变成不同的队列。所以：<br>$$<br>Q(n,n)=\frac{P(n,n)}{n}=(n-1)!<br>$$<br>由此可知，部分圆排:<br>$$<br>Q(n,r)=\frac{P(n,r)}{r}=\frac{n!}{r\times (n-r)!}<br>$$</p>
+<h1 id="多重集"><a href="#多重集" class="headerlink" title="多重集"></a>多重集</h1><p>也就是允许元素重复的广义集合<br>表示为$S={n1 \cdot a1,n2 \cdot a2,…nk \cdot ak}$</p>
+<p>全排列：$\frac{n!}{n1! \times n2! … \times nk!}$</p>
+<p>组合：设选r个<br>先考虑较为特殊的$r \leq n_i (\forall i \in [1,k])$<br>然后我们就能直接把问题转化为求$S={r \cdot 0,k-1 \cdot 1}$的全排列<br>所以得到$\frac{ (r+k-1)! }{r! \times (k-1)!}=C_{r-k+1}^{r}$</p>
+<p>例题：<a href="82f7.html">Counting Swaps</a></p>
+<hr>
+<p>(下文不保证正确性，因为我也不会)</p>
+<h1 id="2-3-3其他排列与组合"><a href="#2-3-3其他排列与组合" class="headerlink" title="2.3.3其他排列与组合"></a>2.3.3其他排列与组合</h1><h2 id="1-圆排列"><a href="#1-圆排列" class="headerlink" title="(1)圆排列"></a>(1)圆排列</h2><p>n个人全部来围成一圈为Q(n,n)，其中已经排好的一圈，从不同位置断开，又变成不同的队列。所以：<br>$$<br>Q(n,n)=\frac{P(n,n)}{n}=(n-1)!<br>$$<br>由此可知，部分圆排:<br>$$<br>Q(n,r)=\frac{P(n,r)}{r}=\frac{n!}{r\times (n-r)!}<br>$$</p>
 <h2 id="2-重复排列-有限"><a href="#2-重复排列-有限" class="headerlink" title="(2)重复排列(有限)"></a>(2)重复排列(有限)</h2><p>k种不一样的球，每种球的个数分别是a1,a2,…ak,<br>设n=a1+a2+…+ak，这n个球的全排列数，为<br>$$<br>\frac{n!}{a1!\times a2!\times …\times ak!}<br>$$</p>
 <h2 id="3-重复组合-无限"><a href="#3-重复组合-无限" class="headerlink" title="(3)重复组合(无限)"></a>(3)重复组合(无限)</h2><p>n种不一样的球，每种球的个数是无限的,从中选k个出来，<br>不用排列，是组合，为C(n+k-1,k)<br>证明：假设选出来的数（排好序）<br>$$<br>1&lt;=b1&lt;=b2&lt;=b3……&lt;=bk&lt;=n<br>$$<br>这题的难点就是=号，现在去掉=号，所以有：<br>$$<br>1&lt;=b1&lt;b2+1&lt;b3+2&lt;b4+3……&lt;bk+k-1&lt;=n+k-1<br>$$<br>中间还是k个数！不过已经不是b系列，而是c系列假设c[i]:=b[i]+i-1，所以<br>$$<br>1&lt;=c1&lt;c2&lt;c3&lt;c4……&lt;ck&lt;=n+k-1<br>$$<br>所以问题就开始转换为无重复组合问题，即在n+k-1个元素中选中k个的组合数C(n+k-1,k)。</p>
 <h2 id="4-不相邻排列"><a href="#4-不相邻排列" class="headerlink" title="(4)不相邻排列"></a>(4)不相邻排列</h2><p>1~n这n个自然数中选k个，这k个数中任何两个数不相邻数的组合有C(n-k+1,k)证明和(3)相同。</p>
@@ -588,7 +593,7 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/8493.html" rel="bookmark">【Luogu1313】计算系数</a></div>
+      <div class="popular-posts-title"><a href="/null" rel="bookmark"></a></div>
       
     </li>
   
@@ -761,7 +766,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">323</span>
+                    <span class="site-state-item-count">326</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -794,6 +799,12 @@
                 <div class="site-state-item site-state-tags">
                   <a href="/tags/index.html">
                     
+                    
+                      
+                    
+                      
+                    
+                      
                     
                       
                     
@@ -1113,7 +1124,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#2-3-1排列（在乎顺序）"><span class="nav-text">2.3.1排列（在乎顺序）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-3-2组合（不在乎顺序）"><span class="nav-text">2.3.2组合（不在乎顺序）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-3-2-5-组合数与11与杨辉三角与二项式定理（原创）"><span class="nav-text">2.3.2.5 组合数与11与杨辉三角与二项式定理（原创）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-3-3其他排列与组合"><span class="nav-text">2.3.3其他排列与组合</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-圆排列"><span class="nav-text">(1)圆排列</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-重复排列-有限"><span class="nav-text">(2)重复排列(有限)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-重复组合-无限"><span class="nav-text">(3)重复组合(无限)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-不相邻排列"><span class="nav-text">(4)不相邻排列</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-stirling数（子集划分）"><span class="nav-text">(5) stirling数（子集划分）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-错位排列（简称-错排）"><span class="nav-text">(6)错位排列（简称:错排）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-Catalan数列"><span class="nav-text">(7)Catalan数列</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#普通排列（在乎顺序）"><span class="nav-text">普通排列（在乎顺序）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#普通组合（不在乎顺序）"><span class="nav-text">普通组合（不在乎顺序）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#组合数与11与杨辉三角与二项式定理（原创）"><span class="nav-text">组合数与11与杨辉三角与二项式定理（原创）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#多重集"><span class="nav-text">多重集</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-3-3其他排列与组合"><span class="nav-text">2.3.3其他排列与组合</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-圆排列"><span class="nav-text">(1)圆排列</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-重复排列-有限"><span class="nav-text">(2)重复排列(有限)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-重复组合-无限"><span class="nav-text">(3)重复组合(无限)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-不相邻排列"><span class="nav-text">(4)不相邻排列</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-stirling数（子集划分）"><span class="nav-text">(5) stirling数（子集划分）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-错位排列（简称-错排）"><span class="nav-text">(6)错位排列（简称:错排）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-Catalan数列"><span class="nav-text">(7)Catalan数列</span></a></li></ol></li></ol></div>
             
 
           </div>

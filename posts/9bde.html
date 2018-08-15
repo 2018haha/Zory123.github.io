@@ -131,7 +131,7 @@
 <meta property="og:site_name" content="Zory的个人博客">
 <meta property="og:description" content="哈希Hash">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-08-11T05:23:52.000Z">
+<meta property="og:updated_time" content="2018-08-15T08:44:30.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【OI之路】08暴力的学问-5哈希">
 <meta name="twitter:description" content="哈希Hash">
@@ -225,7 +225,7 @@
     </div>
     
       
-        <h1 class="site-subtitle" itemprop="description">人生即使不能走最短路，依然是连通图</h1>
+        <h1 class="site-subtitle" itemprop="description">人生即使不能走最短路，仍是连通图</h1>
       
     
   </div>
@@ -259,7 +259,7 @@
           
           <li class="menu-item menu-item-archives">
     <a href="/archives/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />历程Archives<span class="badge">328</span></a>
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />历程Archives<span class="badge">327</span></a>
   </li>
         
         
@@ -275,7 +275,7 @@
           
           <li class="menu-item menu-item-tags">
     <a href="/tags/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签Tags<span class="badge">123</span></a>
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签Tags<span class="badge">120</span></a>
   </li>
         
         
@@ -409,7 +409,7 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Zory">
-      <meta itemprop="description" content="人生即使不能走最短路，依然是连通图">
+      <meta itemprop="description" content="人生即使不能走最短路，仍是连通图">
       <meta itemprop="image" content="http://ouk2t1pgs.bkt.clouddn.com/avatar.jpg">
     </span>
 
@@ -464,7 +464,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改于：2018-08-11 13:23:52" itemprop="dateModified" datetime="2018-08-11T13:23:52+08:00">2018-08-11</time>
+                <time title="修改于：2018-08-15 16:44:30" itemprop="dateModified" datetime="2018-08-15T16:44:30+08:00">2018-08-15</time>
               
             
           </span>
@@ -539,7 +539,7 @@
         <p>哈希Hash<br><a id="more"></a></p>
 <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>这东西主要用来验重<br>而且在字符串领域比较常用<br>但其思想的应用才是其精髓<br>所以没有放在字符串分类</p>
 <h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">typedef</span> <span class="keyword">unsigned</span> <span class="keyword">long</span> <span class="keyword">long</span> ull;</div><div class="line"><span class="function">ull <span class="title">gethash</span><span class="params">(<span class="keyword">char</span> *s)</span></div><div class="line"></span>&#123;</div><div class="line">    <span class="keyword">int</span> len=<span class="built_in">strlen</span>(s+<span class="number">1</span>);</div><div class="line">    ull ans=<span class="number">0</span>,p=<span class="number">1</span>;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=len;i++)</div><div class="line">    &#123;</div><div class="line">        ans=ans*p+s[i];</div><div class="line">        p*=<span class="number">13331</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> ans;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h2 id="其他应用"><a href="#其他应用" class="headerlink" title="其他应用"></a>其他应用</h2><h3 id="1-字符串匹配-kmp"><a href="#1-字符串匹配-kmp" class="headerlink" title="1. 字符串匹配-kmp"></a>1. 字符串匹配-kmp</h3><p>例题：<a href="../2018-04/Oulipo.html">poj3461 Oulipo</a></p>
+<h2 id="其他应用"><a href="#其他应用" class="headerlink" title="其他应用"></a>其他应用</h2><h3 id="1-字符串匹配-kmp"><a href="#1-字符串匹配-kmp" class="headerlink" title="1. 字符串匹配-kmp"></a>1. 字符串匹配-kmp</h3><p>例题：<a href="eaf4.html">poj3461 Oulipo</a></p>
 <h3 id="2-字符串匹配-ac自动机"><a href="#2-字符串匹配-ac自动机" class="headerlink" title="2. 字符串匹配-ac自动机"></a>2. 字符串匹配-ac自动机</h3><p>等价于用kmp搞ac机，不推荐</p>
 <h3 id="3-字符串匹配-manacher"><a href="#3-字符串匹配-manacher" class="headerlink" title="3. 字符串匹配-manacher"></a>3. 字符串匹配-manacher</h3><p>O(nlogn)求最大回文子串<br>其实就是枚举中心点，分情况讨论，然后二分长度</p>
 <h3 id="4-字符串匹配-后缀数组"><a href="#4-字符串匹配-后缀数组" class="headerlink" title="4. 字符串匹配-后缀数组"></a>4. 字符串匹配-后缀数组</h3><p>O(n log^2⁡ n )<br>在排序的比较函数中，套一个二分，得到最长公共前缀，比较其下一个字符，就能够比较出大小<br>得出排名后，相邻的再同样地二分一次就好了</p>
@@ -569,7 +569,14 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/null" rel="bookmark"></a></div>
+      <div class="popular-posts-title"><a href="/posts/eaf4.html" rel="bookmark">【Poj3461】Oulipo</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="/posts/4a8c.html" rel="bookmark">【AHOI2005】【CQOI2014】病毒检测/通配符匹配</a></div>
       
     </li>
   
@@ -732,7 +739,7 @@
                 alt="Zory" />
             
               <p class="site-author-name" itemprop="name">Zory</p>
-              <p class="site-description motion-element" itemprop="description">人生即使不能走最短路，依然是连通图</p>
+              <p class="site-description motion-element" itemprop="description">人生即使不能走最短路，仍是连通图</p>
           </div>
 
           
@@ -742,7 +749,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">328</span>
+                    <span class="site-state-item-count">327</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -775,12 +782,6 @@
                 <div class="site-state-item site-state-tags">
                   <a href="/tags/index.html">
                     
-                    
-                      
-                    
-                      
-                    
-                      
                     
                       
                     
@@ -1059,33 +1060,12 @@
           
           
 
-<br><br>
-
-<!--a href="http://info.flagcounter.com/pNr7">
-<img src="//s05.flagcounter.com/countxl/pNr7/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_12/viewers_0/labels_1/pageviews_0/flags_0/percent_0/" alt="Flag Counter" border="0">
-</a-->
-
-<br><br>
-
-
-<p class="abc" id="hitokoto">:D 获取中...</p>
-<script>
-  fetch('https://v1.hitokoto.cn')
-    .then(function (res)
-    {
-      return res.json();
-    })
-    .then(function (data)
-    {
-      var hitokoto = document.getElementById('hitokoto');
-      var from = document.getElementById('from');
-      hitokoto.innerText = '「'+data.hitokoto+'」';
-    })
-    .catch(function (err)
-    {
-      console.error(err);
-    })
-</script>
+<script type="text/javascript" src="https://api.lwl12.com/hitokoto/main/get?encode=js&charset=utf-8"></script>
+<div id="lwlhitokoto">
+    <script>
+        lwlhitokoto()
+    </script>
+</div>
 
         </div>
       </section>

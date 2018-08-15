@@ -124,7 +124,7 @@
 
 
   <meta name="description" content="前方高能！请先学好线性筛">
-<meta name="keywords" content="莫比乌斯反演,原创精华">
+<meta name="keywords" content="原创精华,莫比乌斯反演">
 <meta property="og:type" content="article">
 <meta property="og:title" content="【OI之路】11更高级数论-3莫比乌斯反演">
 <meta property="og:url" content="http://zory.cf/posts/d81d.html">
@@ -132,7 +132,7 @@
 <meta property="og:description" content="前方高能！请先学好线性筛">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://zory.cf/images/OI之路/%E8%8E%AB%E6%AF%94%E4%B9%8C%E6%96%AF%E5%8F%8D%E6%BC%94/1.png">
-<meta property="og:updated_time" content="2018-08-11T05:23:52.000Z">
+<meta property="og:updated_time" content="2018-08-15T08:47:28.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【OI之路】11更高级数论-3莫比乌斯反演">
 <meta name="twitter:description" content="前方高能！请先学好线性筛">
@@ -227,7 +227,7 @@
     </div>
     
       
-        <h1 class="site-subtitle" itemprop="description">人生即使不能走最短路，依然是连通图</h1>
+        <h1 class="site-subtitle" itemprop="description">人生即使不能走最短路，仍是连通图</h1>
       
     
   </div>
@@ -261,7 +261,7 @@
           
           <li class="menu-item menu-item-archives">
     <a href="/archives/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />历程Archives<span class="badge">328</span></a>
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />历程Archives<span class="badge">327</span></a>
   </li>
         
         
@@ -277,7 +277,7 @@
           
           <li class="menu-item menu-item-tags">
     <a href="/tags/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签Tags<span class="badge">123</span></a>
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签Tags<span class="badge">120</span></a>
   </li>
         
         
@@ -411,7 +411,7 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Zory">
-      <meta itemprop="description" content="人生即使不能走最短路，依然是连通图">
+      <meta itemprop="description" content="人生即使不能走最短路，仍是连通图">
       <meta itemprop="image" content="http://ouk2t1pgs.bkt.clouddn.com/avatar.jpg">
     </span>
 
@@ -466,7 +466,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改于：2018-08-11 13:23:52" itemprop="dateModified" datetime="2018-08-11T13:23:52+08:00">2018-08-11</time>
+                <time title="修改于：2018-08-15 16:47:28" itemprop="dateModified" datetime="2018-08-15T16:47:28+08:00">2018-08-15</time>
               
             
           </span>
@@ -542,7 +542,7 @@
 <p>update:2017.11.27 莫比乌斯函数能使用线性筛获得是因为它是一个积性函数<br>（注意并不是完全积性函数），<br>而一个质数与任何数必定互质，所以能用后文介绍的方法求得。</p>
 <p>注意：本文提到的除法运算都是向下取整，因为小数部分完全没有意义。</p>
 <p>莫比乌斯反演,需要使用到一个名为莫比乌斯函数的东东<br>即所谓 $\mu$(mu)函数</p>
-<h2 id="mu-函数的运用"><a href="#mu-函数的运用" class="headerlink" title="$\mu$函数的运用"></a>$\mu$函数的运用</h2><p>我们先不解释$\mu$(mu)函数，而是假设我们已经求得它，并尝试利用它做题<br>例题：<a href="../2017-11/GCD-莫比乌斯1.html">GCD-莫比乌斯1</a><br>求数对(x,y)满足$gcd(x,y)=k$,其中$x\leq b,y\leq d$<br>并且(1,2)和(2,1)算一对</p>
+<h2 id="mu-函数的运用"><a href="#mu-函数的运用" class="headerlink" title="$\mu$函数的运用"></a>$\mu$函数的运用</h2><p>我们先不解释$\mu$(mu)函数，而是假设我们已经求得它，并尝试利用它做题<br>例题：<a href="d395.html">GCD-莫比乌斯1</a><br>求数对(x,y)满足$gcd(x,y)=k$,其中$x\leq b,y\leq d$<br>并且(1,2)和(2,1)算一对</p>
 <p>解：<br>先简化问题为$gcd(x,y)=1$,其中$x\leq b/k,y\leq d/k$<br>为方便表示设n=b/k,m=d/k</p>
 <p>设f(t)为满足gcd(x,y)=t的对数,<br>其中$x\leq n,y\leq m$,本题相当于求f(1)</p>
 <p>由于直接求f(t)较困难,考虑另一个函数<br>F(d)为满足gcd(x,y)%d=0的对数,<br>其中$x\leq n,y\leq m$,<br>又因为两个数的最大公约数不可能超过任何一个数,<br>所以$t和d \leq min(x,y)$ 当然$ t和d \leq min(n,m)$<br>易知$F(d)=\frac{n}{d} \times \frac{m}{d}$</p>
@@ -565,7 +565,6 @@
 <li>$\sum_{d|n} \frac{\mu(d)}{d}=\frac{\varphi(n)}{n}$</li>
 </ol>
 <h2 id="公式"><a href="#公式" class="headerlink" title="公式"></a>公式</h2><p>倍数和公式<br>$F(d)=\sum f(t) 要求满足d|t $<br>$f(t)=\sum \mu(\frac{d}{t})\times F(d) 要求满足t|d$<br>约数和公式<br>$F(d)=\sum f(t) 要求满足t|d $<br>$f(t)=\sum \mu(d)\times F(\frac{t}{d}) 要求满足d|t$ （网上好像常见这个）<br>$f(t)=\sum \mu(\frac{t}{d})\times F(d) 要求满足d|t$ （其实这个也是等效的）</p>
-<h2 id="例题"><a href="#例题" class="headerlink" title="例题"></a>例题</h2><p><a href="../2017-11/GCD-莫比乌斯2.html">Bzoj2818 GCD-莫比乌斯2</a><br><a href="../2017-11/Problem_b-莫比乌斯3.html">Bzoj2301 Problem_b-莫比乌斯3</a><br><a href="../2017-11/仪仗队.html">Bzoj2190 仪仗队</a><br><a href="../2017-11/Ideal_Puzzle_Bobble.html">Zoj3435 Ideal Puzzle Bobble</a><br><a href="../2017-11/YY的GCD.html">Bzoj2820 YY的GCD</a></p>
 <h2 id="莫比乌斯所有题目"><a href="#莫比乌斯所有题目" class="headerlink" title="莫比乌斯所有题目"></a>莫比乌斯所有题目</h2><p><a href="../tags/莫比乌斯反演/">Tag-莫比乌斯反演</a></p>
 
       
@@ -578,9 +577,9 @@
     
       <div class="post-tags">
         
-          <a href="/tags/莫比乌斯反演/" rel="tag"># 莫比乌斯反演</a>
-        
           <a href="/tags/原创精华/" rel="tag"># 原创精华</a>
+        
+          <a href="/tags/莫比乌斯反演/" rel="tag"># 莫比乌斯反演</a>
         
       </div>
     
@@ -594,7 +593,35 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/null" rel="bookmark"></a></div>
+      <div class="popular-posts-title"><a href="/posts/d395.html" rel="bookmark">【Hdu1695】GCD(莫比乌斯1)</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="/posts/7748.html" rel="bookmark">【OI之路】02数论算法-1公约数公倍数与欧几里得</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="/posts/c111.html" rel="bookmark">【OI之路】10字符串-1KMP</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="/posts/4db.html" rel="bookmark">【OI之路】11更高级数论-4快速傅里叶变换</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="/posts/80c8.html" rel="bookmark">【置顶】套路集锦</a></div>
       
     </li>
   
@@ -757,7 +784,7 @@
                 alt="Zory" />
             
               <p class="site-author-name" itemprop="name">Zory</p>
-              <p class="site-description motion-element" itemprop="description">人生即使不能走最短路，依然是连通图</p>
+              <p class="site-description motion-element" itemprop="description">人生即使不能走最短路，仍是连通图</p>
           </div>
 
           
@@ -767,7 +794,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">328</span>
+                    <span class="site-state-item-count">327</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -800,12 +827,6 @@
                 <div class="site-state-item site-state-tags">
                   <a href="/tags/index.html">
                     
-                    
-                      
-                    
-                      
-                    
-                      
                     
                       
                     
@@ -1084,33 +1105,12 @@
           
           
 
-<br><br>
-
-<!--a href="http://info.flagcounter.com/pNr7">
-<img src="//s05.flagcounter.com/countxl/pNr7/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_12/viewers_0/labels_1/pageviews_0/flags_0/percent_0/" alt="Flag Counter" border="0">
-</a-->
-
-<br><br>
-
-
-<p class="abc" id="hitokoto">:D 获取中...</p>
-<script>
-  fetch('https://v1.hitokoto.cn')
-    .then(function (res)
-    {
-      return res.json();
-    })
-    .then(function (data)
-    {
-      var hitokoto = document.getElementById('hitokoto');
-      var from = document.getElementById('from');
-      hitokoto.innerText = '「'+data.hitokoto+'」';
-    })
-    .catch(function (err)
-    {
-      console.error(err);
-    })
-</script>
+<script type="text/javascript" src="https://api.lwl12.com/hitokoto/main/get?encode=js&charset=utf-8"></script>
+<div id="lwlhitokoto">
+    <script>
+        lwlhitokoto()
+    </script>
+</div>
 
         </div>
       </section>
@@ -1125,7 +1125,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#mu-函数的运用"><span class="nav-text">$\mu$函数的运用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#mu-函数的计算和证明"><span class="nav-text">$\mu$函数的计算和证明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#mu-函数的特性"><span class="nav-text">$\mu$函数的特性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#公式"><span class="nav-text">公式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#例题"><span class="nav-text">例题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#莫比乌斯所有题目"><span class="nav-text">莫比乌斯所有题目</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#mu-函数的运用"><span class="nav-text">$\mu$函数的运用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#mu-函数的计算和证明"><span class="nav-text">$\mu$函数的计算和证明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#mu-函数的特性"><span class="nav-text">$\mu$函数的特性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#公式"><span class="nav-text">公式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#莫比乌斯所有题目"><span class="nav-text">莫比乌斯所有题目</span></a></li></ol></div>
             
 
           </div>

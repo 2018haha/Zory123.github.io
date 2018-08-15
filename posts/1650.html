@@ -131,7 +131,7 @@
 <meta property="og:site_name" content="Zory的个人博客">
 <meta property="og:description" content="6.2.0 前言本文同样不是教程，提供一些思路罢了 6.2.1 定义树状数组是一种利用正整数二进制的某种特殊性质，从而比线段树更精简但没这么强大的，并且借助了前缀和思路的特殊数组">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-08-11T05:23:50.000Z">
+<meta property="og:updated_time" content="2018-08-15T11:53:50.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【OI之路】06树-2树状数组">
 <meta name="twitter:description" content="6.2.0 前言本文同样不是教程，提供一些思路罢了 6.2.1 定义树状数组是一种利用正整数二进制的某种特殊性质，从而比线段树更精简但没这么强大的，并且借助了前缀和思路的特殊数组">
@@ -225,7 +225,7 @@
     </div>
     
       
-        <h1 class="site-subtitle" itemprop="description">人生即使不能走最短路，依然是连通图</h1>
+        <h1 class="site-subtitle" itemprop="description">人生即使不能走最短路，仍是连通图</h1>
       
     
   </div>
@@ -259,7 +259,7 @@
           
           <li class="menu-item menu-item-archives">
     <a href="/archives/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />历程Archives<span class="badge">328</span></a>
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />历程Archives<span class="badge">327</span></a>
   </li>
         
         
@@ -275,7 +275,7 @@
           
           <li class="menu-item menu-item-tags">
     <a href="/tags/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签Tags<span class="badge">123</span></a>
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签Tags<span class="badge">120</span></a>
   </li>
         
         
@@ -409,7 +409,7 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Zory">
-      <meta itemprop="description" content="人生即使不能走最短路，依然是连通图">
+      <meta itemprop="description" content="人生即使不能走最短路，仍是连通图">
       <meta itemprop="image" content="http://ouk2t1pgs.bkt.clouddn.com/avatar.jpg">
     </span>
 
@@ -464,7 +464,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改于：2018-08-11 13:23:50" itemprop="dateModified" datetime="2018-08-11T13:23:50+08:00">2018-08-11</time>
+                <time title="修改于：2018-08-15 19:53:50" itemprop="dateModified" datetime="2018-08-15T19:53:50+08:00">2018-08-15</time>
               
             
           </span>
@@ -539,7 +539,7 @@
         <h2 id="6-2-0-前言"><a href="#6-2-0-前言" class="headerlink" title="6.2.0 前言"></a>6.2.0 前言</h2><p>本文同样不是教程，提供一些思路罢了</p>
 <h2 id="6-2-1-定义"><a href="#6-2-1-定义" class="headerlink" title="6.2.1 定义"></a>6.2.1 定义</h2><p>树状数组是一种利用正整数二进制的某种特殊性质，<br>从而比线段树更精简但没这么强大的，<br>并且借助了前缀和思路的特殊数组</p>
 <a id="more"></a>
-<h2 id="6-2-2-有关二进制"><a href="#6-2-2-有关二进制" class="headerlink" title="6.2.2 有关二进制"></a>6.2.2 有关二进制</h2><p>基础知识可以参考<a href="【OI之路】05理论知识-2原码反码补码.html">这篇文章</a><br>主要就是这个函数，原理可以看网上的教程，<br>主要就是O(1)找到自己的父亲（加上结果）和兄弟（减去结果）<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">lowbit</span><span class="params">(<span class="keyword">int</span> x)</span></div><div class="line"></span>&#123;</div><div class="line">    <span class="keyword">return</span> x&amp;-x;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h2 id="6-2-2-有关二进制"><a href="#6-2-2-有关二进制" class="headerlink" title="6.2.2 有关二进制"></a>6.2.2 有关二进制</h2><p>基础知识可以参考<a href="a619.html">这篇文章</a><br>主要就是这个函数，原理可以看网上的教程，<br>主要就是O(1)找到自己的父亲（加上结果）和兄弟（减去结果）<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">lowbit</span><span class="params">(<span class="keyword">int</span> x)</span></div><div class="line"></span>&#123;</div><div class="line">    <span class="keyword">return</span> x&amp;-x;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <h2 id="6-2-2-单点更新-区间询问"><a href="#6-2-2-单点更新-区间询问" class="headerlink" title="6.2.2 单点更新, 区间询问"></a>6.2.2 单点更新, 区间询问</h2><p>前缀和:<br>i到j就是ask(j)-ask(i-1)</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">change</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> c)</span></div><div class="line"></span>&#123;</div><div class="line">    <span class="keyword">while</span>(x&lt;=n)</div><div class="line">    &#123;</div><div class="line">        p[x]=c;</div><div class="line">        x+=lowbit(x);</div><div class="line">        <span class="comment">//更新管理着x的所有父亲</span></div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">ask</span><span class="params">(<span class="keyword">int</span> x)</span></div><div class="line"></span>&#123;</div><div class="line">    <span class="keyword">int</span> s=<span class="number">0</span>;</div><div class="line">    <span class="keyword">while</span>(x&gt;=<span class="number">1</span>)</div><div class="line">    &#123;</div><div class="line">        s+=p[x];</div><div class="line">        x-=lowbit(x);</div><div class="line">        <span class="comment">//加上自己所管理不到的，在我前面的兄弟</span></div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h2 id="6-2-3-区间更新-单点询问"><a href="#6-2-3-区间更新-单点询问" class="headerlink" title="6.2.3 区间更新, 单点询问"></a>6.2.3 区间更新, 单点询问</h2><p>运用差分<br>就是说原本的a[i]=p[1]+p[2]…+p[i]<br>从而把数值变得依赖于前面的数值</p>
@@ -547,7 +547,7 @@
 <p>差分思想的运用非常广泛，这只是其中一种简单的体现<br>详见<a href="../tags/差分/">Tag-差分</a></p>
 <h2 id="6-2-4-区间更新-区间询问"><a href="#6-2-4-区间更新-区间询问" class="headerlink" title="6.2.4 区间更新, 区间询问"></a>6.2.4 区间更新, 区间询问</h2><p>假设现在求sum[s]，d[]是差分数组<br>a[1]+a[2]+a[3]+…..+a[s-1]+a[s]<br>=(d[1])+(d[1]+d[2])+…..+(d[1]+d[2]+…..+d[s])<br>=(s)<em>d[1]+(s-1)</em>d[2]+…..+(1)<em>d[s]<br>=s</em>(d[1]+d[2]+….+d[s])-((1-1)<em>d[1]+(2-1)</em>d[2]…+(s-1)<em>d[s])<br>为了简化，故定义另一个数组c<br>c[i]=(i-1)</em>d[i]<br>从而把原式化简为<br>=s*(d[1]+d[2]+….+d[s])-(c[1]+c[2]…+c[s])</p>
 <p>这样，只需要两个树状数组即可，一个维护d，一个维护c<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"><span class="comment">//*******************定义*******************</span></div><div class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ld;</div><div class="line">ld n;ld c[<span class="number">2</span>][<span class="number">210000</span>];</div><div class="line"><span class="comment">//*******************实现*******************</span></div><div class="line"><span class="function">ld <span class="title">lowbit</span><span class="params">(ld x)</span></div><div class="line"></span>&#123;</div><div class="line">    <span class="keyword">return</span> x&amp;-x;</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">ch</span><span class="params">(ld f,ld x,ld s)</span></div><div class="line"></span>&#123;</div><div class="line">    <span class="keyword">while</span>(x&lt;=n)</div><div class="line">    &#123;</div><div class="line">        c[f][x]+=s;</div><div class="line">        x+=lowbit(x);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="function">ld <span class="title">sum</span><span class="params">(ld f,ld x)</span></div><div class="line"></span>&#123;</div><div class="line">    ld s=<span class="number">0</span>;</div><div class="line">    <span class="keyword">while</span>(x&gt;<span class="number">0</span>)</div><div class="line">    &#123;</div><div class="line">        s+=c[f][x];</div><div class="line">        x-=lowbit(x);</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> s;</div><div class="line">&#125;</div><div class="line"><span class="comment">//*******************接口*******************</span></div><div class="line"><span class="function">ld <span class="title">ask</span><span class="params">(ld x)</span></div><div class="line"></span>&#123;</div><div class="line">    <span class="keyword">return</span> x*sum(<span class="number">0</span>,x)-sum(<span class="number">1</span>,x);</div><div class="line">&#125;</div><div class="line"><span class="comment">//*******************主函数*******************</span></div><div class="line">ld a[<span class="number">210000</span>];</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></div><div class="line"></span>&#123;</div><div class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;n);</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</div><div class="line">    &#123;</div><div class="line">        <span class="built_in">scanf</span>(<span class="string">"%lld"</span>,&amp;a[i]);</div><div class="line">        ld d=a[i]-a[i<span class="number">-1</span>];</div><div class="line">        ch(<span class="number">0</span>,i,d);</div><div class="line">        ch(<span class="number">1</span>,i,(i<span class="number">-1</span>)*d);</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">int</span> q;<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;q);</div><div class="line">    <span class="keyword">while</span>(q--)</div><div class="line">    &#123;</div><div class="line">        <span class="keyword">int</span> o,a,b;<span class="built_in">scanf</span>(<span class="string">"%d%d%d"</span>,&amp;o,&amp;a,&amp;b);</div><div class="line">        ld c;</div><div class="line">        <span class="keyword">if</span>(o==<span class="number">1</span>)</div><div class="line">        &#123;</div><div class="line">            <span class="built_in">scanf</span>(<span class="string">"%lld"</span>,&amp;c);</div><div class="line">            <span class="comment">//d[i]+=c</span></div><div class="line">            ch(<span class="number">0</span>,a,c);ch(<span class="number">0</span>,b+<span class="number">1</span>,-c);</div><div class="line">            <span class="comment">//c[i]+=(i-1)*c</span></div><div class="line">            ch(<span class="number">1</span>,a,(a<span class="number">-1</span>)*c);ch(<span class="number">1</span>,b+<span class="number">1</span>,-b*c);</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">else</span> <span class="built_in">printf</span>(<span class="string">"%lld\n"</span>,ask(b)-ask(a<span class="number">-1</span>));</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>可以去<a href="http://codevs.cn/problem/1082/" target="_blank" rel="noopener">Codevs1082</a>评测<br>如果用线段树就非常简单了：<a href="../2017-08/Codevs线段树练习3.html">这篇文章</a></p>
+<p>可以去<a href="http://codevs.cn/problem/1082/" target="_blank" rel="noopener">Codevs1082</a>评测<br>如果用线段树就非常简单了：<a href="9bea.html">这篇文章</a></p>
 <h2 id="6-2-4-练习题"><a href="#6-2-4-练习题" class="headerlink" title="6.2.4 练习题"></a>6.2.4 练习题</h2><p><a href="../tags/树状数组/">Tag-树状数组</a></p>
 <h2 id="6-2-5-总结"><a href="#6-2-5-总结" class="headerlink" title="6.2.5 总结"></a>6.2.5 总结</h2><p>树状数组的核心竞争力在于比线段树容易实现（因为利用前缀和思想），<br>但也正是因为用了前缀和，操作必须满足区间可加性，例如无法求最值</p>
 
@@ -575,7 +575,35 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/null" rel="bookmark"></a></div>
+      <div class="popular-posts-title"><a href="/posts/8705.html" rel="bookmark">【Bzoj1901】Dynamic Rankings</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="/posts/5d1d.html" rel="bookmark">【Ural1028】【Vijos1066】弱弱的战壕</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="/posts/5f48.html" rel="bookmark">【Bzoj1012】最大数</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="/posts/421b.html" rel="bookmark">【NOIP13 D1T2】火柴排队</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="/posts/2ed3.html" rel="bookmark">【Bzoj1112】砖块</a></div>
       
     </li>
   
@@ -738,7 +766,7 @@
                 alt="Zory" />
             
               <p class="site-author-name" itemprop="name">Zory</p>
-              <p class="site-description motion-element" itemprop="description">人生即使不能走最短路，依然是连通图</p>
+              <p class="site-description motion-element" itemprop="description">人生即使不能走最短路，仍是连通图</p>
           </div>
 
           
@@ -748,7 +776,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">328</span>
+                    <span class="site-state-item-count">327</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -781,12 +809,6 @@
                 <div class="site-state-item site-state-tags">
                   <a href="/tags/index.html">
                     
-                    
-                      
-                    
-                      
-                    
-                      
                     
                       
                     
@@ -1065,33 +1087,12 @@
           
           
 
-<br><br>
-
-<!--a href="http://info.flagcounter.com/pNr7">
-<img src="//s05.flagcounter.com/countxl/pNr7/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_12/viewers_0/labels_1/pageviews_0/flags_0/percent_0/" alt="Flag Counter" border="0">
-</a-->
-
-<br><br>
-
-
-<p class="abc" id="hitokoto">:D 获取中...</p>
-<script>
-  fetch('https://v1.hitokoto.cn')
-    .then(function (res)
-    {
-      return res.json();
-    })
-    .then(function (data)
-    {
-      var hitokoto = document.getElementById('hitokoto');
-      var from = document.getElementById('from');
-      hitokoto.innerText = '「'+data.hitokoto+'」';
-    })
-    .catch(function (err)
-    {
-      console.error(err);
-    })
-</script>
+<script type="text/javascript" src="https://api.lwl12.com/hitokoto/main/get?encode=js&charset=utf-8"></script>
+<div id="lwlhitokoto">
+    <script>
+        lwlhitokoto()
+    </script>
+</div>
 
         </div>
       </section>

@@ -131,7 +131,7 @@
 <meta property="og:site_name" content="Zory的个人博客">
 <meta property="og:description" content="线性基的通俗解释">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-08-13T01:01:36.000Z">
+<meta property="og:updated_time" content="2018-08-19T08:58:20.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【OI之路】11更高级数论-7线性基">
 <meta name="twitter:description" content="线性基的通俗解释">
@@ -259,7 +259,7 @@
           
           <li class="menu-item menu-item-archives">
     <a href="/archives/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />历程Archives<span class="badge">330</span></a>
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />历程Archives<span class="badge">331</span></a>
   </li>
         
         
@@ -464,7 +464,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改于：2018-08-13 09:01:36" itemprop="dateModified" datetime="2018-08-13T09:01:36+08:00">2018-08-13</time>
+                <time title="修改于：2018-08-19 16:58:20" itemprop="dateModified" datetime="2018-08-19T16:58:20+08:00">2018-08-19</time>
               
             
           </span>
@@ -538,12 +538,17 @@
       
         <p>线性基的通俗解释<br><a id="more"></a></p>
 <h2 id="思想"><a href="#思想" class="headerlink" title="思想"></a>思想</h2><p>在普通线性基中用加、乘法，能表示出其对应线性空间中的所有数。<br>在异或线性基中用异或操作，能表示出其对应线性空间中的所有数。<br>然后一般第二种比较常用</p>
-<p>主要的解法都是利用高斯消元，因为其【初等行列式变换】和加、乘法对应，<br>行列间异或，其实也相当于是二进制，所以和异或对应。</p>
+<p>主要的解法都是利用高斯消元（当然用插入版本的也行，比较动态，但本质上还是高斯消元），<br>因为其【初等行列式变换】和加、乘法对应，<br>行列间异或，其实也相当于是二进制，所以和异或对应。</p>
 <p>性质：<br>1.<br>对于用高斯消元求出的异或线性基<br>（还有用插入法的，不介绍了，因为复杂度一样）<br>该列上唯一的1在这上面</p>
-<p>2.<br>异或线性基组合出来的数（即span张成）互不相同<br>可以用反证法证明：<br>假设有一个柿子，左右两边都是异或出来的数字，把左边留下某一个，<br>其他移项到右边，那么出现，那个数字能被其他数字表示出，则违反线性基定义</p>
+<p>2.<br>异或线性基组合出来的数（即span张成）互不相同，而且不存在0<br>可以用反证法证明：<br>假设有一个柿子，左右两边都是异或出来的数字，把左边留下某一个，<br>其他移项到右边，那么出现，那个数字能被其他数字表示出，则违反线性基定义<br>不存在0也是相同的证明方法</p>
 <p>这就是我目前理解的，非常浅显的线性基应用。</p>
 <h2 id="简易代码"><a href="#简易代码" class="headerlink" title="简易代码"></a>简易代码</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span> n;</div><div class="line"><span class="keyword">bool</span> zero;</div><div class="line">ll a[<span class="number">11000</span>];</div><div class="line"><span class="keyword">int</span> tot;<span class="comment">//线性基长度</span></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">gauss</span><span class="params">()</span></div><div class="line"></span>&#123;</div><div class="line">    zero=<span class="number">0</span>;tot=<span class="number">0</span>;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">60</span>;i&gt;=<span class="number">0</span>;i--)</div><div class="line">    &#123;</div><div class="line">        <span class="keyword">int</span> nx=tot+<span class="number">1</span>;</div><div class="line">        <span class="keyword">while</span>( !(a[nx]&amp;bin[i]) and nx&lt;=n ) nx++;</div><div class="line">        <span class="keyword">if</span>(nx&gt;n) <span class="keyword">continue</span>;</div><div class="line"></div><div class="line">        tot++;swap(a[tot],a[nx]);</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> k=<span class="number">1</span>;k&lt;=n;k++)</div><div class="line">            <span class="keyword">if</span>(k!=tot and a[k]&amp;bin[i])</div><div class="line">                a[k]^=a[tot];</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">if</span>(tot&lt;n) zero=<span class="number">1</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="动态插入版"><a href="#动态插入版" class="headerlink" title="动态插入版"></a>动态插入版</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">ll bs[<span class="number">61</span>];</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">insert</span><span class="params">(ll now)</span></div><div class="line">    </span>&#123;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">60</span>;i&gt;=<span class="number">0</span>;i--)</div><div class="line">            <span class="keyword">if</span>(now&amp;bin[i])</div><div class="line">            &#123;</div><div class="line">                <span class="keyword">if</span>(bs[i]&lt;<span class="number">0</span>)</div><div class="line">                &#123;</div><div class="line">                    bs[i]=now;</div><div class="line">                    <span class="comment">//回代，这个看需求，例如第k大要用</span></div><div class="line">                    <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">60</span>;j&gt;i;j--) <span class="keyword">if</span>(bs[j]&amp;bin[i]) bs[j]^=now;</div><div class="line">                    <span class="keyword">break</span>;</div><div class="line">                &#125;</div><div class="line">                <span class="keyword">else</span> now^=bs[i];</div><div class="line">            &#125;</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
 <h2 id="练习"><a href="#练习" class="headerlink" title="练习"></a>练习</h2><p><a href="../tags/线性基/">Tag-线性基</a></p>
+<h2 id="By-the-way"><a href="#By-the-way" class="headerlink" title="By the way"></a>By the way</h2><ol>
+<li>通常看到异或和可以想想线性基，因为异或表达的时候，最多用一次</li>
+<li>面对插入时有附加决策条件的题目，通常可以贪心，因为相互位之间不影响</li>
+</ol>
 
       
     </div>
@@ -730,7 +735,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">330</span>
+                    <span class="site-state-item-count">331</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -1067,7 +1072,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#思想"><span class="nav-text">思想</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#简易代码"><span class="nav-text">简易代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#练习"><span class="nav-text">练习</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#思想"><span class="nav-text">思想</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#简易代码"><span class="nav-text">简易代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#动态插入版"><span class="nav-text">动态插入版</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#练习"><span class="nav-text">练习</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#By-the-way"><span class="nav-text">By the way</span></a></li></ol></div>
             
 
           </div>

@@ -132,7 +132,7 @@
 <meta property="og:description" content="Source and JudgeNOIP2016 提高组 D1T2Loj2359Uoj261Bzoj4719Luogu1600Caioj1576">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://cdn.vijos.org/fs/e6e93a08bf57c390c11981540cf8b898e51c4a25">
-<meta property="og:updated_time" content="2018-08-19T08:58:08.000Z">
+<meta property="og:updated_time" content="2018-08-20T07:26:08.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【NOIP16 D1T2】天天爱跑步">
 <meta name="twitter:description" content="Source and JudgeNOIP2016 提高组 D1T2Loj2359Uoj261Bzoj4719Luogu1600Caioj1576">
@@ -261,7 +261,7 @@
           
           <li class="menu-item menu-item-archives">
     <a href="/archives/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />历程Archives<span class="badge">331</span></a>
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />历程Archives<span class="badge">334</span></a>
   </li>
         
         
@@ -277,7 +277,7 @@
           
           <li class="menu-item menu-item-tags">
     <a href="/tags/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签Tags<span class="badge">123</span></a>
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签Tags<span class="badge">124</span></a>
   </li>
         
         
@@ -466,7 +466,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改于：2018-08-19 16:58:08" itemprop="dateModified" datetime="2018-08-19T16:58:08+08:00">2018-08-19</time>
+                <time title="修改于：2018-08-20 15:26:08" itemprop="dateModified" datetime="2018-08-20T15:26:08+08:00">2018-08-20</time>
               
             
           </span>
@@ -539,16 +539,16 @@
 
       
         <h2 id="Source-and-Judge"><a href="#Source-and-Judge" class="headerlink" title="Source and Judge"></a>Source and Judge</h2><p>NOIP2016 提高组 D1T2<br><a href="https://loj.ac/problem/2359" target="_blank" rel="noopener">Loj2359</a><br><a href="http://uoj.ac/problem/261" target="_blank" rel="noopener">Uoj261</a><br><a href="https://www.lydsy.com/JudgeOnline/problem.php?id=4719" target="_blank" rel="noopener">Bzoj4719</a><br><a href="https://www.luogu.org/problemnew/show/P1600" target="_blank" rel="noopener">Luogu1600</a><br><a href="http://caioj.cn/problem.php?id=1576" target="_blank" rel="noopener">Caioj1576</a><br><a id="more"></a></p>
-<h2 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h2><p id="div-border-top-green"><strong>【Description】</strong><br> 小C同学认为跑步非常有趣，于是决定制作一款叫做《天天爱跑步》的游戏。《天天爱跑步》是一个养成类游戏，需要玩家每天按时上线，完成打卡任务。<br><br>这个游戏的地图可以看作一棵包含n个结点和n - 1条边的树，每条边连接两个结点，且任意两个结点存在一条路径互相可达。树上结点编号为从1到n的连续正整数。<br><br>现在有m个玩家，第i个玩家的起点为Si，终点为Ti。每天打卡任务开始时，所有玩家 在第0秒 同时从 自己的起点 出发，以 每秒跑一条边 的速度，不间断地沿着最短路径向着 自己的终点 跑去，跑到终点后该玩家就算完成了打卡任务。（由于地图是一棵树，所以每个人的路径是唯一的）<br><br>小C想知道游戏的活跃度，所以在每个结点上都放置了一个观察员。在结点j的观察员会选择在第Wj秒观察玩家，一个玩家能被这个观察员观察到当且仅当该玩家在第Wj秒也 正好 到达了结点j。小C想知道每个观察员会观察到多少人？<br><br>注意： 我们认为一个玩家到达自己的终点后该玩家就会结束游戏，他不能等待一段时间后再被观察员观察到。即对于把结点j作为终点的玩家：若他在第Wj秒前到达 终点，则在结点j的观察员 不能观察到 该玩家；若他 正好 在第Wj秒到达终点，则在结点j的观察员 可以观察到 这个玩家。<br><strong>【Input】</strong><br>第一行有两个整数n和m。其中n代表树的结点数量，同时也是观察员的数量， m代表玩家的数量。<br>接下来n - 1行每行两个整数u和v，表示结点u到结点v有一条边。<br>接下来一行n个整数，其中第j个整数为Wj，表示结点j出现观察员的时间。 接下来m行，每行两个整数Si和Ti，表示一个玩家的起点和终点。<br><strong>【Output】</strong><br>输出1行n个整数，第j个整数表示结点j的观察员可以观察到多少人。<br><strong>【Limited conditions】</strong><br>对于所有的数据，保证1 &lt;= Si, Ti &lt;= n，0 &lt;= Wj &lt;= n。<br><img src="https://cdn.vijos.org/fs/e6e93a08bf57c390c11981540cf8b898e51c4a25" alt=""><br><strong>【Sample input 1】</strong><br>6 3<br>2 3<br>1 2<br>1 4<br>4 5<br>4 6<br>0 2 5 1 2 3<br>1 5<br>1 3<br>2 6<br><strong>【Sample output 1】</strong><br>2 0 0 1 1 1<br><strong>【Sample input 2】</strong><br>5 3<br>1 2<br>2 3<br>2 4<br>1 5<br>0 1 0 3 0<br>3 1<br>1 4<br>5 5<br><strong>【Sample output 2】</strong><br>1 2 1 0 1<br><strong>【Sample explanation】</strong><br>无<br></p>
+<h2 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h2><p id="div-border-top-green"><strong>【Description】</strong><br> 小C同学认为跑步灰常有趣，于是决定制作一款叫做《天天爱跑步》的游戏。《天天爱跑步》是一个养成类游戏，需要玩家每天按时上线，完成打卡任务。<br><br>这个游戏的地图可以看作一棵包含n个结点和n - 1条边的树，每条边连接两个结点，且任意两个结点存在一条路径互相可达。树上结点编号为从1到n的连续正整数。<br><br>现在有m个玩家，第i个玩家的起点为Si，终点为Ti。每天打卡任务开始时，所有玩家 在第0秒 同时从 自己的起点 出发，以 每秒跑一条边 的速度，不间断地沿着最短路径向着 自己的终点 跑去，跑到终点后该玩家就算完成了打卡任务。（由于地图是一棵树，所以每个人的路径是唯一的）<br><br>小C想知道游戏的活跃度，所以在每个结点上都放置了一个观察员。在结点j的观察员会选择在第Wj秒观察玩家，一个玩家能被这个观察员观察到当且仅当该玩家在第Wj秒也 正好 到达了结点j。小C想知道每个观察员会观察到多少人？<br><br>注意： 我们认为一个玩家到达自己的终点后该玩家就会结束游戏，他不能等待一段时间后再被观察员观察到。即对于把结点j作为终点的玩家：若他在第Wj秒前到达 终点，则在结点j的观察员 不能观察到 该玩家；若他 正好 在第Wj秒到达终点，则在结点j的观察员 可以观察到 这个玩家。<br><strong>【Input】</strong><br>第一行有两个整数n和m。其中n代表树的结点数量，同时也是观察员的数量， m代表玩家的数量。<br>接下来n - 1行每行两个整数u和v，表示结点u到结点v有一条边。<br>接下来一行n个整数，其中第j个整数为Wj，表示结点j出现观察员的时间。 接下来m行，每行两个整数Si和Ti，表示一个玩家的起点和终点。<br><strong>【Output】</strong><br>输出1行n个整数，第j个整数表示结点j的观察员可以观察到多少人。<br><strong>【Limited conditions】</strong><br>对于所有的数据，保证1 &lt;= Si, Ti &lt;= n，0 &lt;= Wj &lt;= n。<br><img src="https://cdn.vijos.org/fs/e6e93a08bf57c390c11981540cf8b898e51c4a25" alt=""><br><strong>【Sample input 1】</strong><br>6 3<br>2 3<br>1 2<br>1 4<br>4 5<br>4 6<br>0 2 5 1 2 3<br>1 5<br>1 3<br>2 6<br><strong>【Sample output 1】</strong><br>2 0 0 1 1 1<br><strong>【Sample input 2】</strong><br>5 3<br>1 2<br>2 3<br>2 4<br>1 5<br>0 1 0 3 0<br>3 1<br>1 4<br>5 5<br><strong>【Sample output 2】</strong><br>1 2 1 0 1<br><strong>【Sample explanation】</strong><br>无<br></p>
 
 <h2 id="Record"><a href="#Record" class="headerlink" title="Record"></a>Record</h2><p>5h</p>
 <h2 id="Analysis"><a href="#Analysis" class="headerlink" title="Analysis"></a>Analysis</h2><div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
 <p>首先，树上路径可以分割为两条链<br>咱们推一推柿子吧，d是深度<br>向上：$d_y+w_y=d_x$<br>向下：$w_y-d_y=d_x-2\times d_{lca}$</p>
 <p>然后发现就是两种值的维护，然后分上下讨论<br>但是怎么维护呢？</p>
 <p>我在晚修的时候忽然想到一种奇淫巧技<br>用到了vector（不喜欢也可以写链表）<br>把上面说的维护的两种值，按照值本身分成数组，<br>然后我们要的就是对同值的编号，对于链上的部分，出现次数+1</p>
-<p>那么我是使用树链剖分来搞的<br>用线段树维护的话，空间复杂度是很高的<br>使用灵活的差分，看起来还是一样，但其实我们可以运用vector的特点了，那就是实际总空间非常小，然后定位的话，就是得到了l和r之后，在保证编号有序的情况下，二分查找一下就好了</p>
+<p>那么我是使用树链剖分来搞的<br>用线段树维护的话，空间复杂度是很高的<br>使用灵活的差分，看起来还是一样，但其实我们可以运用vector的特点了，那就是实际总空间灰常小，然后定位的话，就是得到了l和r之后，在保证编号有序的情况下，二分查找一下就好了</p>
 <p>那么最后的时候递推一下，累计一下答案，这道题就完成了<br>但是其实细节还是很多的<br>例如一开始忘记对两种情况分开维护之类</p>
-<p>现在我们分析一下复杂度<br>空间：$O(n)$，常数10以内<br>时间：$O(nlogn)$，常数3以内吧大概；看起来虽然是log方，但数量非常少，均摊小<br>然而这样优秀的时间复杂度，居然不是很快？好像有些oj还会超时……<br>好迷啊，之前那几个数据结构题也是类似的感觉，nlogn巨慢，不知道是不是复杂度算错？</p>
+<p>现在我们分析一下复杂度<br>空间：$O(n)$，常数10以内<br>时间：$O(nlogn)$，常数3以内吧大概；看起来虽然是log方，但数量灰常少，均摊小<br>然而这样优秀的时间复杂度，居然不是很快？好像有些oj还会超时……<br>好迷啊，之前那几个数据结构题也是类似的感觉，nlogn巨慢，不知道是不是复杂度算错？</p>
 <p>UP 2018.8.9 rose用的是线段树维护<br>虽然是区间操作，但还是可以动态开点<br>至于复杂度，我们无敌的波老师（hanks_o大爷）有个证明：<br>最多只会有logn层，然后每一次分治的时候，最多会分裂成两段，<br>那么在第i层就分裂成logn段，所以说最多新开log方的节点，而且大概是很难构造的吧</p>
 
 </div></div>
@@ -610,7 +610,7 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/7731.html" rel="bookmark">【Poj2455】【Bzoj1733】Secret Milking Machine</a></div>
+      <div class="popular-posts-title"><a href="/posts/eed1.html" rel="bookmark">【Bzoj1645】City Horizon城市地平线</a></div>
       
     </li>
   
@@ -783,7 +783,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">331</span>
+                    <span class="site-state-item-count">334</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -1063,7 +1063,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">121</span>
+                      
+                    
+                    <span class="site-state-item-count">122</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>

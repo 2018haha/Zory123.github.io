@@ -131,7 +131,7 @@
 <meta property="og:site_name" content="Zory的个人博客">
 <meta property="og:description" content="Source and JudgeNOIP2016 提高组 D2T2Loj2362Uoj264Bzoj4721Luogu2827Caioj1579">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-08-19T08:58:10.000Z">
+<meta property="og:updated_time" content="2018-08-20T07:26:08.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【NOIP16 D2T2】蚯蚓">
 <meta name="twitter:description" content="Source and JudgeNOIP2016 提高组 D2T2Loj2362Uoj264Bzoj4721Luogu2827Caioj1579">
@@ -259,7 +259,7 @@
           
           <li class="menu-item menu-item-archives">
     <a href="/archives/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />历程Archives<span class="badge">331</span></a>
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />历程Archives<span class="badge">334</span></a>
   </li>
         
         
@@ -275,7 +275,7 @@
           
           <li class="menu-item menu-item-tags">
     <a href="/tags/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签Tags<span class="badge">123</span></a>
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签Tags<span class="badge">124</span></a>
   </li>
         
         
@@ -464,7 +464,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改于：2018-08-19 16:58:10" itemprop="dateModified" datetime="2018-08-19T16:58:10+08:00">2018-08-19</time>
+                <time title="修改于：2018-08-20 15:26:08" itemprop="dateModified" datetime="2018-08-20T15:26:08+08:00">2018-08-20</time>
               
             
           </span>
@@ -542,7 +542,7 @@
 <h2 id="Record"><a href="#Record" class="headerlink" title="Record"></a>Record</h2><p>3h</p>
 <h2 id="Analysis"><a href="#Analysis" class="headerlink" title="Analysis"></a>Analysis</h2><div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
 <p>首先，一个显而易见的做法：<br>当q=0，搞一个堆，那么每次取最大的出来，切开，然后把另外两端塞回去<br>那这个q怎么处理呢？考虑一个全局常量add，然后就是堆里面所有元素都要加上这个常量，<br>放东西进去的时候，放入的是d-add即可</p>
-<p>然而这样是mlogm的，只有70分<br>一开始没有抄数据范围，还以为是非常优秀的做法……其实只是最暴力的</p>
+<p>然而这样是mlogm的，只有70分<br>一开始没有抄数据范围，还以为是灰常优秀的做法……其实只是最暴力的</p>
 <p>怎么优化呢？<br>这个log有点烦</p>
 <p>有没有什么题目的特性被忽略了？<br>割点比值的固定！<br>然后因为每次拿出来的蚯蚓，长度不递增<br>所以切完后，左右两边同类比较的话，也是不递增的，满足单调性<br>所以我们可以直接利用这个单调性，把堆用三个队列代替</p>
 <p>具体来说：<br>main队列，left队列，right队列，都满足不递增性质<br>然后每次取得时候，取三个中的最大值即可</p>
@@ -618,7 +618,7 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/9151.html" rel="bookmark">【Bzoj2818】GCD-莫比乌斯2</a></div>
+      <div class="popular-posts-title"><a href="/posts/12b6.html" rel="bookmark">【Bzoj2301】【Luogu2522】Problem_b</a></div>
       
     </li>
   
@@ -708,8 +708,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/posts/f5e.html" rel="prev" title="【NOIP16 D2T3】换教室">
-                【NOIP16 D2T3】换教室 <i class="fa fa-chevron-right"></i>
+              <a href="/posts/f5e.html" rel="prev" title="【NOIP16 D2T3】愤怒的小鸟">
+                【NOIP16 D2T3】愤怒的小鸟 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -791,7 +791,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">331</span>
+                    <span class="site-state-item-count">334</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -1071,7 +1071,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">121</span>
+                      
+                    
+                    <span class="site-state-item-count">122</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>

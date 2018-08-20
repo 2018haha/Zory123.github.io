@@ -131,7 +131,7 @@
 <meta property="og:site_name" content="Zory的个人博客">
 <meta property="og:description" content="声明这篇文章原先来自于网络，现由我转载并稍微做了修改，原文暂时找不到，如果有人知道麻烦留言。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-08-19T08:58:16.000Z">
+<meta property="og:updated_time" content="2018-08-20T07:26:08.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【OI之路】05理论知识-4可变参数">
 <meta name="twitter:description" content="声明这篇文章原先来自于网络，现由我转载并稍微做了修改，原文暂时找不到，如果有人知道麻烦留言。">
@@ -259,7 +259,7 @@
           
           <li class="menu-item menu-item-archives">
     <a href="/archives/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />历程Archives<span class="badge">331</span></a>
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />历程Archives<span class="badge">334</span></a>
   </li>
         
         
@@ -275,7 +275,7 @@
           
           <li class="menu-item menu-item-tags">
     <a href="/tags/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签Tags<span class="badge">123</span></a>
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签Tags<span class="badge">124</span></a>
   </li>
         
         
@@ -464,7 +464,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改于：2018-08-19 16:58:16" itemprop="dateModified" datetime="2018-08-19T16:58:16+08:00">2018-08-19</time>
+                <time title="修改于：2018-08-20 15:26:08" itemprop="dateModified" datetime="2018-08-20T15:26:08+08:00">2018-08-20</time>
               
             
           </span>
@@ -548,7 +548,7 @@
 <p>其中用到的_INTSIZEOF宏定义如下：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">define</span> _INTSIZEOF(n) ( (sizeof(n)+sizeof(int)-1) &amp; ~(sizeof(int)-1) )</span></div></pre></td></tr></table></figure></p>
 <p>来分析这四个宏：</p>
 <p>va_end(ap)这个最简单，就是将指针置成NULL。</p>
-<p>va_start(ap,v)中ap =(va_list)&amp;v+_INTSIZEOF(v)先是取v的地址，再加上_INTSIZEOF(v)。_INTSIZEOF(v)就有点小复杂了。( (sizeof(n)+sizeof(int)-1) &amp; ~(sizeof(int)-1) )全是位操作，看起来有点麻烦，其实不然，非常简单的，就是取整到sizeof(int)。比如sizeof(int)为4,1,2,3,4就取4,5,6,7,8就取8。对x向n取整用C语言的算术表达就是((x+n-1)/n)*n,当n为2的幂时可以将最后二步运算换成位操作——将最低n-1个二进制位清0就可以了。</p>
+<p>va_start(ap,v)中ap =(va_list)&amp;v+_INTSIZEOF(v)先是取v的地址，再加上_INTSIZEOF(v)。_INTSIZEOF(v)就有点小复杂了。( (sizeof(n)+sizeof(int)-1) &amp; ~(sizeof(int)-1) )全是位操作，看起来有点麻烦，其实不然，灰常简单的，就是取整到sizeof(int)。比如sizeof(int)为4,1,2,3,4就取4,5,6,7,8就取8。对x向n取整用C语言的算术表达就是((x+n-1)/n)*n,当n为2的幂时可以将最后二步运算换成位操作——将最低n-1个二进制位清0就可以了。</p>
 <p>va_arg(ap,t)就是从ap中取出类型为t的数据，并将指针相应后移。如va_arg(ap, int)就表示取出一个int数据并将指针向移四个字节。</p>
 <p>因此在函数中先用va_start()得到变参的起始地址，再用va_arg()一个一个取值，最后再用va_end()收尾就可以解析可变参数了。</p>
 <h2 id="vfprintf-函数和vsprintf-函数"><a href="#vfprintf-函数和vsprintf-函数" class="headerlink" title="vfprintf()函数和vsprintf()函数"></a>vfprintf()函数和vsprintf()函数</h2><p>vfprintf()这个函数很重要，光从名字上看就知道它与经常使用的printf()函数有很大的关联。它有多个重载版本，这里讲解最常用的一种：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">vfprintf</span></div><div class="line"><span class="params">(</div><div class="line">   FILE *stream,</div><div class="line">   <span class="keyword">const</span> <span class="keyword">char</span> *format,</div><div class="line">   va_list argptr;</div><div class="line">)</span></span>;</div></pre></td></tr></table></figure></p>
@@ -564,7 +564,7 @@
 <p>可变参数的使用方法远远不止上述几种，不过在C,C++中使用可变参数时要小心，在使用printf()等函数时传入的参数个数一定不能比前面的格式化字符串中的’%’符号个数少，否则会产生访问越界，运气不好的话还会导致程序崩溃。</p>
 <p>可变参数的原形理涉及到调用函数时参数的入栈问题，这个下次再开一篇进行专门的探讨。</p>
 <p>注1．网上有不用vfprintf()自己解析参数来实现printf()的，但很少能将功能做到与printf()相近（实际上能完全熟悉printf()的人已经就不多，不信的话可以先看看《C陷阱与缺陷》了解printf()很多不太常用的参数，再去Microsoft Visual Studio\VC98\CRT\SRC中查看OUTPUT.C对printf()的实现）。</p>
-<p>注2．如果输出单个字符putchar(ch)会比printf(“%c”, ch)效率高的多。在字符串不长的情况下，多次调用putchar()也会比调用printf(“%s\n”,szStr);的效率高。在函数大量调用时非常明显。</p>
+<p>注2．如果输出单个字符putchar(ch)会比printf(“%c”, ch)效率高的多。在字符串不长的情况下，多次调用putchar()也会比调用printf(“%s\n”,szStr);的效率高。在函数大量调用时灰常明显。</p>
 
       
     </div>
@@ -772,7 +772,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">331</span>
+                    <span class="site-state-item-count">334</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -1052,7 +1052,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">121</span>
+                      
+                    
+                    <span class="site-state-item-count">122</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>

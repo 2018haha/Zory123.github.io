@@ -133,7 +133,7 @@
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://cdn.vijos.org/fs/0ea8b796dcac058229ea4fe2d78c0ed5ad3205fa">
 <meta property="og:image" content="https://cdn.vijos.org/fs/7510c0020b66ef0486cba506e941dc08e9ab9f6c">
-<meta property="og:updated_time" content="2018-08-19T08:58:00.000Z">
+<meta property="og:updated_time" content="2018-08-20T07:26:08.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【NOIP13 D2T3】华容道">
 <meta name="twitter:description" content="Source and JudgeNOIP2013 提高组 D2T3Luogu1979Caioj1562">
@@ -262,7 +262,7 @@
           
           <li class="menu-item menu-item-archives">
     <a href="/archives/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />历程Archives<span class="badge">331</span></a>
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />历程Archives<span class="badge">334</span></a>
   </li>
         
         
@@ -278,7 +278,7 @@
           
           <li class="menu-item menu-item-tags">
     <a href="/tags/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签Tags<span class="badge">123</span></a>
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签Tags<span class="badge">124</span></a>
   </li>
         
         
@@ -467,7 +467,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改于：2018-08-19 16:58:00" itemprop="dateModified" datetime="2018-08-19T16:58:00+08:00">2018-08-19</time>
+                <time title="修改于：2018-08-20 15:26:08" itemprop="dateModified" datetime="2018-08-20T15:26:08+08:00">2018-08-20</time>
               
             
           </span>
@@ -545,9 +545,9 @@
 <h2 id="Record"><a href="#Record" class="headerlink" title="Record"></a>Record</h2><p>5h</p>
 <h2 id="Analysis"><a href="#Analysis" class="headerlink" title="Analysis"></a>Analysis</h2><div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
 <p>这是一道有脑子的搜索题</p>
-<p>本质上就是空白的棋子到处和别人交换来达成目标，固定即不可交换<br>那么只要记录当前空白的位置和目标棋子的位置，就可以bfs了，据说有70分<br>时间复杂度：O(q(nm)^2)，虽然稳tle，但考场上还是非常值得的，也可以拿来拍</p>
+<p>本质上就是空白的棋子到处和别人交换来达成目标，固定即不可交换<br>那么只要记录当前空白的位置和目标棋子的位置，就可以bfs了，据说有70分<br>时间复杂度：O(q(nm)^2)，虽然稳tle，但考场上还是灰常值得的，也可以拿来拍</p>
 <p>那我们梳理一下，可以这样想象：目标棋子和前面的空白交换，然后空白到后面之后，<br>又屁颠屁颠地跑到目标棋子前面……周边的普通棋子就像群众，一旦墙壁明确，存在性等同于空气。<br>怎么样，题意是不是明确了很多<br>显然仅当【空白在棋子旁边】的状态是有用的，仅有3600种！<br>但是我们虽然减少了状态，但并不代表忽略<br>bfs还是要有的，但不能每一次都搞呀，不然还是炸（特别是无解的时候）<br>因为如果指定棋子要移动，首先空格要到它旁边，而这段信息基本是公共的，尽管空格位置每次不同。也就是说，需要计算出dis(ax,ay,bx,by,d)，分别表示空格和指定棋子位置以及最后空格在棋子的方位（0表示下方，1表示上方，2表示左方，3表示右方）<br><strong>注意！没有必要枚举两点，用到的时候再处理</strong><br><strong>而且，不能忽略终点来bfs（我一开始是这样想的），因为bfs的要求是不能穿越终点（否则空格就会影响到当前棋子的值，而这个我们应单独处理）</strong></p>
-<p>那么搜索中有个强大的东西：A*！<br>教程的话，因为也在很多领域有应用，所以网上有非常多的资料。<br>然后据说这东西的神奇之处在于，对于搜索题，帮你搞定很多想不到的剪枝。<br>但我对这东西不是太熟练，特别是其使用条件（适用范围）</p>
+<p>那么搜索中有个强大的东西：A*！<br>教程的话，因为也在很多领域有应用，所以网上有灰常多的资料。<br>然后据说这东西的神奇之处在于，对于搜索题，帮你搞定很多想不到的剪枝。<br>但我对这东西不是太熟练，特别是其使用条件（适用范围）</p>
 <ol>
 <li>首先，预处理出相邻可移动棋子的距离（用于求解中）</li>
 <li>估价函数h(n)：指定棋子到终点位置的曼哈顿距离</li>
@@ -798,7 +798,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">331</span>
+                    <span class="site-state-item-count">334</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -1078,7 +1078,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">121</span>
+                      
+                    
+                    <span class="site-state-item-count">122</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>

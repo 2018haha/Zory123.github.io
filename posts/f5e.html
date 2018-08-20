@@ -126,14 +126,14 @@
   <meta name="description" content="Source and JudgeNOIP2016 提高组 D2T3Loj2363Uoj265Luogu2831Caioj1580">
 <meta name="keywords" content="难度2,状压DP">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【NOIP16 D2T3】换教室">
+<meta property="og:title" content="【NOIP16 D2T3】愤怒的小鸟">
 <meta property="og:url" content="http://zory.cf/posts/f5e.html">
 <meta property="og:site_name" content="Zory的个人博客">
 <meta property="og:description" content="Source and JudgeNOIP2016 提高组 D2T3Loj2363Uoj265Luogu2831Caioj1580">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-08-19T08:58:08.000Z">
+<meta property="og:updated_time" content="2018-08-20T11:16:50.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="【NOIP16 D2T3】换教室">
+<meta name="twitter:title" content="【NOIP16 D2T3】愤怒的小鸟">
 <meta name="twitter:description" content="Source and JudgeNOIP2016 提高组 D2T3Loj2363Uoj265Luogu2831Caioj1580">
 
 
@@ -151,7 +151,7 @@
   };
 </script>
 
-  <title>【NOIP16 D2T3】换教室 | Zory的个人博客</title>
+  <title>【NOIP16 D2T3】愤怒的小鸟 | Zory的个人博客</title>
   
 
 
@@ -259,7 +259,7 @@
           
           <li class="menu-item menu-item-archives">
     <a href="/archives/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />历程Archives<span class="badge">331</span></a>
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />历程Archives<span class="badge">334</span></a>
   </li>
         
         
@@ -275,7 +275,7 @@
           
           <li class="menu-item menu-item-tags">
     <a href="/tags/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签Tags<span class="badge">123</span></a>
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签Tags<span class="badge">124</span></a>
   </li>
         
         
@@ -422,7 +422,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">【NOIP16 D2T3】换教室
+          <h2 class="post-title" itemprop="name headline">【NOIP16 D2T3】愤怒的小鸟
               
             
           </h2>
@@ -464,7 +464,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改于：2018-08-19 16:58:08" itemprop="dateModified" datetime="2018-08-19T16:58:08+08:00">2018-08-19</time>
+                <time title="修改于：2018-08-20 19:16:50" itemprop="dateModified" datetime="2018-08-20T19:16:50+08:00">2018-08-20</time>
               
             
           </span>
@@ -505,7 +505,7 @@
 
           
           
-             <span id="/posts/f5e.html" class="leancloud_visitors" data-flag-title="【NOIP16 D2T3】换教室">
+             <span id="/posts/f5e.html" class="leancloud_visitors" data-flag-title="【NOIP16 D2T3】愤怒的小鸟">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -547,14 +547,15 @@
 <li>卡精度的eps</li>
 </ol>
 <p>然后，这么小的n，又是在noip的环境中，基本就是状压<br>考虑状态压缩dp，然后对于一个s，如果从前往后递推，<br>是可以线性的，因为满足最优子结构，然后前面的已经更新好了</p>
-<p>然后一开始傻傻地觉得枚举a和b是非常多的<br>其实只要枚举两个点，解出一个二次函数就好<br>然后只要预处理出cc，表示枚举两个点，能搞掉的点的集合<br>复杂度就达到了O(2^n×n^2)<br>然后因为多组数据，复杂度炸了</p>
-<p>考虑优化掉一个n的方法（其实可以看作一个log般的存在）<br>有一个非常不显然的特性（很多时候正解都是这样）：<br>因为所有点都在第一象限，对于需要经过的点中【横坐标最左边的】的那个，迟早要被枚举到或者覆盖到的<br>那么与其等着去被覆盖，不如首先枚举<br>那么在dp中，枚举i和j，变成了i确定枚举j<br>这样就达到了无比优秀的O(2^n×n)</p>
+<p>然后一开始傻傻地觉得枚举a和b是灰常多的<br>其实只要枚举两个点，解出一个二次函数就好<br>然后只要预处理出cc，表示枚举两个点，能搞掉的点的集合<br>复杂度就达到了O(2^n×n^2)<br>然后因为多组数据，复杂度炸了</p>
+<p>考虑优化掉一个n的方法（其实可以看作一个log般的存在）<br>有一个灰常不显然的特性（很多时候正解都是这样）：<br>因为所有点都在第一象限，对于需要经过的点中【横坐标最左边的】的那个，迟早要被枚举到或者覆盖到的<br>那么与其等着去被覆盖，不如首先枚举<br>那么在dp中，枚举i和j，变成了i确定枚举j<br>这样就达到了无比优秀的O(2^n×n)</p>
 
 </div></div>
 <h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//Zory in 2018</span></div><div class="line"><span class="comment">//*******************头文件*******************</span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cmath&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;queue&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;vector&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;set&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;queue&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">mymin</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span> </span>&#123;<span class="keyword">return</span> x&lt;y?x:y;&#125;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">mymax</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span> </span>&#123;<span class="keyword">return</span> x&gt;y?x:y;&#125;</div><div class="line"><span class="comment">//*******************全局常量*******************</span></div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> MAXN=<span class="number">20</span>,MAXS=<span class="number">1</span>&lt;&lt;<span class="number">20</span>;</div><div class="line"><span class="keyword">const</span> <span class="keyword">double</span> eps=<span class="number">1e-10</span>;</div><div class="line"><span class="comment">//*******************全局定义*******************</span></div><div class="line"><span class="keyword">int</span> bin[MAXN];</div><div class="line"><span class="keyword">double</span> xx[MAXN],yy[MAXN];</div><div class="line"></div><div class="line"><span class="keyword">int</span> cc[MAXN][MAXN];</div><div class="line"><span class="keyword">int</span> dp[MAXS];</div><div class="line"><span class="comment">//*******************实现*******************</span></div><div class="line"><span class="function"><span class="keyword">double</span> <span class="title">myabs</span><span class="params">(<span class="keyword">double</span> x)</span> </span>&#123;<span class="keyword">return</span> x&gt;<span class="number">0</span>?x:-x;&#125;</div><div class="line"><span class="comment">//*******************主函数*******************</span></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></div><div class="line"></span>&#123;</div><div class="line">    bin[<span class="number">0</span>]=<span class="number">1</span>;<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;MAXN;i++) bin[i]=bin[i<span class="number">-1</span>]&lt;&lt;<span class="number">1</span>;</div><div class="line"></div><div class="line">    <span class="keyword">int</span> T;<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;T);</div><div class="line">    <span class="keyword">while</span>(T--)</div><div class="line">    &#123;</div><div class="line">        <span class="keyword">int</span> n,m;<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;n,&amp;m);</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) <span class="built_in">scanf</span>(<span class="string">"%lf%lf"</span>,&amp;xx[i],&amp;yy[i]);</div><div class="line"></div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</div><div class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=n;j++)</div><div class="line">            &#123;</div><div class="line">                <span class="keyword">if</span>(i==j) &#123;cc[i][j]=bin[i<span class="number">-1</span>];<span class="keyword">continue</span>;&#125;</div><div class="line">                cc[i][j]=<span class="number">0</span>;</div><div class="line"></div><div class="line">                <span class="keyword">double</span> a1=xx[i]*xx[i],b1=xx[i],c1=yy[i];<span class="comment">//a1x+b1y=c1</span></div><div class="line">                <span class="keyword">double</span> a2=xx[j]*xx[j],b2=xx[j],c2=yy[j];<span class="comment">//a2x+b2y=c2</span></div><div class="line">                <span class="keyword">if</span>(myabs(a1*b2-a2*b1)&lt;=eps) <span class="keyword">continue</span>;<span class="comment">//分母!=0</span></div><div class="line">                <span class="keyword">double</span> x=(c1*b2-c2*b1)/(a1*b2-a2*b1);</div><div class="line">                <span class="keyword">double</span> y=(c1-a1*x)/b1;<span class="comment">//y=(x)a^2+(y)a</span></div><div class="line">                <span class="keyword">if</span>(x&gt;=-eps) <span class="keyword">continue</span>;<span class="comment">//a&lt;0</span></div><div class="line"></div><div class="line">                <span class="keyword">for</span>(<span class="keyword">int</span> now=<span class="number">1</span>;now&lt;=n;now++)</div><div class="line">                &#123;</div><div class="line">                    <span class="keyword">double</span> ny=x*xx[now]*xx[now]+y*xx[now];</div><div class="line">                    <span class="keyword">if</span>(myabs(ny-yy[now])&lt;=eps) cc[i][j]+=bin[now<span class="number">-1</span>];</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line"></div><div class="line">        <span class="built_in">memset</span>(dp,<span class="number">63</span>,<span class="keyword">sizeof</span>(dp));dp[<span class="number">0</span>]=<span class="number">0</span>;</div><div class="line">        <span class="keyword">int</span> tot=bin[n]<span class="number">-1</span>;xx[n+<span class="number">1</span>]=<span class="number">20</span>;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> s=<span class="number">0</span>;s&lt;tot;s++)</div><div class="line">        &#123;</div><div class="line">            <span class="keyword">int</span> i=n+<span class="number">1</span>;<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=n;j++) <span class="keyword">if</span>( (s&amp;bin[j<span class="number">-1</span>])==<span class="number">0</span> and xx[j]&lt;xx[i]) i=j;</div><div class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=n;j++) dp[s|cc[i][j]]=mymin(dp[s|cc[i][j]],dp[s]+<span class="number">1</span>);</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="built_in">printf</span>(<span class="string">"%d\n"</span>,dp[tot]);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
 </div></div>
+
       
     </div>
 
@@ -609,7 +610,7 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/ea1.html" rel="bookmark">【Zoj3435】Ideal Puzzle Bobble</a></div>
+      <div class="popular-posts-title"><a href="/posts/7731.html" rel="bookmark">【Poj2455】【Bzoj1733】Secret Milking Machine</a></div>
       
     </li>
   
@@ -623,7 +624,7 @@
 				<p id="div-border-left-purple">
 			   <b>本文基于<a target="_blank" title="Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)" href="http://creativecommons.org/licenses/by-sa/4.0/deed.zh"> 知识共享署名-相同方式共享 4.0 </a>国际许可协议发布</b><br/>
 				<span>
-				<b>本文地址：</b><a href="/posts/f5e.html" title="【NOIP16 D2T3】换教室">http://zory.cf/posts/f5e.html</a><br/><b>转载请注明出处，谢谢！</b>
+				<b>本文地址：</b><a href="/posts/f5e.html" title="【NOIP16 D2T3】愤怒的小鸟">http://zory.cf/posts/f5e.html</a><br/><b>转载请注明出处，谢谢！</b>
 				</span>
 				</p>
 		</div>
@@ -782,7 +783,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">331</span>
+                    <span class="site-state-item-count">334</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -1062,7 +1063,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">121</span>
+                      
+                    
+                    <span class="site-state-item-count">122</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>

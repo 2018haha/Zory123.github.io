@@ -131,7 +131,7 @@
 <meta property="og:site_name" content="Zory的个人博客">
 <meta property="og:description" content="经典套路集锦早就想搞了">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-08-19T08:57:32.000Z">
+<meta property="og:updated_time" content="2018-08-24T08:51:44.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【置顶】套路集锦">
 <meta name="twitter:description" content="经典套路集锦早就想搞了">
@@ -259,7 +259,7 @@
           
           <li class="menu-item menu-item-archives">
     <a href="/archives/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />历程Archives<span class="badge">334</span></a>
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />历程Archives<span class="badge">336</span></a>
   </li>
         
         
@@ -464,7 +464,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改于：2018-08-19 16:57:32" itemprop="dateModified" datetime="2018-08-19T16:57:32+08:00">2018-08-19</time>
+                <time title="修改于：2018-08-24 16:51:44" itemprop="dateModified" datetime="2018-08-24T16:51:44+08:00">2018-08-24</time>
               
             
           </span>
@@ -537,22 +537,24 @@
 
       
         <p>经典套路集锦<br>早就想搞了<br><a id="more"></a></p>
-<h1 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h1><h2 id="1"><a href="#1" class="headerlink" title="1"></a>1</h2><p>需求：最大化最小值、最小化最大值<br>做法：二分答案<br>举例：一抓一大把</p>
-<h2 id="2"><a href="#2" class="headerlink" title="2"></a>2</h2><p>有些题可以从简单情况着手<br>然后拓展到复杂情况（数学归纳法或者总结经验、模仿）<br>举例：<br>noi2015 荷马史诗<br><a href="7248.html">poj2442 Sequence</a><br>平面几何，先研究三角形</p>
-<h1 id="枚举方法"><a href="#枚举方法" class="headerlink" title="枚举方法"></a>枚举方法</h1><h2 id="1-1"><a href="#1-1" class="headerlink" title="1"></a>1</h2><p>有关区间问题并用到区间最值，<br>求出l[i]和r[i]表示第一个比a[i]大的位置，<br>则l[i]+1~r[i]-1中间，用到的最大值都是a[i]<br>不过要小心最大值相等而重复的情况，可以强行把左边界改严格来限制<br><a href="b37c.html">洛谷18年7月月赛T4</a></p>
+<h1 id="一、解题思路"><a href="#一、解题思路" class="headerlink" title="一、解题思路"></a>一、解题思路</h1><h2 id="1"><a href="#1" class="headerlink" title="1"></a>1</h2><p>需求：最大化最小值、最小化最大值<br>做法：二分答案<br>举例：一抓一大把</p>
+<h2 id="2"><a href="#2" class="headerlink" title="2"></a>2</h2><p>有些题可以从简单情况着手<br>然后拓展到复杂情况（数学归纳法或者总结经验、模仿）<br>或者先考虑普通情况，再考虑改进来解决特殊情况<br>举例：<br>noi2015 荷马史诗<br><a href="7248.html">poj2442 Sequence</a><br>平面几何，先研究三角形</p>
+<h1 id="二、枚举方法"><a href="#二、枚举方法" class="headerlink" title="二、枚举方法"></a>二、枚举方法</h1><h2 id="1-1"><a href="#1-1" class="headerlink" title="1"></a>1</h2><p>有关区间问题并用到区间最值，<br>求出l[i]和r[i]表示第一个比a[i]大的位置，<br>则l[i]+1~r[i]-1中间，用到的最大值都是a[i]<br>不过要小心最大值相等而重复的情况，可以强行把左边界改严格来限制<br><a href="b37c.html">洛谷18年7月月赛T4</a></p>
 <h2 id="2-1"><a href="#2-1" class="headerlink" title="2"></a>2</h2><p>按照akc说的，碰到搜索，无脑倒序<br>举例：<br><a href="9d2f.html">poj1190 生日蛋糕</a><br><a href="6a62.html">虫食算</a></p>
 <h2 id="3"><a href="#3" class="headerlink" title="3"></a>3</h2><p>当出现连续的$\lfloor \frac{n}{i} \rfloor$时，<br>值一定是单调不递增的，同值的区间可以合起来计算<br>复杂度：<br>$O(\sqrt n)$<br>① 当$i \leq \sqrt n$,分母只有$\sqrt n$种<br>② 当$i &gt; \sqrt n$,$\lfloor \frac{n}{i} \rfloor &lt; \sqrt n$<br>$last=\lfloor \frac{n}{ \lfloor \frac{n}{i} \rfloor } \rfloor$<br>举例：<br><a href="82f7.html">CQOI2007 余数求和</a><br>大部分莫比乌斯反演题，如gdoi2018d2t1</p>
-<h1 id="决策类"><a href="#决策类" class="headerlink" title="决策类"></a>决策类</h1><h2 id="1-2"><a href="#1-2" class="headerlink" title="1"></a>1</h2><p>需求：维护前k个（方案）<br>做法：堆维护，堆顶为最差元素<br>举例：<br><a href="673d.html">K远点对</a><br><a href="1486.html">树上的路径</a><br><a href="7248.html">Supermarket</a></p>
+<h2 id="4"><a href="#4" class="headerlink" title="4"></a>4</h2><p>对于许多计数类问题，如果有多个段可分，<br>可以分成1+(n-1)，这样子能保证不会重复计数<br>举例：<br><a href="82f7.html">noi2001 陨石的秘密</a></p>
+<h1 id="三、决策类"><a href="#三、决策类" class="headerlink" title="三、决策类"></a>三、决策类</h1><h2 id="1-2"><a href="#1-2" class="headerlink" title="1"></a>1</h2><p>需求：维护前k个（方案）<br>做法：堆维护，堆顶为最差元素<br>举例：<br><a href="673d.html">K远点对</a><br><a href="1486.html">树上的路径</a><br><a href="7248.html">Supermarket</a></p>
 <h2 id="2-2"><a href="#2-2" class="headerlink" title="2"></a>2</h2><p>把决策转化为边，边权为代价<br>于是就变成了最短路问题<br>举例：<br><a href="9d2f.html">电路维修</a></p>
-<h1 id="搜索类"><a href="#搜索类" class="headerlink" title="搜索类"></a>搜索类</h1><h2 id="1-3"><a href="#1-3" class="headerlink" title="1"></a>1</h2><p>搜索去掉次序性的套路：强行限制大小关系<br>举例：<br><a href="9d2f.html">poj1011 Sticks</a></p>
+<h1 id="四、搜索类"><a href="#四、搜索类" class="headerlink" title="四、搜索类"></a>四、搜索类</h1><h2 id="1-3"><a href="#1-3" class="headerlink" title="1"></a>1</h2><p>搜索去掉次序性的套路：强行限制大小关系<br>举例：<br><a href="9d2f.html">poj1011 Sticks</a></p>
 <h2 id="2-3"><a href="#2-3" class="headerlink" title="2"></a>2</h2><p>搜索的复杂度：<br>把每次决策量也就是分支数量计算出来</p>
 <h2 id="3-1"><a href="#3-1" class="headerlink" title="3"></a>3</h2><p>其他优化：<br>优化搜索顺序<br>排除等效的决策和物体<br>可行性<br>最优性<br>记忆化</p>
-<h2 id="4"><a href="#4" class="headerlink" title="4"></a>4</h2><p>对于一个序列，拆分成多个序列的问题<br>有两种不同的方向：</p>
+<h2 id="4-1"><a href="#4-1" class="headerlink" title="4"></a>4</h2><p>对于一个序列，拆分成多个序列的问题<br>有两种不同的方向：</p>
 <ol>
 <li>给每个元素分配组（通常这个更快）</li>
 <li>通过组，找元素<br>最好能仔细根据题目斟酌一下策略<br>本人多次无脑用2各种剪枝，也比不过裸的1……<br>举例：<br><a href="9d2f.html">Sticks</a><br><a href="9d2f.html">Missile Defence System</a><br><a href="8404.html">Zebras</a></li>
 </ol>
-<h1 id="数论"><a href="#数论" class="headerlink" title="数论"></a>数论</h1><h2 id="1-4"><a href="#1-4" class="headerlink" title="1"></a>1</h2><p>面对gcd、lcm的限制条件，可以从质因数上考虑，<br>从而变成min、max，省去log暴力判断的复杂度<br>举例：<br><a href="7398.html">Hankson的趣味题</a></p>
+<h1 id="五、数论技巧"><a href="#五、数论技巧" class="headerlink" title="五、数论技巧"></a>五、数论技巧</h1><h2 id="1-4"><a href="#1-4" class="headerlink" title="1"></a>1</h2><p>面对gcd、lcm的限制条件，可以从质因数上考虑，<br>从而变成min、max，省去log暴力判断的复杂度<br>举例：<br><a href="7398.html">Hankson的趣味题</a></p>
+<h2 id="2-4"><a href="#2-4" class="headerlink" title="2"></a>2</h2><p>由调和级数<br>1+1/2+1/3…1/n=logn</p>
 
       
     </div>
@@ -775,7 +777,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">334</span>
+                    <span class="site-state-item-count">336</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -1114,7 +1116,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#解题思路"><span class="nav-text">解题思路</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1"><span class="nav-text">1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2"><span class="nav-text">2</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#枚举方法"><span class="nav-text">枚举方法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1"><span class="nav-text">1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1"><span class="nav-text">2</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3"><span class="nav-text">3</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#决策类"><span class="nav-text">决策类</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2"><span class="nav-text">1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2"><span class="nav-text">2</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#搜索类"><span class="nav-text">搜索类</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-3"><span class="nav-text">1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3"><span class="nav-text">2</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-1"><span class="nav-text">3</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4"><span class="nav-text">4</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#数论"><span class="nav-text">数论</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-4"><span class="nav-text">1</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一、解题思路"><span class="nav-text">一、解题思路</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1"><span class="nav-text">1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2"><span class="nav-text">2</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二、枚举方法"><span class="nav-text">二、枚举方法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1"><span class="nav-text">1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1"><span class="nav-text">2</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3"><span class="nav-text">3</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4"><span class="nav-text">4</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#三、决策类"><span class="nav-text">三、决策类</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2"><span class="nav-text">1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2"><span class="nav-text">2</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#四、搜索类"><span class="nav-text">四、搜索类</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-3"><span class="nav-text">1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3"><span class="nav-text">2</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-1"><span class="nav-text">3</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-1"><span class="nav-text">4</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#五、数论技巧"><span class="nav-text">五、数论技巧</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-4"><span class="nav-text">1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-4"><span class="nav-text">2</span></a></li></ol></li></ol></div>
             
 
           </div>

@@ -131,7 +131,7 @@
 <meta property="og:site_name" content="Zory的个人博客">
 <meta property="og:description" content="来源和评测点SCOI2011 Day1Bzoj2330Luogu3275">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-08-19T08:57:52.000Z">
+<meta property="og:updated_time" content="2018-09-01T11:31:08.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【Bzoj2330】【Luogu3275】糖果">
 <meta name="twitter:description" content="来源和评测点SCOI2011 Day1Bzoj2330Luogu3275">
@@ -259,7 +259,7 @@
           
           <li class="menu-item menu-item-archives">
     <a href="/archives/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />历程Archives<span class="badge">340</span></a>
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />历程Archives<span class="badge">344</span></a>
   </li>
         
         
@@ -464,7 +464,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改于：2018-08-19 16:57:52" itemprop="dateModified" datetime="2018-08-19T16:57:52+08:00">2018-08-19</time>
+                <time title="修改于：2018-09-01 19:31:08" itemprop="dateModified" datetime="2018-09-01T19:31:08+08:00">2018-09-01</time>
               
             
           </span>
@@ -541,9 +541,18 @@
 <h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p id="div-border-top-yellow"><strong>【题目大意】</strong><br>幼儿园里有N个小朋友，lxhgww老师现在想要给这些小朋友们分配糖果，要求每个小朋友都要分到糖果。<br>但是小朋友们也有嫉妒心，总是会提出一些要求，比如小明不希望小红分到的糖果比他的多，<br>于是在分配糖果的时候，lxhgww需要满足小朋友们的K个要求。<br>幼儿园的糖果总是有限的，lxhgww想知道他至少需要准备多少个糖果，<br>才能使得每个小朋友都能够分到糖果，并且满足小朋友们所有的要求。<br><strong>【输入格式】</strong><br>输入的第一行是两个整数N，K。<br>接下来K行，表示这些点需要满足的关系，每行3个数字X，A，B。<br>如果X=1，表示第A个小朋友分到的糖果必须和第B个小朋友分到的糖果一样多；<br>如果X=2，表示第A个小朋友分到的糖果必须少于第B个小朋友分到的糖果；<br>如果X=3，表示第A个小朋友分到的糖果必须不少于第B个小朋友分到的糖果；<br>如果X=4，表示第A个小朋友分到的糖果必须多于第B个小朋友分到的糖果；<br>如果X=5，表示第A个小朋友分到的糖果必须不多于第B个小朋友分到的糖果；<br><strong>【限定条件】</strong><br>N&lt;=100000,K&lt;=100000，1&lt;=X&lt;=5，1&lt;=A, B&lt;=N<br><strong>【输出格式】</strong><br>输出一行，表示lxhgww老师至少需要准备的糖果数，如果不能满足小朋友们的所有要求，就输出-1。<br><strong>【输入样例】</strong><br>5 7<br>1 1 2<br>2 3 2<br>4 4 1<br>3 4 5<br>5 4 5<br>2 3 5<br>4 5 1<br><strong>【输出样例】</strong><br>11<br><strong>【样例解释】</strong><br>d[1]=d[2]<br>d[3]&lt;d[2]<br>d[4]&gt;d[1]<br>d[4]&gt;=d[5]<br>d[4]&lt;=d[5]<br>d[3]&lt;d[5]<br>d[5]&gt;d[1]<br></p>
 
 <h2 id="刷题记录"><a href="#刷题记录" class="headerlink" title="刷题记录"></a>刷题记录</h2><p>1.5h<br>吃了屎一样难受！<br>居然输出的时候忘记打else了！</p>
-<h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>设d[1]=0，那么答案就是(1-mind)*n+all（因为每个人至少一个）<br>x=1<br>d[a]=d[b]<br>ins(a,b,0)<br>ins(b,a,0)<br>x=2<br>d[a]&lt;d[b]<br>d[b]&gt;d[a]<br>d[b]&gt;=d[a]+1<br>ins(a,b,1)<br>x=3<br>d[a]&gt;=d[b]<br>ins(b,a,0)<br>x=4<br>d[a]&gt;d[b]<br>d[a]&gt;=d[b]+1<br>ins(b,a,1)<br>x=5<br>d[a]&lt;=d[b]<br>d[b]&gt;=d[a]<br>ins(b,a,0)</p>
-<p>总结：<br>x=1,ins(a,b,0),ins(b,a,0)<br>x=2,ins(a,b,1)<br>x=3,ins(b,a,0)<br>x=4,ins(b,a,1)<br>x=5,ins(b,a,0)</p>
+<h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>具体跑最长路还是最短路，其实都没有问题<br>下文以最长路为例</p>
+<ol>
+<li>a=b<br>a&gt;=b+0,ins(b,a,0)<br>a&lt;=b+0,b&gt;=a+0,ins(a,b,0)</li>
+<li>a<b b="">a,b&gt;=a+1,ins(a,b,1)</b></li>
+<li>a&gt;=b<br>a&gt;=b+0,ins(b,a,0)</li>
+<li>a&gt;b<br>a&gt;=b+1,ins(b,a,1)</li>
+<li>a&lt;=b<br>b&gt;=a+0,ins(a,b,0)<br>为了判断是否存在正环，不得不用spfa<br>最后，我们找到了满足不等式组的一组解<br>为了求出答案要求的最小，将最小值平移到1即可</li>
+</ol>
+<p>up 2018.9.1<br>其实有可能，数据强行卡spfa<br>可以自己加上酸辣粉优化</p>
+<p>正规做法是找题目性质，发现边权都是0或者1<br>所以可以考虑直接判断是否存在正环（用tarjan，累加环总长度即可）<br>没有的话，可以在缩点后的dag上直接拓扑来最短路</p>
 <h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//Zory-2018</span></div><div class="line"><span class="comment">//*******************头文件*******************</span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cmath&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;queue&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"><span class="comment">//*******************全局常量*******************</span></div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> MAXN=<span class="number">110000</span>,MAXM=<span class="number">210000</span>;</div><div class="line"><span class="comment">//*******************全局定义*******************</span></div><div class="line"><span class="keyword">struct</span> nod</div><div class="line">&#123;</div><div class="line">	<span class="keyword">int</span> hou;</div><div class="line">	<span class="keyword">int</span> ru,d;</div><div class="line">	<span class="keyword">bool</span> v;</div><div class="line">	nod()</div><div class="line">	&#123;</div><div class="line">		hou=<span class="number">0</span>;</div><div class="line">	&#125;</div><div class="line">&#125;p[MAXN];</div><div class="line"><span class="keyword">struct</span> edge</div><div class="line">&#123;</div><div class="line">	<span class="keyword">int</span> y,c,g;</div><div class="line">&#125;e[MAXM];</div><div class="line"><span class="keyword">int</span> ln=<span class="number">0</span>;</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">ins</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y,<span class="keyword">int</span> c)</span></div><div class="line"></span>&#123;</div><div class="line">	ln++;</div><div class="line">	e[ln].y=y;</div><div class="line">	e[ln].c=c;</div><div class="line">	e[ln].g=p[x].hou;</div><div class="line">	p[x].hou=ln;</div><div class="line">&#125;</div><div class="line"><span class="comment">//*******************实现*******************</span></div><div class="line"><span class="built_in">queue</span>&lt;<span class="keyword">int</span>&gt; lst;</div><div class="line"><span class="function"><span class="keyword">bool</span> <span class="title">spfa</span><span class="params">(<span class="keyword">int</span> st,<span class="keyword">int</span> n)</span></div><div class="line"></span>&#123;</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)<span class="comment">//debug</span></div><div class="line">	&#123;</div><div class="line">		p[i].v=<span class="number">1</span>;</div><div class="line">		p[i].ru=<span class="number">1</span>;</div><div class="line">		p[i].d=<span class="number">1</span>;</div><div class="line">		lst.push(i);</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">while</span>(!lst.empty())</div><div class="line">	&#123;</div><div class="line">		<span class="keyword">int</span> x=lst.front();lst.pop();p[x].v=<span class="number">0</span>;</div><div class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> k=p[x].hou;k&gt;<span class="number">0</span>;k=e[k].g)</div><div class="line">		&#123;</div><div class="line">			<span class="keyword">int</span> y=e[k].y;</div><div class="line">			<span class="keyword">if</span>(p[y].d&lt;p[x].d+e[k].c)</div><div class="line">			&#123;</div><div class="line">				p[y].d=p[x].d+e[k].c;</div><div class="line">				<span class="keyword">if</span>(p[y].v==<span class="number">0</span>)</div><div class="line">				&#123;</div><div class="line">					p[y].v=<span class="number">1</span>;</div><div class="line">					lst.push(y);</div><div class="line">					p[y].ru++;</div><div class="line">					<span class="keyword">if</span>(p[y].ru&gt;n) <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">				&#125;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">return</span> <span class="number">1</span>;</div><div class="line">&#125;</div><div class="line"><span class="comment">//*******************主函数*******************</span></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></div><div class="line"></span>&#123;</div><div class="line">	<span class="keyword">int</span> n,k;<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;n,&amp;k);</div><div class="line">	<span class="keyword">bool</span> bk=<span class="number">0</span>;</div><div class="line">	<span class="keyword">while</span>(k--)</div><div class="line">	&#123;</div><div class="line">		<span class="keyword">int</span> op,a,b;<span class="built_in">scanf</span>(<span class="string">"%d%d%d"</span>,&amp;op,&amp;a,&amp;b);</div><div class="line">		<span class="keyword">if</span>(op==<span class="number">1</span>) ins(a,b,<span class="number">0</span>),ins(b,a,<span class="number">0</span>);</div><div class="line">		<span class="keyword">if</span>(op==<span class="number">2</span>) &#123;ins(a,b,<span class="number">1</span>);<span class="keyword">if</span>(a==b) bk=<span class="number">1</span>;&#125;</div><div class="line">		<span class="keyword">if</span>(op==<span class="number">3</span>) ins(b,a,<span class="number">0</span>);</div><div class="line">		<span class="keyword">if</span>(op==<span class="number">4</span>) &#123;ins(b,a,<span class="number">1</span>);<span class="keyword">if</span>(a==b) bk=<span class="number">1</span>;&#125;</div><div class="line">		<span class="keyword">if</span>(op==<span class="number">5</span>) ins(a,b,<span class="number">0</span>);</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">if</span>(bk or !spfa(<span class="number">0</span>,n)) <span class="built_in">printf</span>(<span class="string">"-1"</span>);</div><div class="line">	<span class="keyword">else</span><span class="comment">//debug</span></div><div class="line">	&#123;</div><div class="line">		<span class="keyword">long</span> <span class="keyword">long</span> all=<span class="number">0</span>;</div><div class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) all+=p[i].d;</div><div class="line">		<span class="built_in">printf</span>(<span class="string">"%lld"</span>,all);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
       
     </div>
 
@@ -577,7 +586,14 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/eec3.html" rel="bookmark">【JSOI2007】文本生成器</a></div>
+      <div class="popular-posts-title"><a href="/posts/a1d3.html" rel="bookmark">【Caioj1206】最近点对</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="/posts/34e8.html" rel="bookmark">【Poj1364】差分约束2国王</a></div>
       
     </li>
   
@@ -592,13 +608,6 @@
       
       
       <div class="popular-posts-title"><a href="/posts/3a06.html" rel="bookmark">【Caioj1402】差分约束3消息可靠吗</a></div>
-      
-    </li>
-  
-    <li class="popular-posts-item">
-      
-      
-      <div class="popular-posts-title"><a href="/posts/34e8.html" rel="bookmark">【Poj1364】差分约束2国王</a></div>
       
     </li>
   
@@ -771,7 +780,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">340</span>
+                    <span class="site-state-item-count">344</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -1059,7 +1068,7 @@
                     
                       
                     
-                    <span class="site-state-item-count">125</span>
+                    <span class="site-state-item-count">127</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>

@@ -131,7 +131,7 @@
 <meta property="og:site_name" content="Zory的个人博客">
 <meta property="og:description" content="在循环同构的n个字符串中，找出字典序最小的一个，就是最小表示法。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-08-19T08:58:20.000Z">
+<meta property="og:updated_time" content="2018-09-08T00:00:22.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【OI之路】10字符串-8最小表示法">
 <meta name="twitter:description" content="在循环同构的n个字符串中，找出字典序最小的一个，就是最小表示法。">
@@ -464,7 +464,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改于：2018-08-19 16:58:20" itemprop="dateModified" datetime="2018-08-19T16:58:20+08:00">2018-08-19</time>
+                <time title="修改于：2018-09-08 08:00:22" itemprop="dateModified" datetime="2018-09-08T08:00:22+08:00">2018-09-08</time>
               
             
           </span>
@@ -539,7 +539,7 @@
         <p>在循环同构的n个字符串中，找出字典序最小的一个，就是最小表示法。</p>
 <a id="more"></a>
 <h1 id="具体做法"><a href="#具体做法" class="headerlink" title="具体做法"></a>具体做法</h1><p>我们没有必要直接排序（n^2暴力或者nlogn哈希），<br>因为我们的目的只是找到最小那一个<br>所以换个思路，试图找到绝对不可能的部分</p>
-<h1 id="举例"><a href="#举例" class="headerlink" title="举例"></a>举例</h1><p>定义B[i]表示从i开始的字符串（可以通过在后面复制一段来代替）<br>对于任意i和j，一个个比较下去，知道出现为止i+k和j+k不同<br>假设i+k更大，则我们可以排除B[i]的可能性，因为存在更小的B[j]</p>
+<h1 id="举例"><a href="#举例" class="headerlink" title="举例"></a>举例</h1><p>定义B[i]表示从i开始的字符串（可以通过在后面复制一段来代替）<br>对于任意i和j，一个个比较下去，直到出现i+k和j+k不同为止<br>假设i+k更大，则我们可以排除B[i]的可能性，因为存在更小的B[j]</p>
 <p>重点来了！<br>由于这个神奇的位置k，以及我们目的的特殊性<br>可以直接确定对于所有B[i~i+k]，都不是最小表示<br>因为存在一个B[j~j+k]，每当碰到那个i+k，都会有相同结果</p>
 <p>所以我们可以直接跳过</p>
 <h1 id="具体实现"><a href="#具体实现" class="headerlink" title="具体实现"></a>具体实现</h1><p>双指针i和j，确保i&lt;j，直接比较，出现不同直接跳过<br>如果i=j，则j++；<br>如果完全没有差别，任何B[i]都是最小表示；<br>如果任何一个到达n之后，意味着另一个是最小表示</p>

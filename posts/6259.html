@@ -133,7 +133,7 @@
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://zory.cf/images/算法竞赛进阶指南/6图论.png">
 <meta property="og:image" content="http://zory.cf/images/算法竞赛进阶指南/走廊泼水节.png">
-<meta property="og:updated_time" content="2018-09-06T08:27:38.000Z">
+<meta property="og:updated_time" content="2018-09-08T05:29:10.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【训练】算法竞赛进阶指南-6图论">
 <meta name="twitter:description" content="本处难度分档以个人实力为参照系难度1：半小时内想出，半小时内ac难度2：半小时想不出，看题解，服气难度3：半小时想不出，看题解，ac后依然觉得难度很大  另外，由于追进度，对于coding部分比较有自信的题目，不再具体实现">
@@ -467,7 +467,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改于：2018-09-06 16:27:38" itemprop="dateModified" datetime="2018-09-06T16:27:38+08:00">2018-09-06</time>
+                <time title="修改于：2018-09-08 13:29:10" itemprop="dateModified" datetime="2018-09-08T13:29:10+08:00">2018-09-08</time>
               
             
           </span>
@@ -645,11 +645,17 @@
 <p>其实已经和正解接近了，但还是错误的<br>第二问求的其实是max(a,b)<br>重新思考，<br>对于入度为0的scc，如果起点不在这里就凉了，要消除掉<br>对于出度为0的scc，如果起点在这里就凉了，要消除掉<br>因为一次可以同时消除两种各一个，得证</p>
 
 </div></div></p>
-<h3 id="17"><a href="#17" class="headerlink" title="17"></a>17</h3><p>9.6 难度2<br><div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div></pre></td></tr></table></figure>
+<h3 id="17-poj2226-Muddy-Fields"><a href="#17-poj2226-Muddy-Fields" class="headerlink" title="17 poj2226 Muddy Fields"></a>17 poj2226 Muddy Fields</h3><p>9.7 难度2<br><div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>不会做的经典模型<br>将连续的泥地分为行泥泞块和列泥泞块，形成了二分图<br>那么，对于每个小泥地，至少要被其中一种覆盖<br>那么把每个小泥地作为边，恰好连接两个元<br>求最小覆盖即可</p>
 
 </div></div></p>
-<h3 id="18"><a href="#18" class="headerlink" title="18"></a>18</h3><p>9.6 难度2<br><div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<h3 id="18-6902-Vani和Cl2捉迷藏"><a href="#18-6902-Vani和Cl2捉迷藏" class="headerlink" title="18 6902 Vani和Cl2捉迷藏"></a>18 6902 Vani和Cl2捉迷藏</h3><p>9.7 难度2<br><div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>神仙结论题，结论不好猜，证明不好想，但出得挺好<br>因为不能有路径相连，可以联想到传递闭包（居然没有想到），转移为边的相连（构造新图，边就是用闭包得出来的结果）<br>那么现在类似于要找最大独立集</p>
+<p>结论：总能在【最小可重复点覆盖路径】的每条路径中，找出一个点<br>证明：<br>首先，【隐藏点】显然小于等于【路径数量】<br>那么我们只要说我们能构造出一种方法来，就相当于证明了结论（这也是一种有趣的证明方法）</p>
+<p>先取出每个路径的终点，作为集合A，将A走一步能到达的节点作为next(A)<br>按照题意，$A \cap next(A)=\varnothing$ ，所以我们要有所调整<br>取出这种元素，然后在其所属的【最小可重复点覆盖路径】上，往起点方向跳，<br>一定能找到一个元素不属于next(A)，否则意味着整条路径都是可以被别人覆盖掉的，违反了我们先前最小的定义<br>综上所述，存在一种方案，满足条件<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div></pre></td></tr></table></figure></p>
+
+</div></div></p>
+<h3 id="19"><a href="#19" class="headerlink" title="19"></a>19</h3><p>9.7 难度2<br><div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div></pre></td></tr></table></figure>
 
 </div></div></p>
@@ -1225,7 +1231,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#0x60-图论"><span class="nav-text">0x60 图论</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-poj3662-Telephone-Lines"><span class="nav-text">1 poj3662 Telephone Lines</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-noip2009-最优贸易"><span class="nav-text">2 noip2009 最优贸易</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-Usaco2011-Jan-Gold-道路和航线"><span class="nav-text">3 Usaco2011 Jan Gold 道路和航线</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-poj1734-Sightseeing-trip"><span class="nav-text">4 poj1734 Sightseeing trip</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-6201-走廊泼水节"><span class="nav-text">5 6201 走廊泼水节</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-poj1639-Picnic-Planning"><span class="nav-text">6 poj1639 Picnic Planning</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-poj2728-Desert-King"><span class="nav-text">7 poj2728 Desert King</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-APIO2010-巡逻"><span class="nav-text">8 APIO2010 巡逻</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-CH-56C-异象石"><span class="nav-text">9 CH#56C 异象石</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-BJWC2010-严格次小生成树"><span class="nav-text">10 BJWC2010 严格次小生成树</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11-IOI2008-Island"><span class="nav-text">11 IOI2008 Island</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#12-6401-创世纪"><span class="nav-text">12 6401 创世纪</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#13-POI2008-BLO-Blockade"><span class="nav-text">13 POI2008 BLO-Blockade</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#14-poj3694-Network"><span class="nav-text">14 poj3694 Network</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#15-poj2942-Knights-of-the-Round-Table"><span class="nav-text">15 poj2942 Knights of the Round Table</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#16-poj1236-Network-of-Schools"><span class="nav-text">16 poj1236 Network of Schools</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#17"><span class="nav-text">17</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#18"><span class="nav-text">18</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#0x6B-图论练习"><span class="nav-text">0x6B 图论练习</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#0x60-图论"><span class="nav-text">0x60 图论</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-poj3662-Telephone-Lines"><span class="nav-text">1 poj3662 Telephone Lines</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-noip2009-最优贸易"><span class="nav-text">2 noip2009 最优贸易</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-Usaco2011-Jan-Gold-道路和航线"><span class="nav-text">3 Usaco2011 Jan Gold 道路和航线</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-poj1734-Sightseeing-trip"><span class="nav-text">4 poj1734 Sightseeing trip</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-6201-走廊泼水节"><span class="nav-text">5 6201 走廊泼水节</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-poj1639-Picnic-Planning"><span class="nav-text">6 poj1639 Picnic Planning</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-poj2728-Desert-King"><span class="nav-text">7 poj2728 Desert King</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-APIO2010-巡逻"><span class="nav-text">8 APIO2010 巡逻</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-CH-56C-异象石"><span class="nav-text">9 CH#56C 异象石</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-BJWC2010-严格次小生成树"><span class="nav-text">10 BJWC2010 严格次小生成树</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11-IOI2008-Island"><span class="nav-text">11 IOI2008 Island</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#12-6401-创世纪"><span class="nav-text">12 6401 创世纪</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#13-POI2008-BLO-Blockade"><span class="nav-text">13 POI2008 BLO-Blockade</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#14-poj3694-Network"><span class="nav-text">14 poj3694 Network</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#15-poj2942-Knights-of-the-Round-Table"><span class="nav-text">15 poj2942 Knights of the Round Table</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#16-poj1236-Network-of-Schools"><span class="nav-text">16 poj1236 Network of Schools</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#17-poj2226-Muddy-Fields"><span class="nav-text">17 poj2226 Muddy Fields</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#18-6902-Vani和Cl2捉迷藏"><span class="nav-text">18 6902 Vani和Cl2捉迷藏</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#19"><span class="nav-text">19</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#0x6B-图论练习"><span class="nav-text">0x6B 图论练习</span></a></li></ol></div>
             
 
           </div>

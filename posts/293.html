@@ -123,18 +123,18 @@
 
 
 
-  <meta name="description" content="简单连通性问题tarjan算法无向图与有向图">
+  <meta name="description" content="简单连通性问题tarjan算法无向图与有向图致敬：维基百科Robert_Tarjan">
 <meta name="keywords" content="tarjan">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【OI之路】03图论算法-10简单连通性问题">
+<meta property="og:title" content="【OI之路】03图论算法-7简单连通性问题">
 <meta property="og:url" content="http://zory.cf/posts/293.html">
 <meta property="og:site_name" content="Zory的个人博客">
-<meta property="og:description" content="简单连通性问题tarjan算法无向图与有向图">
+<meta property="og:description" content="简单连通性问题tarjan算法无向图与有向图致敬：维基百科Robert_Tarjan">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-09-07T13:51:02.000Z">
+<meta property="og:updated_time" content="2018-09-10T13:39:10.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="【OI之路】03图论算法-10简单连通性问题">
-<meta name="twitter:description" content="简单连通性问题tarjan算法无向图与有向图">
+<meta name="twitter:title" content="【OI之路】03图论算法-7简单连通性问题">
+<meta name="twitter:description" content="简单连通性问题tarjan算法无向图与有向图致敬：维基百科Robert_Tarjan">
 
 
 
@@ -151,7 +151,7 @@
   };
 </script>
 
-  <title>【OI之路】03图论算法-10简单连通性问题 | Zory的个人博客</title>
+  <title>【OI之路】03图论算法-7简单连通性问题 | Zory的个人博客</title>
   
 
 
@@ -259,7 +259,7 @@
           
           <li class="menu-item menu-item-archives">
     <a href="/archives/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />历程Archives<span class="badge">344</span></a>
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />历程Archives<span class="badge">345</span></a>
   </li>
         
         
@@ -275,7 +275,7 @@
           
           <li class="menu-item menu-item-tags">
     <a href="/tags/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签Tags<span class="badge">127</span></a>
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签Tags<span class="badge">129</span></a>
   </li>
         
         
@@ -422,7 +422,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">【OI之路】03图论算法-10简单连通性问题
+          <h2 class="post-title" itemprop="name headline">【OI之路】03图论算法-7简单连通性问题
               
             
           </h2>
@@ -464,7 +464,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改于：2018-09-07 21:51:02" itemprop="dateModified" datetime="2018-09-07T21:51:02+08:00">2018-09-07</time>
+                <time title="修改于：2018-09-10 21:39:10" itemprop="dateModified" datetime="2018-09-10T21:39:10+08:00">2018-09-10</time>
               
             
           </span>
@@ -505,7 +505,7 @@
 
           
           
-             <span id="/posts/293.html" class="leancloud_visitors" data-flag-title="【OI之路】03图论算法-10简单连通性问题">
+             <span id="/posts/293.html" class="leancloud_visitors" data-flag-title="【OI之路】03图论算法-7简单连通性问题">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -536,7 +536,7 @@
       
 
       
-        <p>简单连通性问题<br>tarjan算法<br>无向图与有向图<br><a id="more"></a></p>
+        <p>简单连通性问题<br>tarjan算法<br>无向图与有向图<br>致敬：<a href="https://en.wikipedia.org/wiki/Robert_Tarjan" target="_blank" rel="noopener">维基百科Robert_Tarjan</a><br><a id="more"></a></p>
 <h1 id="无向图"><a href="#无向图" class="headerlink" title="无向图"></a>无向图</h1><h2 id="连通图"><a href="#连通图" class="headerlink" title="连通图"></a>连通图</h2><p>割点：删去该点和相关的边后，分裂为两个或以上子图<br>桥或割边：删去该边后，分裂为两个或以上子图</p>
 <h2 id="tarjan算法"><a href="#tarjan算法" class="headerlink" title="tarjan算法"></a>tarjan算法</h2><p>dfn表示时间戳<br>low表示所有【子树内节点，能通过一条非搜索树边到达子树内的节点】的最小dfn</p>
 <h2 id="割点和割边的判定"><a href="#割点和割边的判定" class="headerlink" title="割点和割边的判定"></a>割点和割边的判定</h2><p>无向边x-&gt;y是割边，当且仅当搜索树上存在x和y，满足$dfn_x &lt; low_y$<br>含义就是，y无法通过其他方式到达比x更早的点<br>显然割边一定是搜索树上面的<br>为了也能兼容有重边的情况，可以考虑通过记录来到这里那条边的编号来判断是否是搜索树边</p>
@@ -600,7 +600,7 @@
 				<p id="div-border-left-purple">
 			   <b>本文基于<a target="_blank" title="Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)" href="http://creativecommons.org/licenses/by-sa/4.0/deed.zh"> 知识共享署名-相同方式共享 4.0 </a>国际许可协议发布</b><br/>
 				<span>
-				<b>本文地址：</b><a href="/posts/293.html" title="【OI之路】03图论算法-10简单连通性问题">http://zory.cf/posts/293.html</a><br/><b>转载请注明出处，谢谢！</b>
+				<b>本文地址：</b><a href="/posts/293.html" title="【OI之路】03图论算法-7简单连通性问题">http://zory.cf/posts/293.html</a><br/><b>转载请注明出处，谢谢！</b>
 				</span>
 				</p>
 		</div>
@@ -676,8 +676,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/posts/feb5.html" rel="prev" title="【OI之路】04排序查找-1二分">
-                【OI之路】04排序查找-1二分 <i class="fa fa-chevron-right"></i>
+              <a href="/posts/250b.html" rel="prev" title="【OI之路】03图论算法-11二分图">
+                【OI之路】03图论算法-11二分图 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -759,7 +759,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">344</span>
+                    <span class="site-state-item-count">345</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -1047,7 +1047,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">127</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">129</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>

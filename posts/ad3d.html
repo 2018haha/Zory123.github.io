@@ -124,7 +124,7 @@
 
 
   <meta name="description" content="Source and JudgeNOIP2014 提高组 D1T3Luogu1941Caioj1565">
-<meta name="keywords" content="bfs,难度2,dp">
+<meta name="keywords" content="难度2,bfs,dp">
 <meta property="og:type" content="article">
 <meta property="og:title" content="【NOIP14 D1T3】飞扬的小鸟">
 <meta property="og:url" content="http://zory.cf/posts/ad3d.html">
@@ -133,7 +133,7 @@
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://cdn.vijos.org/fs/ab820ade16604d7b3ce8c4e0e64d6302f7ba0ac3">
 <meta property="og:image" content="https://cdn.luogu.org/upload/pic/1348.png">
-<meta property="og:updated_time" content="2018-08-19T08:57:56.000Z">
+<meta property="og:updated_time" content="2018-09-09T04:10:20.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【NOIP14 D1T3】飞扬的小鸟">
 <meta name="twitter:description" content="Source and JudgeNOIP2014 提高组 D1T3Luogu1941Caioj1565">
@@ -262,7 +262,7 @@
           
           <li class="menu-item menu-item-archives">
     <a href="/archives/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />历程Archives<span class="badge">344</span></a>
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />历程Archives<span class="badge">345</span></a>
   </li>
         
         
@@ -278,7 +278,7 @@
           
           <li class="menu-item menu-item-tags">
     <a href="/tags/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签Tags<span class="badge">127</span></a>
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签Tags<span class="badge">129</span></a>
   </li>
         
         
@@ -467,7 +467,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改于：2018-08-19 16:57:56" itemprop="dateModified" datetime="2018-08-19T16:57:56+08:00">2018-08-19</time>
+                <time title="修改于：2018-09-09 12:10:20" itemprop="dateModified" datetime="2018-09-09T12:10:20+08:00">2018-09-09</time>
               
             
           </span>
@@ -554,7 +554,7 @@
 <h2 id="Analysis2"><a href="#Analysis2" class="headerlink" title="Analysis2"></a>Analysis2</h2><div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
 <p>在上一个做法中，我们忽略了这道题一个重要的特性：方向固定（向右）<br>所以是可以DP的<br>把上升看作【多次背包】，下降看作【单次背包】</p>
 <p>朴素的$O(nm^2)$：<br>$$<br>f[i][j] =<br>\left{<br>\begin{matrix}<br>\underset{k}{min}(f[i-1][j-k\times x[i-1]])+k&amp; (j-k\times x[i-1]&gt;0) \<br>f[i-1][j+y[i-1]]&amp; (j+y[i-1]\leq m)<br>\end{matrix}<br>\right.<br>$$</p>
-<p>然而，对于这之中耗时最多的枚举k，其实我们完全可以【放后影响】，从上一遍搞过来<br>（显而易见，打bfs的时候想过但是不适用……然而DP是可以的）<br>于是就下降到了$O(nm)$辣：<br>$$<br>f[i][j] =<br>\left{<br>\begin{matrix}<br>min(f[i-1][j-x[i-1]],f[i][j-x[i-1])+1&amp; (j-x[i-1]&gt;0) \<br>f[i-1][j+y[i-1]]&amp; (j+y[i-1]\leq m)<br>\end{matrix}<br>\right.<br>$$</p>
+<p>然鹅，对于这之中耗时最多的枚举k，其实我们完全可以【放后影响】，从上一遍搞过来<br>（显而易见，打bfs的时候想过但是不适用……然鹅DP是可以的）<br>于是就下降到了$O(nm)$辣：<br>$$<br>f[i][j] =<br>\left{<br>\begin{matrix}<br>min(f[i-1][j-x[i-1]],f[i][j-x[i-1])+1&amp; (j-x[i-1]&gt;0) \<br>f[i-1][j+y[i-1]]&amp; (j+y[i-1]\leq m)<br>\end{matrix}<br>\right.<br>$$</p>
 <p>注意：<br>对于撞到管子的$f[i][j]$，还是要计算的，因为有这种情况：<br>我们从$f[i][j-x[i-1]]$转移过来，它撞墙了，但$f[i][j]$没有撞墙，它去没得继承了。<br>所以要<br>顺便说一句：<br>感觉这个dp很像维护一个二维前缀</p>
 <p>所以，综上所述，对于每一列：</p>
 <ol>
@@ -579,9 +579,9 @@
     
       <div class="post-tags">
         
-          <a href="/tags/bfs/" rel="tag"># bfs</a>
-        
           <a href="/tags/难度2/" rel="tag"># 难度2</a>
+        
+          <a href="/tags/bfs/" rel="tag"># bfs</a>
         
           <a href="/tags/dp/" rel="tag"># dp</a>
         
@@ -597,21 +597,21 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/f27c.html" rel="bookmark">【NOIP17 D1T3】逛公园</a></div>
-      
-    </li>
-  
-    <li class="popular-posts-item">
-      
-      
-      <div class="popular-posts-title"><a href="/posts/23c4.html" rel="bookmark">【NOIP13 D2T3】华容道</a></div>
-      
-    </li>
-  
-    <li class="popular-posts-item">
-      
-      
       <div class="popular-posts-title"><a href="/posts/e5d4.html" rel="bookmark">【NOIP15 D2T2】 子串</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="/posts/3fed.html" rel="bookmark">【NOIP17 D2T1】宝藏</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="/posts/f27c.html" rel="bookmark">【NOIP17 D1T3】逛公园</a></div>
       
     </li>
   
@@ -625,7 +625,7 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/301d.html" rel="bookmark">【NOIP17 D2T2】宝藏</a></div>
+      <div class="popular-posts-title"><a href="/posts/eb3b.html" rel="bookmark">【ARC096-b】Static Sushi</a></div>
       
     </li>
   
@@ -705,8 +705,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/posts/b8ea.html" rel="next" title="【NOIP14 D1T2】联合权值">
-                <i class="fa fa-chevron-left"></i> 【NOIP14 D1T2】联合权值
+              <a href="/posts/3a8c.html" rel="next" title="【NOIP14 D2T1】无线网络发射器选址">
+                <i class="fa fa-chevron-left"></i> 【NOIP14 D2T1】无线网络发射器选址
               </a>
             
           </div>
@@ -715,8 +715,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/posts/3a8c.html" rel="prev" title="【NOIP14 D2T1】无线网络发射器选址">
-                【NOIP14 D2T1】无线网络发射器选址 <i class="fa fa-chevron-right"></i>
+              <a href="/posts/15f6.html" rel="prev" title="【Bzoj3124】【Luogu3304】直径">
+                【Bzoj3124】【Luogu3304】直径 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -798,7 +798,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">344</span>
+                    <span class="site-state-item-count">345</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -1086,7 +1086,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">127</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">129</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>

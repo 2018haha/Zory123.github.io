@@ -123,25 +123,32 @@
 
 
 
-  <meta name="description" content="匈牙利算法核心：融合了贪心的某种暴力">
-<meta name="keywords" content="匈牙利">
+  <meta name="description" content="博大精深的二分图">
+<meta name="keywords" content="匈牙利,二分图">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【OI之路】08暴力的学问-3匈牙利算法">
-<meta property="og:url" content="http://zory.cf/posts/3257.html">
+<meta property="og:title" content="【OI之路】03图论算法-11二分图">
+<meta property="og:url" content="http://zory.cf/posts/250b.html">
 <meta property="og:site_name" content="Zory的个人博客">
-<meta property="og:description" content="匈牙利算法核心：融合了贪心的某种暴力">
+<meta property="og:description" content="博大精深的二分图">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-09-07T05:48:36.000Z">
+<meta property="og:image" content="http://zory.cf/images/OI之路/二分图/1-1.png">
+<meta property="og:image" content="http://zory.cf/images/OI之路/二分图/1-2.png">
+<meta property="og:image" content="http://zory.cf/images/OI之路/二分图/2-1.png">
+<meta property="og:image" content="http://zory.cf/images/OI之路/二分图/2-2.png">
+<meta property="og:image" content="http://zory.cf/images/OI之路/二分图/3-1.png">
+<meta property="og:image" content="http://zory.cf/images/OI之路/二分图/3-2.png">
+<meta property="og:updated_time" content="2018-09-10T05:26:34.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="【OI之路】08暴力的学问-3匈牙利算法">
-<meta name="twitter:description" content="匈牙利算法核心：融合了贪心的某种暴力">
+<meta name="twitter:title" content="【OI之路】03图论算法-11二分图">
+<meta name="twitter:description" content="博大精深的二分图">
+<meta name="twitter:image" content="http://zory.cf/images/OI之路/二分图/1-1.png">
 
 
 
 
 
 
-  <link rel="canonical" href="http://zory.cf/posts/3257.html"/>
+  <link rel="canonical" href="http://zory.cf/posts/250b.html"/>
 
 
 
@@ -151,7 +158,7 @@
   };
 </script>
 
-  <title>【OI之路】08暴力的学问-3匈牙利算法 | Zory的个人博客</title>
+  <title>【OI之路】03图论算法-11二分图 | Zory的个人博客</title>
   
 
 
@@ -259,7 +266,7 @@
           
           <li class="menu-item menu-item-archives">
     <a href="/archives/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />历程Archives<span class="badge">344</span></a>
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />历程Archives<span class="badge">345</span></a>
   </li>
         
         
@@ -275,7 +282,7 @@
           
           <li class="menu-item menu-item-tags">
     <a href="/tags/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签Tags<span class="badge">127</span></a>
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签Tags<span class="badge">129</span></a>
   </li>
         
         
@@ -405,7 +412,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://zory.cf/posts/3257.html">
+    <link itemprop="mainEntityOfPage" href="http://zory.cf/posts/250b.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Zory">
@@ -422,7 +429,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">【OI之路】08暴力的学问-3匈牙利算法
+          <h2 class="post-title" itemprop="name headline">【OI之路】03图论算法-11二分图
               
             
           </h2>
@@ -447,7 +454,7 @@
                 
               
 
-              <time title="创建于：2003-01-22 00:08:03" itemprop="dateCreated datePublished" datetime="2003-01-22T00:08:03+08:00">2003-01-22</time>
+              <time title="创建于：2003-01-22 00:03:11" itemprop="dateCreated datePublished" datetime="2003-01-22T00:03:11+08:00">2003-01-22</time>
             
 
             
@@ -464,7 +471,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改于：2018-09-07 13:48:36" itemprop="dateModified" datetime="2018-09-07T13:48:36+08:00">2018-09-07</time>
+                <time title="修改于：2018-09-10 13:26:34" itemprop="dateModified" datetime="2018-09-10T13:26:34+08:00">2018-09-10</time>
               
             
           </span>
@@ -496,8 +503,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/posts/3257.html#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论：</span> <span class="post-comments-count valine-comment-count" data-xid="/posts/3257.html" itemprop="commentCount"></span>
+                <a href="/posts/250b.html#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论：</span> <span class="post-comments-count valine-comment-count" data-xid="/posts/250b.html" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -505,7 +512,7 @@
 
           
           
-             <span id="/posts/3257.html" class="leancloud_visitors" data-flag-title="【OI之路】08暴力的学问-3匈牙利算法">
+             <span id="/posts/250b.html" class="leancloud_visitors" data-flag-title="【OI之路】03图论算法-11二分图">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -536,19 +543,31 @@
       
 
       
-        <p>匈牙利算法核心：融合了贪心的某种暴力</p>
-<a id="more"></a>
-<h2 id="二分图："><a href="#二分图：" class="headerlink" title="二分图："></a>二分图：</h2><p>顶点可以分类两个集合X和Y，所有的边关联的两个顶点，恰好一个属于集合X，另一个属于集合Y。</p>
-<h2 id="最大二分匹配："><a href="#最大二分匹配：" class="headerlink" title="最大二分匹配："></a>最大二分匹配：</h2><p><a href="http://caioj.cn/problem.php?id=1122" target="_blank" rel="noopener">Caioj1122</a><br>【问题背景】<br>n只公牛和m只母牛，每只公牛都和一些母牛有匹配关系。<br>公牛和母牛只能一对一匹配。要使得最后匹配对数最大。<br>【输入】<br>第一行两个整数，n(0≤n≤400)和m(0≤m≤500)。<br>第二行到第N+1行一共N行，每行对应一只公牛。<br>第一个数字(si)是与这头公牛有匹配关系的母牛的数目(0≤si≤m)。<br>后面的si个数表示这些母牛编号。母牛编号限定在区间(1..m)中。<br>【输出】<br>输出一个整数，表示牛群匹配对数最大值<br>【INPUT】<br>5 5<br>1 2<br>3 2 3 5<br>2 1 3<br>1 1<br>2 3 4<br>【OUTPUT】<br>5</p>
+        <p>博大精深的二分图<br><a id="more"></a></p>
+<h1 id="二分图"><a href="#二分图" class="headerlink" title="二分图"></a>二分图</h1><p>顶点可以分类两个集合X和Y，所有的边关联的两个顶点，恰好一个属于集合X，另一个属于集合Y。</p>
+<h1 id="最大二分匹配"><a href="#最大二分匹配" class="headerlink" title="最大二分匹配"></a>最大二分匹配</h1><p>（下文为早期所写，不保证正确性）<br>例题<br><a href="http://caioj.cn/problem.php?id=1122" target="_blank" rel="noopener">Caioj1122</a></p>
 <h2 id="匈牙利算法："><a href="#匈牙利算法：" class="headerlink" title="匈牙利算法："></a>匈牙利算法：</h2><p>ask[i]==true，表示这一轮中母牛i有匹配成功的可能性（每到一只新公牛t就要重置）</p>
 <p>我们每次尽量让公牛x（不一定是t）配对，那么当询问到母牛i时</p>
 <h3 id="ask-i-true"><a href="#ask-i-true" class="headerlink" title="ask[i]==true"></a>ask[i]==true</h3><p>情况一、match[i]==0，直接成功<br>情况二、match[i]&gt;0，之前有一只公牛y=match[i]，<br> 尝试让y找其他母牛去匹配，从而调整搭配<br> 在这过程中，这个公牛y以及之后为了搞定公牛y所需要调整的其他公牛y2、y3<br> 都不能占用母牛i（先宣告主权，ask[i]=false），从而避免死循环，这是一个潜在的贪心，<br> 递归回来之后假如一切顺利，则x也成功<br>假如情况任意一个成功，匹配match[i]=x<br>但无论如何，ask[i]=false（别急着问为什么，看下去先）</p>
-<h3 id="ask-i-false（看文字前再明确一遍，配对公牛t时曾经询问过i）"><a href="#ask-i-false（看文字前再明确一遍，配对公牛t时曾经询问过i）" class="headerlink" title="ask[i]==false（看文字前再明确一遍，配对公牛t时曾经询问过i）"></a>ask[i]==false（看文字前再明确一遍，配对公牛t时曾经询问过i）</h3><p>情况一、之前匹配成功了，然而，仔细想想，我们的递归结构中，只要有一次成功，<br>        就全部成功了，那么x的配对就不会找到母牛i了，所里本情况不存在。<br>情况二、之前匹配也就是调整失败，那么在同样情况下（ask没变也就是公牛t没变）<br>        这一次必然也会失败，所以这时应当退出，达到剪枝省时的目的<br>总而言之，当ask[i]==false时，退出即可</p>
+<h3 id="ask-i-false（看文字前再明确一遍，配对公牛t时曾经询问过i）"><a href="#ask-i-false（看文字前再明确一遍，配对公牛t时曾经询问过i）" class="headerlink" title="ask[i]==false（看文字前再明确一遍，配对公牛t时曾经询问过i）"></a>ask[i]==false（看文字前再明确一遍，配对公牛t时曾经询问过i）</h3><p>情况一、之前匹配成功了，然鹅，仔细想想，我们的递归结构中，只要有一次成功，<br>        就全部成功了，那么x的配对就不会找到母牛i了，所里本情况不存在。<br>情况二、之前匹配也就是调整失败，那么在同样情况下（ask没变也就是公牛t没变）<br>        这一次必然也会失败，所以这时应当退出，达到剪枝省时的目的<br>总而言之，当ask[i]==false时，退出即可</p>
 <h2 id="决策单调性（好像语言组织得不是特别好）："><a href="#决策单调性（好像语言组织得不是特别好）：" class="headerlink" title="决策单调性（好像语言组织得不是特别好）："></a>决策单调性（好像语言组织得不是特别好）：</h2><p>为什么当情况二调整公牛y后成功则母牛i属于x，而不是x自己去再往后尝试？<br>好吧严格而言这并不是一个证明：目前先凑合着，假如以后发生状况需要调整x时再调整<br>疑点：“现在调整”和“满足现状”面对的状况可能不一样？<br>解答：这应该是可行最大二分图匹配方案不唯一的一种体现吧，<br>反正目前而言我们的目的是求出最大匹配数，所以具体方案没有关系</p>
 <h2 id="加速："><a href="#加速：" class="headerlink" title="加速："></a>加速：</h2><p>可以考虑运用邻接表（这条边通往的地方）和时间戳（这样就不用每次初始化ask数组）<br>邻接表：话说这可是我们学最短路后立刻就学了的东西，适用于稀疏图<br>时间戳：ask用int存储，如果比“当前匹配公牛编号t”小就是过时的，相当于false</p>
-<h2 id="改造："><a href="#改造：" class="headerlink" title="改造："></a>改造：</h2><p><strong>多重二分图匹配</strong>并且完美代替网络流：<br><a href="41bc.html">Optimal Milking</a><br>其实就是每个公牛可以匹配多个母牛<br>（脑子灵活点哦，假如题目是一个母牛匹配多个公牛，那就把母牛看做公牛嘛）<br>稍微改改配对规则就好了，match变二维</p>
+<h2 id="改造："><a href="#改造：" class="headerlink" title="改造："></a>改造：</h2><p>解决多重二分图匹配问题<br><a href="41bc.html">Optimal Milking</a></p>
 <h2 id="练习："><a href="#练习：" class="headerlink" title="练习："></a>练习：</h2><p><a href="7392.html">【Poj1325】Machine Schedule</a></p>
-<h2 id="总之"><a href="#总之" class="headerlink" title="总之"></a>总之</h2><p>假如看不懂E-mail我或评论哦！<br>还是那句话，伟大的scy也会有不完美的地方，以上是我的思考。</p>
+<h1 id="二分图提高篇"><a href="#二分图提高篇" class="headerlink" title="二分图提高篇"></a>二分图提高篇</h1><p>二分图增广路的另一种理解：<br>建立一个有向图，非匹配边看做从左向右，匹配边看做从右向左<br>那么左边的x到右边的y存在增广路，相当于存在一条路径</p>
+<h2 id="二分图最大匹配的必经边和可行边"><a href="#二分图最大匹配的必经边和可行边" class="headerlink" title="二分图最大匹配的必经边和可行边"></a>二分图最大匹配的必经边和可行边</h2><p>先从特殊的<strong>完备匹配</strong>开始考虑<br>可以先任意找到一组匹配方案</p>
+<p>必经边：【当前是匹配边】并且【删除后不存在从x到y的路径】<br>因为匹配边意味着从y到x，现在又存在从x到y的路径<br>那么就以为着 x和y属于同一个强连通分量<br>所以必经边的判定条件可以改为：【当前是匹配边】并且【不同强连通分量中】</p>
+<p>可行边：【当前是匹配边】或者【把x到y看做可行边后，存在连接原本另外两个匹配点的路径】<br>因为我们刚才的建边方式，也就是另外两个原本的点之间有路径，同时原本就有匹配边把他们和x、y连接<br>所以说条件可以改成：【当前是匹配边】或者【同一个强连通分量中】</p>
+<p>不过，如果没有完备匹配呢？<br>对于两种边的第二个条件，不一定非要增广x到y，而可以是到z<br>所以就会出问题（还傻傻地以为没有问题）</p>
+<p>怎么解决呢？接下来的内容很好懂<br>但是我认为是神仙想出来的东西……太nb了，我也只有帮忙吹水的份</p>
+<p>分情况去解决问题<br>对于必经边的判定，不能只是x到y了，而是不能有任何新增广路<br>所以我们要判断，删除之后是否存在其他增广路<br>不过，这个增广路一定是连接x和y中某一个的，否则与此次操作无关，影响了最大匹配的“最大”</p>
+<p>如果我们考虑用网络流解决二分图最大匹配问题，<br>剩下的残余网络能够很清晰地得出具体的有向图方案<br>因为对于匹配边，流量过去了，那么有效边是其反向弧，<br>非匹配边则不变，恰好与我们提出的有向图表示法相一致</p>
+<p>加入源点和汇点，那么匹配点也能很清晰地表示出来了<br>然后我们可以用这个图去考虑完善判断条件</p>
+<p>图示：<br>a和b是非匹配点，u和v是匹配边<br>蓝色是匹配边，红色是非匹配边<br>然后绿色是在强连通分量中的<strong>部分</strong></p>
+<p>先解决必经边的判定，也就是断开原本的边，分为x和y去找两种情况<br><img src="../images/OI之路/二分图/1-1.png" alt=""><br><img src="../images/OI之路/二分图/1-2.png" alt=""></p>
+<p>对于可行边的判定，原本是非匹配边<br>可能x和y中只有一个匹配点，分为x和y去找两种情况<br><img src="../images/OI之路/二分图/2-1.png" alt=""><br><img src="../images/OI之路/二分图/2-2.png" alt=""><br>也可能两个都是匹配点<br><img src="../images/OI之路/二分图/3-1.png" alt=""><br><img src="../images/OI之路/二分图/3-2.png" alt=""></p>
+<p>综上所述，可以把原本的方案，判断强连通部分不变，<br>对象从简单有向图变为网络流的残余网络（忽略流量为0的边）</p>
+<p>例题：<a href="6259.html">舞动的夜晚</a></p>
 
       
     </div>
@@ -562,6 +581,8 @@
         
           <a href="/tags/匈牙利/" rel="tag"># 匈牙利</a>
         
+          <a href="/tags/二分图/" rel="tag"># 二分图</a>
+        
       </div>
     
 
@@ -574,6 +595,13 @@
     <li class="popular-posts-item">
       
       
+      <div class="popular-posts-title"><a href="/posts/7392.html" rel="bookmark">【Poj1325】Machine Schedule</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+      
       <div class="popular-posts-title"><a href="/posts/41bc.html" rel="bookmark">【Poj2112】Optimal Milking</a></div>
       
     </li>
@@ -581,7 +609,7 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/7392.html" rel="bookmark">【Poj1325】Machine Schedule</a></div>
+      <div class="popular-posts-title"><a href="/posts/fc.html" rel="bookmark">【Poj1904】King's Quest</a></div>
       
     </li>
   
@@ -595,7 +623,7 @@
 				<p id="div-border-left-purple">
 			   <b>本文基于<a target="_blank" title="Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)" href="http://creativecommons.org/licenses/by-sa/4.0/deed.zh"> 知识共享署名-相同方式共享 4.0 </a>国际许可协议发布</b><br/>
 				<span>
-				<b>本文地址：</b><a href="/posts/3257.html" title="【OI之路】08暴力的学问-3匈牙利算法">http://zory.cf/posts/3257.html</a><br/><b>转载请注明出处，谢谢！</b>
+				<b>本文地址：</b><a href="/posts/250b.html" title="【OI之路】03图论算法-11二分图">http://zory.cf/posts/250b.html</a><br/><b>转载请注明出处，谢谢！</b>
 				</span>
 				</p>
 		</div>
@@ -661,8 +689,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/posts/ced6.html" rel="next" title="【OI之路】08暴力的学问-2莫队">
-                <i class="fa fa-chevron-left"></i> 【OI之路】08暴力的学问-2莫队
+              <a href="/posts/293.html" rel="next" title="【OI之路】03图论算法-7简单连通性问题">
+                <i class="fa fa-chevron-left"></i> 【OI之路】03图论算法-7简单连通性问题
               </a>
             
           </div>
@@ -671,8 +699,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/posts/23c.html" rel="prev" title="【OI之路】08暴力的学问-4kdtree">
-                【OI之路】08暴力的学问-4kdtree <i class="fa fa-chevron-right"></i>
+              <a href="/posts/feb5.html" rel="prev" title="【OI之路】04排序查找-1二分">
+                【OI之路】04排序查找-1二分 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -754,7 +782,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">344</span>
+                    <span class="site-state-item-count">345</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -1042,7 +1070,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">127</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">129</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1099,7 +1131,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#二分图："><span class="nav-text">二分图：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#最大二分匹配："><span class="nav-text">最大二分匹配：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#匈牙利算法："><span class="nav-text">匈牙利算法：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#ask-i-true"><span class="nav-text">ask[i]==true</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ask-i-false（看文字前再明确一遍，配对公牛t时曾经询问过i）"><span class="nav-text">ask[i]==false（看文字前再明确一遍，配对公牛t时曾经询问过i）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#决策单调性（好像语言组织得不是特别好）："><span class="nav-text">决策单调性（好像语言组织得不是特别好）：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#加速："><span class="nav-text">加速：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#改造："><span class="nav-text">改造：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#练习："><span class="nav-text">练习：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总之"><span class="nav-text">总之</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#二分图"><span class="nav-text">二分图</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#最大二分匹配"><span class="nav-text">最大二分匹配</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#匈牙利算法："><span class="nav-text">匈牙利算法：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#ask-i-true"><span class="nav-text">ask[i]==true</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ask-i-false（看文字前再明确一遍，配对公牛t时曾经询问过i）"><span class="nav-text">ask[i]==false（看文字前再明确一遍，配对公牛t时曾经询问过i）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#决策单调性（好像语言组织得不是特别好）："><span class="nav-text">决策单调性（好像语言组织得不是特别好）：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#加速："><span class="nav-text">加速：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#改造："><span class="nav-text">改造：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#练习："><span class="nav-text">练习：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二分图提高篇"><span class="nav-text">二分图提高篇</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#二分图最大匹配的必经边和可行边"><span class="nav-text">二分图最大匹配的必经边和可行边</span></a></li></ol></li></ol></div>
             
 
           </div>

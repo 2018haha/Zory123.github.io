@@ -124,14 +124,14 @@
 
 
   <meta name="description" content="来源和评测点Zjoi2014Bzoj3771Caioj1451">
-<meta name="keywords" content="快速傅里叶变换,精品题,难度3,容斥原理">
+<meta name="keywords" content="快速傅里叶变换,难度3,容斥原理,精品题">
 <meta property="og:type" content="article">
 <meta property="og:title" content="【Bzoj3771】Triple">
 <meta property="og:url" content="http://zory.cf/posts/df74.html">
 <meta property="og:site_name" content="Zory的个人博客">
 <meta property="og:description" content="来源和评测点Zjoi2014Bzoj3771Caioj1451">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-08-20T07:26:08.000Z">
+<meta property="og:updated_time" content="2018-09-09T04:10:20.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【Bzoj3771】Triple">
 <meta name="twitter:description" content="来源和评测点Zjoi2014Bzoj3771Caioj1451">
@@ -259,7 +259,7 @@
           
           <li class="menu-item menu-item-archives">
     <a href="/archives/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />历程Archives<span class="badge">344</span></a>
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />历程Archives<span class="badge">345</span></a>
   </li>
         
         
@@ -275,7 +275,7 @@
           
           <li class="menu-item menu-item-tags">
     <a href="/tags/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签Tags<span class="badge">127</span></a>
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签Tags<span class="badge">129</span></a>
   </li>
         
         
@@ -464,7 +464,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改于：2018-08-20 15:26:08" itemprop="dateModified" datetime="2018-08-20T15:26:08+08:00">2018-08-20</time>
+                <time title="修改于：2018-09-09 12:10:20" itemprop="dateModified" datetime="2018-09-09T12:10:20+08:00">2018-09-09</time>
               
             
           </span>
@@ -545,7 +545,7 @@
 <p>题意：给出价格<strong>各不相同</strong>（这很重要）的一些斧头，每次选一、二、三个，将所有方案统计起来，按价格输出，<strong>注意选的是组合不是排列。</strong><br>考虑分解成子问题。</p>
 <h1 id="选一个"><a href="#选一个" class="headerlink" title="选一个"></a>选一个</h1><p>先解决选一个的情况。<br>设$q_i$表示第i个斧头的价格。<br>再设$A(q_i)=1$<br>则$Ans[i]+=A(q_i)$<br>原因就是每个斧头选自己，很好理解的</p>
 <h1 id="选两个"><a href="#选两个" class="headerlink" title="选两个"></a>选两个</h1><p>答案是$A^2(q_i)$吗？<br>先想想这个柿子怎么来的：<br>将A想成多项式的系数<br>系数（原本1）相乘就是方案数相乘<br>指数（价格）相加就是花费相加</p>
-<p>然而，仔细考虑，发现不完整，因为会有违法情况<br>违法1：第i项和第i项相乘，应该被忽略的<br>违法2：第i、j项乘积和第j、i项乘积重复<br>对于违法1，设$B(2q_i)=1$，$A^2(q_i)-B(q_i)$<br>对于违法2，解决违法一后除以2即可<br>综上所述，$Ans[i]+=\frac { A^2(q_i)-B(q_i) }{2}$</p>
+<p>然鹅，仔细考虑，发现不完整，因为会有违法情况<br>违法1：第i项和第i项相乘，应该被忽略的<br>违法2：第i、j项乘积和第j、i项乘积重复<br>对于违法1，设$B(2q_i)=1$，$A^2(q_i)-B(q_i)$<br>对于违法2，解决违法一后除以2即可<br>综上所述，$Ans[i]+=\frac { A^2(q_i)-B(q_i) }{2}$</p>
 <h1 id="选三个"><a href="#选三个" class="headerlink" title="选三个"></a>选三个</h1><p>依照选两个的思路，先计算出$A^3(q_i)$<br>违法1：aab aba baa<br>违法2：abc acb bac bca cab cba<br>对于违法1，<br>设$AB()=A() \times B()，C(q_i \times 3)=1$，<br>答案就是$A^3(q_i)-3AB(q_i)+2C(i)$<br>（因为B是相当于选了两个相同的，所有三个中两个相同情况都应去除）<br>但假如b=a，也就是aaa，那就不能减3个而是一个，用C补回差值<br>对于违法2，解决违法一后除以6即可<br>综上所述，$Ans[i]+=\frac { A^3(q_i)-3AB(q_i)+2C(i) }{6}$</p>
 <h1 id="总结与提醒"><a href="#总结与提醒" class="headerlink" title="总结与提醒"></a>总结与提醒</h1><p>0次项系数是0，所以$A^3(q_i)$必定是选了三个<br>$Ans[i]=A(q_i)+\frac{A^2(q_i)-B(q_i)}{2}+\frac { A^3(q_i)-3AB(q_i)+2C(i) }{6}$</p>
 <p>对于多项式乘积，使用FFT计算，综合复杂度$\Theta(nlogn)$</p>
@@ -563,11 +563,11 @@
         
           <a href="/tags/快速傅里叶变换/" rel="tag"># 快速傅里叶变换</a>
         
-          <a href="/tags/精品题/" rel="tag"># 精品题</a>
-        
           <a href="/tags/难度3/" rel="tag"># 难度3</a>
         
           <a href="/tags/容斥原理/" rel="tag"># 容斥原理</a>
+        
+          <a href="/tags/精品题/" rel="tag"># 精品题</a>
         
       </div>
     
@@ -588,14 +588,14 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/25f1.html" rel="bookmark">【Bzoj1095】【Luogu2056】捉迷藏</a></div>
+      <div class="popular-posts-title"><a href="/posts/1db5.html" rel="bookmark">【Bzoj3527】力</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/1db5.html" rel="bookmark">【Bzoj3527】力</a></div>
+      <div class="popular-posts-title"><a href="/posts/b112.html" rel="bookmark">花园</a></div>
       
     </li>
   
@@ -609,7 +609,7 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/b112.html" rel="bookmark">花园</a></div>
+      <div class="popular-posts-title"><a href="/posts/edb5.html" rel="bookmark">【Bzoj1835】【Luogu2605】基站选址</a></div>
       
     </li>
   
@@ -689,8 +689,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/posts/1db5.html" rel="next" title="【Bzoj3527】力">
-                <i class="fa fa-chevron-left"></i> 【Bzoj3527】力
+              <a href="/posts/9654.html" rel="next" title="【Bzoj2179】超大整数乘法">
+                <i class="fa fa-chevron-left"></i> 【Bzoj2179】超大整数乘法
               </a>
             
           </div>
@@ -699,8 +699,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/posts/134e.html" rel="prev" title="【Luogu3113】马拉松赛跑Marathon">
-                【Luogu3113】马拉松赛跑Marathon <i class="fa fa-chevron-right"></i>
+              <a href="/posts/1db5.html" rel="prev" title="【Bzoj3527】力">
+                【Bzoj3527】力 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -782,7 +782,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">344</span>
+                    <span class="site-state-item-count">345</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -1070,7 +1070,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">127</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">129</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>

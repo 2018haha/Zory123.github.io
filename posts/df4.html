@@ -131,7 +131,7 @@
 <meta property="og:site_name" content="Zory的个人博客">
 <meta property="og:description" content="来源和评测点和谐社会模拟赛Bzoj2064">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-08-20T07:26:08.000Z">
+<meta property="og:updated_time" content="2018-09-09T04:10:20.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【Bzoj2064】分裂">
 <meta name="twitter:description" content="来源和评测点和谐社会模拟赛Bzoj2064">
@@ -259,7 +259,7 @@
           
           <li class="menu-item menu-item-archives">
     <a href="/archives/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />历程Archives<span class="badge">344</span></a>
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />历程Archives<span class="badge">345</span></a>
   </li>
         
         
@@ -275,7 +275,7 @@
           
           <li class="menu-item menu-item-tags">
     <a href="/tags/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签Tags<span class="badge">127</span></a>
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签Tags<span class="badge">129</span></a>
   </li>
         
         
@@ -464,7 +464,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改于：2018-08-20 15:26:08" itemprop="dateModified" datetime="2018-08-20T15:26:08+08:00">2018-08-20</time>
+                <time title="修改于：2018-09-09 12:10:20" itemprop="dateModified" datetime="2018-09-09T12:10:20+08:00">2018-09-09</time>
               
             
           </span>
@@ -553,7 +553,7 @@
 <li>考虑题目要求的是最小次数，虽然DP和贪心差别很大，但先考虑一下极端情况：<br>1) 最坏情况(n-1)+(m-1)=n+m-2，也就是全部加起来再分开<br>2) 如果稍微好一点，恰好有两部分对应和相等，那么合并和分离就都减少了一次<br>也就是(n-2)+(m-2)=n+m-4<br>3) 那么如果有k部分对应相等，显然次数就是n+m-2*k<br>4) 用最好情况验证一下，次数是0,那么k=n=m，n+m-2*k=0</li>
 </ol>
 <p>哇这下子就好办了！求出一个最大的k就好了。<br>更好的是，求最大的k，根本就不用真的去合并、分割<br>于是祭出状态压缩大法！用二进制表示选取状态。<br>f[s1][s2]表示集合1和集合2的子集s1和s2的最大k<br>sum[s]表示状态s的和<br>f[s1][s2]=max(f[s1^i][s2^j])+bool(sum[s1]==sum[s2])</p>
-<p>以上就是网上普遍的解法了，然而我有幸又看到一篇文章<br>他的方法也挺巧妙的，主要是<strong>简化</strong>上面的方程（复杂度不变）<br>首先，sum数组要开两个，有点麻烦，<br>因为两个状态都是一起用的，考虑状态全部合二为一（最大长度从10变20）<br>然后集合1是正数，集合2是负数，那么如果sum[s]=0表示和相同<br>然后为了避免冲突，sum不能乱算（挺巧妙的）：<br>sum[s]=sum[lowbit(s)]+sum[s-lowbit(s)]<br>然后f也可以把状态合二为一</p>
+<p>以上就是网上普遍的解法了，然鹅我有幸又看到一篇文章<br>他的方法也挺巧妙的，主要是<strong>简化</strong>上面的方程（复杂度不变）<br>首先，sum数组要开两个，有点麻烦，<br>因为两个状态都是一起用的，考虑状态全部合二为一（最大长度从10变20）<br>然后集合1是正数，集合2是负数，那么如果sum[s]=0表示和相同<br>然后为了避免冲突，sum不能乱算（挺巧妙的）：<br>sum[s]=sum[lowbit(s)]+sum[s-lowbit(s)]<br>然后f也可以把状态合二为一</p>
 
 </div></div>
 <h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
@@ -609,14 +609,14 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/8e5c.html" rel="bookmark">【NOIP16 D2T2】换教室</a></div>
+      <div class="popular-posts-title"><a href="/posts/f8f3.html" rel="bookmark">WZK的减肥计划</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/4a23.html" rel="bookmark">【Caioj1086】进攻策略</a></div>
+      <div class="popular-posts-title"><a href="/posts/554a.html" rel="bookmark">打鼹鼠</a></div>
       
     </li>
   
@@ -696,8 +696,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/posts/dc53.html" rel="next" title="【Bzoj1801】【Luogu2051】中国象棋">
-                <i class="fa fa-chevron-left"></i> 【Bzoj1801】【Luogu2051】中国象棋
+              <a href="/posts/4b22.html" rel="next" title="【Bzoj1827】【Luogu2986】【Bzoj3743】奶牛大集会">
+                <i class="fa fa-chevron-left"></i> 【Bzoj1827】【Luogu2986】【Bzoj3743】奶牛大集会
               </a>
             
           </div>
@@ -789,7 +789,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">344</span>
+                    <span class="site-state-item-count">345</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -1077,7 +1077,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">127</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">129</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>

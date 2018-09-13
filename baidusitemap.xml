@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>http://zory.cf/posts/293.html</loc>
+    <lastmod>2018-09-13T09:05:06.000Z</lastmod>
+    <data>
+        <display>
+        <title>【OI之路】03图论算法-7简单连通性问题</title>
+        <pubTime>2003-01-21T16:03:10.000Z</pubTime>
+        
+        <tag>tarjan</tag>
+         
+         
+           
+             
+              <breadCrumb title="OI之路" url="http://zory.cf/categories/OI%E4%B9%8B%E8%B7%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://zory.cf/posts/6259.html</loc>
     <lastmod>2018-09-11T09:30:34.000Z</lastmod>
     <data>
@@ -17,26 +37,6 @@
            
              
               <breadCrumb title="刷题" url="http://zory.cf/categories/%E5%88%B7%E9%A2%98/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://zory.cf/posts/293.html</loc>
-    <lastmod>2018-09-10T13:39:10.000Z</lastmod>
-    <data>
-        <display>
-        <title>【OI之路】03图论算法-7简单连通性问题</title>
-        <pubTime>2003-01-21T16:03:10.000Z</pubTime>
-        
-        <tag>tarjan</tag>
-         
-         
-           
-             
-              <breadCrumb title="OI之路" url="http://zory.cf/categories/OI%E4%B9%8B%E8%B7%AF/"/>
           
         </display>
     </data>

@@ -131,7 +131,7 @@
 <meta property="og:site_name" content="Zory的个人博客">
 <meta property="og:description" content="简单连通性问题tarjan算法无向图与有向图致敬：维基百科Robert_Tarjan">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-09-10T13:39:10.000Z">
+<meta property="og:updated_time" content="2018-09-13T09:05:06.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【OI之路】03图论算法-7简单连通性问题">
 <meta name="twitter:description" content="简单连通性问题tarjan算法无向图与有向图致敬：维基百科Robert_Tarjan">
@@ -464,7 +464,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改于：2018-09-10 21:39:10" itemprop="dateModified" datetime="2018-09-10T21:39:10+08:00">2018-09-10</time>
+                <time title="修改于：2018-09-13 17:05:06" itemprop="dateModified" datetime="2018-09-13T17:05:06+08:00">2018-09-13</time>
               
             
           </span>
@@ -539,10 +539,10 @@
         <p>简单连通性问题<br>tarjan算法<br>无向图与有向图<br>致敬：<a href="https://en.wikipedia.org/wiki/Robert_Tarjan" target="_blank" rel="noopener">维基百科Robert_Tarjan</a><br><a id="more"></a></p>
 <h1 id="无向图"><a href="#无向图" class="headerlink" title="无向图"></a>无向图</h1><h2 id="连通图"><a href="#连通图" class="headerlink" title="连通图"></a>连通图</h2><p>割点：删去该点和相关的边后，分裂为两个或以上子图<br>桥或割边：删去该边后，分裂为两个或以上子图</p>
 <h2 id="tarjan算法"><a href="#tarjan算法" class="headerlink" title="tarjan算法"></a>tarjan算法</h2><p>dfn表示时间戳<br>low表示所有【子树内节点，能通过一条非搜索树边到达子树内的节点】的最小dfn</p>
-<h2 id="割点和割边的判定"><a href="#割点和割边的判定" class="headerlink" title="割点和割边的判定"></a>割点和割边的判定</h2><p>无向边x-&gt;y是割边，当且仅当搜索树上存在x和y，满足$dfn_x &lt; low_y$<br>含义就是，y无法通过其他方式到达比x更早的点<br>显然割边一定是搜索树上面的<br>为了也能兼容有重边的情况，可以考虑通过记录来到这里那条边的编号来判断是否是搜索树边</p>
-<p>对于割点，<br>当x不是根节点是，仅当搜索树上存在x的子节点y，满足$dfn_x \leq low_y$<br>但当x是根节点的时候，则更简单，即x要有至少两个儿子节点</p>
+<h2 id="割点和割边的判定"><a href="#割点和割边的判定" class="headerlink" title="割点和割边的判定"></a>割点和割边的判定</h2><p>无向边x-&gt;y是割边，当且仅当搜索树上存在x和y，满足 $dfn_x &lt; low_y$<br>含义就是，y无法通过其他方式到达比x更早的点<br>显然割边一定是搜索树上面的<br>为了也能兼容有重边的情况，可以考虑通过记录来到这里那条边的编号来判断是否是搜索树边</p>
+<p>对于割点，<br>当x不是根节点时，仅当搜索树上存在x的子节点y，满足 $dfn_x \leq low_y$<br>但当x是根节点的时候，则更简单，即x要有至少两个儿子节点</p>
 <h2 id="双联通分量"><a href="#双联通分量" class="headerlink" title="双联通分量"></a>双联通分量</h2><p>点双联通分量（v-DDC，又有一个经常被误用的名字：块）：无向图中，极大无割点联通子图<br>显然任意两个点，都同时在至少一个简单环中<br>求法和缩点：<br><strong>并不是去掉所有割点！</strong><br>割点可能同时存在多个v-DCC中<br>维护一个栈（仅第一次访问才放入），当x和y满足割点判定条件（不管x是不是根节点），<br>将顶部到y间的元素弹出，再强行加入一个x，作为v-DDC（不难发现x还在里面，以后可能会被取出）<br>另外，孤立点也是v-DDC<br>缩点的时候，要新建割点个数（分配新编号，指向所有包含自己的v-DDC）的点，是一棵树（或森林）<br>原理：<br>因为满足条件，去掉x无法导致y内分裂，<br>而一定不存在内部有割点的情况，否则在前面就弹出了</p>
-<p>边双联通分量（e-DDC）：无向图中，极大无割边联通子图<br>显然任意一条边，都同时在至少一个简单环中<br>求法和缩点：去掉所有割边，剩下的就是边双联通图<br>把每个点双联通图缩成一个点，用割边连起来，就形成一棵树（或森林）</p>
+<p>边双联通分量（e-DDC）：无向图中，极大无割边联通子图<br>显然任意一条边，都同时在至少一个简单环中<br>求法和缩点：去掉所有割边，剩下的就是边双联通图<br>把每个边双联通图缩成一个点，用割边连起来，就形成一棵树（或森林）</p>
 <h2 id="欧拉路"><a href="#欧拉路" class="headerlink" title="欧拉路"></a>欧拉路</h2><p>从s到t，经过每条边恰好一次<br>判定：两个点的度数是奇数，其他都是偶数，那两个点就是s和t</p>
 <h2 id="欧拉回路"><a href="#欧拉回路" class="headerlink" title="欧拉回路"></a>欧拉回路</h2><p>从s出发，回到s的欧拉路</p>
 <h2 id="欧拉图"><a href="#欧拉图" class="headerlink" title="欧拉图"></a>欧拉图</h2><p>存在欧拉回路的图<br>判定：无向图联通，每个点度数是偶数<br>输出：从任意点出发，前往没有去过的边，回溯的时候把y入栈，最后倒序输出<br>这样的时间复杂度较高，因为会多次尝试询问每一条边<br>一种优化是，每次邻接表把用过的剔除掉，因为不可逆，时间降到n+m<br>但此时空间复杂度为m，即使linux也会爆（详见理论知识-概要），建议手写栈</p>
@@ -1776,6 +1776,30 @@
   
   
 
+  
+    
+      <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      },
+      TeX: {equationNumbers: { autoNumber: "AMS" }}
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/mathjax@2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    
   
 
 

@@ -131,7 +131,7 @@
 <meta property="og:site_name" content="Zory的个人博客">
 <meta property="og:description" content="简单连通性问题tarjan算法无向图与有向图致敬：维基百科Robert_Tarjan">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-09-13T09:05:06.000Z">
+<meta property="og:updated_time" content="2018-09-14T13:07:06.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【OI之路】03图论算法-7简单连通性问题">
 <meta name="twitter:description" content="简单连通性问题tarjan算法无向图与有向图致敬：维基百科Robert_Tarjan">
@@ -464,7 +464,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改于：2018-09-13 17:05:06" itemprop="dateModified" datetime="2018-09-13T17:05:06+08:00">2018-09-13</time>
+                <time title="修改于：2018-09-14 21:07:06" itemprop="dateModified" datetime="2018-09-14T21:07:06+08:00">2018-09-14</time>
               
             
           </span>
@@ -567,6 +567,7 @@
 <p>那么，对所有scc缩点后，就会得到一个dag（有向无环图）</p>
 <h2 id="必经点、必经边"><a href="#必经点、必经边" class="headerlink" title="必经点、必经边"></a>必经点、必经边</h2><p>从s到t，所有路径上都存在的点<br>必经边也类似</p>
 <p>在普通有向图上求据说要使用支配树<br>不过在一个有向无环图上，可以用拓扑统计到这里的路径数量，再跑一次反图<br>那么枚举每个点，或者边，根据乘法原理检验即可<br>但是数字可能太大，可以考虑搞点模数来校验</p>
+<p>至于无向图就比较简单了，可以用相应的dcc去缩点</p>
 <h1 id="无向图的独立集和团"><a href="#无向图的独立集和团" class="headerlink" title="无向图的独立集和团"></a>无向图的独立集和团</h1><p>独立集：任意两点间没有边相连<br>团：任意两点都有一条边相连</p>
 <p>定理1：最大团大小=补图（对于边集的补集）的最大独立集大小<br>定理2：见套路集锦中二分图项目</p>
 <h1 id="有向无环图的最小路径点覆盖"><a href="#有向无环图的最小路径点覆盖" class="headerlink" title="有向无环图的最小路径点覆盖"></a>有向无环图的最小路径点覆盖</h1><p>简称最小路径覆盖，就是用最少数量的简单路径，覆盖每个点恰好一次<br>解决方法：<br>分析题意，因为点只能覆盖一次，对于路径上面的点，入度和出度不能超过1，而且至少一个是1<br>把每个点，拆分成入度点和出度点，那么就形成了一个二分图，按照原图的边来构图即可</p>
@@ -676,8 +677,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/posts/250b.html" rel="prev" title="【OI之路】03图论算法-11二分图">
-                【OI之路】03图论算法-11二分图 <i class="fa fa-chevron-right"></i>
+              <a href="/posts/250b.html" rel="prev" title="【OI之路】03图论算法-10二分图">
+                【OI之路】03图论算法-10二分图 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -1797,7 +1798,7 @@
         }
     });
 </script>
-<script type="text/javascript" src="//cdn.jsdelivr.net/npm/mathjax@2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/mathjax@2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
     
   

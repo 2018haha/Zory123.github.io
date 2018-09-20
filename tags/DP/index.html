@@ -257,7 +257,7 @@
           
           <li class="menu-item menu-item-archives">
     <a href="/archives/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />历程Archives<span class="badge">347</span></a>
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />历程Archives<span class="badge">348</span></a>
   </li>
         
         
@@ -499,34 +499,6 @@
 
       <h3 class="post-title">
         
-            <a class="post-title-link" href="/posts/3fed.html" itemprop="url">
-              
-                <span itemprop="name">【NOIP17 D2T1】宝藏</span>
-              
-            </a>
-        
-      </h3>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-06-27T18:42:00+08:00"
-              content="2018-06-27" >
-          06-27
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h3 class="post-title">
-        
             <a class="post-title-link" href="/posts/f27c.html" itemprop="url">
               
                 <span itemprop="name">【NOIP17 D1T3】逛公园</span>
@@ -684,7 +656,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">347</span>
+                    <span class="site-state-item-count">348</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -1821,7 +1793,28 @@
 
 </body>
 </html>
-  counter.save(null, {
+        }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            
+            counter.save(null, {
               success: function(counter) {
                 
                   var $element = $(document.getElementById(url));

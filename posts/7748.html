@@ -126,14 +126,14 @@
   <meta name="description" content="2.1.0 前言：%和mod都表示C++中的取余运算$\lfloor x \rfloor$就是向下取整数论这一章，建议大家用C++实现的时候以long long为主长文预警！  2.1.1 取余和取模顺便讲讲~首先声明C++中的%运算符是取余运算基本思路：①$c=a/b$ ②$r=a-c\times b$取余：在①中，向0方向取整取模：在①中，向负无穷方向取整举个栗子：(4)/(-3)≈-1.3$">
 <meta name="keywords" content="原创精华,欧几里得">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【OI之路】02数论算法-1公约数公倍数与欧几里得">
+<meta property="og:title" content="【OI之路】03数论-1约数与欧几里得">
 <meta property="og:url" content="http://zory.cf/posts/7748.html">
 <meta property="og:site_name" content="Zory的个人博客">
 <meta property="og:description" content="2.1.0 前言：%和mod都表示C++中的取余运算$\lfloor x \rfloor$就是向下取整数论这一章，建议大家用C++实现的时候以long long为主长文预警！  2.1.1 取余和取模顺便讲讲~首先声明C++中的%运算符是取余运算基本思路：①$c=a/b$ ②$r=a-c\times b$取余：在①中，向0方向取整取模：在①中，向负无穷方向取整举个栗子：(4)/(-3)≈-1.3$">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-08-19T08:58:22.000Z">
+<meta property="og:updated_time" content="2018-09-28T00:45:48.625Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="【OI之路】02数论算法-1公约数公倍数与欧几里得">
+<meta name="twitter:title" content="【OI之路】03数论-1约数与欧几里得">
 <meta name="twitter:description" content="2.1.0 前言：%和mod都表示C++中的取余运算$\lfloor x \rfloor$就是向下取整数论这一章，建议大家用C++实现的时候以long long为主长文预警！  2.1.1 取余和取模顺便讲讲~首先声明C++中的%运算符是取余运算基本思路：①$c=a/b$ ②$r=a-c\times b$取余：在①中，向0方向取整取模：在①中，向负无穷方向取整举个栗子：(4)/(-3)≈-1.3$">
 
 
@@ -151,7 +151,7 @@
   };
 </script>
 
-  <title>【OI之路】02数论算法-1公约数公倍数与欧几里得 | Zory的个人博客</title>
+  <title>【OI之路】03数论-1约数与欧几里得 | Zory的个人博客</title>
   
 
 
@@ -259,7 +259,7 @@
           
           <li class="menu-item menu-item-archives">
     <a href="/archives/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />历程Archives<span class="badge">355</span></a>
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />历程Archives<span class="badge">350</span></a>
   </li>
         
         
@@ -275,7 +275,7 @@
           
           <li class="menu-item menu-item-tags">
     <a href="/tags/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签Tags<span class="badge">133</span></a>
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签Tags<span class="badge">137</span></a>
   </li>
         
         
@@ -422,7 +422,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">【OI之路】02数论算法-1公约数公倍数与欧几里得
+          <h2 class="post-title" itemprop="name headline">【OI之路】03数论-1约数与欧几里得
               
             
           </h2>
@@ -447,7 +447,7 @@
                 
               
 
-              <time title="创建于：2003-01-22 00:02:01" itemprop="dateCreated datePublished" datetime="2003-01-22T00:02:01+08:00">2003-01-22</time>
+              <time title="创建于：2003-01-22 00:03:01" itemprop="dateCreated datePublished" datetime="2003-01-22T00:03:01+08:00">2003-01-22</time>
             
 
             
@@ -464,7 +464,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改于：2018-08-19 16:58:22" itemprop="dateModified" datetime="2018-08-19T16:58:22+08:00">2018-08-19</time>
+                <time title="修改于：2018-09-28 08:45:48" itemprop="dateModified" datetime="2018-09-28T08:45:48+08:00">2018-09-28</time>
               
             
           </span>
@@ -505,7 +505,7 @@
 
           
           
-             <span id="/posts/7748.html" class="leancloud_visitors" data-flag-title="【OI之路】02数论算法-1公约数公倍数与欧几里得">
+             <span id="/posts/7748.html" class="leancloud_visitors" data-flag-title="【OI之路】03数论-1约数与欧几里得">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -584,6 +584,15 @@
 <p>顺带一提，目前网上介绍OI方面的扩展欧几里得的文章很少<br>所以到处综合网上文章加上<strong>个人思考</strong>写下本文，希望能对大家有所帮助!</p>
 <p>2018.01.24 UP:<br>写这篇文章的时候我的博客还不支持公式，<br>大家将就着看吧，懒得改了，影响不是太大。</p>
 <p>2018.03.28 UP:<br>咳咳，忍不住还是改好了……</p>
+<h2 id="2-2-2-线性筛选素数"><a href="#2-2-2-线性筛选素数" class="headerlink" title="2.2.2 线性筛选素数"></a>2.2.2 线性筛选素数</h2><p>线性筛选素数，也就是O(n)<br>条件：积性函数，常见如素数函数、莫比乌斯函数、欧拉函数<br>精髓：每个合数都只被它的最小质因子筛出<br>注意，作为素数的循环j是在内部的<br>那么当i%prime[j]==0，意味着i中已经包含了prime[j]<br>那后面的数中，prime[j]一定会比prime[t]小<br>那么 <strong>至少</strong> 最小质因数不会是prime[t]<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> MAXN=<span class="number">21000000</span>;</div><div class="line"><span class="keyword">int</span> prime[<span class="number">1100000</span>],pr;</div><div class="line"><span class="keyword">bool</span> v[MAXN];</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">calcprime</span><span class="params">()</span></div><div class="line"></span>&#123;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">2</span>;i&lt;=MAXN;i++)</div><div class="line">    &#123;</div><div class="line">        <span class="keyword">if</span>(v[i]==<span class="number">0</span>) prime[++pr]=i;</div><div class="line">        <span class="keyword">if</span>(pr==<span class="number">1000000</span>) <span class="keyword">return</span>;<span class="comment">//满意而归</span></div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=pr and i*prime[j]&lt;=MAXN;j++)</div><div class="line">        &#123;</div><div class="line">            <span class="keyword">if</span>(i%prime[j]==<span class="number">0</span>) <span class="keyword">break</span>;</div><div class="line">            v[ i*prime[j] ]=<span class="number">1</span>;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h2 id="2-2-3-约数个数与和"><a href="#2-2-3-约数个数与和" class="headerlink" title="2.2.3 约数个数与和"></a>2.2.3 约数个数与和</h2><p>对于数字G<br>$$G=p1^{a1}\times p2^{a2}\times p3^{a3}\times …\times pk^{ak}$$<br><!-- more --></p>
+<p>$$约数个数=(a₁+1)(a₂+1)(a₃+1)…(ak+1)$$<br>$$和=<br>(p1^0+p1^1+…p1^{a1})<br>(p2^0+p2^1+…p2^{a2})<br>…(pk^0+pk^1+…pk^{ak})<br>$$</p>
+<p>其实就是傻傻的乘法原理啦</p>
+<h2 id="2-2-4-其他知识"><a href="#2-2-4-其他知识" class="headerlink" title="2.2.4 其他知识"></a>2.2.4 其他知识</h2><p>附赠几个有用的东西：</p>
+<p>1.<br>通过$O(\sqrt n)$枚举出n的所有约数<br>推论: n的约数总数，上限$2 \sqrt n$</p>
+<p>2.<br>通过$O(n log_2 n)$枚举d，更新其倍数得到1~n的所有约数<br>复杂度证明：调和级数<br>推论：1~n的所有约数个数，上限$n log_2 n$</p>
+<p>3.<br>对于int范围内的x，其质因子数量&lt;10<br>证明就是把最小那几个乘起来<br>然后指数总和&lt;31</p>
+<p>4.<br>素数分布数量<br>1~n大致上看作n/log n</p>
 
       
     </div>
@@ -625,21 +634,21 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/f6c6.html" rel="bookmark">【OI之路】09经典问题-3哈夫曼树</a></div>
+      <div class="popular-posts-title"><a href="/posts/d81d.html" rel="bookmark">【OI之路】03数论-13莫比乌斯反演</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/d81d.html" rel="bookmark">【OI之路】11更高级数论-3莫比乌斯反演</a></div>
+      <div class="popular-posts-title"><a href="/posts/4db.html" rel="bookmark">【OI之路】03数论-14快速傅里叶变换</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/4db.html" rel="bookmark">【OI之路】11更高级数论-4快速傅里叶变换</a></div>
+      <div class="popular-posts-title"><a href="/posts/c111.html" rel="bookmark">【OI之路】06字符串-1KMP</a></div>
       
     </li>
   
@@ -653,7 +662,7 @@
 				<p id="div-border-left-purple">
 			   <b>本文基于<a target="_blank" title="Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)" href="http://creativecommons.org/licenses/by-sa/4.0/deed.zh"> 知识共享署名-相同方式共享 4.0 </a>国际许可协议发布</b><br/>
 				<span>
-				<b>本文地址：</b><a href="/posts/7748.html" title="【OI之路】02数论算法-1公约数公倍数与欧几里得">http://zory.cf/posts/7748.html</a><br/><b>转载请注明出处，谢谢！</b>
+				<b>本文地址：</b><a href="/posts/7748.html" title="【OI之路】03数论-1约数与欧几里得">http://zory.cf/posts/7748.html</a><br/><b>转载请注明出处，谢谢！</b>
 				</span>
 				</p>
 		</div>
@@ -719,8 +728,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/posts/a012.html" rel="next" title="【OI之路】01函数和STL-2STL">
-                <i class="fa fa-chevron-left"></i> 【OI之路】01函数和STL-2STL
+              <a href="/posts/b1b7.html" rel="next" title="【OI之路】02数据结构-8线段树">
+                <i class="fa fa-chevron-left"></i> 【OI之路】02数据结构-8线段树
               </a>
             
           </div>
@@ -729,8 +738,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/posts/ba6e.html" rel="prev" title="【OI之路】02数论算法-2素数">
-                【OI之路】02数论算法-2素数 <i class="fa fa-chevron-right"></i>
+              <a href="/posts/a06a.html" rel="prev" title="【OI之路】03数论-2定理杂烩">
+                【OI之路】03数论-2定理杂烩 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -812,7 +821,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">355</span>
+                    <span class="site-state-item-count">350</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -845,6 +854,14 @@
                 <div class="site-state-item site-state-tags">
                   <a href="/tags/index.html">
                     
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
                     
                       
                     
@@ -1169,7 +1186,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-0-前言："><span class="nav-text">2.1.0 前言：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-1-取余和取模"><span class="nav-text">2.1.1 取余和取模</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-2-最大公约数Greatest-Common-Divisor"><span class="nav-text">2.1.2 最大公约数Greatest Common Divisor</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-3-最小公倍数Least-Common-Multiple"><span class="nav-text">2.1.3 最小公倍数Least Common Multiple</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-4-补充知识"><span class="nav-text">2.1.4 补充知识</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-5-欧几里得算法Euclid"><span class="nav-text">2.1.5 欧几里得算法Euclid</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-6-扩展欧几里德算法ExEuclid"><span class="nav-text">2.1.6 扩展欧几里德算法ExEuclid</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Ⅰ"><span class="nav-text">Ⅰ.</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Ⅱ"><span class="nav-text">Ⅱ.</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Ⅲ"><span class="nav-text">Ⅲ.</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Code"><span class="nav-text">Code</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-7-扩展欧几里德算法的运用1"><span class="nav-text">2.1.7 扩展欧几里德算法的运用1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-8-扩展欧几里德算法的运用2"><span class="nav-text">2.1.8 扩展欧几里德算法的运用2</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-9-扩展欧几里德算法的运用3"><span class="nav-text">2.1.9 扩展欧几里德算法的运用3</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-10-总结一下"><span class="nav-text">2.1.10 总结一下</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-0-前言："><span class="nav-text">2.1.0 前言：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-1-取余和取模"><span class="nav-text">2.1.1 取余和取模</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-2-最大公约数Greatest-Common-Divisor"><span class="nav-text">2.1.2 最大公约数Greatest Common Divisor</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-3-最小公倍数Least-Common-Multiple"><span class="nav-text">2.1.3 最小公倍数Least Common Multiple</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-4-补充知识"><span class="nav-text">2.1.4 补充知识</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-5-欧几里得算法Euclid"><span class="nav-text">2.1.5 欧几里得算法Euclid</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-6-扩展欧几里德算法ExEuclid"><span class="nav-text">2.1.6 扩展欧几里德算法ExEuclid</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Ⅰ"><span class="nav-text">Ⅰ.</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Ⅱ"><span class="nav-text">Ⅱ.</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Ⅲ"><span class="nav-text">Ⅲ.</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Code"><span class="nav-text">Code</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-7-扩展欧几里德算法的运用1"><span class="nav-text">2.1.7 扩展欧几里德算法的运用1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-8-扩展欧几里德算法的运用2"><span class="nav-text">2.1.8 扩展欧几里德算法的运用2</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-9-扩展欧几里德算法的运用3"><span class="nav-text">2.1.9 扩展欧几里德算法的运用3</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-10-总结一下"><span class="nav-text">2.1.10 总结一下</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-2-线性筛选素数"><span class="nav-text">2.2.2 线性筛选素数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-3-约数个数与和"><span class="nav-text">2.2.3 约数个数与和</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-4-其他知识"><span class="nav-text">2.2.4 其他知识</span></a></li></ol></div>
             
 
           </div>
@@ -1210,8 +1227,6 @@
 
 
 
-
-  <div class="footer-custom">Hosted by <a target="_blank" rel="external nofollow" href="https://pages.coding.me"><b>Coding Pages</b></a></div>
 
 
         

@@ -131,7 +131,7 @@
 <meta property="og:site_name" content="Zory的个人博客">
 <meta property="og:description" content="前半部分为自己的创作后半部分为转载，因为并没有去理解">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-09-28T00:45:48.677Z">
+<meta property="og:updated_time" content="2018-10-11T08:28:35.657Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【OI之路】03数论-12组合数学">
 <meta name="twitter:description" content="前半部分为自己的创作后半部分为转载，因为并没有去理解">
@@ -259,7 +259,7 @@
           
           <li class="menu-item menu-item-archives">
     <a href="/archives/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />历程Archives<span class="badge">369</span></a>
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />历程Archives<span class="badge">370</span></a>
   </li>
         
         
@@ -275,7 +275,7 @@
           
           <li class="menu-item menu-item-tags">
     <a href="/tags/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签Tags<span class="badge">145</span></a>
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签Tags<span class="badge">146</span></a>
   </li>
         
         
@@ -464,7 +464,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改于：2018-09-28 08:45:48" itemprop="dateModified" datetime="2018-09-28T08:45:48+08:00">2018-09-28</time>
+                <time title="修改于：2018-10-11 16:28:35" itemprop="dateModified" datetime="2018-10-11T16:28:35+08:00">2018-10-11</time>
               
             
           </span>
@@ -563,9 +563,11 @@
 <h2 id="通项公式"><a href="#通项公式" class="headerlink" title="通项公式"></a>通项公式</h2><p>$Cat_n=\frac{C_{2n}^n}{n+1}$</p>
 <h2 id="性质"><a href="#性质" class="headerlink" title="性质"></a>性质</h2><ol>
 <li>$Cat_n=C_{2n}^n-C_{2n}^{n-1}$，可以由定义得出</li>
+<li>$Cat_n=\sum Cat_a \times Cat_{n-a-1}$</li>
 </ol>
 <h2 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h2><ol>
 <li>简单应用，例如【合法括号序列】、【出栈序列】</li>
+<li>由性质2这个递推式可知，能够解决【不同形态二叉树】</li>
 </ol>
 <h1 id="错排"><a href="#错排" class="headerlink" title="错排"></a>错排</h1><h2 id="问题-1"><a href="#问题-1" class="headerlink" title="问题"></a>问题</h2><p>求有多少个1~n的排列，满足每个$a_i \neq i$</p>
 <h2 id="递推式"><a href="#递推式" class="headerlink" title="递推式"></a>递推式</h2><p>考虑元素1，找到2~n中的k，使$a_k=1$，k有n-1种取值<br>① $a_1=k$，此时相当于剩下n-2个元素，进行错排<br>② otherwise，此时相当于剩下n-1个元素，进行错排<br>所以$D_n=(n-1)(D_{n-1}+D_{n-2})$</p>
@@ -789,7 +791,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">369</span>
+                    <span class="site-state-item-count">370</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -1113,7 +1115,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">142</span>
+                      
+                    
+                    <span class="site-state-item-count">143</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>

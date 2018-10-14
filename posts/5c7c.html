@@ -123,18 +123,20 @@
 
 
 
-  <meta name="description" content="网络流类似流水问题难点就是构图与建边也有各种变例">
+  <meta name="description" content="网络流类似流水问题难点就是构图也有各种变例决策类问题的法宝之一（还有贪心等）">
 <meta name="keywords" content="网络流">
 <meta property="og:type" content="article">
 <meta property="og:title" content="【OI之路】04图论-5网络流">
 <meta property="og:url" content="http://zory.cf/posts/5c7c.html">
 <meta property="og:site_name" content="Zory的个人博客">
-<meta property="og:description" content="网络流类似流水问题难点就是构图与建边也有各种变例">
+<meta property="og:description" content="网络流类似流水问题难点就是构图也有各种变例决策类问题的法宝之一（还有贪心等）">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-09-28T00:47:55.354Z">
+<meta property="og:image" content="http://zory.cf/images/OI之路/网络流/1,png">
+<meta property="og:updated_time" content="2018-10-13T12:29:21.106Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【OI之路】04图论-5网络流">
-<meta name="twitter:description" content="网络流类似流水问题难点就是构图与建边也有各种变例">
+<meta name="twitter:description" content="网络流类似流水问题难点就是构图也有各种变例决策类问题的法宝之一（还有贪心等）">
+<meta name="twitter:image" content="http://zory.cf/images/OI之路/网络流/1,png">
 
 
 
@@ -259,7 +261,7 @@
           
           <li class="menu-item menu-item-archives">
     <a href="/archives/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />历程Archives<span class="badge">370</span></a>
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />历程Archives<span class="badge">371</span></a>
   </li>
         
         
@@ -275,7 +277,7 @@
           
           <li class="menu-item menu-item-tags">
     <a href="/tags/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签Tags<span class="badge">146</span></a>
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签Tags<span class="badge">147</span></a>
   </li>
         
         
@@ -464,7 +466,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改于：2018-09-28 08:47:55" itemprop="dateModified" datetime="2018-09-28T08:47:55+08:00">2018-09-28</time>
+                <time title="修改于：2018-10-13 20:29:21" itemprop="dateModified" datetime="2018-10-13T20:29:21+08:00">2018-10-13</time>
               
             
           </span>
@@ -536,7 +538,7 @@
       
 
       
-        <p>网络流类似流水问题<br>难点就是构图与建边<br>也有各种变例</p>
+        <p>网络流类似流水问题<br>难点就是构图<br>也有各种变例<br>决策类问题的法宝之一（还有贪心等）</p>
 <a id="more"></a>
 <h2 id="有个不错的入门教程"><a href="#有个不错的入门教程" class="headerlink" title="有个不错的入门教程"></a>有个不错的入门教程</h2><p>网络流-纳米黑客<br><a href="../files/文章/网络流-纳米黑客.pdf">PDF</a></p>
 <h2 id="最大流解决方案"><a href="#最大流解决方案" class="headerlink" title="最大流解决方案"></a>最大流解决方案</h2><p>Edmond-Karp 理论上界是 $nm^2$ ，但通常可以解决$10^3$ ~ $10^4$ 的规模</p>
@@ -556,6 +558,9 @@
 <p>资料：<a href="https://blog.csdn.net/the301stdoub/article/details/51030175" target="_blank" rel="noopener">窝嘞割草</a><br>本质上其实就是把EK中bfs换成能处理边权的spfa<br>（因为dinic无法处理，所以只有EK的衍生版）</p>
 <p>题目：<br><a href="../tags/费用流/">Tag-费用流</a></p>
 <p>至于zkw费用流……<br><a href="https://blog.csdn.net/jzq233jzq/article/details/73123089" target="_blank" rel="noopener">jzq233jzq</a><br><a href="https://artofproblemsolving.com/community/c1368h1020435" target="_blank" rel="noopener">zkw</a></p>
+<h2 id="最大权闭合子图"><a href="#最大权闭合子图" class="headerlink" title="最大权闭合子图"></a>最大权闭合子图</h2><p>闭合子图：只进不出的子图，可用于处理依赖关系<br>很容易贪心地想到，最优情况是所有正权点，但为了闭合要有所割舍</p>
+<p>考虑有网络流决策，将点分成选和不选两种，用割的模型，以是否和S联通来标识<br>则S向所有正权点连边，边权为点权，所有负权点向T连边，边权为点权的绝对值<br>割后，设选的点集为A，不选为B，根据点权正负细分，如图所示：<br><img src="../images/OI之路/网络流/1,png" alt=""><br>如果x依赖y，则选x就要选y，此时从x到y连接一条INF的边，标识不可【选x不选y】<br>注意一个细节（因为我这菜逼一开始忽略了）：<br>这条边是允许选y不选x的，因为那种情况没有造成联通</p>
+<p>此时只要是个合法的割，A一定是一个闭合子图，现在要最大化它<br>显然割=B1-A0，而A=A1+A0<br>故A+割=A1+A2=正权和，让割最小化即可</p>
 
       
     </div>
@@ -782,7 +787,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">370</span>
+                    <span class="site-state-item-count">371</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -1108,7 +1113,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">143</span>
+                      
+                    
+                    <span class="site-state-item-count">144</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1165,7 +1172,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#有个不错的入门教程"><span class="nav-text">有个不错的入门教程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#最大流解决方案"><span class="nav-text">最大流解决方案</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#最大流练习"><span class="nav-text">最大流练习</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#费用流"><span class="nav-text">费用流</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#有个不错的入门教程"><span class="nav-text">有个不错的入门教程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#最大流解决方案"><span class="nav-text">最大流解决方案</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#最大流练习"><span class="nav-text">最大流练习</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#费用流"><span class="nav-text">费用流</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#最大权闭合子图"><span class="nav-text">最大权闭合子图</span></a></li></ol></div>
             
 
           </div>

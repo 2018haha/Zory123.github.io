@@ -124,14 +124,14 @@
 
 
   <meta name="description" content="来源和评测点USACO10JANLuogu2975Bzoj1783">
-<meta name="keywords" content="博弈,DP,难度1,精品题">
+<meta name="keywords" content="博弈,难度1,精品题,dp">
 <meta property="og:type" content="article">
 <meta property="og:title" content="【Bzoj1783】【Luogu2975】轮流Taking Turns">
 <meta property="og:url" content="http://zory.cf/posts/5323.html">
 <meta property="og:site_name" content="Zory的个人博客">
 <meta property="og:description" content="来源和评测点USACO10JANLuogu2975Bzoj1783">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-08-19T08:57:38.000Z">
+<meta property="og:updated_time" content="2018-10-18T07:17:47.910Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【Bzoj1783】【Luogu2975】轮流Taking Turns">
 <meta name="twitter:description" content="来源和评测点USACO10JANLuogu2975Bzoj1783">
@@ -259,7 +259,7 @@
           
           <li class="menu-item menu-item-archives">
     <a href="/archives/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />历程Archives<span class="badge">376</span></a>
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />历程Archives<span class="badge">378</span></a>
   </li>
         
         
@@ -275,7 +275,7 @@
           
           <li class="menu-item menu-item-tags">
     <a href="/tags/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签Tags<span class="badge">147</span></a>
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签Tags<span class="badge">149</span></a>
   </li>
         
         
@@ -464,7 +464,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改于：2018-08-19 16:57:38" itemprop="dateModified" datetime="2018-08-19T16:57:38+08:00">2018-08-19</time>
+                <time title="修改于：2018-10-18 15:17:47" itemprop="dateModified" datetime="2018-10-18T15:17:47+08:00">2018-10-18</time>
               
             
           </span>
@@ -540,7 +540,7 @@
 <a id="more"></a>
 <h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p id="div-border-top-red"><strong>【题目大意】</strong><br>两头奶牛Bessi和Dessie走过一条路吃草，共n（n&lt;=700,000）个格子，<br>第i个格子有重量为Wi（1&lt;=Wi&lt;=2,000,000,000）的草，<br>两牛轮流走，一旦某头牛走过了一格，那么这格的草再也不可能被任一头奶牛吃，<br>每格的草只能被吃一次，所以两头牛只能往后走。<br><br>Bessi先走，每头牛每次都往最终自己能吃到最多草的格子走<br>（若有多个格子则选择第一个能吃到最多草的格子），<br>他们都知道对方也想吃到最多的草，问最后Bessi和Dessie各吃到的草的重量。<br><strong>【输入格式】</strong><br>第一行一个正整数n（n&lt;=700,000）<br>接下来有n行，第i+1行是Wi（1&lt;=Wi&lt;=2,000,000,000）<br><strong>【输出格式】</strong><br>答案<br><strong>【输入样例】</strong><br>6<br>17<br>5<br>9<br>10<br>3<br>8<br><strong>【输出样例】</strong><br>27 17<br></p>
 
-<h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>类似博弈，倒退DP<br>f[i]=从i到n最大收益<br>id[i]=达到f[i]用了的干草堆最后编号</p>
+<h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>类似博弈，倒退dp<br>f[i]=从i到n最大收益<br>id[i]=达到f[i]用了的干草堆最后编号</p>
 <p>对于干草堆i，存在两种选择：<br>1)用i，id[i]=i,f[i]=w[i]+f[id[i+1]+1] 即本堆干草+舍弃f[i+1]后最大收益<br>2)不用i，id[i]=id[i+1],f[i]=f[i+1]</p>
 <h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</div><div class="line">ll w[<span class="number">710000</span>],f[<span class="number">710000</span>],id[<span class="number">710000</span>];</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></div><div class="line"></span>&#123;</div><div class="line">    <span class="keyword">int</span> n;<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;n);</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) <span class="built_in">scanf</span>(<span class="string">"%lld"</span>,&amp;w[i]);</div><div class="line">    f[n]=w[n];id[n]=n;f[n+<span class="number">1</span>]=<span class="number">0</span>;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=n<span class="number">-1</span>;i&gt;=<span class="number">1</span>;i--)</div><div class="line">    &#123;</div><div class="line">        <span class="keyword">if</span>(w[i]+f[id[i+<span class="number">1</span>]+<span class="number">1</span>]&gt;=f[i+<span class="number">1</span>])</div><div class="line">        &#123;</div><div class="line">            f[i]=w[i]+f[id[i+<span class="number">1</span>]+<span class="number">1</span>];</div><div class="line">            id[i]=i;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">else</span></div><div class="line">        &#123;</div><div class="line">            f[i]=f[i+<span class="number">1</span>];</div><div class="line">            id[i]=id[i+<span class="number">1</span>];</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="built_in">printf</span>(<span class="string">"%lld %lld"</span>,f[<span class="number">1</span>],f[id[<span class="number">1</span>]+<span class="number">1</span>]);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
       
@@ -555,11 +555,11 @@
         
           <a href="/tags/博弈/" rel="tag"># 博弈</a>
         
-          <a href="/tags/DP/" rel="tag"># DP</a>
-        
           <a href="/tags/难度1/" rel="tag"># 难度1</a>
         
           <a href="/tags/精品题/" rel="tag"># 精品题</a>
+        
+          <a href="/tags/dp/" rel="tag"># dp</a>
         
       </div>
     
@@ -587,21 +587,21 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/e616.html" rel="bookmark">【Luogu1541】乌龟棋</a></div>
+      <div class="popular-posts-title"><a href="/posts/d69c.html" rel="bookmark">【Luogu1063】能量项链</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/4a23.html" rel="bookmark">【Caioj1086】进攻策略</a></div>
+      <div class="popular-posts-title"><a href="/posts/4075.html" rel="bookmark">【poj2057】The Lost House</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/310b.html" rel="bookmark">【CZYZ2009暑假集训提高组6】盟军敢死队</a></div>
+      <div class="popular-posts-title"><a href="/posts/4670.html" rel="bookmark">【Bzoj1026】【Luogu2657】windy数</a></div>
       
     </li>
   
@@ -774,7 +774,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">376</span>
+                    <span class="site-state-item-count">378</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -1102,7 +1102,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">144</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">142</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>

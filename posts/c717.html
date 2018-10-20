@@ -124,14 +124,14 @@
 
 
   <meta name="description" content="来源和评测点Usaco2008 Mar GoldBzoj1597LuogucCaioj1140">
-<meta name="keywords" content="DP,单调队列,斜率优化,难度2">
+<meta name="keywords" content="单调队列,斜率优化,难度2,dp">
 <meta property="og:type" content="article">
 <meta property="og:title" content="【Bzoj1597】【Luogu1010】土地购买">
 <meta property="og:url" content="http://zory.cf/posts/c717.html">
 <meta property="og:site_name" content="Zory的个人博客">
 <meta property="og:description" content="来源和评测点Usaco2008 Mar GoldBzoj1597LuogucCaioj1140">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-08-20T07:26:08.000Z">
+<meta property="og:updated_time" content="2018-10-18T07:17:48.135Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【Bzoj1597】【Luogu1010】土地购买">
 <meta name="twitter:description" content="来源和评测点Usaco2008 Mar GoldBzoj1597LuogucCaioj1140">
@@ -259,7 +259,7 @@
           
           <li class="menu-item menu-item-archives">
     <a href="/archives/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />历程Archives<span class="badge">376</span></a>
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />历程Archives<span class="badge">378</span></a>
   </li>
         
         
@@ -275,7 +275,7 @@
           
           <li class="menu-item menu-item-tags">
     <a href="/tags/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签Tags<span class="badge">147</span></a>
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签Tags<span class="badge">149</span></a>
   </li>
         
         
@@ -464,7 +464,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改于：2018-08-20 15:26:08" itemprop="dateModified" datetime="2018-08-20T15:26:08+08:00">2018-08-20</time>
+                <time title="修改于：2018-10-18 15:17:48" itemprop="dateModified" datetime="2018-10-18T15:17:48+08:00">2018-10-18</time>
               
             
           </span>
@@ -543,7 +543,7 @@
 <h2 id="刷题记录"><a href="#刷题记录" class="headerlink" title="刷题记录"></a>刷题记录</h2><p>30min</p>
 <h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>灰常妙的一点：<br>使用排序进行除杂（被完全覆盖的土地可以被忽略）<br>神奇的一幕出现了，可以实现长递增，宽递减（主要是题目特性）<br>于是就可以瞬间获得区间打包的费用！</p>
 <p>想通这个以后接下来就甚至比上一题还简单了<br>部分省略</p>
-<p>1.化简DP公式<br>a[i]=长 b[i]=宽<br><strong>f[i]=min(f[j]+a[i]*b[j+1])</strong></p>
+<p>1.化简dp公式<br>a[i]=长 b[i]=宽<br><strong>f[i]=min(f[j]+a[i]*b[j+1])</strong></p>
 <p>2.证明决策单调性<br>假设j1&lt;j2&lt;i<br>已知对于i，j2优于j1，本题追求小，所以<br>假设f[j2]+a[i]*b[j2+1]&lt;=f[j1]+a[i]*b[j1+1]——————-①<br>是否f[j2]+a[t]*b[j2+1]&lt;=f[j1]+a[t]*b[j1+1]——————-②<br><strong>为了从①证明②，两式取差</strong><br>得证<br>所以这次如果选了j2，j1将没有任何用处，可淘汰</p>
 <p>3.确定比较状态优劣的斜率方程<br><strong>只能用于相邻的状态比较</strong><br>斜率=(y1-y2)/(x1-x2)</p>
 <p>f[j2]+a[i]*b[j2+1]&lt;=f[j1]+a[i]*b[j1+1]<br>(f[j2]-f[j1])/(b[j1+1]-b[j2+1])&lt;=a[i]<br>满足则j2更优</p>
@@ -563,13 +563,13 @@
     
       <div class="post-tags">
         
-          <a href="/tags/DP/" rel="tag"># DP</a>
-        
           <a href="/tags/单调队列/" rel="tag"># 单调队列</a>
         
           <a href="/tags/斜率优化/" rel="tag"># 斜率优化</a>
         
           <a href="/tags/难度2/" rel="tag"># 难度2</a>
+        
+          <a href="/tags/dp/" rel="tag"># dp</a>
         
       </div>
     
@@ -597,21 +597,21 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/304d.html" rel="bookmark">【Bzoj3679】数字之积</a></div>
+      <div class="popular-posts-title"><a href="/posts/968.html" rel="bookmark">【Bzoj1079】【Luogu2476】着色方案</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/4a23.html" rel="bookmark">【Caioj1086】进攻策略</a></div>
+      <div class="popular-posts-title"><a href="/posts/b262.html" rel="bookmark">【Bzoj1999】【Luogu1099】树网的核</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/f8f3.html" rel="bookmark">WZK的减肥计划</a></div>
+      <div class="popular-posts-title"><a href="/posts/5867.html" rel="bookmark">【IOI2000】Post Office</a></div>
       
     </li>
   
@@ -784,7 +784,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">376</span>
+                    <span class="site-state-item-count">378</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -1112,7 +1112,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">144</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">142</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>

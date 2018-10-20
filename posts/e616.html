@@ -124,14 +124,14 @@
 
 
   <meta name="description" content="Source and JudgeNOIP2010 提高组 T2Luogu1541Caioj1542">
-<meta name="keywords" content="DP,难度1">
+<meta name="keywords" content="难度1,dp">
 <meta property="og:type" content="article">
 <meta property="og:title" content="【Luogu1541】乌龟棋">
 <meta property="og:url" content="http://zory.cf/posts/e616.html">
 <meta property="og:site_name" content="Zory的个人博客">
 <meta property="og:description" content="Source and JudgeNOIP2010 提高组 T2Luogu1541Caioj1542">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-08-19T08:57:58.000Z">
+<meta property="og:updated_time" content="2018-10-18T07:17:48.091Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【Luogu1541】乌龟棋">
 <meta name="twitter:description" content="Source and JudgeNOIP2010 提高组 T2Luogu1541Caioj1542">
@@ -259,7 +259,7 @@
           
           <li class="menu-item menu-item-archives">
     <a href="/archives/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />历程Archives<span class="badge">376</span></a>
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />历程Archives<span class="badge">378</span></a>
   </li>
         
         
@@ -275,7 +275,7 @@
           
           <li class="menu-item menu-item-tags">
     <a href="/tags/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签Tags<span class="badge">147</span></a>
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签Tags<span class="badge">149</span></a>
   </li>
         
         
@@ -464,7 +464,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改于：2018-08-19 16:57:58" itemprop="dateModified" datetime="2018-08-19T16:57:58+08:00">2018-08-19</time>
+                <time title="修改于：2018-10-18 15:17:48" itemprop="dateModified" datetime="2018-10-18T15:17:48+08:00">2018-10-18</time>
               
             
           </span>
@@ -542,7 +542,7 @@
 
 <h2 id="Record"><a href="#Record" class="headerlink" title="Record"></a>Record</h2><p>30min</p>
 <h2 id="Analysis"><a href="#Analysis" class="headerlink" title="Analysis"></a>Analysis</h2><div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
-<p>一眼DP,<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div></pre></td><td class="code"><pre><div class="line">空间：2560000</div><div class="line">时间：21760000</div><div class="line">枚举的时候按照n、d、c、b的顺序</div><div class="line">&#123;% endfold %&#125;</div><div class="line"></div><div class="line">## Code</div><div class="line"></div><div class="line">&#123;% fold 请先思考后再展开 %&#125;</div><div class="line">```cpp</div><div class="line">//Zory in 2018</div><div class="line">//*******************头文件*******************</div><div class="line">#include&lt;cstdio&gt;</div><div class="line">#include&lt;cstring&gt;</div><div class="line">#include&lt;cmath&gt;</div><div class="line">#include&lt;queue&gt;</div><div class="line">#include&lt;vector&gt;</div><div class="line">#include&lt;stack&gt;</div><div class="line">#include&lt;algorithm&gt;</div><div class="line">#ifdef WIN32</div><div class="line">#define BIGN &quot;%I64d&quot;</div><div class="line">#else</div><div class="line">#define BIGN &quot;%lld&quot;</div><div class="line">#endif</div><div class="line">using namespace std;</div><div class="line">typedef long long ll;</div><div class="line">int mymax(int x,int y) &#123;return x&gt;y?x:y;&#125;</div><div class="line">int mymin(int x,int y) &#123;return x&lt;y?x:y;&#125;</div><div class="line">//*******************全局常量*******************</div><div class="line">const int INF=0x3f3f3f3f;</div><div class="line">const int MAXN=10;</div><div class="line">//*******************全局定义*******************</div><div class="line">int ct[5];</div><div class="line">int s[400];</div><div class="line">int f[50][50][50][50];</div><div class="line">//*******************实现*******************</div><div class="line"></div><div class="line">//*******************主函数*******************</div><div class="line">int main()</div><div class="line">&#123;</div><div class="line">	int n,m;scanf(&quot;%d%d&quot;,&amp;n,&amp;m);</div><div class="line">	for(int i=0;i&lt;=n-1;i++) scanf(&quot;%d&quot;,&amp;s[i]);</div><div class="line">	for(int i=1;i&lt;=m;i++)</div><div class="line">	&#123;</div><div class="line">		int t;</div><div class="line">		scanf(&quot;%d&quot;,&amp;t);</div><div class="line">		ct[t]++;</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	f[0][0][0][0]=s[0];</div><div class="line">	for(int i=0;i&lt;=n-2;i++)</div><div class="line">	&#123;</div><div class="line">		for(int d=0;d&lt;=ct[4];d++)</div><div class="line">		&#123;</div><div class="line">			for(int c=0;c&lt;=ct[3];c++)</div><div class="line">			&#123;</div><div class="line">				for(int b=0;b&lt;=ct[2];b++)</div><div class="line">				&#123;</div><div class="line">					int a=i-4*d-3*c-2*b;</div><div class="line">					if(a&lt;0) break;</div><div class="line">					if(a&gt;ct[1]) continue;//debug</div><div class="line">					f[a+1][b][c][d]=mymax(f[a+1][b][c][d],f[a][b][c][d]+s[i+1]);</div><div class="line">					f[a][b+1][c][d]=mymax(f[a][b+1][c][d],f[a][b][c][d]+s[i+2]);</div><div class="line">					f[a][b][c+1][d]=mymax(f[a][b][c+1][d],f[a][b][c][d]+s[i+3]);</div><div class="line">					f[a][b][c][d+1]=mymax(f[a][b][c][d+1],f[a][b][c][d]+s[i+4]);</div><div class="line">				&#125;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	printf(&quot;%d&quot;,f[ct[1]][ct[2]][ct[3]][ct[4]]);//n-1</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>一眼dp,<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div></pre></td><td class="code"><pre><div class="line">空间：2560000</div><div class="line">时间：21760000</div><div class="line">枚举的时候按照n、d、c、b的顺序</div><div class="line">&#123;% endfold %&#125;</div><div class="line"></div><div class="line">## Code</div><div class="line"></div><div class="line">&#123;% fold 请先思考后再展开 %&#125;</div><div class="line">```cpp</div><div class="line">//Zory in 2018</div><div class="line">//*******************头文件*******************</div><div class="line">#include&lt;cstdio&gt;</div><div class="line">#include&lt;cstring&gt;</div><div class="line">#include&lt;cmath&gt;</div><div class="line">#include&lt;queue&gt;</div><div class="line">#include&lt;vector&gt;</div><div class="line">#include&lt;stack&gt;</div><div class="line">#include&lt;algorithm&gt;</div><div class="line">#ifdef WIN32</div><div class="line">#define BIGN &quot;%I64d&quot;</div><div class="line">#else</div><div class="line">#define BIGN &quot;%lld&quot;</div><div class="line">#endif</div><div class="line">using namespace std;</div><div class="line">typedef long long ll;</div><div class="line">int mymax(int x,int y) &#123;return x&gt;y?x:y;&#125;</div><div class="line">int mymin(int x,int y) &#123;return x&lt;y?x:y;&#125;</div><div class="line">//*******************全局常量*******************</div><div class="line">const int INF=0x3f3f3f3f;</div><div class="line">const int MAXN=10;</div><div class="line">//*******************全局定义*******************</div><div class="line">int ct[5];</div><div class="line">int s[400];</div><div class="line">int f[50][50][50][50];</div><div class="line">//*******************实现*******************</div><div class="line"></div><div class="line">//*******************主函数*******************</div><div class="line">int main()</div><div class="line">&#123;</div><div class="line">	int n,m;scanf(&quot;%d%d&quot;,&amp;n,&amp;m);</div><div class="line">	for(int i=0;i&lt;=n-1;i++) scanf(&quot;%d&quot;,&amp;s[i]);</div><div class="line">	for(int i=1;i&lt;=m;i++)</div><div class="line">	&#123;</div><div class="line">		int t;</div><div class="line">		scanf(&quot;%d&quot;,&amp;t);</div><div class="line">		ct[t]++;</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	f[0][0][0][0]=s[0];</div><div class="line">	for(int i=0;i&lt;=n-2;i++)</div><div class="line">	&#123;</div><div class="line">		for(int d=0;d&lt;=ct[4];d++)</div><div class="line">		&#123;</div><div class="line">			for(int c=0;c&lt;=ct[3];c++)</div><div class="line">			&#123;</div><div class="line">				for(int b=0;b&lt;=ct[2];b++)</div><div class="line">				&#123;</div><div class="line">					int a=i-4*d-3*c-2*b;</div><div class="line">					if(a&lt;0) break;</div><div class="line">					if(a&gt;ct[1]) continue;//debug</div><div class="line">					f[a+1][b][c][d]=mymax(f[a+1][b][c][d],f[a][b][c][d]+s[i+1]);</div><div class="line">					f[a][b+1][c][d]=mymax(f[a][b+1][c][d],f[a][b][c][d]+s[i+2]);</div><div class="line">					f[a][b][c+1][d]=mymax(f[a][b][c+1][d],f[a][b][c][d]+s[i+3]);</div><div class="line">					f[a][b][c][d+1]=mymax(f[a][b][c][d+1],f[a][b][c][d]+s[i+4]);</div><div class="line">				&#125;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	printf(&quot;%d&quot;,f[ct[1]][ct[2]][ct[3]][ct[4]]);//n-1</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 
 </div></div>
       
@@ -555,9 +555,9 @@
     
       <div class="post-tags">
         
-          <a href="/tags/DP/" rel="tag"># DP</a>
-        
           <a href="/tags/难度1/" rel="tag"># 难度1</a>
+        
+          <a href="/tags/dp/" rel="tag"># dp</a>
         
       </div>
     
@@ -571,14 +571,28 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/10e.html" rel="bookmark">【Luogu1091】合唱队形</a></div>
+      <div class="popular-posts-title"><a href="/posts/7e9b.html" rel="bookmark">【Luogu1006】传纸条</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/ddc4.html" rel="bookmark">HDU1159最长公共子序列LCS</a></div>
+      <div class="popular-posts-title"><a href="/posts/8231.html" rel="bookmark">【Luogu1064】金明的预算方案</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="/posts/35a8.html" rel="bookmark">终极装备</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="/posts/5323.html" rel="bookmark">【Bzoj1783】【Luogu2975】轮流Taking Turns</a></div>
       
     </li>
   
@@ -586,20 +600,6 @@
       
       
       <div class="popular-posts-title"><a href="/posts/6a8a.html" rel="bookmark">【CF946-F】Fibonacci String Subsequences</a></div>
-      
-    </li>
-  
-    <li class="popular-posts-item">
-      
-      
-      <div class="popular-posts-title"><a href="/posts/4670.html" rel="bookmark">【Bzoj1026】【Luogu2657】windy数</a></div>
-      
-    </li>
-  
-    <li class="popular-posts-item">
-      
-      
-      <div class="popular-posts-title"><a href="/posts/87af.html" rel="bookmark">【Luogu1018】乘积最大</a></div>
       
     </li>
   
@@ -772,7 +772,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">376</span>
+                    <span class="site-state-item-count">378</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -1100,7 +1100,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">144</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">142</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>

@@ -126,7 +126,7 @@
   <meta name="description" content="人生即使不能走最短路，仍是连通图">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Zory的个人博客">
-<meta property="og:url" content="http://zory.ink/tags/LCT/index.html">
+<meta property="og:url" content="http://zory.ink/tags/lct/index.html">
 <meta property="og:site_name" content="Zory的个人博客">
 <meta property="og:description" content="人生即使不能走最短路，仍是连通图">
 <meta property="og:locale" content="zh-CN">
@@ -139,7 +139,7 @@
 
 
 
-  <link rel="canonical" href="http://zory.ink/tags/LCT/"/>
+  <link rel="canonical" href="http://zory.ink/tags/lct/"/>
 
 
 
@@ -149,7 +149,7 @@
   };
 </script>
 
-  <title>标签Tag: LCT | Zory的个人博客</title>
+  <title>标签Tag: lct | Zory的个人博客</title>
   
 
 
@@ -257,7 +257,7 @@
           
           <li class="menu-item menu-item-archives">
     <a href="/archives/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />历程Archives<span class="badge">400</span></a>
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />历程Archives<span class="badge">407</span></a>
   </li>
         
         
@@ -273,7 +273,7 @@
           
           <li class="menu-item menu-item-tags menu-item-active">
     <a href="/tags/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签Tags<span class="badge">146</span></a>
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签Tags<span class="badge">148</span></a>
   </li>
         
         
@@ -431,7 +431,7 @@
 
     <div id="posts" class="posts-collapse">
       <div class="collection-title">
-        <h2>LCT<small>标签Tag</small>
+        <h2>lct<small>标签Tag</small>
         </h2>
       </div>
 
@@ -443,37 +443,9 @@
 
       <h3 class="post-title">
         
-            <a class="post-title-link" href="/posts/bebe.html" itemprop="url">
+            <a class="post-title-link" href="/posts/31df.html" itemprop="url">
               
-                <span itemprop="name">【模板】动态树</span>
-              
-            </a>
-        
-      </h3>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-04-26T21:19:00+08:00"
-              content="2018-04-26" >
-          04-26
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h3 class="post-title">
-        
-            <a class="post-title-link" href="/posts/8065.html" itemprop="url">
-              
-                <span itemprop="name">【Bzoj2002】【Luogu3203】弹飞绵羊</span>
+                <span itemprop="name">【SDOI2017】树点涂色</span>
               
             </a>
         
@@ -481,37 +453,9 @@
 
       <div class="post-meta">
         <time class="post-time" itemprop="dateCreated"
-              datetime="2018-03-27T11:03:00+08:00"
-              content="2018-03-27" >
-          03-27
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h3 class="post-title">
-        
-            <a class="post-title-link" href="/posts/e23c.html" itemprop="url">
-              
-                <span itemprop="name">【OI之路】02数据结构-7动态树</span>
-              
-            </a>
-        
-      </h3>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2003-01-22T00:02:07+08:00"
-              content="2003-01-22" >
-          01-22
+              datetime="2018-11-01T20:59:49+08:00"
+              content="2018-11-01" >
+          11-01
         </time>
       </div>
 
@@ -572,7 +516,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">400</span>
+                    <span class="site-state-item-count">407</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -898,7 +842,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">146</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">147</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1715,6 +1663,57 @@ var _hmt = _hmt || [];
     .highlight-wrap .copy-btn {
       transition: opacity .3s ease-in-out;
       opacity: 0;
+      padding: 2px 6px;
+      position: absolute;
+      right: 4px;
+      top: 8px;
+    }
+
+    .highlight-wrap:hover .copy-btn,
+    .highlight-wrap .copy-btn:focus {
+      opacity: 1
+    }
+
+    .highlight-wrap {
+      position: relative;
+    }
+  </style>
+  <script>
+    $('.highlight').each(function (i, e) {
+      var $wrap = $('<div>').addClass('highlight-wrap')
+      $(e).after($wrap)
+      $wrap.append($('<button>').addClass('copy-btn').append('Copy').on('click', function (e) {
+        var code = $(this).parent().find('.code').find('.line').map(function (i, e) {
+          return $(e).text()
+        }).toArray().join('\n')
+        var ta = document.createElement('textarea')
+        document.body.appendChild(ta)
+        ta.style.position = 'absolute'
+        ta.style.top = '0px'
+        ta.style.left = '0px'
+        ta.value = code
+        ta.select()
+        ta.focus()
+        var result = document.execCommand('copy')
+        document.body.removeChild(ta)
+        
+          if(result)$(this).text('Copied')
+          else $(this).text('Copy failed')
+        
+        $(this).blur()
+      })).on('mouseleave', function (e) {
+        var $b = $(this).find('.copy-btn')
+        setTimeout(function () {
+          $b.text('Copy')
+        }, 300)
+      }).append(e)
+    })
+  </script>
+
+
+</body>
+</html>
+0;
       padding: 2px 6px;
       position: absolute;
       right: 4px;

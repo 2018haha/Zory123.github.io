@@ -131,7 +131,7 @@
 <meta property="og:site_name" content="Zory的个人博客">
 <meta property="og:description" content="1D/1D动态规划状态为n，转移为n的dp方程动态规划的优化-周尚彦.pdf">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-10-18T07:17:48.087Z">
+<meta property="og:updated_time" content="2018-11-02T09:09:07.738Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【OI之路】05动态规划-2-1d1d动态规划">
 <meta name="twitter:description" content="1D/1D动态规划状态为n，转移为n的dp方程动态规划的优化-周尚彦.pdf">
@@ -259,7 +259,7 @@
           
           <li class="menu-item menu-item-archives">
     <a href="/archives/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />历程Archives<span class="badge">400</span></a>
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />历程Archives<span class="badge">407</span></a>
   </li>
         
         
@@ -275,7 +275,7 @@
           
           <li class="menu-item menu-item-tags">
     <a href="/tags/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签Tags<span class="badge">146</span></a>
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签Tags<span class="badge">148</span></a>
   </li>
         
         
@@ -464,7 +464,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改于：2018-10-18 15:17:48" itemprop="dateModified" datetime="2018-10-18T15:17:48+08:00">2018-10-18</time>
+                <time title="修改于：2018-11-02 17:09:07" itemprop="dateModified" datetime="2018-11-02T17:09:07+08:00">2018-11-02</time>
               
             
           </span>
@@ -560,6 +560,7 @@
 <h3 id="练习"><a href="#练习" class="headerlink" title="练习"></a>练习</h3><p>详细地讲讲这个入门好题(仅从数学的角度)：<br><a href="dae0.html">玩具装箱</a><br>好文章推荐：<br><a href="http://www.cnblogs.com/MashiroSky/p/6009685.html" target="_blank" rel="noopener">MashiroSky</a></p>
 <h2 id="四边形不等式"><a href="#四边形不等式" class="headerlink" title="四边形不等式"></a>四边形不等式</h2><p>如果转移满足该不等式，则称满足决策单调性<br>形式1：对于 $a \leq b \leq c \leq d,w(a,d)+w(b,c) \geq w(a,c)+w(b,d)$<br>（简单记为：交叉小于包含）<br>形式2： $w(a,b+1)+w(a+1,b) \geq w(a,b)+w(a+1,b+1)$<br>考场上可以考虑暴力打出决策点的表，验证单调性</p>
 <p>一维：<br>$f(i)=min f(j)+w(j,i)$<br>一维状态例题：<a href="fb5d.html">诗人小G</a><br>这个套路还是很好用的</p>
+<p>然后还有一种写法，某些情况下可能更好写<br>就是分治，每次暴力处理mid的决策点</p>
 <p>二维（虽然这个不属于1d1d，但是也顺便讲讲）：<br>$f(l,r)=min f(l,k)+f(k+1,r)+w(l,r)$<br>如果w满足四边形不等式，则f也满足四边形不等式<br>如果f满足四边形不等式，则 $fm(l,r-1) \leq fm(l,r) \leq fm(l+1,r)$<br>即f的决策，在同一行、同一列上单调递增</p>
 <p>例题：合并石子<br>显然其w满足四边形不等式（取等），则f也满足，那么决策的区间是确定了的<br>然后你考虑每种ln<br>$l=1，fm(1,ln-1) -&gt; fm(2,ln)$<br>$l=2，fm(2,ln) -&gt; fm(3,ln+1)$<br>……<br>也就是枚举范围连起来只有一个n<br>（感觉这种东西谁会想到啊……）<br>l<br>推荐文章：<br><a href="https://www.cnblogs.com/mlystdcall/p/6525962.html" target="_blank" rel="noopener">https://www.cnblogs.com/mlystdcall/p/6525962.html</a><br><a href="https://blog.csdn.net/noiau/article/details/72514812" target="_blank" rel="noopener">https://blog.csdn.net/noiau/article/details/72514812</a></p>
 
@@ -712,8 +713,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/posts/dc4.html" rel="prev" title="【OI之路】04图论-3最近公共祖先">
-                【OI之路】04图论-3最近公共祖先 <i class="fa fa-chevron-right"></i>
+              <a href="/posts/7366.html" rel="prev" title="【OI之路】05动态规划-5概率与期望">
+                【OI之路】05动态规划-5概率与期望 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -795,7 +796,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">400</span>
+                    <span class="site-state-item-count">407</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -1121,7 +1122,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">146</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">147</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>

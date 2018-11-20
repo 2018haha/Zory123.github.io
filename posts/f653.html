@@ -95,7 +95,15 @@
 
 <script>
 (function(){ if('key')
-{ if (prompt('��������������') !== 'key'){ alert('����������'); history.back(); } } })(); </script>
+{
+    if(prompt('请输入文章密码') !== 'key')
+    {
+        alert('密码错误！');
+        history.back();
+    }
+}
+})();
+</script>
 
 
 

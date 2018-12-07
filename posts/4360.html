@@ -123,23 +123,23 @@
 
 
 
-  <meta name="description" content="更详细地解释：Manacher、莫队、fft、后缀数组、exkmp等各种算法，本质上都是尽量地利用子信息、残留信息本文思路和图片大致来自于师兄cys大佬的论文本文会用相同颜色分别表示图片中某段的相等性">
+  <meta name="description" content="本文思路和图片大致来自于师兄cys大佬的论文本文会用相同颜色分别表示图片中某段的相等性">
 <meta name="keywords" content="ExKMP">
 <meta property="og:type" content="article">
 <meta property="og:title" content="【OI之路】06字符串-3ExKMP">
 <meta property="og:url" content="http://zory.ink/posts/4360.html">
 <meta property="og:site_name" content="Zory的个人博客">
-<meta property="og:description" content="更详细地解释：Manacher、莫队、fft、后缀数组、exkmp等各种算法，本质上都是尽量地利用子信息、残留信息本文思路和图片大致来自于师兄cys大佬的论文本文会用相同颜色分别表示图片中某段的相等性">
+<meta property="og:description" content="本文思路和图片大致来自于师兄cys大佬的论文本文会用相同颜色分别表示图片中某段的相等性">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://zory.ink/images/OI之路/KMP/3.png">
 <meta property="og:image" content="http://zory.ink/images/OI之路/KMP/4.png">
 <meta property="og:image" content="http://zory.ink/images/OI之路/KMP/5.png">
 <meta property="og:image" content="http://zory.ink/images/OI之路/KMP/6.png">
 <meta property="og:image" content="http://zory.ink/images/OI之路/KMP/10.png">
-<meta property="og:updated_time" content="2018-09-28T00:47:57.896Z">
+<meta property="og:updated_time" content="2018-12-06T08:10:52.680Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【OI之路】06字符串-3ExKMP">
-<meta name="twitter:description" content="更详细地解释：Manacher、莫队、fft、后缀数组、exkmp等各种算法，本质上都是尽量地利用子信息、残留信息本文思路和图片大致来自于师兄cys大佬的论文本文会用相同颜色分别表示图片中某段的相等性">
+<meta name="twitter:description" content="本文思路和图片大致来自于师兄cys大佬的论文本文会用相同颜色分别表示图片中某段的相等性">
 <meta name="twitter:image" content="http://zory.ink/images/OI之路/KMP/3.png">
 
 
@@ -265,7 +265,7 @@
           
           <li class="menu-item menu-item-archives">
     <a href="/archives/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />历程Archives<span class="badge">410</span></a>
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />历程Archives<span class="badge">417</span></a>
   </li>
         
         
@@ -281,7 +281,7 @@
           
           <li class="menu-item menu-item-tags">
     <a href="/tags/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签Tags<span class="badge">151</span></a>
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签Tags<span class="badge">152</span></a>
   </li>
         
         
@@ -470,7 +470,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改于：2018-09-28 08:47:57" itemprop="dateModified" datetime="2018-09-28T08:47:57+08:00">2018-09-28</time>
+                <time title="修改于：2018-12-06 16:10:52" itemprop="dateModified" datetime="2018-12-06T16:10:52+08:00">2018-12-06</time>
               
             
           </span>
@@ -542,7 +542,7 @@
       
 
       
-        <p>更详细地解释：Manacher、莫队、fft、后缀数组、exkmp等各种算法，本质上都是尽量地利用子信息、残留信息<br>本文思路和图片大致来自于师兄cys大佬的论文<br>本文会用相同颜色分别表示图片中某段的相等性<br><a id="more"></a></p>
+        <p>本文思路和图片大致来自于师兄cys大佬的论文<br>本文会用相同颜色分别表示图片中某段的相等性<br><a id="more"></a></p>
 <h2 id="一、定义"><a href="#一、定义" class="headerlink" title="一、定义"></a>一、定义</h2><p>KMP：$str(1,nxt[i])=str(i-nxt[i]+1,i)$<br>exKMP：$str(1,ext[i])=str(i,i+ext[i]-1)$<br>然后接下来的过程中，思路和manacher是灰常类似的，各种分类讨论继承</p>
 <h2 id="二、求ext数组"><a href="#二、求ext数组" class="headerlink" title="二、求ext数组"></a>二、求ext数组</h2><p>$ext[1]=lenb$（显而易见）<br>因为ext[1]这个是具有一定性，所以我们基本把这东西废掉……<br>那么我们就直接从ext[2]开始求。</p>
 <p>A. <span id="big2">k表示在当前搜索过的范围以内,rx=k+ext[k]-1最远</span>（与manacher很像）<br>故<span id="purple2">str(1,ext[k])=str(k,rx)</span><br>因为$rx=k+ext[k]-1$，又得：$ext[k]=rx-k+1$<br>代换变成：<span id="purple2">str(1,rx-k+1)=str(k,rx)</span><br>因为现在要求ext[i]，截取<span id="green2">str(i-k+1,rx-k+1)=str(i,rx)</span><br><img src="../images/OI之路/KMP/3.png" alt=""></p>
@@ -742,7 +742,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">410</span>
+                    <span class="site-state-item-count">417</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -775,6 +775,8 @@
                 <div class="site-state-item site-state-tags">
                   <a href="/tags/index.html">
                     
+                    
+                      
                     
                       
                     
@@ -1113,31 +1115,7 @@
           
             
           
-          <script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?def22195762280493c838db9e929dcdb";
-  var s = document.getElementsByTagName("script")[0];
-  s.parentNode.insertBefore(hm, s);
-})();
-</script>
-
-<script>
-(function(){
-    var bp = document.createElement('script');
-    var curProtocol = window.location.protocol.split(':')[0];
-    if (curProtocol === 'https') {
-        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
-    }
-    else {
-        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-    }
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(bp, s);
-})();
-</script>
-
+          �������䣺
 
 <script type="text/javascript" src="https://api.lwl12.com/hitokoto/main/get?encode=js&charset=utf-8"></script>
 <div id="lwlhitokoto">

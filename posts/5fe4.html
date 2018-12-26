@@ -125,14 +125,14 @@
 
   <meta name="description" content="这些可能在NOIP初赛、日常做题比较有用当然也是计算机领域的一些常识">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【OI之路】01语法与STL-1概要">
+<meta property="og:title" content="【OI之路】01语法与STL-1概要与常识">
 <meta property="og:url" content="http://zory.ink/posts/5fe4.html">
 <meta property="og:site_name" content="Zory的个人博客">
 <meta property="og:description" content="这些可能在NOIP初赛、日常做题比较有用当然也是计算机领域的一些常识">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-10-18T07:17:47.900Z">
+<meta property="og:updated_time" content="2018-12-25T04:43:13.130Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="【OI之路】01语法与STL-1概要">
+<meta name="twitter:title" content="【OI之路】01语法与STL-1概要与常识">
 <meta name="twitter:description" content="这些可能在NOIP初赛、日常做题比较有用当然也是计算机领域的一些常识">
 
 
@@ -150,7 +150,7 @@
   };
 </script>
 
-  <title>【OI之路】01语法与STL-1概要 | Zory的个人博客</title>
+  <title>【OI之路】01语法与STL-1概要与常识 | Zory的个人博客</title>
   
 
 
@@ -258,7 +258,7 @@
           
           <li class="menu-item menu-item-archives">
     <a href="/archives/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />历程Archives<span class="badge">421</span></a>
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />历程Archives<span class="badge">428</span></a>
   </li>
         
         
@@ -274,7 +274,7 @@
           
           <li class="menu-item menu-item-tags">
     <a href="/tags/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签Tags<span class="badge">155</span></a>
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签Tags<span class="badge">154</span></a>
   </li>
         
         
@@ -299,14 +299,6 @@
           <li class="menu-item menu-item-friends">
     <a href="/friends/" rel="section">
       <i class="menu-item-icon fa fa-fw fa-user-circle"></i> <br />友链Friends</a>
-  </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-english">
-    <a href="/English/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-etsy"></i> <br />English知识体系</a>
   </li>
         
         
@@ -421,7 +413,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">【OI之路】01语法与STL-1概要
+          <h2 class="post-title" itemprop="name headline">【OI之路】01语法与STL-1概要与常识
               
             
           </h2>
@@ -463,7 +455,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改于：2018-10-18 15:17:47" itemprop="dateModified" datetime="2018-10-18T15:17:47+08:00">2018-10-18</time>
+                <time title="修改于：2018-12-25 12:43:13" itemprop="dateModified" datetime="2018-12-25T12:43:13+08:00">2018-12-25</time>
               
             
           </span>
@@ -504,7 +496,7 @@
 
           
           
-             <span id="/posts/5fe4.html" class="leancloud_visitors" data-flag-title="【OI之路】01语法与STL-1概要">
+             <span id="/posts/5fe4.html" class="leancloud_visitors" data-flag-title="【OI之路】01语法与STL-1概要与常识">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -538,15 +530,6 @@
         <p>这些可能在NOIP初赛、日常做题比较有用<br>当然也是计算机领域的一些常识<br><a id="more"></a></p>
 <h1 id="系统dfs栈"><a href="#系统dfs栈" class="headerlink" title="系统dfs栈"></a>系统dfs栈</h1><p>windows默认60000左右，linux默认250000左右<br>解决方法：手写栈</p>
 <h1 id="主定理"><a href="#主定理" class="headerlink" title="主定理"></a>主定理</h1><p>用来分析复杂度的东东<br>$T(n)=aT(\frac{n}{B})+f(n)$<br>如果 $f(n)&lt;n^{log_b a},T(n)=O(n^{log_b a})$<br>如果 $f(n)=n^{log_b a},T(n)=O(n^{log_b a} log n)$<br>很多分治算法不太好计算，就可以用这个</p>
-<p>树上的度指子节点数量，和通常说的不同！<br>设ni为二叉树上，度为i的节点数量<br>则n0=n2+1<br>证明：</p>
-<ol>
-<li>n=n0+n1+n2</li>
-<li>孩子节点总数=n1+2n2</li>
-<li>显然n=n1+2n2+1</li>
-<li>所以得证</li>
-</ol>
-<p>树的层次，从第0层开始<br>一棵树的高度，为其层数-1，所以和深度最大的节点，数值相同（根深度为0）</p>
-<p>完美二叉树 Perfect Binary Tree: 没有度为0的节点<br>完全二叉树 Complete Binary Tree：最后一层不满<br>完满二叉树 Full Binary Tree：即国内通常指的满二叉树</p>
 <h1 id="初赛易错"><a href="#初赛易错" class="headerlink" title="初赛易错"></a>初赛易错</h1><ol>
 <li>主频1 GHZ=1000 MHz</li>
 <li>区位码转国际码，分别加上32；国际码转机内码，分别加128</li>
@@ -587,7 +570,7 @@
 				<p id="div-border-left-purple">
 			   <b>本文基于<a target="_blank" title="Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)" href="http://creativecommons.org/licenses/by-sa/4.0/deed.zh"> 知识共享署名-相同方式共享 4.0 </a>国际许可协议发布</b><br/>
 				<span>
-				<b>本文地址：</b><a href="/posts/5fe4.html" title="【OI之路】01语法与STL-1概要">http://zory.ink/posts/5fe4.html</a><br/><b>转载请注明出处，谢谢！</b>
+				<b>本文地址：</b><a href="/posts/5fe4.html" title="【OI之路】01语法与STL-1概要与常识">http://zory.ink/posts/5fe4.html</a><br/><b>转载请注明出处，谢谢！</b>
 				</span>
 				</p>
 		</div>
@@ -746,7 +729,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">421</span>
+                    <span class="site-state-item-count">428</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -1088,9 +1071,7 @@
                     
                       
                     
-                      
-                    
-                    <span class="site-state-item-count">152</span>
+                    <span class="site-state-item-count">154</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1125,12 +1106,7 @@
           
             
           
-          
-
-<script src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto" defer></script>
-
-——一言
-
+          ﻿
         </div>
       </section>
 

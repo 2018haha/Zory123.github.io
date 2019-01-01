@@ -4,20 +4,16 @@
 
     
   <url>
-    <loc>http://zory.ink/posts/81f.html</loc>
-    <lastmod>2018-12-27T06:45:51.420Z</lastmod>
+    <loc>http://zory.ink/posts/e5f5.html</loc>
+    <lastmod>2019-01-01T09:11:04.559Z</lastmod>
     <data>
         <display>
-        <title>适者</title>
-        <pubTime>2018-10-06T14:15:00.000Z</pubTime>
+        <title>【CF528D】Fuzzy Search</title>
+        <pubTime>2018-01-01T09:05:28.000Z</pubTime>
         
         <tag>难度2</tag>
          
-        <tag>贪心</tag>
-         
-        <tag>动态凸包</tag>
-         
-        <tag>标记永久化</tag>
+        <tag>fft</tag>
          
          
            
@@ -30,8 +26,638 @@
 
     
   <url>
+    <loc>http://zory.ink/posts/80c8.html</loc>
+    <lastmod>2019-01-01T09:04:37.419Z</lastmod>
+    <data>
+        <display>
+        <title>【置顶】套路集锦</title>
+        <pubTime>2003-01-21T16:00:00.000Z</pubTime>
+        
+        <tag>原创精华</tag>
+         
+         
+           
+             
+              <breadCrumb title="其他" url="http://zory.ink/categories/%E5%85%B6%E4%BB%96/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zory.ink/posts/4db.html</loc>
+    <lastmod>2019-01-01T03:31:11.729Z</lastmod>
+    <data>
+        <display>
+        <title>【OI之路】03数论-14多项式乘法</title>
+        <pubTime>2003-01-21T16:03:14.000Z</pubTime>
+        
+        <tag>fft</tag>
+         
+        <tag>ntt</tag>
+         
+         
+           
+             
+              <breadCrumb title="OI之路" url="http://zory.ink/categories/OI%E4%B9%8B%E8%B7%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zory.ink/posts/d81d.html</loc>
+    <lastmod>2018-12-31T14:31:53.405Z</lastmod>
+    <data>
+        <display>
+        <title>【OI之路】03数论-13莫比乌斯</title>
+        <pubTime>2003-01-21T16:03:13.000Z</pubTime>
+        
+        <tag>莫比乌斯</tag>
+         
+         
+           
+             
+              <breadCrumb title="OI之路" url="http://zory.ink/categories/OI%E4%B9%8B%E8%B7%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zory.ink/posts/1db5.html</loc>
+    <lastmod>2018-12-31T13:30:40.963Z</lastmod>
+    <data>
+        <display>
+        <title>【Zjoi2014】力</title>
+        <pubTime>2017-12-09T07:33:00.000Z</pubTime>
+        
+        <tag>快速傅里叶变换</tag>
+         
+        <tag>难度2</tag>
+         
+         
+           
+             
+              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zory.ink/posts/fb8e.html</loc>
+    <lastmod>2018-12-31T06:51:41.380Z</lastmod>
+    <data>
+        <display>
+        <title>【Bzoj2194】快速傅立叶之二</title>
+        <pubTime>2017-12-08T04:55:00.000Z</pubTime>
+        
+        <tag>快速傅里叶变换</tag>
+         
+        <tag>难度2</tag>
+         
+         
+           
+             
+              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zory.ink/posts/df74.html</loc>
+    <lastmod>2018-12-31T06:51:41.379Z</lastmod>
+    <data>
+        <display>
+        <title>【Bzoj3771】Triple</title>
+        <pubTime>2017-12-09T07:33:00.000Z</pubTime>
+        
+        <tag>快速傅里叶变换</tag>
+         
+        <tag>难度3</tag>
+         
+        <tag>容斥原理</tag>
+         
+        <tag>好题</tag>
+         
+         
+           
+             
+              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zory.ink/posts/5aa0.html</loc>
+    <lastmod>2018-12-31T06:51:41.375Z</lastmod>
+    <data>
+        <display>
+        <title>【Bzoj2820】YY的GCD</title>
+        <pubTime>2017-11-29T04:55:00.000Z</pubTime>
+        
+        <tag>难度2</tag>
+         
+        <tag>莫比乌斯</tag>
+         
+         
+           
+             
+              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zory.ink/posts/105f.html</loc>
+    <lastmod>2018-12-30T15:31:44.288Z</lastmod>
+    <data>
+        <display>
+        <title>【bzoj2839】集合计数</title>
+        <pubTime>2018-12-30T14:46:58.000Z</pubTime>
+        
+        <tag>难度2</tag>
+         
+        <tag>容斥</tag>
+         
+         
+           
+             
+              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zory.ink/posts/71d2.html</loc>
+    <lastmod>2018-12-30T15:02:31.893Z</lastmod>
+    <data>
+        <display>
+        <title>【OI之路】03数论-3逆元</title>
+        <pubTime>2003-01-21T16:03:03.000Z</pubTime>
+        
+        <tag>逆元</tag>
+         
+         
+           
+             
+              <breadCrumb title="OI之路" url="http://zory.ink/categories/OI%E4%B9%8B%E8%B7%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zory.ink/posts/462d.html</loc>
+    <lastmod>2018-12-30T08:33:28.094Z</lastmod>
+    <data>
+        <display>
+        <title>【HNOI2012】集合选数</title>
+        <pubTime>2018-12-29T01:24:37.000Z</pubTime>
+        
+        <tag>dp</tag>
+         
+        <tag>难度2</tag>
+         
+        <tag>状压dp</tag>
+         
+         
+           
+             
+              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zory.ink/posts/c508.html</loc>
+    <lastmod>2018-12-30T03:29:18.036Z</lastmod>
+    <data>
+        <display>
+        <title>【OI之路】03数论-11-BSGS</title>
+        <pubTime>2003-01-21T16:03:11.000Z</pubTime>
+        
+        <tag>BSGS</tag>
+         
+         
+           
+             
+              <breadCrumb title="OI之路" url="http://zory.ink/categories/OI%E4%B9%8B%E8%B7%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zory.ink/posts/a06a.html</loc>
+    <lastmod>2018-12-30T03:29:12.435Z</lastmod>
+    <data>
+        <display>
+        <title>【OI之路】03数论-2定理杂烩</title>
+        <pubTime>2003-01-21T16:03:02.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="OI之路" url="http://zory.ink/categories/OI%E4%B9%8B%E8%B7%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zory.ink/posts/a959.html</loc>
+    <lastmod>2018-12-30T02:31:54.196Z</lastmod>
+    <data>
+        <display>
+        <title>【CF235E】Number Challenge</title>
+        <pubTime>2018-12-29T01:24:37.000Z</pubTime>
+        
+        <tag>难度2</tag>
+         
+        <tag>好题</tag>
+         
+        <tag>莫比乌斯</tag>
+         
+         
+           
+             
+              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zory.ink/posts/82f7.html</loc>
+    <lastmod>2018-12-30T02:17:14.094Z</lastmod>
+    <data>
+        <display>
+        <title>【训练】算法竞赛进阶指南-3数学30题</title>
+        <pubTime>2018-07-18T16:00:00.000Z</pubTime>
+        
+        <tag>算法竞赛进阶指南</tag>
+         
+         
+           
+             
+              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zory.ink/posts/53a7.html</loc>
+    <lastmod>2018-12-30T02:17:14.055Z</lastmod>
+    <data>
+        <display>
+        <title>【Bzoj3670】【Luogu2375】动物园</title>
+        <pubTime>2018-04-24T00:25:00.000Z</pubTime>
+        
+        <tag>难度2</tag>
+         
+        <tag>kmp</tag>
+         
+        <tag>好题</tag>
+         
+         
+           
+             
+              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zory.ink/posts/b4ff.html</loc>
+    <lastmod>2018-12-30T02:17:14.046Z</lastmod>
+    <data>
+        <display>
+        <title>【Bzoj3527】3-idiots</title>
+        <pubTime>2017-12-09T07:33:00.000Z</pubTime>
+        
+        <tag>快速傅里叶变换</tag>
+         
+        <tag>难度3</tag>
+         
+        <tag>好题</tag>
+         
+         
+           
+             
+              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zory.ink/posts/24f8.html</loc>
+    <lastmod>2018-12-30T02:17:14.045Z</lastmod>
+    <data>
+        <display>
+        <title>【Bzoj2190】仪仗队</title>
+        <pubTime>2017-11-26T07:55:00.000Z</pubTime>
+        
+        <tag>难度2</tag>
+         
+        <tag>莫比乌斯</tag>
+         
+         
+           
+             
+              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zory.ink/posts/12b6.html</loc>
+    <lastmod>2018-12-30T02:17:14.038Z</lastmod>
+    <data>
+        <display>
+        <title>【Bzoj2301】【Luogu2522】Problem_b</title>
+        <pubTime>2017-11-26T05:55:00.000Z</pubTime>
+        
+        <tag>难度2</tag>
+         
+        <tag>莫比乌斯</tag>
+         
+         
+           
+             
+              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zory.ink/posts/9151.html</loc>
+    <lastmod>2018-12-30T02:17:14.032Z</lastmod>
+    <data>
+        <display>
+        <title>【Bzoj2818】GCD-莫比乌斯2</title>
+        <pubTime>2017-11-25T09:55:00.000Z</pubTime>
+        
+        <tag>难度2</tag>
+         
+        <tag>莫比乌斯</tag>
+         
+         
+           
+             
+              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zory.ink/posts/d395.html</loc>
+    <lastmod>2018-12-30T02:17:14.032Z</lastmod>
+    <data>
+        <display>
+        <title>【Hdu1695】GCD(莫比乌斯1)</title>
+        <pubTime>2017-11-25T08:03:00.000Z</pubTime>
+        
+        <tag>难度2</tag>
+         
+        <tag>莫比乌斯</tag>
+         
+         
+           
+             
+              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zory.ink/posts/d688.html</loc>
+    <lastmod>2018-12-30T02:17:14.031Z</lastmod>
+    <data>
+        <display>
+        <title>GDOI2018</title>
+        <pubTime>2018-04-27T09:41:00.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="竞赛历程" url="http://zory.ink/categories/%E7%AB%9E%E8%B5%9B%E5%8E%86%E7%A8%8B/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zory.ink/posts/a143.html</loc>
+    <lastmod>2018-12-30T02:17:14.029Z</lastmod>
+    <data>
+        <display>
+        <title>【SDOI2014】数表</title>
+        <pubTime>2018-12-28T08:57:18.000Z</pubTime>
+        
+        <tag>难度2</tag>
+         
+        <tag>好题</tag>
+         
+        <tag>莫比乌斯</tag>
+         
+         
+           
+             
+              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zory.ink/posts/6322.html</loc>
+    <lastmod>2018-12-30T02:17:14.028Z</lastmod>
+    <data>
+        <display>
+        <title>jzptab</title>
+        <pubTime>2018-12-28T23:54:37.000Z</pubTime>
+        
+        <tag>难度2</tag>
+         
+        <tag>好题</tag>
+         
+        <tag>莫比乌斯</tag>
+         
+         
+           
+             
+              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zory.ink/posts/ea1.html</loc>
+    <lastmod>2018-12-30T02:17:14.027Z</lastmod>
+    <data>
+        <display>
+        <title>【Zoj3435】Ideal Puzzle Bobble</title>
+        <pubTime>2017-11-27T05:35:00.000Z</pubTime>
+        
+        <tag>难度2</tag>
+         
+        <tag>好题</tag>
+         
+        <tag>莫比乌斯</tag>
+         
+         
+           
+             
+              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zory.ink/posts/4c9e.html</loc>
+    <lastmod>2018-12-30T02:17:14.025Z</lastmod>
+    <data>
+        <display>
+        <title>【置顶】目录</title>
+        <pubTime>2020-04-30T16:00:00.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="其他" url="http://zory.ink/categories/%E5%85%B6%E4%BB%96/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zory.ink/posts/7748.html</loc>
+    <lastmod>2018-12-30T01:53:05.110Z</lastmod>
+    <data>
+        <display>
+        <title>【OI之路】03数论-1约数与欧几里得</title>
+        <pubTime>2003-01-21T16:03:01.000Z</pubTime>
+        
+        <tag>原创精华</tag>
+         
+        <tag>欧几里得</tag>
+         
+         
+           
+             
+              <breadCrumb title="OI之路" url="http://zory.ink/categories/OI%E4%B9%8B%E8%B7%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zory.ink/posts/a379.html</loc>
+    <lastmod>2018-12-28T08:56:35.405Z</lastmod>
+    <data>
+        <display>
+        <title>【ZJOI2016】小星星</title>
+        <pubTime>2018-12-26T06:51:33.000Z</pubTime>
+        
+        <tag>dp</tag>
+         
+        <tag>难度2</tag>
+         
+        <tag>好题</tag>
+         
+         
+           
+             
+              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zory.ink/posts/5fe4.html</loc>
+    <lastmod>2018-12-28T01:55:07.993Z</lastmod>
+    <data>
+        <display>
+        <title>【OI之路】01语法与STL-1概要与常识</title>
+        <pubTime>2003-01-21T16:01:01.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="OI之路" url="http://zory.ink/categories/OI%E4%B9%8B%E8%B7%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zory.ink/posts/c7bb.html</loc>
+    <lastmod>2018-12-28T01:02:14.149Z</lastmod>
+    <data>
+        <display>
+        <title>【OI之路】03数论-16博弈</title>
+        <pubTime>2003-01-21T16:03:16.000Z</pubTime>
+        
+        <tag>博弈</tag>
+         
+         
+           
+             
+              <breadCrumb title="OI之路" url="http://zory.ink/categories/OI%E4%B9%8B%E8%B7%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://zory.ink/posts/4478.html</loc>
-    <lastmod>2018-12-27T04:52:13.973Z</lastmod>
+    <lastmod>2018-12-28T00:53:32.096Z</lastmod>
     <data>
         <display>
         <title>HNOI2015 接水果</title>
@@ -54,8 +680,23 @@
 
     
   <url>
+    <loc>http://zory.ink/posts/367.html</loc>
+    <lastmod>2018-12-27T08:04:17.769Z</lastmod>
+    <data>
+        <display>
+        <title>【置顶】个人简介About me</title>
+        <pubTime>2017-07-31T16:00:00.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://zory.ink/posts/a417.html</loc>
-    <lastmod>2018-12-27T00:48:37.623Z</lastmod>
+    <lastmod>2018-12-27T07:55:59.783Z</lastmod>
     <data>
         <display>
         <title>【bzoj4644】经典傻逼题【集训队互测2015】最大异或和</title>
@@ -78,18 +719,20 @@
 
     
   <url>
-    <loc>http://zory.ink/posts/a379.html</loc>
-    <lastmod>2018-12-27T00:30:15.254Z</lastmod>
+    <loc>http://zory.ink/posts/81f.html</loc>
+    <lastmod>2018-12-27T06:45:51.420Z</lastmod>
     <data>
         <display>
-        <title>【ZJOI2016】小星星</title>
-        <pubTime>2018-12-26T06:51:33.000Z</pubTime>
+        <title>适者</title>
+        <pubTime>2018-10-06T14:15:00.000Z</pubTime>
         
-        <tag>dp</tag>
-         
         <tag>难度2</tag>
          
-        <tag>好题</tag>
+        <tag>贪心</tag>
+         
+        <tag>动态凸包</tag>
+         
+        <tag>标记永久化</tag>
          
          
            
@@ -204,16 +847,16 @@
 
     
   <url>
-    <loc>http://zory.ink/posts/a999.html</loc>
+    <loc>http://zory.ink/posts/9bc9.html</loc>
     <lastmod>2018-12-27T00:29:47.830Z</lastmod>
     <data>
         <display>
-        <title>【JOI】稻草人</title>
-        <pubTime>2018-09-29T03:58:00.000Z</pubTime>
+        <title>【Vijos1677】陶陶的名字</title>
+        <pubTime>2018-04-23T12:18:00.000Z</pubTime>
         
         <tag>难度2</tag>
          
-        <tag>分治</tag>
+        <tag>kmp</tag>
          
         <tag>好题</tag>
          
@@ -228,16 +871,16 @@
 
     
   <url>
-    <loc>http://zory.ink/posts/9bc9.html</loc>
+    <loc>http://zory.ink/posts/a999.html</loc>
     <lastmod>2018-12-27T00:29:47.830Z</lastmod>
     <data>
         <display>
-        <title>【Vijos1677】陶陶的名字</title>
-        <pubTime>2018-04-23T12:18:00.000Z</pubTime>
+        <title>【JOI】稻草人</title>
+        <pubTime>2018-09-29T03:58:00.000Z</pubTime>
         
         <tag>难度2</tag>
          
-        <tag>kmp</tag>
+        <tag>分治</tag>
          
         <tag>好题</tag>
          
@@ -278,20 +921,16 @@
 
     
   <url>
-    <loc>http://zory.ink/posts/d2e5.html</loc>
+    <loc>http://zory.ink/posts/24a0.html</loc>
     <lastmod>2018-12-27T00:29:47.814Z</lastmod>
     <data>
         <display>
-        <title>【Luogu1514】引水入城</title>
-        <pubTime>2018-04-10T05:41:00.000Z</pubTime>
+        <title>【Luogu1031】均分纸牌</title>
+        <pubTime>2018-04-02T00:40:00.000Z</pubTime>
         
-        <tag>dp</tag>
-         
-        <tag>难度2</tag>
+        <tag>难度1</tag>
          
         <tag>贪心</tag>
-         
-        <tag>记忆化搜索</tag>
          
         <tag>好题</tag>
          
@@ -306,16 +945,20 @@
 
     
   <url>
-    <loc>http://zory.ink/posts/24a0.html</loc>
+    <loc>http://zory.ink/posts/d2e5.html</loc>
     <lastmod>2018-12-27T00:29:47.814Z</lastmod>
     <data>
         <display>
-        <title>【Luogu1031】均分纸牌</title>
-        <pubTime>2018-04-02T00:40:00.000Z</pubTime>
+        <title>【Luogu1514】引水入城</title>
+        <pubTime>2018-04-10T05:41:00.000Z</pubTime>
         
-        <tag>难度1</tag>
+        <tag>dp</tag>
+         
+        <tag>难度2</tag>
          
         <tag>贪心</tag>
+         
+        <tag>记忆化搜索</tag>
          
         <tag>好题</tag>
          
@@ -416,30 +1059,6 @@
 
     
   <url>
-    <loc>http://zory.ink/posts/53a7.html</loc>
-    <lastmod>2018-12-27T00:29:47.784Z</lastmod>
-    <data>
-        <display>
-        <title>【Bzoj3670】【Luogu2375】动物园</title>
-        <pubTime>2018-04-24T00:25:00.000Z</pubTime>
-        
-        <tag>难度2</tag>
-         
-        <tag>kmp</tag>
-         
-        <tag>好题</tag>
-         
-         
-           
-             
-              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://zory.ink/posts/23c4.html</loc>
     <lastmod>2018-12-27T00:29:47.763Z</lastmod>
     <data>
@@ -452,134 +1071,6 @@
         <tag>bfs</tag>
          
         <tag>spfa</tag>
-         
-        <tag>好题</tag>
-         
-         
-           
-             
-              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://zory.ink/posts/e426.html</loc>
-    <lastmod>2018-12-27T00:29:47.743Z</lastmod>
-    <data>
-        <display>
-        <title>【Bzoj3240】【Luogu1397】矩阵游戏</title>
-        <pubTime>2018-03-28T23:46:00.000Z</pubTime>
-        
-        <tag>矩阵乘法</tag>
-         
-        <tag>难度3</tag>
-         
-        <tag>好题</tag>
-         
-         
-           
-             
-              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://zory.ink/posts/304d.html</loc>
-    <lastmod>2018-12-27T00:29:47.743Z</lastmod>
-    <data>
-        <display>
-        <title>【Bzoj3679】数字之积</title>
-        <pubTime>2018-03-21T03:34:00.000Z</pubTime>
-        
-        <tag>dp</tag>
-         
-        <tag>数位dp</tag>
-         
-        <tag>难度2</tag>
-         
-        <tag>好题</tag>
-         
-         
-           
-             
-              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://zory.ink/posts/dae0.html</loc>
-    <lastmod>2018-12-27T00:29:47.743Z</lastmod>
-    <data>
-        <display>
-        <title>【Bzoj1010】【Luogu3195】玩具装箱</title>
-        <pubTime>2018-03-20T00:52:00.000Z</pubTime>
-        
-        <tag>dp</tag>
-         
-        <tag>难度2</tag>
-         
-        <tag>斜率优化</tag>
-         
-        <tag>单调队列</tag>
-         
-        <tag>好题</tag>
-         
-         
-           
-             
-              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://zory.ink/posts/c57c.html</loc>
-    <lastmod>2018-12-27T00:29:47.743Z</lastmod>
-    <data>
-        <display>
-        <title>【Bzoj3343】教主的魔法</title>
-        <pubTime>2018-03-01T12:30:00.000Z</pubTime>
-        
-        <tag>矩阵乘法</tag>
-         
-        <tag>难度3</tag>
-         
-        <tag>好题</tag>
-         
-         
-           
-             
-              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://zory.ink/posts/8b22.html</loc>
-    <lastmod>2018-12-27T00:29:47.743Z</lastmod>
-    <data>
-        <display>
-        <title>【Luogu1525】关押罪犯</title>
-        <pubTime>2018-04-08T12:26:00.000Z</pubTime>
-        
-        <tag>并查集</tag>
-         
-        <tag>难度2</tag>
-         
-        <tag>贪心</tag>
          
         <tag>好题</tag>
          
@@ -622,6 +1113,84 @@
 
     
   <url>
+    <loc>http://zory.ink/posts/8b22.html</loc>
+    <lastmod>2018-12-27T00:29:47.743Z</lastmod>
+    <data>
+        <display>
+        <title>【Luogu1525】关押罪犯</title>
+        <pubTime>2018-04-08T12:26:00.000Z</pubTime>
+        
+        <tag>并查集</tag>
+         
+        <tag>难度2</tag>
+         
+        <tag>贪心</tag>
+         
+        <tag>好题</tag>
+         
+         
+           
+             
+              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zory.ink/posts/e426.html</loc>
+    <lastmod>2018-12-27T00:29:47.743Z</lastmod>
+    <data>
+        <display>
+        <title>【Bzoj3240】【Luogu1397】矩阵游戏</title>
+        <pubTime>2018-03-28T23:46:00.000Z</pubTime>
+        
+        <tag>矩阵乘法</tag>
+         
+        <tag>难度3</tag>
+         
+        <tag>好题</tag>
+         
+         
+           
+             
+              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zory.ink/posts/dae0.html</loc>
+    <lastmod>2018-12-27T00:29:47.743Z</lastmod>
+    <data>
+        <display>
+        <title>【Bzoj1010】【Luogu3195】玩具装箱</title>
+        <pubTime>2018-03-20T00:52:00.000Z</pubTime>
+        
+        <tag>dp</tag>
+         
+        <tag>难度2</tag>
+         
+        <tag>斜率优化</tag>
+         
+        <tag>单调队列</tag>
+         
+        <tag>好题</tag>
+         
+         
+           
+             
+              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://zory.ink/posts/9f3.html</loc>
     <lastmod>2018-12-27T00:29:47.743Z</lastmod>
     <data>
@@ -648,6 +1217,56 @@
 
     
   <url>
+    <loc>http://zory.ink/posts/304d.html</loc>
+    <lastmod>2018-12-27T00:29:47.743Z</lastmod>
+    <data>
+        <display>
+        <title>【Bzoj3679】数字之积</title>
+        <pubTime>2018-03-21T03:34:00.000Z</pubTime>
+        
+        <tag>dp</tag>
+         
+        <tag>数位dp</tag>
+         
+        <tag>难度2</tag>
+         
+        <tag>好题</tag>
+         
+         
+           
+             
+              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zory.ink/posts/c57c.html</loc>
+    <lastmod>2018-12-27T00:29:47.743Z</lastmod>
+    <data>
+        <display>
+        <title>【Bzoj3343】教主的魔法</title>
+        <pubTime>2018-03-01T12:30:00.000Z</pubTime>
+        
+        <tag>矩阵乘法</tag>
+         
+        <tag>难度3</tag>
+         
+        <tag>好题</tag>
+         
+         
+           
+             
+              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://zory.ink/posts/25f1.html</loc>
     <lastmod>2018-12-27T00:29:47.742Z</lastmod>
     <data>
@@ -660,6 +1279,30 @@
         <tag>难度3</tag>
          
         <tag>树链剖分</tag>
+         
+        <tag>好题</tag>
+         
+         
+           
+             
+              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zory.ink/posts/184e.html</loc>
+    <lastmod>2018-12-27T00:29:47.742Z</lastmod>
+    <data>
+        <display>
+        <title>【Bzoj1018】【Luogu4246】堵塞的交通</title>
+        <pubTime>2018-03-01T12:30:00.000Z</pubTime>
+        
+        <tag>线段树</tag>
+         
+        <tag>难度2</tag>
          
         <tag>好题</tag>
          
@@ -716,30 +1359,6 @@
         <tag>难度2</tag>
          
         <tag>贪心</tag>
-         
-        <tag>好题</tag>
-         
-         
-           
-             
-              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://zory.ink/posts/184e.html</loc>
-    <lastmod>2018-12-27T00:29:47.742Z</lastmod>
-    <data>
-        <display>
-        <title>【Bzoj1018】【Luogu4246】堵塞的交通</title>
-        <pubTime>2018-03-01T12:30:00.000Z</pubTime>
-        
-        <tag>线段树</tag>
-         
-        <tag>难度2</tag>
          
         <tag>好题</tag>
          
@@ -974,32 +1593,6 @@
 
     
   <url>
-    <loc>http://zory.ink/posts/710f.html</loc>
-    <lastmod>2018-12-27T00:29:47.619Z</lastmod>
-    <data>
-        <display>
-        <title>【USACO12DEC】【Bzoj3012】【Luogu3065】First!</title>
-        <pubTime>2018-04-24T03:52:00.000Z</pubTime>
-        
-        <tag>难度2</tag>
-         
-        <tag>拓扑</tag>
-         
-        <tag>字典树</tag>
-         
-        <tag>好题</tag>
-         
-         
-           
-             
-              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://zory.ink/posts/f69a.html</loc>
     <lastmod>2018-12-27T00:29:47.619Z</lastmod>
     <data>
@@ -1010,30 +1603,6 @@
         <tag>难度2</tag>
          
         <tag>欧拉函数</tag>
-         
-        <tag>好题</tag>
-         
-         
-           
-             
-              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://zory.ink/posts/dd1c.html</loc>
-    <lastmod>2018-12-27T00:29:47.619Z</lastmod>
-    <data>
-        <display>
-        <title>【Bzoj5192】【Luogu4271】New Barns</title>
-        <pubTime>2018-03-30T06:38:00.000Z</pubTime>
-        
-        <tag>难度2</tag>
-         
-        <tag>动态点分治</tag>
          
         <tag>好题</tag>
          
@@ -1074,16 +1643,42 @@
 
     
   <url>
-    <loc>http://zory.ink/posts/59cc.html</loc>
-    <lastmod>2018-12-27T00:29:47.612Z</lastmod>
+    <loc>http://zory.ink/posts/710f.html</loc>
+    <lastmod>2018-12-27T00:29:47.619Z</lastmod>
     <data>
         <display>
-        <title>【CF19E】【Bzoj4424】Fairy</title>
-        <pubTime>2018-03-13T11:50:00.000Z</pubTime>
+        <title>【USACO12DEC】【Bzoj3012】【Luogu3065】First!</title>
+        <pubTime>2018-04-24T03:52:00.000Z</pubTime>
         
         <tag>难度2</tag>
          
-        <tag>树形dp</tag>
+        <tag>拓扑</tag>
+         
+        <tag>字典树</tag>
+         
+        <tag>好题</tag>
+         
+         
+           
+             
+              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zory.ink/posts/dd1c.html</loc>
+    <lastmod>2018-12-27T00:29:47.619Z</lastmod>
+    <data>
+        <display>
+        <title>【Bzoj5192】【Luogu4271】New Barns</title>
+        <pubTime>2018-03-30T06:38:00.000Z</pubTime>
+        
+        <tag>难度2</tag>
+         
+        <tag>动态点分治</tag>
          
         <tag>好题</tag>
          
@@ -1108,6 +1703,30 @@
         <tag>dp</tag>
          
         <tag>难度1</tag>
+         
+        <tag>好题</tag>
+         
+         
+           
+             
+              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zory.ink/posts/59cc.html</loc>
+    <lastmod>2018-12-27T00:29:47.612Z</lastmod>
+    <data>
+        <display>
+        <title>【CF19E】【Bzoj4424】Fairy</title>
+        <pubTime>2018-03-13T11:50:00.000Z</pubTime>
+        
+        <tag>难度2</tag>
+         
+        <tag>树形dp</tag>
          
         <tag>好题</tag>
          
@@ -1200,18 +1819,18 @@
 
     
   <url>
-    <loc>http://zory.ink/posts/9d1.html</loc>
+    <loc>http://zory.ink/posts/bfa5.html</loc>
     <lastmod>2018-12-27T00:29:47.595Z</lastmod>
     <data>
         <display>
-        <title>【POI2009】救火站</title>
-        <pubTime>2018-09-29T08:48:00.000Z</pubTime>
+        <title>【NOIAC32】Sort</title>
+        <pubTime>2018-10-03T03:30:00.000Z</pubTime>
         
-        <tag>难度3</tag>
+        <tag>难度2</tag>
          
-        <tag>贪心</tag>
+        <tag>分治</tag>
          
-        <tag>树形dp</tag>
+        <tag>排序</tag>
          
         <tag>好题</tag>
          
@@ -1226,18 +1845,18 @@
 
     
   <url>
-    <loc>http://zory.ink/posts/bfa5.html</loc>
+    <loc>http://zory.ink/posts/9d1.html</loc>
     <lastmod>2018-12-27T00:29:47.595Z</lastmod>
     <data>
         <display>
-        <title>【NOIAC32】Sort</title>
-        <pubTime>2018-10-03T03:30:00.000Z</pubTime>
+        <title>【POI2009】救火站</title>
+        <pubTime>2018-09-29T08:48:00.000Z</pubTime>
         
-        <tag>难度2</tag>
+        <tag>难度3</tag>
          
-        <tag>分治</tag>
+        <tag>贪心</tag>
          
-        <tag>排序</tag>
+        <tag>树形dp</tag>
          
         <tag>好题</tag>
          
@@ -1278,28 +1897,6 @@
 
     
   <url>
-    <loc>http://zory.ink/posts/34ee.html</loc>
-    <lastmod>2018-12-27T00:29:47.594Z</lastmod>
-    <data>
-        <display>
-        <title>【NOIP17 D1T1】小凯的疑惑</title>
-        <pubTime>2018-05-20T06:26:00.000Z</pubTime>
-        
-        <tag>难度2</tag>
-         
-        <tag>好题</tag>
-         
-         
-           
-             
-              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://zory.ink/posts/fc.html</loc>
     <lastmod>2018-12-27T00:29:47.594Z</lastmod>
     <data>
@@ -1326,16 +1923,14 @@
 
     
   <url>
-    <loc>http://zory.ink/posts/5359.html</loc>
-    <lastmod>2018-12-27T00:29:47.592Z</lastmod>
+    <loc>http://zory.ink/posts/34ee.html</loc>
+    <lastmod>2018-12-27T00:29:47.594Z</lastmod>
     <data>
         <display>
-        <title>【CTSC2010】珠宝商</title>
-        <pubTime>2018-12-24T06:28:42.000Z</pubTime>
+        <title>【NOIP17 D1T1】小凯的疑惑</title>
+        <pubTime>2018-05-20T06:26:00.000Z</pubTime>
         
-        <tag>sam</tag>
-         
-        <tag>难度3</tag>
+        <tag>难度2</tag>
          
         <tag>好题</tag>
          
@@ -1400,6 +1995,30 @@
 
     
   <url>
+    <loc>http://zory.ink/posts/5359.html</loc>
+    <lastmod>2018-12-27T00:29:47.592Z</lastmod>
+    <data>
+        <display>
+        <title>【CTSC2010】珠宝商</title>
+        <pubTime>2018-12-24T06:28:42.000Z</pubTime>
+        
+        <tag>sam</tag>
+         
+        <tag>难度3</tag>
+         
+        <tag>好题</tag>
+         
+         
+           
+             
+              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://zory.ink/posts/31df.html</loc>
     <lastmod>2018-12-27T00:29:47.586Z</lastmod>
     <data>
@@ -1426,14 +2045,40 @@
 
     
   <url>
-    <loc>http://zory.ink/posts/ea1.html</loc>
+    <loc>http://zory.ink/posts/310b.html</loc>
     <lastmod>2018-12-27T00:29:47.418Z</lastmod>
     <data>
         <display>
-        <title>【Zoj3435】Ideal Puzzle Bobble</title>
-        <pubTime>2017-11-27T05:35:00.000Z</pubTime>
+        <title>【CZYZ2009暑假集训提高组6】盟军敢死队</title>
+        <pubTime>2018-01-04T05:00:00.000Z</pubTime>
         
-        <tag>莫比乌斯反演</tag>
+        <tag>dp</tag>
+         
+        <tag>难度2</tag>
+         
+        <tag>状压dp</tag>
+         
+        <tag>好题</tag>
+         
+         
+           
+             
+              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zory.ink/posts/134e.html</loc>
+    <lastmod>2018-12-27T00:29:47.418Z</lastmod>
+    <data>
+        <display>
+        <title>【Luogu3113】马拉松赛跑Marathon</title>
+        <pubTime>2017-12-23T08:12:00.000Z</pubTime>
+        
+        <tag>线段树</tag>
          
         <tag>难度2</tag>
          
@@ -1450,16 +2095,68 @@
 
     
   <url>
-    <loc>http://zory.ink/posts/b4ff.html</loc>
+    <loc>http://zory.ink/posts/5323.html</loc>
     <lastmod>2018-12-27T00:29:47.418Z</lastmod>
     <data>
         <display>
-        <title>【Bzoj3527】3-idiots</title>
-        <pubTime>2017-12-09T07:33:00.000Z</pubTime>
+        <title>【Bzoj1783】【Luogu2975】轮流Taking Turns</title>
+        <pubTime>2017-12-23T08:42:00.000Z</pubTime>
         
-        <tag>快速傅里叶变换</tag>
+        <tag>博弈</tag>
          
-        <tag>难度3</tag>
+        <tag>dp</tag>
+         
+        <tag>难度1</tag>
+         
+        <tag>好题</tag>
+         
+         
+           
+             
+              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zory.ink/posts/4a23.html</loc>
+    <lastmod>2018-12-27T00:29:47.418Z</lastmod>
+    <data>
+        <display>
+        <title>【Caioj1086】进攻策略</title>
+        <pubTime>2017-09-10T08:38:00.000Z</pubTime>
+        
+        <tag>dp</tag>
+         
+        <tag>难度2</tag>
+         
+        <tag>好题</tag>
+         
+         
+           
+             
+              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zory.ink/posts/a1fb.html</loc>
+    <lastmod>2018-12-27T00:29:47.418Z</lastmod>
+    <data>
+        <display>
+        <title>【Bzoj1934】【Bzoj2768】善意的投票&冠军调查</title>
+        <pubTime>2017-11-23T05:46:00.000Z</pubTime>
+        
+        <tag>网络流</tag>
+         
+        <tag>难度2</tag>
+         
+        <tag>最小割</tag>
          
         <tag>好题</tag>
          
@@ -1506,54 +2203,6 @@
 
     
   <url>
-    <loc>http://zory.ink/posts/2666.html</loc>
-    <lastmod>2018-12-27T00:29:47.418Z</lastmod>
-    <data>
-        <display>
-        <title>【Caioj1080】乘电梯</title>
-        <pubTime>2017-09-11T07:38:00.000Z</pubTime>
-        
-        <tag>dp</tag>
-         
-        <tag>难度2</tag>
-         
-        <tag>好题</tag>
-         
-         
-           
-             
-              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://zory.ink/posts/4a23.html</loc>
-    <lastmod>2018-12-27T00:29:47.418Z</lastmod>
-    <data>
-        <display>
-        <title>【Caioj1086】进攻策略</title>
-        <pubTime>2017-09-10T08:38:00.000Z</pubTime>
-        
-        <tag>dp</tag>
-         
-        <tag>难度2</tag>
-         
-        <tag>好题</tag>
-         
-         
-           
-             
-              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://zory.ink/posts/44a6.html</loc>
     <lastmod>2018-12-27T00:29:47.418Z</lastmod>
     <data>
@@ -1570,30 +2219,6 @@
         <tag>Floyd</tag>
          
         <tag>二分</tag>
-         
-        <tag>好题</tag>
-         
-         
-           
-             
-              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://zory.ink/posts/134e.html</loc>
-    <lastmod>2018-12-27T00:29:47.418Z</lastmod>
-    <data>
-        <display>
-        <title>【Luogu3113】马拉松赛跑Marathon</title>
-        <pubTime>2017-12-23T08:12:00.000Z</pubTime>
-        
-        <tag>线段树</tag>
-         
-        <tag>难度2</tag>
          
         <tag>好题</tag>
          
@@ -1632,144 +2257,16 @@
 
     
   <url>
-    <loc>http://zory.ink/posts/310b.html</loc>
+    <loc>http://zory.ink/posts/2666.html</loc>
     <lastmod>2018-12-27T00:29:47.418Z</lastmod>
     <data>
         <display>
-        <title>【CZYZ2009暑假集训提高组6】盟军敢死队</title>
-        <pubTime>2018-01-04T05:00:00.000Z</pubTime>
+        <title>【Caioj1080】乘电梯</title>
+        <pubTime>2017-09-11T07:38:00.000Z</pubTime>
         
         <tag>dp</tag>
          
         <tag>难度2</tag>
-         
-        <tag>状压dp</tag>
-         
-        <tag>好题</tag>
-         
-         
-           
-             
-              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://zory.ink/posts/df74.html</loc>
-    <lastmod>2018-12-27T00:29:47.418Z</lastmod>
-    <data>
-        <display>
-        <title>【Bzoj3771】Triple</title>
-        <pubTime>2017-12-09T07:33:00.000Z</pubTime>
-        
-        <tag>快速傅里叶变换</tag>
-         
-        <tag>难度3</tag>
-         
-        <tag>容斥原理</tag>
-         
-        <tag>好题</tag>
-         
-         
-           
-             
-              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://zory.ink/posts/5323.html</loc>
-    <lastmod>2018-12-27T00:29:47.418Z</lastmod>
-    <data>
-        <display>
-        <title>【Bzoj1783】【Luogu2975】轮流Taking Turns</title>
-        <pubTime>2017-12-23T08:42:00.000Z</pubTime>
-        
-        <tag>博弈</tag>
-         
-        <tag>dp</tag>
-         
-        <tag>难度1</tag>
-         
-        <tag>好题</tag>
-         
-         
-           
-             
-              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://zory.ink/posts/a1fb.html</loc>
-    <lastmod>2018-12-27T00:29:47.418Z</lastmod>
-    <data>
-        <display>
-        <title>【Bzoj1934】【Bzoj2768】善意的投票&冠军调查</title>
-        <pubTime>2017-11-23T05:46:00.000Z</pubTime>
-        
-        <tag>网络流</tag>
-         
-        <tag>难度2</tag>
-         
-        <tag>最小割</tag>
-         
-        <tag>好题</tag>
-         
-         
-           
-             
-              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://zory.ink/posts/381c.html</loc>
-    <lastmod>2018-12-27T00:29:47.411Z</lastmod>
-    <data>
-        <display>
-        <title>【NOIAC31】MST</title>
-        <pubTime>2018-10-03T07:55:00.000Z</pubTime>
-        
-        <tag>dp</tag>
-         
-        <tag>难度2</tag>
-         
-        <tag>好题</tag>
-         
-         
-           
-             
-              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://zory.ink/posts/8c5f.html</loc>
-    <lastmod>2018-12-27T00:29:47.411Z</lastmod>
-    <data>
-        <display>
-        <title>Merchant</title>
-        <pubTime>2018-10-22T06:22:00.000Z</pubTime>
-        
-        <tag>难度2</tag>
-         
-        <tag>二分</tag>
          
         <tag>好题</tag>
          
@@ -1790,6 +2287,30 @@
         <display>
         <title>【CF960F】Pathwalks</title>
         <pubTime>2018-10-25T02:46:00.000Z</pubTime>
+        
+        <tag>dp</tag>
+         
+        <tag>难度2</tag>
+         
+        <tag>好题</tag>
+         
+         
+           
+             
+              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zory.ink/posts/381c.html</loc>
+    <lastmod>2018-12-27T00:29:47.411Z</lastmod>
+    <data>
+        <display>
+        <title>【NOIAC31】MST</title>
+        <pubTime>2018-10-03T07:55:00.000Z</pubTime>
         
         <tag>dp</tag>
          
@@ -1864,6 +2385,30 @@
 
     
   <url>
+    <loc>http://zory.ink/posts/8c5f.html</loc>
+    <lastmod>2018-12-27T00:29:47.411Z</lastmod>
+    <data>
+        <display>
+        <title>Merchant</title>
+        <pubTime>2018-10-22T06:22:00.000Z</pubTime>
+        
+        <tag>难度2</tag>
+         
+        <tag>二分</tag>
+         
+        <tag>好题</tag>
+         
+         
+           
+             
+              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://zory.ink/posts/5574.html</loc>
     <lastmod>2018-12-27T00:29:47.410Z</lastmod>
     <data>
@@ -1903,44 +2448,6 @@
            
              
               <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://zory.ink/posts/4c9e.html</loc>
-    <lastmod>2018-12-27T00:29:47.408Z</lastmod>
-    <data>
-        <display>
-        <title>【置顶】目录</title>
-        <pubTime>2020-04-30T16:00:00.000Z</pubTime>
-        
-         
-           
-             
-              <breadCrumb title="其他" url="http://zory.ink/categories/%E5%85%B6%E4%BB%96/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://zory.ink/posts/80c8.html</loc>
-    <lastmod>2018-12-26T12:49:24.911Z</lastmod>
-    <data>
-        <display>
-        <title>【置顶】套路集锦</title>
-        <pubTime>2003-01-21T16:00:00.000Z</pubTime>
-        
-        <tag>原创精华</tag>
-         
-         
-           
-             
-              <breadCrumb title="其他" url="http://zory.ink/categories/%E5%85%B6%E4%BB%96/"/>
           
         </display>
     </data>
@@ -2063,42 +2570,6 @@
     </url>
 
     
-  <url>
-    <loc>http://zory.ink/posts/a06a.html</loc>
-    <lastmod>2018-12-25T13:26:45.247Z</lastmod>
-    <data>
-        <display>
-        <title>【OI之路】03数论-2定理杂烩</title>
-        <pubTime>2003-01-21T16:03:02.000Z</pubTime>
-        
-         
-           
-             
-              <breadCrumb title="OI之路" url="http://zory.ink/categories/OI%E4%B9%8B%E8%B7%AF/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-    
-  <url>
-    <loc>http://zory.ink/posts/5fe4.html</loc>
-    <lastmod>2018-12-25T04:43:13.130Z</lastmod>
-    <data>
-        <display>
-        <title>【OI之路】01语法与STL-1概要与常识</title>
-        <pubTime>2003-01-21T16:01:01.000Z</pubTime>
-        
-         
-           
-             
-              <breadCrumb title="OI之路" url="http://zory.ink/categories/OI%E4%B9%8B%E8%B7%AF/"/>
-          
-        </display>
-    </data>
-    </url>
-
     
   <url>
     <loc>http://zory.ink/posts/212a.html</loc>
@@ -2555,24 +3026,6 @@
 
     
   <url>
-    <loc>http://zory.ink/posts/d688.html</loc>
-    <lastmod>2018-11-11T08:28:03.098Z</lastmod>
-    <data>
-        <display>
-        <title>GDOI2018</title>
-        <pubTime>2018-04-27T09:41:00.000Z</pubTime>
-        
-         
-           
-             
-              <breadCrumb title="竞赛历程" url="http://zory.ink/categories/%E7%AB%9E%E8%B5%9B%E5%8E%86%E7%A8%8B/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://zory.ink/posts/421b.html</loc>
     <lastmod>2018-11-09T04:37:54.827Z</lastmod>
     <data>
@@ -2723,21 +3176,6 @@
 
     
   <url>
-    <loc>http://zory.ink/posts/367.html</loc>
-    <lastmod>2018-11-08T03:24:12.276Z</lastmod>
-    <data>
-        <display>
-        <title>【置顶】个人简介About me</title>
-        <pubTime>2017-07-31T16:00:00.000Z</pubTime>
-        
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://zory.ink/posts/7de4.html</loc>
     <lastmod>2018-11-08T01:52:07.791Z</lastmod>
     <data>
@@ -2804,26 +3242,6 @@
         <pubTime>2003-01-21T16:04:04.000Z</pubTime>
         
         <tag>tarjan</tag>
-         
-         
-           
-             
-              <breadCrumb title="OI之路" url="http://zory.ink/categories/OI%E4%B9%8B%E8%B7%AF/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://zory.ink/posts/c7bb.html</loc>
-    <lastmod>2018-11-06T08:04:18.450Z</lastmod>
-    <data>
-        <display>
-        <title>【OI之路】03数论-16博弈</title>
-        <pubTime>2003-01-21T16:03:16.000Z</pubTime>
-        
-        <tag>博弈</tag>
          
          
            
@@ -3618,50 +4036,6 @@
 
     
   <url>
-    <loc>http://zory.ink/posts/1339.html</loc>
-    <lastmod>2018-10-18T07:17:48.256Z</lastmod>
-    <data>
-        <display>
-        <title>【Luogu1006】加分二叉树</title>
-        <pubTime>2018-04-03T11:31:00.000Z</pubTime>
-        
-        <tag>难度1</tag>
-         
-        <tag>树形dp</tag>
-         
-         
-           
-             
-              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://zory.ink/posts/7e9b.html</loc>
-    <lastmod>2018-10-18T07:17:48.256Z</lastmod>
-    <data>
-        <display>
-        <title>【Luogu1006】传纸条</title>
-        <pubTime>2018-04-07T02:31:00.000Z</pubTime>
-        
-        <tag>dp</tag>
-         
-        <tag>难度1</tag>
-         
-         
-           
-             
-              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://zory.ink/posts/10e.html</loc>
     <lastmod>2018-10-18T07:17:48.256Z</lastmod>
     <data>
@@ -3684,6 +4058,28 @@
 
     
   <url>
+    <loc>http://zory.ink/posts/1339.html</loc>
+    <lastmod>2018-10-18T07:17:48.256Z</lastmod>
+    <data>
+        <display>
+        <title>【Luogu1006】加分二叉树</title>
+        <pubTime>2018-04-03T11:31:00.000Z</pubTime>
+        
+        <tag>难度1</tag>
+         
+        <tag>树形dp</tag>
+         
+         
+           
+             
+              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://zory.ink/posts/2ac6.html</loc>
     <lastmod>2018-10-18T07:17:48.256Z</lastmod>
     <data>
@@ -3694,6 +4090,28 @@
         <tag>难度1</tag>
          
         <tag>模拟</tag>
+         
+         
+           
+             
+              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zory.ink/posts/7e9b.html</loc>
+    <lastmod>2018-10-18T07:17:48.256Z</lastmod>
+    <data>
+        <display>
+        <title>【Luogu1006】传纸条</title>
+        <pubTime>2018-04-07T02:31:00.000Z</pubTime>
+        
+        <tag>dp</tag>
+         
+        <tag>难度1</tag>
          
          
            
@@ -3776,16 +4194,16 @@
 
     
   <url>
-    <loc>http://zory.ink/posts/90dd.html</loc>
+    <loc>http://zory.ink/posts/e20b.html</loc>
     <lastmod>2018-10-18T07:17:48.212Z</lastmod>
     <data>
         <display>
-        <title>【Bzoj1003】【Luogu1772】物流运输</title>
-        <pubTime>2018-03-24T08:18:00.000Z</pubTime>
+        <title>【ARC063-E】木と整数</title>
+        <pubTime>2018-03-07T06:18:00.000Z</pubTime>
         
-        <tag>dp</tag>
-         
         <tag>难度2</tag>
+         
+        <tag>树形dp</tag>
          
          
            
@@ -3798,16 +4216,16 @@
 
     
   <url>
-    <loc>http://zory.ink/posts/e20b.html</loc>
+    <loc>http://zory.ink/posts/90dd.html</loc>
     <lastmod>2018-10-18T07:17:48.212Z</lastmod>
     <data>
         <display>
-        <title>【ARC063-E】木と整数</title>
-        <pubTime>2018-03-07T06:18:00.000Z</pubTime>
+        <title>【Bzoj1003】【Luogu1772】物流运输</title>
+        <pubTime>2018-03-24T08:18:00.000Z</pubTime>
         
-        <tag>难度2</tag>
+        <tag>dp</tag>
          
-        <tag>树形dp</tag>
+        <tag>难度2</tag>
          
          
            
@@ -3888,6 +4306,30 @@
 
     
   <url>
+    <loc>http://zory.ink/posts/be34.html</loc>
+    <lastmod>2018-10-18T07:17:48.135Z</lastmod>
+    <data>
+        <display>
+        <title>【Bzoj4197】【Luogu2150】寿司晚宴</title>
+        <pubTime>2018-03-23T11:32:00.000Z</pubTime>
+        
+        <tag>dp</tag>
+         
+        <tag>难度2</tag>
+         
+        <tag>状压dp</tag>
+         
+         
+           
+             
+              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://zory.ink/posts/c717.html</loc>
     <lastmod>2018-10-18T07:17:48.135Z</lastmod>
     <data>
@@ -3902,30 +4344,6 @@
         <tag>斜率优化</tag>
          
         <tag>单调队列</tag>
-         
-         
-           
-             
-              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://zory.ink/posts/be34.html</loc>
-    <lastmod>2018-10-18T07:17:48.135Z</lastmod>
-    <data>
-        <display>
-        <title>【Bzoj4197】【Luogu2150】寿司晚宴</title>
-        <pubTime>2018-03-23T11:32:00.000Z</pubTime>
-        
-        <tag>dp</tag>
-         
-        <tag>难度2</tag>
-         
-        <tag>状压dp</tag>
          
          
            
@@ -3962,18 +4380,16 @@
 
     
   <url>
-    <loc>http://zory.ink/posts/f44c.html</loc>
+    <loc>http://zory.ink/posts/87af.html</loc>
     <lastmod>2018-10-18T07:17:48.130Z</lastmod>
     <data>
         <display>
-        <title>【Bzoj1087】【Luogu1896】互不侵犯</title>
-        <pubTime>2018-03-20T12:39:00.000Z</pubTime>
+        <title>【Luogu1018】乘积最大</title>
+        <pubTime>2018-03-31T08:24:00.000Z</pubTime>
         
         <tag>dp</tag>
          
-        <tag>难度2</tag>
-         
-        <tag>状压dp</tag>
+        <tag>难度1</tag>
          
          
            
@@ -3986,16 +4402,18 @@
 
     
   <url>
-    <loc>http://zory.ink/posts/87af.html</loc>
+    <loc>http://zory.ink/posts/f44c.html</loc>
     <lastmod>2018-10-18T07:17:48.130Z</lastmod>
     <data>
         <display>
-        <title>【Luogu1018】乘积最大</title>
-        <pubTime>2018-03-31T08:24:00.000Z</pubTime>
+        <title>【Bzoj1087】【Luogu1896】互不侵犯</title>
+        <pubTime>2018-03-20T12:39:00.000Z</pubTime>
         
         <tag>dp</tag>
          
-        <tag>难度1</tag>
+        <tag>难度2</tag>
+         
+        <tag>状压dp</tag>
          
          
            
@@ -4080,18 +4498,16 @@
 
     
   <url>
-    <loc>http://zory.ink/posts/a045.html</loc>
+    <loc>http://zory.ink/posts/f5e.html</loc>
     <lastmod>2018-10-18T07:17:48.087Z</lastmod>
     <data>
         <display>
-        <title>【Luogu1066】2^k进制数</title>
-        <pubTime>2018-04-05T03:46:00.000Z</pubTime>
+        <title>【NOIP16 D2T3】愤怒的小鸟</title>
+        <pubTime>2018-05-16T05:44:00.000Z</pubTime>
         
-        <tag>dp</tag>
-         
-        <tag>数位dp</tag>
-         
         <tag>难度2</tag>
+         
+        <tag>状压dp</tag>
          
          
            
@@ -4104,16 +4520,18 @@
 
     
   <url>
-    <loc>http://zory.ink/posts/f5e.html</loc>
+    <loc>http://zory.ink/posts/a045.html</loc>
     <lastmod>2018-10-18T07:17:48.087Z</lastmod>
     <data>
         <display>
-        <title>【NOIP16 D2T3】愤怒的小鸟</title>
-        <pubTime>2018-05-16T05:44:00.000Z</pubTime>
+        <title>【Luogu1066】2^k进制数</title>
+        <pubTime>2018-04-05T03:46:00.000Z</pubTime>
         
-        <tag>难度2</tag>
+        <tag>dp</tag>
          
-        <tag>状压dp</tag>
+        <tag>数位dp</tag>
+         
+        <tag>难度2</tag>
          
          
            
@@ -4280,14 +4698,14 @@
 
     
   <url>
-    <loc>http://zory.ink/posts/554a.html</loc>
+    <loc>http://zory.ink/posts/c439.html</loc>
     <lastmod>2018-10-18T07:17:47.919Z</lastmod>
     <data>
         <display>
-        <title>打鼹鼠</title>
-        <pubTime>2018-02-02T14:29:00.000Z</pubTime>
+        <title>【Vijos1067】守望者的烦恼</title>
+        <pubTime>2018-01-30T07:01:00.000Z</pubTime>
         
-        <tag>dp</tag>
+        <tag>矩阵乘法</tag>
          
         <tag>难度2</tag>
          
@@ -4326,14 +4744,14 @@
 
     
   <url>
-    <loc>http://zory.ink/posts/c439.html</loc>
+    <loc>http://zory.ink/posts/554a.html</loc>
     <lastmod>2018-10-18T07:17:47.919Z</lastmod>
     <data>
         <display>
-        <title>【Vijos1067】守望者的烦恼</title>
-        <pubTime>2018-01-30T07:01:00.000Z</pubTime>
+        <title>打鼹鼠</title>
+        <pubTime>2018-02-02T14:29:00.000Z</pubTime>
         
-        <tag>矩阵乘法</tag>
+        <tag>dp</tag>
          
         <tag>难度2</tag>
          
@@ -4370,12 +4788,12 @@
 
     
   <url>
-    <loc>http://zory.ink/posts/f969.html</loc>
+    <loc>http://zory.ink/posts/d1a6.html</loc>
     <lastmod>2018-10-18T07:17:47.910Z</lastmod>
     <data>
         <display>
-        <title>NOIP2017训练日记</title>
-        <pubTime>2017-10-24T02:28:00.000Z</pubTime>
+        <title>NOIP2017游记</title>
+        <pubTime>2017-11-11T03:11:11.000Z</pubTime>
         
         <tag>NOIP</tag>
          
@@ -4392,56 +4810,12 @@
 
     
   <url>
-    <loc>http://zory.ink/posts/35a8.html</loc>
+    <loc>http://zory.ink/posts/f969.html</loc>
     <lastmod>2018-10-18T07:17:47.910Z</lastmod>
     <data>
         <display>
-        <title>终极装备</title>
-        <pubTime>2017-08-14T02:47:00.000Z</pubTime>
-        
-        <tag>dp</tag>
-         
-        <tag>难度1</tag>
-         
-         
-           
-             
-              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://zory.ink/posts/4672.html</loc>
-    <lastmod>2018-10-18T07:17:47.910Z</lastmod>
-    <data>
-        <display>
-        <title>魏总数星星</title>
-        <pubTime>2017-08-14T07:36:00.000Z</pubTime>
-        
-        <tag>并查集</tag>
-         
-        <tag>难度1</tag>
-         
-         
-           
-             
-              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://zory.ink/posts/d1a6.html</loc>
-    <lastmod>2018-10-18T07:17:47.910Z</lastmod>
-    <data>
-        <display>
-        <title>NOIP2017游记</title>
-        <pubTime>2017-11-11T03:11:11.000Z</pubTime>
+        <title>NOIP2017训练日记</title>
+        <pubTime>2017-10-24T02:28:00.000Z</pubTime>
         
         <tag>NOIP</tag>
          
@@ -4480,21 +4854,43 @@
 
     
   <url>
-    <loc>http://zory.ink/posts/4db.html</loc>
+    <loc>http://zory.ink/posts/4672.html</loc>
     <lastmod>2018-10-18T07:17:47.910Z</lastmod>
     <data>
         <display>
-        <title>【OI之路】03数论-14快速傅里叶变换</title>
-        <pubTime>2003-01-21T16:03:14.000Z</pubTime>
+        <title>魏总数星星</title>
+        <pubTime>2017-08-14T07:36:00.000Z</pubTime>
         
-        <tag>原创精华</tag>
+        <tag>并查集</tag>
          
-        <tag>快速傅里叶变换</tag>
+        <tag>难度1</tag>
          
          
            
              
-              <breadCrumb title="OI之路" url="http://zory.ink/categories/OI%E4%B9%8B%E8%B7%AF/"/>
+              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zory.ink/posts/35a8.html</loc>
+    <lastmod>2018-10-18T07:17:47.910Z</lastmod>
+    <data>
+        <display>
+        <title>终极装备</title>
+        <pubTime>2017-08-14T02:47:00.000Z</pubTime>
+        
+        <tag>dp</tag>
+         
+        <tag>难度1</tag>
+         
+         
+           
+             
+              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
           
         </display>
     </data>
@@ -5210,28 +5606,6 @@
 
     
   <url>
-    <loc>http://zory.ink/posts/d81d.html</loc>
-    <lastmod>2018-09-28T00:45:48.760Z</lastmod>
-    <data>
-        <display>
-        <title>【OI之路】03数论-13莫比乌斯反演</title>
-        <pubTime>2003-01-21T16:03:13.000Z</pubTime>
-        
-        <tag>莫比乌斯反演</tag>
-         
-        <tag>原创精华</tag>
-         
-         
-           
-             
-              <breadCrumb title="OI之路" url="http://zory.ink/categories/OI%E4%B9%8B%E8%B7%AF/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://zory.ink/posts/6cd.html</loc>
     <lastmod>2018-09-28T00:45:48.738Z</lastmod>
     <data>
@@ -5252,14 +5626,14 @@
 
     
   <url>
-    <loc>http://zory.ink/posts/c508.html</loc>
-    <lastmod>2018-09-28T00:45:48.738Z</lastmod>
+    <loc>http://zory.ink/posts/e8f0.html</loc>
+    <lastmod>2018-09-28T00:45:48.676Z</lastmod>
     <data>
         <display>
-        <title>【OI之路】03数论-11-BSGS</title>
-        <pubTime>2003-01-21T16:03:11.000Z</pubTime>
+        <title>【OI之路】03数论-8高斯消元</title>
+        <pubTime>2003-01-21T16:03:08.000Z</pubTime>
         
-        <tag>BSGS</tag>
+        <tag>高斯消元</tag>
          
          
            
@@ -5279,26 +5653,6 @@
         <title>【OI之路】03数论-6离散化</title>
         <pubTime>2003-01-21T16:03:06.000Z</pubTime>
         
-         
-           
-             
-              <breadCrumb title="OI之路" url="http://zory.ink/categories/OI%E4%B9%8B%E8%B7%AF/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://zory.ink/posts/e8f0.html</loc>
-    <lastmod>2018-09-28T00:45:48.676Z</lastmod>
-    <data>
-        <display>
-        <title>【OI之路】03数论-8高斯消元</title>
-        <pubTime>2003-01-21T16:03:08.000Z</pubTime>
-        
-        <tag>高斯消元</tag>
-         
          
            
              
@@ -5336,48 +5690,6 @@
         <pubTime>2003-01-21T16:03:07.000Z</pubTime>
         
         <tag>高精度</tag>
-         
-         
-           
-             
-              <breadCrumb title="OI之路" url="http://zory.ink/categories/OI%E4%B9%8B%E8%B7%AF/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://zory.ink/posts/71d2.html</loc>
-    <lastmod>2018-09-28T00:45:48.636Z</lastmod>
-    <data>
-        <display>
-        <title>【OI之路】03数论-3逆元</title>
-        <pubTime>2003-01-21T16:03:03.000Z</pubTime>
-        
-        <tag>逆元</tag>
-         
-         
-           
-             
-              <breadCrumb title="OI之路" url="http://zory.ink/categories/OI%E4%B9%8B%E8%B7%AF/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://zory.ink/posts/7748.html</loc>
-    <lastmod>2018-09-28T00:45:48.625Z</lastmod>
-    <data>
-        <display>
-        <title>【OI之路】03数论-1约数与欧几里得</title>
-        <pubTime>2003-01-21T16:03:01.000Z</pubTime>
-        
-        <tag>原创精华</tag>
-         
-        <tag>欧几里得</tag>
          
          
            
@@ -5944,6 +6256,30 @@
 
     
   <url>
+    <loc>http://zory.ink/posts/3729.html</loc>
+    <lastmod>2018-09-09T08:44:54.000Z</lastmod>
+    <data>
+        <display>
+        <title>【Luogu4881】hby与tkw的基情</title>
+        <pubTime>2018-09-09T04:00:00.000Z</pubTime>
+        
+        <tag>矩阵乘法</tag>
+         
+        <tag>难度1</tag>
+         
+        <tag>差比数列</tag>
+         
+         
+           
+             
+              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://zory.ink/posts/9a30.html</loc>
     <lastmod>2018-09-09T08:44:54.000Z</lastmod>
     <data>
@@ -5966,19 +6302,165 @@
 
     
   <url>
-    <loc>http://zory.ink/posts/3729.html</loc>
-    <lastmod>2018-09-09T08:44:54.000Z</lastmod>
+    <loc>http://zory.ink/posts/867.html</loc>
+    <lastmod>2018-09-09T04:10:20.000Z</lastmod>
     <data>
         <display>
-        <title>【Luogu4881】hby与tkw的基情</title>
-        <pubTime>2018-09-09T04:00:00.000Z</pubTime>
+        <title>【NOIP16 D2T2】蚯蚓</title>
+        <pubTime>2018-05-14T05:24:00.000Z</pubTime>
         
-        <tag>矩阵乘法</tag>
+        <tag>难度2</tag>
          
-        <tag>难度1</tag>
+        <tag>单调队列</tag>
          
-        <tag>差比数列</tag>
+        <tag>堆</tag>
          
+         
+           
+             
+              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zory.ink/posts/9d2f.html</loc>
+    <lastmod>2018-09-09T04:10:20.000Z</lastmod>
+    <data>
+        <display>
+        <title>【训练】算法竞赛进阶指南-2搜索13题</title>
+        <pubTime>2018-07-02T16:00:00.000Z</pubTime>
+        
+        <tag>算法竞赛进阶指南</tag>
+         
+         
+           
+             
+              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zory.ink/posts/7248.html</loc>
+    <lastmod>2018-09-09T04:10:20.000Z</lastmod>
+    <data>
+        <display>
+        <title>【训练】算法竞赛进阶指南-1基本数据结构21题</title>
+        <pubTime>2018-07-02T16:00:00.000Z</pubTime>
+        
+        <tag>算法竞赛进阶指南</tag>
+         
+         
+           
+             
+              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zory.ink/posts/cfc5.html</loc>
+    <lastmod>2018-09-09T04:10:20.000Z</lastmod>
+    <data>
+        <display>
+        <title>【训练】算法竞赛进阶指南-0基本算法23题</title>
+        <pubTime>2018-06-30T16:00:00.000Z</pubTime>
+        
+        <tag>算法竞赛进阶指南</tag>
+         
+         
+           
+             
+              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zory.ink/posts/676d.html</loc>
+    <lastmod>2018-09-09T04:10:20.000Z</lastmod>
+    <data>
+        <display>
+        <title>GDKOI2018日志&游记</title>
+        <pubTime>2018-01-28T13:00:00.000Z</pubTime>
+        
+        <tag>赛事</tag>
+         
+        <tag>GDKOI</tag>
+         
+         
+           
+             
+              <breadCrumb title="竞赛历程" url="http://zory.ink/categories/%E7%AB%9E%E8%B5%9B%E5%8E%86%E7%A8%8B/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zory.ink/posts/f249.html</loc>
+    <lastmod>2018-09-09T04:10:20.000Z</lastmod>
+    <data>
+        <display>
+        <title>【Bzoj1529】【Luogu3420】ska Piggy banks</title>
+        <pubTime>2018-04-18T03:56:00.000Z</pubTime>
+        
+        <tag>并查集</tag>
+         
+        <tag>难度2</tag>
+         
+        <tag>强连通</tag>
+         
+         
+           
+             
+              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zory.ink/posts/6628.html</loc>
+    <lastmod>2018-09-09T04:10:20.000Z</lastmod>
+    <data>
+        <display>
+        <title>【Luogu1379】八数码</title>
+        <pubTime>2018-04-19T00:26:00.000Z</pubTime>
+        
+        <tag>难度2</tag>
+         
+        <tag>模拟</tag>
+         
+         
+           
+             
+              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zory.ink/posts/b37c.html</loc>
+    <lastmod>2018-09-09T04:10:20.000Z</lastmod>
+    <data>
+        <display>
+        <title>洛谷18年7月月赛比赛总结</title>
+        <pubTime>2018-07-14T13:51:00.000Z</pubTime>
+        
          
            
              
@@ -6036,70 +6518,6 @@
 
     
   <url>
-    <loc>http://zory.ink/posts/3834.html</loc>
-    <lastmod>2018-09-09T04:10:20.000Z</lastmod>
-    <data>
-        <display>
-        <title>【置顶】码风与卡常技巧</title>
-        <pubTime>2018-01-24T04:56:00.000Z</pubTime>
-        
-        <tag>原创精华</tag>
-         
-         
-           
-             
-              <breadCrumb title="其他" url="http://zory.ink/categories/%E5%85%B6%E4%BB%96/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://zory.ink/posts/da68.html</loc>
-    <lastmod>2018-09-09T04:10:20.000Z</lastmod>
-    <data>
-        <display>
-        <title>NOIP2016总结</title>
-        <pubTime>2017-08-16T02:28:00.000Z</pubTime>
-        
-        <tag>NOIP</tag>
-         
-        <tag>赛事</tag>
-         
-         
-           
-             
-              <breadCrumb title="竞赛历程" url="http://zory.ink/categories/%E7%AB%9E%E8%B5%9B%E5%8E%86%E7%A8%8B/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://zory.ink/posts/676d.html</loc>
-    <lastmod>2018-09-09T04:10:20.000Z</lastmod>
-    <data>
-        <display>
-        <title>GDKOI2018日志&游记</title>
-        <pubTime>2018-01-28T13:00:00.000Z</pubTime>
-        
-        <tag>赛事</tag>
-         
-        <tag>GDKOI</tag>
-         
-         
-           
-             
-              <breadCrumb title="竞赛历程" url="http://zory.ink/categories/%E7%AB%9E%E8%B5%9B%E5%8E%86%E7%A8%8B/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://zory.ink/posts/41bc.html</loc>
     <lastmod>2018-09-09T04:10:20.000Z</lastmod>
     <data>
@@ -6132,21 +6550,19 @@
 
     
   <url>
-    <loc>http://zory.ink/posts/5aa0.html</loc>
+    <loc>http://zory.ink/posts/3834.html</loc>
     <lastmod>2018-09-09T04:10:20.000Z</lastmod>
     <data>
         <display>
-        <title>【Bzoj2820】YY的GCD</title>
-        <pubTime>2017-11-29T04:55:00.000Z</pubTime>
+        <title>【置顶】码风与卡常技巧</title>
+        <pubTime>2018-01-24T04:56:00.000Z</pubTime>
         
-        <tag>莫比乌斯反演</tag>
-         
-        <tag>难度3</tag>
+        <tag>原创精华</tag>
          
          
            
              
-              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
+              <breadCrumb title="其他" url="http://zory.ink/categories/%E5%85%B6%E4%BB%96/"/>
           
         </display>
     </data>
@@ -6154,64 +6570,16 @@
 
     
   <url>
-    <loc>http://zory.ink/posts/1444.html</loc>
+    <loc>http://zory.ink/posts/7398.html</loc>
     <lastmod>2018-09-09T04:10:20.000Z</lastmod>
     <data>
         <display>
-        <title>【Luogu3005】槽的游戏The Trough Game</title>
-        <pubTime>2017-12-27T04:12:00.000Z</pubTime>
+        <title>【Luogu1072】Hankson的趣味题</title>
+        <pubTime>2018-04-08T02:31:00.000Z</pubTime>
         
-        <tag>矩阵乘法</tag>
+        <tag>难度1</tag>
          
-        <tag>难度2</tag>
-         
-        <tag>dfs</tag>
-         
-         
-           
-             
-              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://zory.ink/posts/f249.html</loc>
-    <lastmod>2018-09-09T04:10:20.000Z</lastmod>
-    <data>
-        <display>
-        <title>【Bzoj1529】【Luogu3420】ska Piggy banks</title>
-        <pubTime>2018-04-18T03:56:00.000Z</pubTime>
-        
-        <tag>并查集</tag>
-         
-        <tag>难度2</tag>
-         
-        <tag>强连通</tag>
-         
-         
-           
-             
-              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://zory.ink/posts/6c7a.html</loc>
-    <lastmod>2018-09-09T04:10:20.000Z</lastmod>
-    <data>
-        <display>
-        <title>【Sdoi2016】数字配对</title>
-        <pubTime>2018-04-28T13:42:00.000Z</pubTime>
-        
-        <tag>难度2</tag>
-         
-        <tag>费用流</tag>
+        <tag>模拟</tag>
          
          
            
@@ -6250,154 +6618,6 @@
 
     
   <url>
-    <loc>http://zory.ink/posts/b37c.html</loc>
-    <lastmod>2018-09-09T04:10:20.000Z</lastmod>
-    <data>
-        <display>
-        <title>洛谷18年7月月赛比赛总结</title>
-        <pubTime>2018-07-14T13:51:00.000Z</pubTime>
-        
-         
-           
-             
-              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://zory.ink/posts/6628.html</loc>
-    <lastmod>2018-09-09T04:10:20.000Z</lastmod>
-    <data>
-        <display>
-        <title>【Luogu1379】八数码</title>
-        <pubTime>2018-04-19T00:26:00.000Z</pubTime>
-        
-        <tag>难度2</tag>
-         
-        <tag>模拟</tag>
-         
-         
-           
-             
-              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://zory.ink/posts/cfc5.html</loc>
-    <lastmod>2018-09-09T04:10:20.000Z</lastmod>
-    <data>
-        <display>
-        <title>【训练】算法竞赛进阶指南-0基本算法23题</title>
-        <pubTime>2018-06-30T16:00:00.000Z</pubTime>
-        
-        <tag>算法竞赛进阶指南</tag>
-         
-         
-           
-             
-              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://zory.ink/posts/867.html</loc>
-    <lastmod>2018-09-09T04:10:20.000Z</lastmod>
-    <data>
-        <display>
-        <title>【NOIP16 D2T2】蚯蚓</title>
-        <pubTime>2018-05-14T05:24:00.000Z</pubTime>
-        
-        <tag>难度2</tag>
-         
-        <tag>单调队列</tag>
-         
-        <tag>堆</tag>
-         
-         
-           
-             
-              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://zory.ink/posts/3d30.html</loc>
-    <lastmod>2018-09-09T04:10:20.000Z</lastmod>
-    <data>
-        <display>
-        <title>【Luogu1032】字串变换</title>
-        <pubTime>2018-04-02T01:10:00.000Z</pubTime>
-        
-        <tag>难度2</tag>
-         
-        <tag>模拟</tag>
-         
-         
-           
-             
-              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://zory.ink/posts/7248.html</loc>
-    <lastmod>2018-09-09T04:10:20.000Z</lastmod>
-    <data>
-        <display>
-        <title>【训练】算法竞赛进阶指南-1基本数据结构21题</title>
-        <pubTime>2018-07-02T16:00:00.000Z</pubTime>
-        
-        <tag>算法竞赛进阶指南</tag>
-         
-         
-           
-             
-              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://zory.ink/posts/7398.html</loc>
-    <lastmod>2018-09-09T04:10:20.000Z</lastmod>
-    <data>
-        <display>
-        <title>【Luogu1072】Hankson的趣味题</title>
-        <pubTime>2018-04-08T02:31:00.000Z</pubTime>
-        
-        <tag>难度1</tag>
-         
-        <tag>模拟</tag>
-         
-         
-           
-             
-              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://zory.ink/posts/9594.html</loc>
     <lastmod>2018-09-09T04:10:20.000Z</lastmod>
     <data>
@@ -6420,40 +6640,16 @@
 
     
   <url>
-    <loc>http://zory.ink/posts/958b.html</loc>
+    <loc>http://zory.ink/posts/6c7a.html</loc>
     <lastmod>2018-09-09T04:10:20.000Z</lastmod>
     <data>
         <display>
-        <title>【Luogu1155】双栈排序</title>
-        <pubTime>2018-04-07T06:18:00.000Z</pubTime>
+        <title>【Sdoi2016】数字配对</title>
+        <pubTime>2018-04-28T13:42:00.000Z</pubTime>
         
         <tag>难度2</tag>
          
-        <tag>贪心</tag>
-         
-        <tag>模拟</tag>
-         
-        <tag>二分图染色</tag>
-         
-         
-           
-             
-              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://zory.ink/posts/9d2f.html</loc>
-    <lastmod>2018-09-09T04:10:20.000Z</lastmod>
-    <data>
-        <display>
-        <title>【训练】算法竞赛进阶指南-2搜索13题</title>
-        <pubTime>2018-07-02T16:00:00.000Z</pubTime>
-        
-        <tag>算法竞赛进阶指南</tag>
+        <tag>费用流</tag>
          
          
            
@@ -6496,6 +6692,52 @@
 
     
   <url>
+    <loc>http://zory.ink/posts/3d30.html</loc>
+    <lastmod>2018-09-09T04:10:20.000Z</lastmod>
+    <data>
+        <display>
+        <title>【Luogu1032】字串变换</title>
+        <pubTime>2018-04-02T01:10:00.000Z</pubTime>
+        
+        <tag>难度2</tag>
+         
+        <tag>模拟</tag>
+         
+         
+           
+             
+              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zory.ink/posts/1444.html</loc>
+    <lastmod>2018-09-09T04:10:20.000Z</lastmod>
+    <data>
+        <display>
+        <title>【Luogu3005】槽的游戏The Trough Game</title>
+        <pubTime>2017-12-27T04:12:00.000Z</pubTime>
+        
+        <tag>矩阵乘法</tag>
+         
+        <tag>难度2</tag>
+         
+        <tag>dfs</tag>
+         
+         
+           
+             
+              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://zory.ink/posts/f89e.html</loc>
     <lastmod>2018-09-09T04:10:20.000Z</lastmod>
     <data>
@@ -6506,6 +6748,54 @@
         <tag>难度1</tag>
          
         <tag>exkmp</tag>
+         
+         
+           
+             
+              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zory.ink/posts/da68.html</loc>
+    <lastmod>2018-09-09T04:10:20.000Z</lastmod>
+    <data>
+        <display>
+        <title>NOIP2016总结</title>
+        <pubTime>2017-08-16T02:28:00.000Z</pubTime>
+        
+        <tag>NOIP</tag>
+         
+        <tag>赛事</tag>
+         
+         
+           
+             
+              <breadCrumb title="竞赛历程" url="http://zory.ink/categories/%E7%AB%9E%E8%B5%9B%E5%8E%86%E7%A8%8B/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zory.ink/posts/958b.html</loc>
+    <lastmod>2018-09-09T04:10:20.000Z</lastmod>
+    <data>
+        <display>
+        <title>【Luogu1155】双栈排序</title>
+        <pubTime>2018-04-07T06:18:00.000Z</pubTime>
+        
+        <tag>难度2</tag>
+         
+        <tag>贪心</tag>
+         
+        <tag>模拟</tag>
+         
+        <tag>二分图染色</tag>
          
          
            
@@ -6552,26 +6842,6 @@
         <tag>差分约束</tag>
          
         <tag>难度2</tag>
-         
-         
-           
-             
-              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://zory.ink/posts/82f7.html</loc>
-    <lastmod>2018-08-29T08:16:02.000Z</lastmod>
-    <data>
-        <display>
-        <title>【训练】算法竞赛进阶指南-3数学30题</title>
-        <pubTime>2018-07-18T16:00:00.000Z</pubTime>
-        
-        <tag>算法竞赛进阶指南</tag>
          
          
            
@@ -6664,6 +6934,30 @@
 
     
   <url>
+    <loc>http://zory.ink/posts/41a1.html</loc>
+    <lastmod>2018-08-20T23:18:14.000Z</lastmod>
+    <data>
+        <display>
+        <title>【SDOI2013】随机数生成器</title>
+        <pubTime>2018-08-07T08:35:00.000Z</pubTime>
+        
+        <tag>BSGS</tag>
+         
+        <tag>dp</tag>
+         
+        <tag>难度2</tag>
+         
+         
+           
+             
+              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://zory.ink/posts/f525.html</loc>
     <lastmod>2018-08-20T23:18:14.000Z</lastmod>
     <data>
@@ -6704,16 +6998,106 @@
 
     
   <url>
-    <loc>http://zory.ink/posts/41a1.html</loc>
+    <loc>http://zory.ink/posts/7565.html</loc>
     <lastmod>2018-08-20T23:18:14.000Z</lastmod>
     <data>
         <display>
-        <title>【SDOI2013】随机数生成器</title>
-        <pubTime>2018-08-07T08:35:00.000Z</pubTime>
+        <title>【CF1025D】Recovering BST</title>
+        <pubTime>2018-08-10T13:30:00.000Z</pubTime>
         
-        <tag>BSGS</tag>
+        <tag>难度2</tag>
          
-        <tag>dp</tag>
+         
+           
+             
+              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zory.ink/posts/4b95.html</loc>
+    <lastmod>2018-08-20T07:26:08.000Z</lastmod>
+    <data>
+        <display>
+        <title>【SCOI2013】【Bzoj3325】【Luogu3279】密码</title>
+        <pubTime>2018-04-24T06:58:00.000Z</pubTime>
+        
+        <tag>并查集</tag>
+         
+        <tag>难度2</tag>
+         
+        <tag>manacher</tag>
+         
+         
+           
+             
+              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zory.ink/posts/e629.html</loc>
+    <lastmod>2018-08-20T07:26:08.000Z</lastmod>
+    <data>
+        <display>
+        <title>【Nyoj298】点的变换</title>
+        <pubTime>2018-01-30T03:56:00.000Z</pubTime>
+        
+        <tag>矩阵乘法</tag>
+         
+        <tag>难度1</tag>
+         
+         
+           
+             
+              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zory.ink/posts/bb9.html</loc>
+    <lastmod>2018-08-20T07:26:08.000Z</lastmod>
+    <data>
+        <display>
+        <title>【NOIP15 D2T3】运输计划</title>
+        <pubTime>2018-05-02T04:26:00.000Z</pubTime>
+        
+        <tag>难度2</tag>
+         
+        <tag>树链剖分</tag>
+         
+        <tag>倍增</tag>
+         
+        <tag>树上差分</tag>
+         
+         
+           
+             
+              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zory.ink/posts/87ed.html</loc>
+    <lastmod>2018-08-20T07:26:08.000Z</lastmod>
+    <data>
+        <display>
+        <title>【Bzoj1941】Hide and Seek</title>
+        <pubTime>2018-03-12T13:18:00.000Z</pubTime>
+        
+        <tag>kdtree</tag>
          
         <tag>难度2</tag>
          
@@ -6728,13 +7112,255 @@
 
     
   <url>
-    <loc>http://zory.ink/posts/7565.html</loc>
-    <lastmod>2018-08-20T23:18:14.000Z</lastmod>
+    <loc>http://zory.ink/posts/fb98.html</loc>
+    <lastmod>2018-08-20T07:26:08.000Z</lastmod>
     <data>
         <display>
-        <title>【CF1025D】Recovering BST</title>
-        <pubTime>2018-08-10T13:30:00.000Z</pubTime>
+        <title>【Poj3233】Matrix_Power_Series</title>
+        <pubTime>2018-01-30T05:41:00.000Z</pubTime>
         
+        <tag>矩阵乘法</tag>
+         
+        <tag>难度1</tag>
+         
+         
+           
+             
+              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zory.ink/posts/673d.html</loc>
+    <lastmod>2018-08-20T07:26:08.000Z</lastmod>
+    <data>
+        <display>
+        <title>【Bzoj4520】K远点对</title>
+        <pubTime>2018-03-13T05:30:00.000Z</pubTime>
+        
+        <tag>kdtree</tag>
+         
+        <tag>难度2</tag>
+         
+         
+           
+             
+              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zory.ink/posts/88c1.html</loc>
+    <lastmod>2018-08-20T07:26:08.000Z</lastmod>
+    <data>
+        <display>
+        <title>佛山2015市选2比赛总结</title>
+        <pubTime>2018-07-13T05:44:00.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zory.ink/posts/9bea.html</loc>
+    <lastmod>2018-08-20T07:26:08.000Z</lastmod>
+    <data>
+        <display>
+        <title>Codevs1082线段树练习3</title>
+        <pubTime>2017-08-14T07:58:00.000Z</pubTime>
+        
+        <tag>线段树</tag>
+         
+        <tag>难度1</tag>
+         
+         
+           
+             
+              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zory.ink/posts/d3b3.html</loc>
+    <lastmod>2018-08-20T07:26:08.000Z</lastmod>
+    <data>
+        <display>
+        <title>俄罗斯轮盘</title>
+        <pubTime>2017-08-22T03:09:02.000Z</pubTime>
+        
+        <tag>难度1</tag>
+         
+        <tag>刷题</tag>
+         
+         
+           
+             
+              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zory.ink/posts/e070.html</loc>
+    <lastmod>2018-08-20T07:26:08.000Z</lastmod>
+    <data>
+        <display>
+        <title>【Bzoj3224】普通平衡树</title>
+        <pubTime>2018-01-21T06:30:00.000Z</pubTime>
+        
+        <tag>伸展树</tag>
+         
+        <tag>难度2</tag>
+         
+         
+           
+             
+              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zory.ink/posts/c65d.html</loc>
+    <lastmod>2018-08-20T07:26:08.000Z</lastmod>
+    <data>
+        <display>
+        <title>【Hdu2157】多少条路呢</title>
+        <pubTime>2018-01-30T07:31:00.000Z</pubTime>
+        
+        <tag>矩阵乘法</tag>
+         
+        <tag>难度2</tag>
+         
+         
+           
+             
+              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zory.ink/posts/9061.html</loc>
+    <lastmod>2018-08-20T07:26:08.000Z</lastmod>
+    <data>
+        <display>
+        <title>【Luogu1039】侦探推理</title>
+        <pubTime>2018-04-03T00:38:00.000Z</pubTime>
+        
+        <tag>难度1</tag>
+         
+        <tag>模拟</tag>
+         
+         
+           
+             
+              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zory.ink/posts/5557.html</loc>
+    <lastmod>2018-08-20T07:26:08.000Z</lastmod>
+    <data>
+        <display>
+        <title>【Bzoj2186】【Luogu2155】沙拉公主的困惑</title>
+        <pubTime>2018-03-31T05:21:00.000Z</pubTime>
+        
+        <tag>逆元</tag>
+         
+        <tag>难度2</tag>
+         
+         
+           
+             
+              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zory.ink/posts/3fa9.html</loc>
+    <lastmod>2018-08-20T07:26:08.000Z</lastmod>
+    <data>
+        <display>
+        <title>【USACO2009 NOV Gold】灯</title>
+        <pubTime>2018-07-14T02:07:00.000Z</pubTime>
+        
+        <tag>高斯消元</tag>
+         
+        <tag>难度2</tag>
+         
+        <tag>折半搜索</tag>
+         
+         
+           
+             
+              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zory.ink/posts/7.html</loc>
+    <lastmod>2018-08-20T07:26:08.000Z</lastmod>
+    <data>
+        <display>
+        <title>【Luogu1034】矩形覆盖</title>
+        <pubTime>2018-04-02T10:38:00.000Z</pubTime>
+        
+        <tag>难度1</tag>
+         
+        <tag>模拟</tag>
+         
+         
+           
+             
+              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zory.ink/posts/d303.html</loc>
+    <lastmod>2018-08-20T07:26:08.000Z</lastmod>
+    <data>
+        <display>
+        <title>【Bzoj1500】【Luogu2042】维修数列</title>
+        <pubTime>2018-03-06T05:10:00.000Z</pubTime>
+        
+        <tag>伸展树</tag>
+         
         <tag>难度2</tag>
          
          
@@ -6796,182 +7422,6 @@
 
     
   <url>
-    <loc>http://zory.ink/posts/9061.html</loc>
-    <lastmod>2018-08-20T07:26:08.000Z</lastmod>
-    <data>
-        <display>
-        <title>【Luogu1039】侦探推理</title>
-        <pubTime>2018-04-03T00:38:00.000Z</pubTime>
-        
-        <tag>难度1</tag>
-         
-        <tag>模拟</tag>
-         
-         
-           
-             
-              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://zory.ink/posts/9bea.html</loc>
-    <lastmod>2018-08-20T07:26:08.000Z</lastmod>
-    <data>
-        <display>
-        <title>Codevs1082线段树练习3</title>
-        <pubTime>2017-08-14T07:58:00.000Z</pubTime>
-        
-        <tag>线段树</tag>
-         
-        <tag>难度1</tag>
-         
-         
-           
-             
-              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://zory.ink/posts/4b95.html</loc>
-    <lastmod>2018-08-20T07:26:08.000Z</lastmod>
-    <data>
-        <display>
-        <title>【SCOI2013】【Bzoj3325】【Luogu3279】密码</title>
-        <pubTime>2018-04-24T06:58:00.000Z</pubTime>
-        
-        <tag>并查集</tag>
-         
-        <tag>难度2</tag>
-         
-        <tag>manacher</tag>
-         
-         
-           
-             
-              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://zory.ink/posts/3fa9.html</loc>
-    <lastmod>2018-08-20T07:26:08.000Z</lastmod>
-    <data>
-        <display>
-        <title>【USACO2009 NOV Gold】灯</title>
-        <pubTime>2018-07-14T02:07:00.000Z</pubTime>
-        
-        <tag>高斯消元</tag>
-         
-        <tag>难度2</tag>
-         
-        <tag>折半搜索</tag>
-         
-         
-           
-             
-              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://zory.ink/posts/12b6.html</loc>
-    <lastmod>2018-08-20T07:26:08.000Z</lastmod>
-    <data>
-        <display>
-        <title>【Bzoj2301】【Luogu2522】Problem_b</title>
-        <pubTime>2017-11-26T05:55:00.000Z</pubTime>
-        
-        <tag>莫比乌斯反演</tag>
-         
-        <tag>难度2</tag>
-         
-         
-           
-             
-              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://zory.ink/posts/87ed.html</loc>
-    <lastmod>2018-08-20T07:26:08.000Z</lastmod>
-    <data>
-        <display>
-        <title>【Bzoj1941】Hide and Seek</title>
-        <pubTime>2018-03-12T13:18:00.000Z</pubTime>
-        
-        <tag>kdtree</tag>
-         
-        <tag>难度2</tag>
-         
-         
-           
-             
-              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://zory.ink/posts/d3b3.html</loc>
-    <lastmod>2018-08-20T07:26:08.000Z</lastmod>
-    <data>
-        <display>
-        <title>俄罗斯轮盘</title>
-        <pubTime>2017-08-22T03:09:02.000Z</pubTime>
-        
-        <tag>难度1</tag>
-         
-        <tag>刷题</tag>
-         
-         
-           
-             
-              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://zory.ink/posts/88c1.html</loc>
-    <lastmod>2018-08-20T07:26:08.000Z</lastmod>
-    <data>
-        <display>
-        <title>佛山2015市选2比赛总结</title>
-        <pubTime>2018-07-13T05:44:00.000Z</pubTime>
-        
-         
-           
-             
-              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://zory.ink/posts/6a1c.html</loc>
     <lastmod>2018-08-20T07:26:08.000Z</lastmod>
     <data>
@@ -6982,116 +7432,6 @@
         <tag>难度2</tag>
          
         <tag>贪心</tag>
-         
-         
-           
-             
-              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://zory.ink/posts/c65d.html</loc>
-    <lastmod>2018-08-20T07:26:08.000Z</lastmod>
-    <data>
-        <display>
-        <title>【Hdu2157】多少条路呢</title>
-        <pubTime>2018-01-30T07:31:00.000Z</pubTime>
-        
-        <tag>矩阵乘法</tag>
-         
-        <tag>难度2</tag>
-         
-         
-           
-             
-              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://zory.ink/posts/e070.html</loc>
-    <lastmod>2018-08-20T07:26:08.000Z</lastmod>
-    <data>
-        <display>
-        <title>【Bzoj3224】普通平衡树</title>
-        <pubTime>2018-01-21T06:30:00.000Z</pubTime>
-        
-        <tag>伸展树</tag>
-         
-        <tag>难度2</tag>
-         
-         
-           
-             
-              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://zory.ink/posts/e629.html</loc>
-    <lastmod>2018-08-20T07:26:08.000Z</lastmod>
-    <data>
-        <display>
-        <title>【Nyoj298】点的变换</title>
-        <pubTime>2018-01-30T03:56:00.000Z</pubTime>
-        
-        <tag>矩阵乘法</tag>
-         
-        <tag>难度1</tag>
-         
-         
-           
-             
-              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://zory.ink/posts/d303.html</loc>
-    <lastmod>2018-08-20T07:26:08.000Z</lastmod>
-    <data>
-        <display>
-        <title>【Bzoj1500】【Luogu2042】维修数列</title>
-        <pubTime>2018-03-06T05:10:00.000Z</pubTime>
-        
-        <tag>伸展树</tag>
-         
-        <tag>难度2</tag>
-         
-         
-           
-             
-              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://zory.ink/posts/673d.html</loc>
-    <lastmod>2018-08-20T07:26:08.000Z</lastmod>
-    <data>
-        <display>
-        <title>【Bzoj4520】K远点对</title>
-        <pubTime>2018-03-13T05:30:00.000Z</pubTime>
-        
-        <tag>kdtree</tag>
-         
-        <tag>难度2</tag>
          
          
            
@@ -7116,98 +7456,6 @@
         <tag>难度2</tag>
          
         <tag>链表</tag>
-         
-         
-           
-             
-              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://zory.ink/posts/bb9.html</loc>
-    <lastmod>2018-08-20T07:26:08.000Z</lastmod>
-    <data>
-        <display>
-        <title>【NOIP15 D2T3】运输计划</title>
-        <pubTime>2018-05-02T04:26:00.000Z</pubTime>
-        
-        <tag>难度2</tag>
-         
-        <tag>树链剖分</tag>
-         
-        <tag>倍增</tag>
-         
-        <tag>树上差分</tag>
-         
-         
-           
-             
-              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://zory.ink/posts/fb98.html</loc>
-    <lastmod>2018-08-20T07:26:08.000Z</lastmod>
-    <data>
-        <display>
-        <title>【Poj3233】Matrix_Power_Series</title>
-        <pubTime>2018-01-30T05:41:00.000Z</pubTime>
-        
-        <tag>矩阵乘法</tag>
-         
-        <tag>难度1</tag>
-         
-         
-           
-             
-              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://zory.ink/posts/7.html</loc>
-    <lastmod>2018-08-20T07:26:08.000Z</lastmod>
-    <data>
-        <display>
-        <title>【Luogu1034】矩形覆盖</title>
-        <pubTime>2018-04-02T10:38:00.000Z</pubTime>
-        
-        <tag>难度1</tag>
-         
-        <tag>模拟</tag>
-         
-         
-           
-             
-              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://zory.ink/posts/5557.html</loc>
-    <lastmod>2018-08-20T07:26:08.000Z</lastmod>
-    <data>
-        <display>
-        <title>【Bzoj2186】【Luogu2155】沙拉公主的困惑</title>
-        <pubTime>2018-03-31T05:21:00.000Z</pubTime>
-        
-        <tag>逆元</tag>
-         
-        <tag>难度2</tag>
          
          
            
@@ -7288,6 +7536,28 @@
 
     
   <url>
+    <loc>http://zory.ink/posts/25a7.html</loc>
+    <lastmod>2018-08-19T08:58:10.000Z</lastmod>
+    <data>
+        <display>
+        <title>【NOIP17 D1T2】时间复杂度</title>
+        <pubTime>2018-05-20T07:36:00.000Z</pubTime>
+        
+        <tag>难度1</tag>
+         
+        <tag>模拟</tag>
+         
+         
+           
+             
+              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://zory.ink/posts/2726.html</loc>
     <lastmod>2018-08-19T08:58:10.000Z</lastmod>
     <data>
@@ -7330,28 +7600,6 @@
 
     
   <url>
-    <loc>http://zory.ink/posts/25a7.html</loc>
-    <lastmod>2018-08-19T08:58:10.000Z</lastmod>
-    <data>
-        <display>
-        <title>【NOIP17 D1T2】时间复杂度</title>
-        <pubTime>2018-05-20T07:36:00.000Z</pubTime>
-        
-        <tag>难度1</tag>
-         
-        <tag>模拟</tag>
-         
-         
-           
-             
-              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://zory.ink/posts/4bc4.html</loc>
     <lastmod>2018-08-19T08:58:10.000Z</lastmod>
     <data>
@@ -7370,84 +7618,16 @@
 
     
   <url>
-    <loc>http://zory.ink/posts/e5d4.html</loc>
+    <loc>http://zory.ink/posts/b8ea.html</loc>
     <lastmod>2018-08-19T08:58:08.000Z</lastmod>
     <data>
         <display>
-        <title>【NOIP15 D2T2】 子串</title>
-        <pubTime>2018-05-01T11:57:00.000Z</pubTime>
-        
-        <tag>dp</tag>
-         
-        <tag>难度2</tag>
-         
-         
-           
-             
-              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://zory.ink/posts/c868.html</loc>
-    <lastmod>2018-08-19T08:58:08.000Z</lastmod>
-    <data>
-        <display>
-        <title>【Luogu1097】统计数字</title>
-        <pubTime>2018-04-05T08:16:00.000Z</pubTime>
+        <title>【NOIP14 D1T2】联合权值</title>
+        <pubTime>2018-04-19T12:43:00.000Z</pubTime>
         
         <tag>难度1</tag>
          
         <tag>模拟</tag>
-         
-         
-           
-             
-              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://zory.ink/posts/f4f8.html</loc>
-    <lastmod>2018-08-19T08:58:08.000Z</lastmod>
-    <data>
-        <display>
-        <title>【GDOI2018 D1T2】【51nod1357】密码锁</title>
-        <pubTime>2018-05-01T03:52:00.000Z</pubTime>
-        
-        <tag>难度2</tag>
-         
-        <tag>贪心</tag>
-         
-        <tag>差分</tag>
-         
-         
-           
-             
-              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://zory.ink/posts/3244.html</loc>
-    <lastmod>2018-08-19T08:58:08.000Z</lastmod>
-    <data>
-        <display>
-        <title>【NOIP15 D1T2】信息传递</title>
-        <pubTime>2018-05-01T10:00:00.000Z</pubTime>
-        
-        <tag>难度1</tag>
-         
-        <tag>强连通</tag>
          
          
            
@@ -7504,6 +7684,52 @@
 
     
   <url>
+    <loc>http://zory.ink/posts/3244.html</loc>
+    <lastmod>2018-08-19T08:58:08.000Z</lastmod>
+    <data>
+        <display>
+        <title>【NOIP15 D1T2】信息传递</title>
+        <pubTime>2018-05-01T10:00:00.000Z</pubTime>
+        
+        <tag>难度1</tag>
+         
+        <tag>强连通</tag>
+         
+         
+           
+             
+              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zory.ink/posts/f4f8.html</loc>
+    <lastmod>2018-08-19T08:58:08.000Z</lastmod>
+    <data>
+        <display>
+        <title>【GDOI2018 D1T2】【51nod1357】密码锁</title>
+        <pubTime>2018-05-01T03:52:00.000Z</pubTime>
+        
+        <tag>难度2</tag>
+         
+        <tag>贪心</tag>
+         
+        <tag>差分</tag>
+         
+         
+           
+             
+              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://zory.ink/posts/bc9.html</loc>
     <lastmod>2018-08-19T08:58:08.000Z</lastmod>
     <data>
@@ -7526,16 +7752,60 @@
 
     
   <url>
-    <loc>http://zory.ink/posts/b8ea.html</loc>
+    <loc>http://zory.ink/posts/c868.html</loc>
     <lastmod>2018-08-19T08:58:08.000Z</lastmod>
     <data>
         <display>
-        <title>【NOIP14 D1T2】联合权值</title>
-        <pubTime>2018-04-19T12:43:00.000Z</pubTime>
+        <title>【Luogu1097】统计数字</title>
+        <pubTime>2018-04-05T08:16:00.000Z</pubTime>
         
         <tag>难度1</tag>
          
         <tag>模拟</tag>
+         
+         
+           
+             
+              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zory.ink/posts/e5d4.html</loc>
+    <lastmod>2018-08-19T08:58:08.000Z</lastmod>
+    <data>
+        <display>
+        <title>【NOIP15 D2T2】 子串</title>
+        <pubTime>2018-05-01T11:57:00.000Z</pubTime>
+        
+        <tag>dp</tag>
+         
+        <tag>难度2</tag>
+         
+         
+           
+             
+              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zory.ink/posts/fa4.html</loc>
+    <lastmod>2018-08-19T08:58:06.000Z</lastmod>
+    <data>
+        <display>
+        <title>【Luogu1084】【Bzoj1465】【Bzoj1045】糖果传递</title>
+        <pubTime>2018-04-16T04:51:00.000Z</pubTime>
+        
+        <tag>难度2</tag>
+         
+        <tag>中位数</tag>
          
          
            
@@ -7560,28 +7830,6 @@
         <tag>拓扑</tag>
          
         <tag>模拟</tag>
-         
-         
-           
-             
-              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://zory.ink/posts/fa4.html</loc>
-    <lastmod>2018-08-19T08:58:06.000Z</lastmod>
-    <data>
-        <display>
-        <title>【Luogu1084】【Bzoj1465】【Bzoj1045】糖果传递</title>
-        <pubTime>2018-04-16T04:51:00.000Z</pubTime>
-        
-        <tag>难度2</tag>
-         
-        <tag>中位数</tag>
          
          
            
@@ -7638,16 +7886,16 @@
 
     
   <url>
-    <loc>http://zory.ink/posts/3a8c.html</loc>
+    <loc>http://zory.ink/posts/f934.html</loc>
     <lastmod>2018-08-19T08:58:04.000Z</lastmod>
     <data>
         <display>
-        <title>【NOIP14 D2T1】无线网络发射器选址</title>
-        <pubTime>2018-04-19T13:10:00.000Z</pubTime>
+        <title>【Caioj1178】最长共同前缀长度</title>
+        <pubTime>2018-04-22T13:26:00.000Z</pubTime>
         
-        <tag>难度1</tag>
+        <tag>难度2</tag>
          
-        <tag>模拟</tag>
+        <tag>exkmp</tag>
          
          
            
@@ -7682,12 +7930,12 @@
 
     
   <url>
-    <loc>http://zory.ink/posts/e897.html</loc>
+    <loc>http://zory.ink/posts/3a8c.html</loc>
     <lastmod>2018-08-19T08:58:04.000Z</lastmod>
     <data>
         <display>
-        <title>【Luogu1089】津津的储蓄计划</title>
-        <pubTime>2018-04-03T11:41:00.000Z</pubTime>
+        <title>【NOIP14 D2T1】无线网络发射器选址</title>
+        <pubTime>2018-04-19T13:10:00.000Z</pubTime>
         
         <tag>难度1</tag>
          
@@ -7704,12 +7952,12 @@
 
     
   <url>
-    <loc>http://zory.ink/posts/e3ff.html</loc>
+    <loc>http://zory.ink/posts/e897.html</loc>
     <lastmod>2018-08-19T08:58:04.000Z</lastmod>
     <data>
         <display>
-        <title>【NOIP14 D1T1】生活大爆炸版石头剪刀布</title>
-        <pubTime>2018-04-19T12:11:00.000Z</pubTime>
+        <title>【Luogu1089】津津的储蓄计划</title>
+        <pubTime>2018-04-03T11:41:00.000Z</pubTime>
         
         <tag>难度1</tag>
          
@@ -7750,28 +7998,6 @@
 
     
   <url>
-    <loc>http://zory.ink/posts/9e5c.html</loc>
-    <lastmod>2018-08-19T08:58:04.000Z</lastmod>
-    <data>
-        <display>
-        <title>【Luogu1071】潜伏者</title>
-        <pubTime>2018-04-08T02:31:00.000Z</pubTime>
-        
-        <tag>难度1</tag>
-         
-        <tag>模拟</tag>
-         
-         
-           
-             
-              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://zory.ink/posts/3759.html</loc>
     <lastmod>2018-08-19T08:58:04.000Z</lastmod>
     <data>
@@ -7794,16 +8020,16 @@
 
     
   <url>
-    <loc>http://zory.ink/posts/f934.html</loc>
+    <loc>http://zory.ink/posts/e3ff.html</loc>
     <lastmod>2018-08-19T08:58:04.000Z</lastmod>
     <data>
         <display>
-        <title>【Caioj1178】最长共同前缀长度</title>
-        <pubTime>2018-04-22T13:26:00.000Z</pubTime>
+        <title>【NOIP14 D1T1】生活大爆炸版石头剪刀布</title>
+        <pubTime>2018-04-19T12:11:00.000Z</pubTime>
         
-        <tag>难度2</tag>
+        <tag>难度1</tag>
          
-        <tag>exkmp</tag>
+        <tag>模拟</tag>
          
          
            
@@ -7816,12 +8042,12 @@
 
     
   <url>
-    <loc>http://zory.ink/posts/a5cf.html</loc>
-    <lastmod>2018-08-19T08:58:02.000Z</lastmod>
+    <loc>http://zory.ink/posts/9e5c.html</loc>
+    <lastmod>2018-08-19T08:58:04.000Z</lastmod>
     <data>
         <display>
-        <title>【Luogu1098】字符串的展开</title>
-        <pubTime>2018-04-05T09:03:00.000Z</pubTime>
+        <title>【Luogu1071】潜伏者</title>
+        <pubTime>2018-04-08T02:31:00.000Z</pubTime>
         
         <tag>难度1</tag>
          
@@ -7906,16 +8132,14 @@
 
     
   <url>
-    <loc>http://zory.ink/posts/1b05.html</loc>
+    <loc>http://zory.ink/posts/a5cf.html</loc>
     <lastmod>2018-08-19T08:58:02.000Z</lastmod>
     <data>
         <display>
-        <title>【Luogu1080】国王游戏</title>
-        <pubTime>2018-04-11T23:31:00.000Z</pubTime>
+        <title>【Luogu1098】字符串的展开</title>
+        <pubTime>2018-04-05T09:03:00.000Z</pubTime>
         
-        <tag>高精度</tag>
-         
-        <tag>难度2</tag>
+        <tag>难度1</tag>
          
         <tag>模拟</tag>
          
@@ -7930,38 +8154,18 @@
 
     
   <url>
-    <loc>http://zory.ink/posts/bebe.html</loc>
-    <lastmod>2018-08-19T08:58:00.000Z</lastmod>
+    <loc>http://zory.ink/posts/1b05.html</loc>
+    <lastmod>2018-08-19T08:58:02.000Z</lastmod>
     <data>
         <display>
-        <title>【模板】动态树</title>
-        <pubTime>2018-04-26T13:19:00.000Z</pubTime>
+        <title>【Luogu1080】国王游戏</title>
+        <pubTime>2018-04-11T23:31:00.000Z</pubTime>
         
-        <tag>LCT</tag>
+        <tag>高精度</tag>
          
         <tag>难度2</tag>
          
-         
-           
-             
-              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://zory.ink/posts/ad35.html</loc>
-    <lastmod>2018-08-19T08:58:00.000Z</lastmod>
-    <data>
-        <display>
-        <title>【Luogu1082】同余方程</title>
-        <pubTime>2018-04-12T06:49:00.000Z</pubTime>
-        
-        <tag>难度1</tag>
-         
-        <tag>拓展欧几里得</tag>
+        <tag>模拟</tag>
          
          
            
@@ -7996,6 +8200,28 @@
 
     
   <url>
+    <loc>http://zory.ink/posts/bebe.html</loc>
+    <lastmod>2018-08-19T08:58:00.000Z</lastmod>
+    <data>
+        <display>
+        <title>【模板】动态树</title>
+        <pubTime>2018-04-26T13:19:00.000Z</pubTime>
+        
+        <tag>LCT</tag>
+         
+        <tag>难度2</tag>
+         
+         
+           
+             
+              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://zory.ink/posts/f653.html</loc>
     <lastmod>2018-08-19T08:58:00.000Z</lastmod>
     <data>
@@ -8018,12 +8244,80 @@
 
     
   <url>
+    <loc>http://zory.ink/posts/ad35.html</loc>
+    <lastmod>2018-08-19T08:58:00.000Z</lastmod>
+    <data>
+        <display>
+        <title>【Luogu1082】同余方程</title>
+        <pubTime>2018-04-12T06:49:00.000Z</pubTime>
+        
+        <tag>难度1</tag>
+         
+        <tag>拓展欧几里得</tag>
+         
+         
+           
+             
+              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zory.ink/posts/eaf4.html</loc>
+    <lastmod>2018-08-19T08:57:58.000Z</lastmod>
+    <data>
+        <display>
+        <title>【Poj3461】Oulipo</title>
+        <pubTime>2018-04-21T02:13:00.000Z</pubTime>
+        
+        <tag>哈希</tag>
+         
+        <tag>难度1</tag>
+         
+        <tag>kmp</tag>
+         
+         
+           
+             
+              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://zory.ink/posts/f28f.html</loc>
     <lastmod>2018-08-19T08:57:58.000Z</lastmod>
     <data>
         <display>
         <title>【Luogu1024】一元三次方程求解</title>
         <pubTime>2018-04-01T03:47:00.000Z</pubTime>
+        
+        <tag>难度1</tag>
+         
+        <tag>模拟</tag>
+         
+         
+           
+             
+              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zory.ink/posts/745a.html</loc>
+    <lastmod>2018-08-19T08:57:58.000Z</lastmod>
+    <data>
+        <display>
+        <title>【Luogu1079】Vigenère密码</title>
+        <pubTime>2018-04-11T13:31:00.000Z</pubTime>
         
         <tag>难度1</tag>
          
@@ -8084,6 +8378,28 @@
 
     
   <url>
+    <loc>http://zory.ink/posts/5005.html</loc>
+    <lastmod>2018-08-19T08:57:58.000Z</lastmod>
+    <data>
+        <display>
+        <title>【Luogu1041】传染病控制</title>
+        <pubTime>2018-04-03T11:41:00.000Z</pubTime>
+        
+        <tag>难度2</tag>
+         
+        <tag>模拟</tag>
+         
+         
+           
+             
+              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://zory.ink/posts/62b4.html</loc>
     <lastmod>2018-08-19T08:57:58.000Z</lastmod>
     <data>
@@ -8094,74 +8410,6 @@
         <tag>难度2</tag>
          
         <tag>bfs</tag>
-         
-        <tag>模拟</tag>
-         
-         
-           
-             
-              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://zory.ink/posts/a978.html</loc>
-    <lastmod>2018-08-19T08:57:58.000Z</lastmod>
-    <data>
-        <display>
-        <title>【Luogu1065】作业调度方案</title>
-        <pubTime>2018-04-05T02:30:00.000Z</pubTime>
-        
-        <tag>难度1</tag>
-         
-        <tag>模拟</tag>
-         
-         
-           
-             
-              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://zory.ink/posts/eaf4.html</loc>
-    <lastmod>2018-08-19T08:57:58.000Z</lastmod>
-    <data>
-        <display>
-        <title>【Poj3461】Oulipo</title>
-        <pubTime>2018-04-21T02:13:00.000Z</pubTime>
-        
-        <tag>哈希</tag>
-         
-        <tag>难度1</tag>
-         
-        <tag>kmp</tag>
-         
-         
-           
-             
-              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://zory.ink/posts/745a.html</loc>
-    <lastmod>2018-08-19T08:57:58.000Z</lastmod>
-    <data>
-        <display>
-        <title>【Luogu1079】Vigenère密码</title>
-        <pubTime>2018-04-11T13:31:00.000Z</pubTime>
-        
-        <tag>难度1</tag>
          
         <tag>模拟</tag>
          
@@ -8198,60 +8446,16 @@
 
     
   <url>
-    <loc>http://zory.ink/posts/5005.html</loc>
+    <loc>http://zory.ink/posts/a978.html</loc>
     <lastmod>2018-08-19T08:57:58.000Z</lastmod>
     <data>
         <display>
-        <title>【Luogu1041】传染病控制</title>
-        <pubTime>2018-04-03T11:41:00.000Z</pubTime>
-        
-        <tag>难度2</tag>
-         
-        <tag>模拟</tag>
-         
-         
-           
-             
-              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://zory.ink/posts/1666.html</loc>
-    <lastmod>2018-08-19T08:57:56.000Z</lastmod>
-    <data>
-        <display>
-        <title>【Luogu1514】铺地毯</title>
-        <pubTime>2018-04-10T08:54:00.000Z</pubTime>
+        <title>【Luogu1065】作业调度方案</title>
+        <pubTime>2018-04-05T02:30:00.000Z</pubTime>
         
         <tag>难度1</tag>
          
         <tag>模拟</tag>
-         
-         
-           
-             
-              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://zory.ink/posts/e9ee.html</loc>
-    <lastmod>2018-08-19T08:57:56.000Z</lastmod>
-    <data>
-        <display>
-        <title>【Luogu1027】Car的旅行路线</title>
-        <pubTime>2018-04-01T13:08:00.000Z</pubTime>
-        
-        <tag>最短路</tag>
-         
-        <tag>难度2</tag>
          
          
            
@@ -8288,16 +8492,16 @@
 
     
   <url>
-    <loc>http://zory.ink/posts/2acf.html</loc>
+    <loc>http://zory.ink/posts/f13e.html</loc>
     <lastmod>2018-08-19T08:57:56.000Z</lastmod>
     <data>
         <display>
-        <title>【Poj2135】Farm Tour</title>
-        <pubTime>2018-04-09T05:25:00.000Z</pubTime>
+        <title>【CF566A】【51Nod1615】Matching Names</title>
+        <pubTime>2018-04-13T05:43:00.000Z</pubTime>
         
         <tag>难度2</tag>
          
-        <tag>费用流</tag>
+        <tag>字典树</tag>
          
          
            
@@ -8332,16 +8536,38 @@
 
     
   <url>
-    <loc>http://zory.ink/posts/f13e.html</loc>
+    <loc>http://zory.ink/posts/1666.html</loc>
     <lastmod>2018-08-19T08:57:56.000Z</lastmod>
     <data>
         <display>
-        <title>【CF566A】【51Nod1615】Matching Names</title>
-        <pubTime>2018-04-13T05:43:00.000Z</pubTime>
+        <title>【Luogu1514】铺地毯</title>
+        <pubTime>2018-04-10T08:54:00.000Z</pubTime>
+        
+        <tag>难度1</tag>
+         
+        <tag>模拟</tag>
+         
+         
+           
+             
+              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zory.ink/posts/2acf.html</loc>
+    <lastmod>2018-08-19T08:57:56.000Z</lastmod>
+    <data>
+        <display>
+        <title>【Poj2135】Farm Tour</title>
+        <pubTime>2018-04-09T05:25:00.000Z</pubTime>
         
         <tag>难度2</tag>
          
-        <tag>字典树</tag>
+        <tag>费用流</tag>
          
          
            
@@ -8380,82 +8606,16 @@
 
     
   <url>
-    <loc>http://zory.ink/posts/375d.html</loc>
-    <lastmod>2018-08-19T08:57:54.000Z</lastmod>
+    <loc>http://zory.ink/posts/e9ee.html</loc>
+    <lastmod>2018-08-19T08:57:56.000Z</lastmod>
     <data>
         <display>
-        <title>【Luogu1017】进制转换</title>
-        <pubTime>2018-03-31T08:24:00.000Z</pubTime>
+        <title>【Luogu1027】Car的旅行路线</title>
+        <pubTime>2018-04-01T13:08:00.000Z</pubTime>
         
-        <tag>难度1</tag>
+        <tag>最短路</tag>
          
-        <tag>模拟</tag>
-         
-         
-           
-             
-              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://zory.ink/posts/ec55.html</loc>
-    <lastmod>2018-08-19T08:57:54.000Z</lastmod>
-    <data>
-        <display>
-        <title>【NOIP11 D1T2】选择客栈</title>
-        <pubTime>2018-04-18T07:42:00.000Z</pubTime>
-        
-        <tag>难度1</tag>
-         
-        <tag>模拟</tag>
-         
-         
-           
-             
-              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://zory.ink/posts/d86a.html</loc>
-    <lastmod>2018-08-19T08:57:54.000Z</lastmod>
-    <data>
-        <display>
-        <title>【NOIP13 D1T1】转圈游戏</title>
-        <pubTime>2018-04-18T06:33:00.000Z</pubTime>
-        
-        <tag>难度1</tag>
-         
-        <tag>快速幂</tag>
-         
-         
-           
-             
-              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://zory.ink/posts/6263.html</loc>
-    <lastmod>2018-08-19T08:57:54.000Z</lastmod>
-    <data>
-        <display>
-        <title>【Bzoj4196】【Luogu2146】软件包管理器</title>
-        <pubTime>2018-03-27T00:43:00.000Z</pubTime>
-        
         <tag>难度2</tag>
-         
-        <tag>树链剖分</tag>
          
          
            
@@ -8512,6 +8672,28 @@
 
     
   <url>
+    <loc>http://zory.ink/posts/375d.html</loc>
+    <lastmod>2018-08-19T08:57:54.000Z</lastmod>
+    <data>
+        <display>
+        <title>【Luogu1017】进制转换</title>
+        <pubTime>2018-03-31T08:24:00.000Z</pubTime>
+        
+        <tag>难度1</tag>
+         
+        <tag>模拟</tag>
+         
+         
+           
+             
+              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://zory.ink/posts/6a62.html</loc>
     <lastmod>2018-08-19T08:57:54.000Z</lastmod>
     <data>
@@ -8522,6 +8704,72 @@
         <tag>难度2</tag>
          
         <tag>坑</tag>
+         
+        <tag>模拟</tag>
+         
+         
+           
+             
+              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zory.ink/posts/6263.html</loc>
+    <lastmod>2018-08-19T08:57:54.000Z</lastmod>
+    <data>
+        <display>
+        <title>【Bzoj4196】【Luogu2146】软件包管理器</title>
+        <pubTime>2018-03-27T00:43:00.000Z</pubTime>
+        
+        <tag>难度2</tag>
+         
+        <tag>树链剖分</tag>
+         
+         
+           
+             
+              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zory.ink/posts/d86a.html</loc>
+    <lastmod>2018-08-19T08:57:54.000Z</lastmod>
+    <data>
+        <display>
+        <title>【NOIP13 D1T1】转圈游戏</title>
+        <pubTime>2018-04-18T06:33:00.000Z</pubTime>
+        
+        <tag>难度1</tag>
+         
+        <tag>快速幂</tag>
+         
+         
+           
+             
+              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zory.ink/posts/ec55.html</loc>
+    <lastmod>2018-08-19T08:57:54.000Z</lastmod>
+    <data>
+        <display>
+        <title>【NOIP11 D1T2】选择客栈</title>
+        <pubTime>2018-04-18T07:42:00.000Z</pubTime>
+        
+        <tag>难度1</tag>
          
         <tag>模拟</tag>
          
@@ -8558,14 +8806,36 @@
 
     
   <url>
-    <loc>http://zory.ink/posts/a1d3.html</loc>
+    <loc>http://zory.ink/posts/6053.html</loc>
     <lastmod>2018-08-19T08:57:48.000Z</lastmod>
     <data>
         <display>
-        <title>【Caioj1206】最近点对</title>
-        <pubTime>2018-03-12T12:18:00.000Z</pubTime>
+        <title>【Bzoj2733】【Luogu3224】永无乡</title>
+        <pubTime>2018-03-06T11:18:00.000Z</pubTime>
         
-        <tag>kdtree</tag>
+        <tag>线段树</tag>
+         
+        <tag>难度2</tag>
+         
+         
+           
+             
+              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zory.ink/posts/ef13.html</loc>
+    <lastmod>2018-08-19T08:57:48.000Z</lastmod>
+    <data>
+        <display>
+        <title>【Bzoj3226】校门外的区间</title>
+        <pubTime>2018-03-06T12:18:00.000Z</pubTime>
+        
+        <tag>线段树</tag>
          
         <tag>难度2</tag>
          
@@ -8602,14 +8872,14 @@
 
     
   <url>
-    <loc>http://zory.ink/posts/ef13.html</loc>
+    <loc>http://zory.ink/posts/a1d3.html</loc>
     <lastmod>2018-08-19T08:57:48.000Z</lastmod>
     <data>
         <display>
-        <title>【Bzoj3226】校门外的区间</title>
-        <pubTime>2018-03-06T12:18:00.000Z</pubTime>
+        <title>【Caioj1206】最近点对</title>
+        <pubTime>2018-03-12T12:18:00.000Z</pubTime>
         
-        <tag>线段树</tag>
+        <tag>kdtree</tag>
          
         <tag>难度2</tag>
          
@@ -8624,34 +8894,12 @@
 
     
   <url>
-    <loc>http://zory.ink/posts/6053.html</loc>
-    <lastmod>2018-08-19T08:57:48.000Z</lastmod>
-    <data>
-        <display>
-        <title>【Bzoj2733】【Luogu3224】永无乡</title>
-        <pubTime>2018-03-06T11:18:00.000Z</pubTime>
-        
-        <tag>线段树</tag>
-         
-        <tag>难度2</tag>
-         
-         
-           
-             
-              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://zory.ink/posts/a10d.html</loc>
+    <loc>http://zory.ink/posts/34e8.html</loc>
     <lastmod>2018-08-19T08:57:46.000Z</lastmod>
     <data>
         <display>
-        <title>【Caioj1400】差分约束1区间</title>
-        <pubTime>2018-03-09T05:01:00.000Z</pubTime>
+        <title>【Poj1364】差分约束2国王</title>
+        <pubTime>2018-03-09T05:49:00.000Z</pubTime>
         
         <tag>差分约束</tag>
          
@@ -8690,12 +8938,12 @@
 
     
   <url>
-    <loc>http://zory.ink/posts/75d0.html</loc>
+    <loc>http://zory.ink/posts/a10d.html</loc>
     <lastmod>2018-08-19T08:57:46.000Z</lastmod>
     <data>
         <display>
-        <title>【Poj1716】差分约束4整数区间</title>
-        <pubTime>2018-03-10T01:18:00.000Z</pubTime>
+        <title>【Caioj1400】差分约束1区间</title>
+        <pubTime>2018-03-09T05:01:00.000Z</pubTime>
         
         <tag>差分约束</tag>
          
@@ -8712,12 +8960,34 @@
 
     
   <url>
-    <loc>http://zory.ink/posts/34e8.html</loc>
+    <loc>http://zory.ink/posts/3a06.html</loc>
     <lastmod>2018-08-19T08:57:46.000Z</lastmod>
     <data>
         <display>
-        <title>【Poj1364】差分约束2国王</title>
-        <pubTime>2018-03-09T05:49:00.000Z</pubTime>
+        <title>【Caioj1402】差分约束3消息可靠吗</title>
+        <pubTime>2018-03-09T13:20:00.000Z</pubTime>
+        
+        <tag>差分约束</tag>
+         
+        <tag>难度1</tag>
+         
+         
+           
+             
+              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zory.ink/posts/75d0.html</loc>
+    <lastmod>2018-08-19T08:57:46.000Z</lastmod>
+    <data>
+        <display>
+        <title>【Poj1716】差分约束4整数区间</title>
+        <pubTime>2018-03-10T01:18:00.000Z</pubTime>
         
         <tag>差分约束</tag>
          
@@ -8756,50 +9026,6 @@
 
     
   <url>
-    <loc>http://zory.ink/posts/3a06.html</loc>
-    <lastmod>2018-08-19T08:57:46.000Z</lastmod>
-    <data>
-        <display>
-        <title>【Caioj1402】差分约束3消息可靠吗</title>
-        <pubTime>2018-03-09T13:20:00.000Z</pubTime>
-        
-        <tag>差分约束</tag>
-         
-        <tag>难度1</tag>
-         
-         
-           
-             
-              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://zory.ink/posts/e1c7.html</loc>
-    <lastmod>2018-08-19T08:57:44.000Z</lastmod>
-    <data>
-        <display>
-        <title>【Poj2823】Sliding Window</title>
-        <pubTime>2018-03-19T13:03:00.000Z</pubTime>
-        
-        <tag>难度1</tag>
-         
-        <tag>单调队列</tag>
-         
-         
-           
-             
-              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://zory.ink/posts/ecf1.html</loc>
     <lastmod>2018-08-19T08:57:44.000Z</lastmod>
     <data>
@@ -8822,34 +9048,14 @@
 
     
   <url>
-    <loc>http://zory.ink/posts/77c7.html</loc>
+    <loc>http://zory.ink/posts/1075.html</loc>
     <lastmod>2018-08-19T08:57:44.000Z</lastmod>
     <data>
         <display>
-        <title>【ARC092-D】Two Sequences</title>
-        <pubTime>2018-03-18T09:56:00.000Z</pubTime>
+        <title>【Hdu2767】Proving Equivalences</title>
+        <pubTime>2018-03-10T05:24:00.000Z</pubTime>
         
         <tag>难度2</tag>
-         
-         
-           
-             
-              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://zory.ink/posts/a373.html</loc>
-    <lastmod>2018-08-19T08:57:44.000Z</lastmod>
-    <data>
-        <display>
-        <title>【Vijos1023】Victoria的舞会3</title>
-        <pubTime>2018-03-10T02:55:00.000Z</pubTime>
-        
-        <tag>难度1</tag>
          
         <tag>强连通</tag>
          
@@ -8886,6 +9092,48 @@
 
     
   <url>
+    <loc>http://zory.ink/posts/a373.html</loc>
+    <lastmod>2018-08-19T08:57:44.000Z</lastmod>
+    <data>
+        <display>
+        <title>【Vijos1023】Victoria的舞会3</title>
+        <pubTime>2018-03-10T02:55:00.000Z</pubTime>
+        
+        <tag>难度1</tag>
+         
+        <tag>强连通</tag>
+         
+         
+           
+             
+              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zory.ink/posts/77c7.html</loc>
+    <lastmod>2018-08-19T08:57:44.000Z</lastmod>
+    <data>
+        <display>
+        <title>【ARC092-D】Two Sequences</title>
+        <pubTime>2018-03-18T09:56:00.000Z</pubTime>
+        
+        <tag>难度2</tag>
+         
+         
+           
+             
+              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://zory.ink/posts/e843.html</loc>
     <lastmod>2018-08-19T08:57:44.000Z</lastmod>
     <data>
@@ -8908,16 +9156,16 @@
 
     
   <url>
-    <loc>http://zory.ink/posts/1075.html</loc>
+    <loc>http://zory.ink/posts/e1c7.html</loc>
     <lastmod>2018-08-19T08:57:44.000Z</lastmod>
     <data>
         <display>
-        <title>【Hdu2767】Proving Equivalences</title>
-        <pubTime>2018-03-10T05:24:00.000Z</pubTime>
+        <title>【Poj2823】Sliding Window</title>
+        <pubTime>2018-03-19T13:03:00.000Z</pubTime>
         
-        <tag>难度2</tag>
+        <tag>难度1</tag>
          
-        <tag>强连通</tag>
+        <tag>单调队列</tag>
          
          
            
@@ -8974,28 +9222,6 @@
 
     
   <url>
-    <loc>http://zory.ink/posts/7e2f.html</loc>
-    <lastmod>2018-08-19T08:57:42.000Z</lastmod>
-    <data>
-        <display>
-        <title>【Hdu1588】Gauss Fibonacci</title>
-        <pubTime>2018-03-28T11:05:00.000Z</pubTime>
-        
-        <tag>矩阵乘法</tag>
-         
-        <tag>难度2</tag>
-         
-         
-           
-             
-              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://zory.ink/posts/7ef5.html</loc>
     <lastmod>2018-08-19T08:57:42.000Z</lastmod>
     <data>
@@ -9018,16 +9244,16 @@
 
     
   <url>
-    <loc>http://zory.ink/posts/e353.html</loc>
-    <lastmod>2018-08-19T08:57:40.000Z</lastmod>
+    <loc>http://zory.ink/posts/7e2f.html</loc>
+    <lastmod>2018-08-19T08:57:42.000Z</lastmod>
     <data>
         <display>
-        <title>【Vijos1049】送给圣诞夜的礼品</title>
-        <pubTime>2018-01-30T05:41:00.000Z</pubTime>
+        <title>【Hdu1588】Gauss Fibonacci</title>
+        <pubTime>2018-03-28T11:05:00.000Z</pubTime>
         
         <tag>矩阵乘法</tag>
          
-        <tag>难度1</tag>
+        <tag>难度2</tag>
          
          
            
@@ -9150,16 +9376,16 @@
 
     
   <url>
-    <loc>http://zory.ink/posts/53d.html</loc>
-    <lastmod>2018-08-19T08:57:38.000Z</lastmod>
+    <loc>http://zory.ink/posts/e353.html</loc>
+    <lastmod>2018-08-19T08:57:40.000Z</lastmod>
     <data>
         <display>
-        <title>【Luogu1962】Fibonacci数列</title>
-        <pubTime>2018-01-30T06:48:00.000Z</pubTime>
+        <title>【Vijos1049】送给圣诞夜的礼品</title>
+        <pubTime>2018-01-30T05:41:00.000Z</pubTime>
         
         <tag>矩阵乘法</tag>
          
-        <tag>难度2</tag>
+        <tag>难度1</tag>
          
          
            
@@ -9172,14 +9398,14 @@
 
     
   <url>
-    <loc>http://zory.ink/posts/9654.html</loc>
+    <loc>http://zory.ink/posts/53d.html</loc>
     <lastmod>2018-08-19T08:57:38.000Z</lastmod>
     <data>
         <display>
-        <title>【Bzoj2179】超大整数乘法</title>
-        <pubTime>2017-12-08T04:55:00.000Z</pubTime>
+        <title>【Luogu1962】Fibonacci数列</title>
+        <pubTime>2018-01-30T06:48:00.000Z</pubTime>
         
-        <tag>快速傅里叶变换</tag>
+        <tag>矩阵乘法</tag>
          
         <tag>难度2</tag>
          
@@ -9216,28 +9442,6 @@
 
     
   <url>
-    <loc>http://zory.ink/posts/fb8e.html</loc>
-    <lastmod>2018-08-19T08:57:38.000Z</lastmod>
-    <data>
-        <display>
-        <title>【Bzoj2194】快速傅立叶之二</title>
-        <pubTime>2017-12-08T04:55:00.000Z</pubTime>
-        
-        <tag>快速傅里叶变换</tag>
-         
-        <tag>难度2</tag>
-         
-         
-           
-             
-              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://zory.ink/posts/4b65.html</loc>
     <lastmod>2018-08-19T08:57:38.000Z</lastmod>
     <data>
@@ -9258,36 +9462,14 @@
 
     
   <url>
-    <loc>http://zory.ink/posts/1db5.html</loc>
-    <lastmod>2018-08-19T08:57:36.000Z</lastmod>
+    <loc>http://zory.ink/posts/9654.html</loc>
+    <lastmod>2018-08-19T08:57:38.000Z</lastmod>
     <data>
         <display>
-        <title>【Bzoj3527】力</title>
-        <pubTime>2017-12-09T07:33:00.000Z</pubTime>
+        <title>【Bzoj2179】超大整数乘法</title>
+        <pubTime>2017-12-08T04:55:00.000Z</pubTime>
         
         <tag>快速傅里叶变换</tag>
-         
-        <tag>难度3</tag>
-         
-         
-           
-             
-              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://zory.ink/posts/eed1.html</loc>
-    <lastmod>2018-08-19T08:57:36.000Z</lastmod>
-    <data>
-        <display>
-        <title>【Bzoj1645】City Horizon城市地平线</title>
-        <pubTime>2017-11-24T05:00:00.000Z</pubTime>
-        
-        <tag>线段树</tag>
          
         <tag>难度2</tag>
          
@@ -9302,14 +9484,16 @@
 
     
   <url>
-    <loc>http://zory.ink/posts/24f8.html</loc>
+    <loc>http://zory.ink/posts/7731.html</loc>
     <lastmod>2018-08-19T08:57:36.000Z</lastmod>
     <data>
         <display>
-        <title>【Bzoj2190】仪仗队</title>
-        <pubTime>2017-11-26T07:55:00.000Z</pubTime>
+        <title>【Poj2455】【Bzoj1733】Secret Milking Machine</title>
+        <pubTime>2017-11-15T05:58:11.000Z</pubTime>
         
-        <tag>莫比乌斯反演</tag>
+        <tag>网络流</tag>
+         
+        <tag>最大流</tag>
          
         <tag>难度2</tag>
          
@@ -9350,38 +9534,14 @@
 
     
   <url>
-    <loc>http://zory.ink/posts/7731.html</loc>
+    <loc>http://zory.ink/posts/eed1.html</loc>
     <lastmod>2018-08-19T08:57:36.000Z</lastmod>
     <data>
         <display>
-        <title>【Poj2455】【Bzoj1733】Secret Milking Machine</title>
-        <pubTime>2017-11-15T05:58:11.000Z</pubTime>
+        <title>【Bzoj1645】City Horizon城市地平线</title>
+        <pubTime>2017-11-24T05:00:00.000Z</pubTime>
         
-        <tag>网络流</tag>
-         
-        <tag>最大流</tag>
-         
-        <tag>难度2</tag>
-         
-         
-           
-             
-              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://zory.ink/posts/9151.html</loc>
-    <lastmod>2018-08-19T08:57:36.000Z</lastmod>
-    <data>
-        <display>
-        <title>【Bzoj2818】GCD-莫比乌斯2</title>
-        <pubTime>2017-11-25T09:55:00.000Z</pubTime>
-        
-        <tag>莫比乌斯反演</tag>
+        <tag>线段树</tag>
          
         <tag>难度2</tag>
          
@@ -9420,16 +9580,18 @@
 
     
   <url>
-    <loc>http://zory.ink/posts/a8dd.html</loc>
+    <loc>http://zory.ink/posts/695c.html</loc>
     <lastmod>2018-08-19T08:57:34.000Z</lastmod>
     <data>
         <display>
-        <title>Qtree3</title>
-        <pubTime>2017-09-23T04:38:00.000Z</pubTime>
+        <title>Qtree1</title>
+        <pubTime>2017-09-23T02:38:00.000Z</pubTime>
         
-        <tag>难度2</tag>
+        <tag>难度1</tag>
          
         <tag>Qtree</tag>
+         
+        <tag>树链剖分</tag>
          
          
            
@@ -9466,40 +9628,18 @@
 
     
   <url>
-    <loc>http://zory.ink/posts/695c.html</loc>
+    <loc>http://zory.ink/posts/9eca.html</loc>
     <lastmod>2018-08-19T08:57:34.000Z</lastmod>
     <data>
         <display>
-        <title>Qtree1</title>
-        <pubTime>2017-09-23T02:38:00.000Z</pubTime>
+        <title>【Poj1273】网络流模版题Drainage Ditches</title>
+        <pubTime>2017-11-14T05:48:11.000Z</pubTime>
         
+        <tag>网络流</tag>
+         
+        <tag>最大流</tag>
+         
         <tag>难度1</tag>
-         
-        <tag>Qtree</tag>
-         
-        <tag>树链剖分</tag>
-         
-         
-           
-             
-              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://zory.ink/posts/141d.html</loc>
-    <lastmod>2018-08-19T08:57:34.000Z</lastmod>
-    <data>
-        <display>
-        <title>NOIP2016魔法阵</title>
-        <pubTime>2017-08-16T02:32:00.000Z</pubTime>
-        
-        <tag>NOIP</tag>
-         
-        <tag>赛事</tag>
          
          
            
@@ -9534,40 +9674,16 @@
 
     
   <url>
-    <loc>http://zory.ink/posts/9eca.html</loc>
+    <loc>http://zory.ink/posts/a8dd.html</loc>
     <lastmod>2018-08-19T08:57:34.000Z</lastmod>
     <data>
         <display>
-        <title>【Poj1273】网络流模版题Drainage Ditches</title>
-        <pubTime>2017-11-14T05:48:11.000Z</pubTime>
+        <title>Qtree3</title>
+        <pubTime>2017-09-23T04:38:00.000Z</pubTime>
         
-        <tag>网络流</tag>
-         
-        <tag>最大流</tag>
-         
-        <tag>难度1</tag>
-         
-         
-           
-             
-              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://zory.ink/posts/d395.html</loc>
-    <lastmod>2018-08-19T08:57:34.000Z</lastmod>
-    <data>
-        <display>
-        <title>【Hdu1695】GCD(莫比乌斯1)</title>
-        <pubTime>2017-11-25T08:03:00.000Z</pubTime>
-        
-        <tag>莫比乌斯反演</tag>
-         
         <tag>难度2</tag>
+         
+        <tag>Qtree</tag>
          
          
            
@@ -9590,6 +9706,50 @@
         <tag>NOIP</tag>
          
         <tag>赛事</tag>
+         
+         
+           
+             
+              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zory.ink/posts/141d.html</loc>
+    <lastmod>2018-08-19T08:57:34.000Z</lastmod>
+    <data>
+        <display>
+        <title>NOIP2016魔法阵</title>
+        <pubTime>2017-08-16T02:32:00.000Z</pubTime>
+        
+        <tag>NOIP</tag>
+         
+        <tag>赛事</tag>
+         
+         
+           
+             
+              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zory.ink/posts/96fc.html</loc>
+    <lastmod>2018-08-19T08:57:32.000Z</lastmod>
+    <data>
+        <display>
+        <title>POJ2528市长的海报Posters</title>
+        <pubTime>2017-08-16T07:42:00.000Z</pubTime>
+        
+        <tag>线段树</tag>
+         
+        <tag>难度2</tag>
          
          
            
@@ -9626,35 +9786,15 @@
 
     
   <url>
-    <loc>http://zory.ink/posts/96fc.html</loc>
+    <loc>http://zory.ink/posts/4cfd.html</loc>
     <lastmod>2018-08-19T08:57:32.000Z</lastmod>
     <data>
         <display>
-        <title>POJ2528市长的海报Posters</title>
-        <pubTime>2017-08-16T07:42:00.000Z</pubTime>
+        <title>星球大战</title>
+        <pubTime>2017-08-14T08:40:00.000Z</pubTime>
         
-        <tag>线段树</tag>
+        <tag>并查集</tag>
          
-        <tag>难度2</tag>
-         
-         
-           
-             
-              <breadCrumb title="刷题" url="http://zory.ink/categories/%E5%88%B7%E9%A2%98/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://zory.ink/posts/47fc.html</loc>
-    <lastmod>2018-08-19T08:57:32.000Z</lastmod>
-    <data>
-        <display>
-        <title>最后的战犯</title>
-        <pubTime>2017-08-14T04:48:00.000Z</pubTime>
-        
         <tag>难度1</tag>
          
         <tag>宽度优先搜索BFS</tag>
@@ -9694,15 +9834,13 @@
 
     
   <url>
-    <loc>http://zory.ink/posts/4cfd.html</loc>
+    <loc>http://zory.ink/posts/47fc.html</loc>
     <lastmod>2018-08-19T08:57:32.000Z</lastmod>
     <data>
         <display>
-        <title>星球大战</title>
-        <pubTime>2017-08-14T08:40:00.000Z</pubTime>
+        <title>最后的战犯</title>
+        <pubTime>2017-08-14T04:48:00.000Z</pubTime>
         
-        <tag>并查集</tag>
-         
         <tag>难度1</tag>
          
         <tag>宽度优先搜索BFS</tag>

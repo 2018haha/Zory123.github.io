@@ -131,7 +131,7 @@
 <meta property="og:site_name" content="Zory的个人博客">
 <meta property="og:description" content="逆元(严格来说叫乘法逆元)">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-09-28T00:45:48.636Z">
+<meta property="og:updated_time" content="2018-12-30T15:02:31.893Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【OI之路】03数论-3逆元">
 <meta name="twitter:description" content="逆元(严格来说叫乘法逆元)">
@@ -259,7 +259,7 @@
           
           <li class="menu-item menu-item-archives">
     <a href="/archives/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />历程Archives<span class="badge">431</span></a>
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />历程Archives<span class="badge">437</span></a>
   </li>
         
         
@@ -275,7 +275,7 @@
           
           <li class="menu-item menu-item-tags">
     <a href="/tags/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签Tags<span class="badge">155</span></a>
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签Tags<span class="badge">158</span></a>
   </li>
         
         
@@ -456,7 +456,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改于：2018-09-28 08:45:48" itemprop="dateModified" datetime="2018-09-28T08:45:48+08:00">2018-09-28</time>
+                <time title="修改于：2018-12-30 23:02:31" itemprop="dateModified" datetime="2018-12-30T23:02:31+08:00">2018-12-30</time>
               
             
           </span>
@@ -535,10 +535,10 @@
 <p>$ (a+b)\mod p=(a\mod p)+(b\mod p)\mod p （对） $<br>$ (a-b)\mod p=(a\mod p)-(b\mod p)\mod p （对） $<br>$ (a\times b)\mod p=(a\mod p)\times (b\mod p) \mod p （对） $<br>$ \frac{a}{b}\mod p=\frac{a\mod p}{b\mod p}\mod p （错） $<br>$ a^b\mod p=(a^{b-k}\mod p)\times (a^{k}\mod p)\mod p （对） $<br>没错，除法中是错误的【随便举个反例即可，毕竟“证明对的难，证明错的容易”】<br>那容易爆的可以搞快速幂，但碰到有模数的时候，难道就不用除法了？<br>当然不是，所以，有请<strong>逆元</strong>隆重登场！</p>
 </blockquote>
 <h2 id="啥玩意？"><a href="#啥玩意？" class="headerlink" title="啥玩意？"></a>啥玩意？</h2><p>$a\times x=1 (\mod p)$<br>是不是有点像数学里面的倒数？只不过这里因为是数论，所有是整数<br>现在x就叫做mod p下a的逆元<br>可见p不同，a的逆元也不同。</p>
-<h2 id="用法？"><a href="#用法？" class="headerlink" title="用法？"></a>用法？</h2><p>可以把除以a变成乘以a的逆元（始终强调模意义下）<br>爽吧~<br><del>然后koi的时候就半懂不懂地杠最后一题，讲题的时候全程懵逼</del></p>
-<h2 id="求法1"><a href="#求法1" class="headerlink" title="求法1"></a>求法1</h2><p>欧拉-费马定理<br>条件：gcd(a,p)=1 【原本就是定理的条件】<br>因为费马小定理还额外要求p是素数 【亲自实验验证】<br>所以不定模数或者已知是合数的时候线性筛好欧拉函数<br>$a^{\varphi(p)}=1 (\mod p)$<br>$inv(a)=a^{-1}=a^{\varphi(p)-1} (\mod p)$</p>
-<h2 id="求法2"><a href="#求法2" class="headerlink" title="求法2"></a>求法2</h2><p>扩展欧几里德算法~<br>就问你6不6<br>条件：gcd(a,p)=1 【扩展欧几里德要求K（这里的1）是gcd(A,B)的倍数】<br>$a\times x+p\times y=1$<br>$a\times x\%p+p\times y\%p=1\%p$<br>$a\times x\%p=1\%p$<br>$x=inv(a) (\mod p)$<br>复杂度O(loga)<br>记得取最小正整数解哟</p>
-<h2 id="求法3"><a href="#求法3" class="headerlink" title="求法3"></a>求法3</h2><p>当p是个质数的时候有<br>$inv(a)=(p-\lfloor p/a \rfloor)\times inv(p\%a)\%p$</p>
+<h2 id="用法？"><a href="#用法？" class="headerlink" title="用法？"></a>用法？</h2><p>可以把除以a变成乘以a的逆元（始终强调模意义下）</p>
+<h2 id="求法1"><a href="#求法1" class="headerlink" title="求法1"></a>求法1</h2><p>欧拉-费马定理<br>条件：gcd(a,p)=1 【原本就是定理的条件】<br>因为费马小定理还额外要求 <strong>p是素数</strong> 【已亲自实验验证】<br>所以不定模数或者已知是合数的时候线性筛好欧拉函数<br>$a^{\varphi(p)}=1 (\mod p)$<br>$inv(a)=a^{-1}=a^{\varphi(p)-1} (\mod p)$</p>
+<h2 id="求法2"><a href="#求法2" class="headerlink" title="求法2"></a>求法2</h2><p>扩展欧几里德算法<br>条件：gcd(a,p)=1 【扩展欧几里德要求K（这里的1）是gcd(A,B)的倍数】<br>$a\times x+p\times y=1$<br>$a\times x\%p+p\times y\%p=1\%p$<br>$a\times x\%p=1\%p$<br>$x=inv(a) (\mod p)$<br>复杂度O(loga)<br>记得取最小正整数解</p>
+<h2 id="求法3"><a href="#求法3" class="headerlink" title="求法3"></a>求法3</h2><p><strong>当p是个质数的时候有</strong><br>$inv(a)=(p-\lfloor p/a \rfloor)\times inv(p\%a)\%p$</p>
 <p>证明：<br>设$x=p\%a,y=\lfloor p/a \rfloor 【a&lt;p】$<br>于是有$y\times a+x=p$ 【就是整数除法定义嘛】<br>$y\times a+x=0 (\mod p)$<br>$x=(-y)\times a (\mod p)$<br>$inv(a)=(p-y)\times inv(x) (\mod p)$<br>$inv(a)=(p-\lfloor p/a \rfloor)\times inv(p\%a) (\mod p)$</p>
 <p>边界：$inv(1)=1$<br>时间复杂度：单个O(loga)，但加上记忆化可以线性</p>
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>条件：gcd(a,p)=1<br>这个条件不是由求法而得来的（例如第三种就不需要），而是由其定义<br>$a \times inv(a)=1 (\mod p)$<br>那么<a href="c508.html">exBSGS算法中说过</a><br>对于一个同余方程组，左边、右边和模数会有相同的质因子（除非是0）<br>而现在右边是1，则$gcd(a \times inv(a),p)=1$<br>则$gcd(a,p)=1$</p>
@@ -756,7 +756,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">431</span>
+                    <span class="site-state-item-count">437</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -1100,7 +1100,13 @@
                     
                       
                     
-                    <span class="site-state-item-count">153</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">155</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1169,7 +1175,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; 2017 &mdash; <span itemprop="copyrightYear">2018</span>
+        <div class="copyright">&copy; 2017 &mdash; <span itemprop="copyrightYear">2019</span>
   <span class="with-love" id="animate">
     <i class="fa fa-heart"></i>
   </span>

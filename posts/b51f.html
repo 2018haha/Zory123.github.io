@@ -123,18 +123,18 @@
 
 
 
-  <meta name="description" content="组合数学入门">
+  <meta name="description" content="组合数学入门其实yyb写得更好……">
 <meta name="keywords" content="组合数学,二项式定理,杨辉三角,错排">
 <meta property="og:type" content="article">
 <meta property="og:title" content="【OI之路】03数论-12组合数学">
 <meta property="og:url" content="http://zory.ink/posts/b51f.html">
 <meta property="og:site_name" content="Zory的个人博客">
-<meta property="og:description" content="组合数学入门">
+<meta property="og:description" content="组合数学入门其实yyb写得更好……">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-12-26T02:15:37.982Z">
+<meta property="og:updated_time" content="2019-01-05T12:53:53.973Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【OI之路】03数论-12组合数学">
-<meta name="twitter:description" content="组合数学入门">
+<meta name="twitter:description" content="组合数学入门其实yyb写得更好……">
 
 
 
@@ -259,7 +259,7 @@
           
           <li class="menu-item menu-item-archives">
     <a href="/archives/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />历程Archives<span class="badge">437</span></a>
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />历程Archives<span class="badge">444</span></a>
   </li>
         
         
@@ -275,7 +275,7 @@
           
           <li class="menu-item menu-item-tags">
     <a href="/tags/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签Tags<span class="badge">158</span></a>
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签Tags<span class="badge">164</span></a>
   </li>
         
         
@@ -456,7 +456,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改于：2018-12-26 10:15:37" itemprop="dateModified" datetime="2018-12-26T10:15:37+08:00">2018-12-26</time>
+                <time title="修改于：2019-01-05 20:53:53" itemprop="dateModified" datetime="2019-01-05T20:53:53+08:00">2019-01-05</time>
               
             
           </span>
@@ -528,7 +528,7 @@
       
 
       
-        <p>组合数学入门<br><a id="more"></a></p>
+        <p>组合数学入门<br><a href="https://www.cnblogs.com/cjyyb/p/10142878.html" target="_blank" rel="noopener">其实yyb写得更好……</a><br><a id="more"></a></p>
 <h1 id="组合数"><a href="#组合数" class="headerlink" title="组合数"></a>组合数</h1><p>$$<br>P(n,m)=n\times (n-1)\times (n-2)……(n-m+1)=\frac{n!}{(n-m)!}<br>$$</p>
 <p>$$<br>C(n,m)=\frac{P(n,m)}{P(m,m)}=\frac{n!}{m!(n-m)!}<br>$$</p>
 <h1 id="组合数的性质"><a href="#组合数的性质" class="headerlink" title="组合数的性质"></a>组合数的性质</h1><p>详见<a href="https://blog.csdn.net/litble/article/details/75913032" target="_blank" rel="noopener">这里</a><br>再补充： $\sum_{k=0}^p {n \choose k} = {n + 1 \choose p}$</p>
@@ -557,7 +557,9 @@
 <ol>
 <li>$\sum_{k = 0}^n f(k) = \sum_{k = 0}^p c_k {n + 1 \choose k}$ （用组合数的性质）</li>
 </ol>
-<p>第一类Stirling数（斯特林轮换数）：n个不同的人，放入m个圆排列（内部顺序不同为不同方案），不能有空的方案数<br>递推式可考虑n放入新的排列，或者放在前面n-1个人中某个的右边<br>$S1(n,m)=S1(n-1,m-1)+(n-1)S1(n-1,m)$</p>
+<p><a href="https://www.cnblogs.com/owenyu/p/6724661.html" target="_blank" rel="noopener">Stirling数各种性质（不知道有没有用）</a></p>
+<p>第一类Stirling数（斯特林轮换数）：<br>带标号：<br>n个不同的人，放入m个圆排列（内部顺序不同为不同方案），不能有空的方案数<br>递推式可考虑n放入新的排列，或者放在前面n-1个人中某个的右边<br>$S(n,m)=S(n-1,m-1)+(n-1)S(n-1,m)$<br>性质（定义？）：<br>$P_n^k=S(k,k)<em>n^k-S(k,k-1)</em>n^{k-1}…$<br>即 $P_n^k=\sum_{i=0}^k(-1)^{k-i}<em>s(k,i)</em>n^i$<br>边界： $S(n,0)=0 (n \leq 1)$]</p>
+<p>不带标号： 不清楚</p>
 <p>第二类Stirling数（斯特林子集数）：n个不同的人，进入m个相同的房子中，不可有空房子的方案数<br>递推式可考虑n放入新排列，或者放在已有的房子中<br>$S2(n,m)=m S2(n-1,m)+S2(n-1,m-1)$<br>非递推式的话，考虑容斥即可，为了方便处理先假设m个房子互不相同<br>$S1(n,m)=\frac{1}{m!} \sum (-1)^k {m \choose k} (m-k)^n$</p>
 
       
@@ -784,7 +786,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">437</span>
+                    <span class="site-state-item-count">444</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -1134,7 +1136,19 @@
                     
                       
                     
-                    <span class="site-state-item-count">155</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">161</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>

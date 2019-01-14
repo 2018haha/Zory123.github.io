@@ -123,18 +123,18 @@
 
 
 
-  <meta name="description" content="快速沃尔什变换主要解决位运算卷积">
+  <meta name="description" content="集合幂级数学习笔记（vfk在15年的论文）">
 <meta name="keywords" content="FWT">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【OI之路】03数论-19 FWT">
+<meta property="og:title" content="【OI之路】03数论-19集合幂级数">
 <meta property="og:url" content="http://zory.ink/posts/8434.html">
 <meta property="og:site_name" content="Zory的个人博客">
-<meta property="og:description" content="快速沃尔什变换主要解决位运算卷积">
+<meta property="og:description" content="集合幂级数学习笔记（vfk在15年的论文）">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-01-06T08:04:41.089Z">
+<meta property="og:updated_time" content="2019-01-14T03:18:14.339Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="【OI之路】03数论-19 FWT">
-<meta name="twitter:description" content="快速沃尔什变换主要解决位运算卷积">
+<meta name="twitter:title" content="【OI之路】03数论-19集合幂级数">
+<meta name="twitter:description" content="集合幂级数学习笔记（vfk在15年的论文）">
 
 
 
@@ -151,7 +151,7 @@
   };
 </script>
 
-  <title>【OI之路】03数论-19 FWT | Zory的个人博客</title>
+  <title>【OI之路】03数论-19集合幂级数 | Zory的个人博客</title>
   
 
 
@@ -259,7 +259,7 @@
           
           <li class="menu-item menu-item-archives">
     <a href="/archives/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />历程Archives<span class="badge">448</span></a>
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />历程Archives<span class="badge">449</span></a>
   </li>
         
         
@@ -414,7 +414,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">【OI之路】03数论-19 FWT
+          <h2 class="post-title" itemprop="name headline">【OI之路】03数论-19集合幂级数
               
             
           </h2>
@@ -456,7 +456,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改于：2019-01-06 16:04:41" itemprop="dateModified" datetime="2019-01-06T16:04:41+08:00">2019-01-06</time>
+                <time title="修改于：2019-01-14 11:18:14" itemprop="dateModified" datetime="2019-01-14T11:18:14+08:00">2019-01-14</time>
               
             
           </span>
@@ -497,7 +497,7 @@
 
           
           
-             <span id="/posts/8434.html" class="leancloud_visitors" data-flag-title="【OI之路】03数论-19 FWT">
+             <span id="/posts/8434.html" class="leancloud_visitors" data-flag-title="【OI之路】03数论-19集合幂级数">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -528,14 +528,19 @@
       
 
       
-        <p>快速沃尔什变换<br>主要解决位运算卷积<br><a id="more"></a></p>
-<h1 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h1><p>A和B都是长度为2的整数次幂长度的【多项式】，按下标分A0和A1，表示二进制最高位<br>定义 $+、-、\times$ 运算，表示按下标定义运算<br>A@B表示以@为运算符，卷积起来<br>$(A@B)[k]=\sum_{i@j=k} A[i] \times B[j]$<br>然后用 $\bigstar$ 表示拼接</p>
-<h1 id="或运算"><a href="#或运算" class="headerlink" title="或运算"></a>或运算</h1><p>@=or<br>好像也叫FMT？<br>$A’<em>i=\sum</em>{j \subseteq i} A_j$<br>考虑分治<br>显然FWT为 $A’=(A_0’) \bigstar (A_0’+A_1’)$<br>然后乘法分配律 $C’=A’ \times B’$<br>然后可以根据容斥（直接利用FWT的式子倒过来也行）推导IFW<br>$C=(C_0) \bigstar (C_1-C_0)$<br>时间为 $O(nlogn)$</p>
-<h1 id="与运算"><a href="#与运算" class="headerlink" title="与运算"></a>与运算</h1><p>@=and<br>好像也叫FMT？<br>和上面的推导类似，但FWT构造出超集<br>$A’=(A_0’+A_1’) \bigstar (A_1’)$<br>$A=(A_0-A_1) \bigstar (A_1)$<br>时间为 $O(nlogn)$</p>
-<h1 id="异或运算"><a href="#异或运算" class="headerlink" title="异或运算"></a>异或运算</h1><p>@=xor<br>这个我还不会推导<br>但同样是考虑分治<br>$A’=(A_0+A_1) \bigstar (A_0-A_1)$<br>逆运算都是倒过来即可 $A=(\frac{A_0+A_1}{2}) \bigstar (\frac{A_0-A_1}{2})$<br>时间为 $O(nlogn)$</p>
+        <p>集合幂级数学习笔记（vfk在15年的论文）<br><a id="more"></a></p>
+<p>集合幂级数 $f=\sum_{S \subseteq 2^U} f_S x^S$<br>然后对于乘法，不同的运算符有具体的不同操作<br>集合并卷积：FMT，基本上就是对子集求和，便于或和与运算<br>集合对称差卷积：<br>注意到 $\frac{1}{2^n} \sum_{T \subseteq 2^U} (-1)^{|T|}=[T=\emptyset]$<br>定义FWT，$f_2s=\sum_{T \subseteq 2^U} (-1)^{|T|} f_T$<br>然后你化一波柿子，发现就是就是两边FWT，相乘后UFWT（可以只写一个函数），<br>最后除以 $2^n$ （中间除也行，这个除以二意味着不能在2没有逆元的域下使用）</p>
+<p>上面这两个东西，做除法的前提都是系数不能为0<br>写的话，一般非递归，考虑首位是0还是1即可推导出来</p>
+<p>子集卷积：或为S并为空，相当于两个不重叠集合的拼接，感觉不少状压都是这种形式<br>将条件转化为 $a|b=S,|a|+|b|=|S|$<br>可以看作是一个集合幂级数的或运算套一个形式幂级数的乘法，暴力枚举做即可，但要去除没有意义的地方<br>当然转化为集合对称差也没有问题</p>
+<hr>
+<p>下文是在看论文之前瞎学的东西</p>
+<h1 id="FWT"><a href="#FWT" class="headerlink" title="FWT"></a>FWT</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>A和B都是长度为2的整数次幂长度的【多项式】，按下标分A0和A1，表示二进制最高位<br>定义 $+、-、\times$ 运算，表示按下标定义运算<br>A@B表示以@为运算符，卷积起来<br>$(A@B)[k]=\sum_{i@j=k} A[i] \times B[j]$<br>然后用 $\bigstar$ 表示拼接</p>
+<h2 id="或运算"><a href="#或运算" class="headerlink" title="或运算"></a>或运算</h2><p>@=or<br>好像也叫FMT？<br>$A’<em>i=\sum</em>{j \subseteq i} A_j$<br>考虑分治<br>显然FWT为 $A’=(A_0’) \bigstar (A_0’+A_1’)$<br>然后乘法分配律 $C’=A’ \times B’$<br>然后可以根据容斥（直接利用FWT的式子倒过来也行）推导IFW<br>$C=(C_0) \bigstar (C_1-C_0)$<br>时间为 $O(nlogn)$</p>
+<h2 id="与运算"><a href="#与运算" class="headerlink" title="与运算"></a>与运算</h2><p>@=and<br>好像也叫FMT？<br>和上面的推导类似，但FWT构造出超集<br>$A’=(A_0’+A_1’) \bigstar (A_1’)$<br>$A=(A_0-A_1) \bigstar (A_1)$<br>时间为 $O(nlogn)$</p>
+<h2 id="异或运算"><a href="#异或运算" class="headerlink" title="异或运算"></a>异或运算</h2><p>@=xor<br>这个我还不会推导<br>但同样是考虑分治<br>$A’=(A_0+A_1) \bigstar (A_0-A_1)$<br>逆运算都是倒过来即可 $A=(\frac{A_0+A_1}{2}) \bigstar (\frac{A_0-A_1}{2})$<br>时间为 $O(nlogn)$</p>
 <p><a href="https://blog.csdn.net/qq_33229466/article/details/78576727" target="_blank" rel="noopener">异或的证明</a></p>
-<h1 id="子集卷积"><a href="#子集卷积" class="headerlink" title="子集卷积"></a>子集卷积</h1><p>$C_k=\sum_{i|j=k,i \&amp; j=\varnothing} A_i \times B_j$<br>巧妙地加多一维表示二进制下1的数量，然后数量对不上的就是0<br>$C_{popcount(k),k}=\sum_{i|j=k} A_{popcount(i),i} \times B_{popcount(k)-popcount(i),j}$<br>我们额外花费 $log^2 n$ 的时间枚举两个popcount，然后做完后可能k和popcount对不上，删除为0即可</p>
-<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>子集卷积中用到的思想还是非常不错的，应该具有一定的推广意义<br>所以即使是完全不同的运算符，可以尝试用上述基本运算符组合起来，并考虑套上去</p>
+<h2 id="子集卷积"><a href="#子集卷积" class="headerlink" title="子集卷积"></a>子集卷积</h2><p>$C_k=\sum_{i|j=k,i \&amp; j=\varnothing} A_i \times B_j$<br>巧妙地加多一维表示二进制下1的数量，然后数量对不上的就是0<br>$C_{popcount(k),k}=\sum_{i|j=k} A_{popcount(i),i} \times B_{popcount(k)-popcount(i),j}$<br>我们额外花费 $log^2 n$ 的时间枚举两个popcount，然后做完后可能k和popcount对不上，删除为0即可</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>子集卷积中用到的思想还是非常不错的，应该具有一定的推广意义<br>所以即使是完全不同的运算符，可以尝试用上述基本运算符组合起来，并考虑套上去</p>
 <p>FWT和FFT在处理问题的方式上都非常相似，通过构造一个更便于计算的表达，再通过分治解决问题</p>
 
       
@@ -564,7 +569,7 @@
 				<p id="div-border-left-purple">
 			   <b>本文基于<a target="_blank" title="Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)" href="http://creativecommons.org/licenses/by-sa/4.0/deed.zh"> 知识共享署名-相同方式共享 4.0 </a>国际许可协议发布</b><br/>
 				<span>
-				<b>本文地址：</b><a href="/posts/8434.html" title="【OI之路】03数论-19 FWT">http://zory.ink/posts/8434.html</a><br/><b>转载请注明出处，谢谢！</b>
+				<b>本文地址：</b><a href="/posts/8434.html" title="【OI之路】03数论-19集合幂级数">http://zory.ink/posts/8434.html</a><br/><b>转载请注明出处，谢谢！</b>
 				</span>
 				</p>
 		</div>
@@ -640,8 +645,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/posts/8720.html" rel="prev" title="【OI之路】04图论-1最短路">
-                【OI之路】04图论-1最短路 <i class="fa fa-chevron-right"></i>
+              <a href="/posts/f502.html" rel="prev" title="【OI之路】03数论-20多项式其他操作">
+                【OI之路】03数论-20多项式其他操作 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -723,7 +728,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">448</span>
+                    <span class="site-state-item-count">449</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -1136,7 +1141,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#定义"><span class="nav-text">定义</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#或运算"><span class="nav-text">或运算</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#与运算"><span class="nav-text">与运算</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#异或运算"><span class="nav-text">异或运算</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#子集卷积"><span class="nav-text">子集卷积</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#总结"><span class="nav-text">总结</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#FWT"><span class="nav-text">FWT</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#定义"><span class="nav-text">定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#或运算"><span class="nav-text">或运算</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#与运算"><span class="nav-text">与运算</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#异或运算"><span class="nav-text">异或运算</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#子集卷积"><span class="nav-text">子集卷积</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-text">总结</span></a></li></ol></li></ol></div>
             
 
           </div>

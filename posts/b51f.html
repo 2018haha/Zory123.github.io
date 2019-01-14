@@ -131,7 +131,7 @@
 <meta property="og:site_name" content="Zory的个人博客">
 <meta property="og:description" content="组合数学入门">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-01-11T14:35:02.327Z">
+<meta property="og:updated_time" content="2019-01-12T05:33:00.116Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【OI之路】03数论-12组合数学与计数">
 <meta name="twitter:description" content="组合数学入门">
@@ -259,7 +259,7 @@
           
           <li class="menu-item menu-item-archives">
     <a href="/archives/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />历程Archives<span class="badge">448</span></a>
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />历程Archives<span class="badge">449</span></a>
   </li>
         
         
@@ -456,7 +456,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改于：2019-01-11 22:35:02" itemprop="dateModified" datetime="2019-01-11T22:35:02+08:00">2019-01-11</time>
+                <time title="修改于：2019-01-12 13:33:00" itemprop="dateModified" datetime="2019-01-12T13:33:00+08:00">2019-01-12</time>
               
             
           </span>
@@ -561,7 +561,7 @@
 <p>第一类Stirling数（斯特林轮换数）：<br>带标号 $S_s(n,m)$ ，n次上升幂的 $x^m$ 的系数<br>不带标号 $S_u(n,m)$ ，n次下降幂的 $x^m$ 的系数<br>显然能相互转化， $S_s(n,m)=(-1)^{n+m}\cdot S_u(n,m)$<br>然后一般不说明指的是不带标号</p>
 <p>组合意义：n个不同的人，放入m个圆排列（内部顺序不同为不同方案），不能有空的方案数<br>递推式可考虑n放入新的排列，或者放在前面n-1个人中某个的右边 $S(n,m)=S(n-1,m-1)+(n-1)S(n-1,m)$<br>边界： $S(0,0)=1,S(n,0)=0 (n \geq 1)$]<br>求法（一行）：用上升幂的定义，暴力从前往后求多项式乘积，是n方log的<br>但如果分治求，发现复杂度与当前长度线性相关， $T(n)=2T(n/2)+nlogn=nlog^2n$<br>然后存在一个log的做法，主要思路是 $T(n)=T(n/2)+nlogn=nlog^2n$ ，也就是通过倍增，只分治一边<br>那么我们的目标就是求出 $f_{2n}(n)=f_n(n)f_n(n+x)$ 中的后者，考虑用前者来求<br>$$<br>\begin{aligned}<br>F_n(x+n)&amp;=\sum_{i=0}^{n-1}a_i (x+n)^i\<br>&amp;=\sum_{i=0}^{n-1}a_i\sum_{j=0}^i{i\choose j}n^{i-j}x^j\<br>&amp;=\sum_{j=0}^{n-1} ( b_j=\sum_{i=j}^{n-1} n^{i-j} {i \choose j} a_i ) x^j\<br>b_j \cdot j!&amp;=\sum_{i=j}^{n-1} \frac{n^{i-j}}{(i-j)!} i! a_i \<br>&amp;=\sum_{t=0}^{n-1-j} \frac{n^t}{t!} (j+t)! a_{j+t} \</p>
 <p>A_i=\frac{n^i}{i!}，B_i&amp;=a_{n-1-i} \cdot (n-1-i)!，C_i=b_i (n-1-i)! \<br>C_{n-j-1}&amp;=\sum_{t=0}^{n-1-j} A_t B_{n-1-j-t}<br>\end{aligned}<br>$$</p>
-<p>第二类Stirling数（斯特林子集数）：n个不同的人，进入m个相同的房子中，不可有空房子的方案数<br>递推式可考虑n放入新排列，或者放在已有的房子中<br>$S2(n,m)=m S2(n-1,m)+S2(n-1,m-1)$<br>非递推式的话，考虑容斥即可，为了方便处理先假设m个房子互不相同<br>$S1(n,m)=\frac{1}{m!} \sum (-1)^k {m \choose k} (m-k)^n$</p>
+<p>第二类Stirling数（斯特林子集数）：n个不同的人，进入m个相同的房子中，不可有空房子的方案数<br>递推式可考虑n放入新排列，或者放在已有的房子中<br>$S2(n,m)=m S2(n-1,m)+S2(n-1,m-1)$<br>非递推式的话，考虑容斥即可，为了方便处理先假设m个房子互不相同<br>$S2(n,m)=\frac{1}{m!} \sum (-1)^k {m \choose k} (m-k)^n$</p>
 <h1 id="min-max容斥"><a href="#min-max容斥" class="headerlink" title="min-max容斥"></a>min-max容斥</h1><p>给定一些元素每次出现的概率，每轮随机一个放入集合中，然后求出现全集所需轮数的期望<br>定义min为最早出现，max为最晚出现<br>比较显然： $P_{min(S)}=\sum_{i \in S} Pi,E_{min(S)}=\frac{1}{\sum_{i \in S} Pi}$<br>然后有个结论： $E_{max(S)}=\sum_{s \subseteq S} E_{min(s)} \times (-1)^{|s|+1}$<br>然后min和max换一下也是成立的，不是期望而是值本身也是成立的<br><a href="https://blog.csdn.net/ez_2016gdgzoi471/article/details/81416333" target="_blank" rel="noopener">证明</a><br>例题：<a href="1e94.html">【HAOI2015】按位或</a></p>
 
       
@@ -788,7 +788,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">448</span>
+                    <span class="site-state-item-count">449</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>

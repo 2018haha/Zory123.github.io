@@ -123,17 +123,17 @@
 
 
 
-  <meta name="description" content="2.5.1分析其实原理很简单，就是可以合并啦作用：  快 能模，我不会证明QAQ，网上找找吧">
+  <meta name="description" content="文化课知识">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【OI之路】03数论-5快速乘及快速幂">
+<meta property="og:title" content="【OI之路】03数论-5文化课知识">
 <meta property="og:url" content="http://zory.ink/posts/3afc.html">
 <meta property="og:site_name" content="Zory的个人博客">
-<meta property="og:description" content="2.5.1分析其实原理很简单，就是可以合并啦作用：  快 能模，我不会证明QAQ，网上找找吧">
+<meta property="og:description" content="文化课知识">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-09-28T00:45:48.675Z">
+<meta property="og:updated_time" content="2019-01-19T00:55:36.189Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="【OI之路】03数论-5快速乘及快速幂">
-<meta name="twitter:description" content="2.5.1分析其实原理很简单，就是可以合并啦作用：  快 能模，我不会证明QAQ，网上找找吧">
+<meta name="twitter:title" content="【OI之路】03数论-5文化课知识">
+<meta name="twitter:description" content="文化课知识">
 
 
 
@@ -150,7 +150,7 @@
   };
 </script>
 
-  <title>【OI之路】03数论-5快速乘及快速幂 | Zory的个人博客</title>
+  <title>【OI之路】03数论-5文化课知识 | Zory的个人博客</title>
   
 
 
@@ -258,7 +258,7 @@
           
           <li class="menu-item menu-item-archives">
     <a href="/archives/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />历程Archives<span class="badge">449</span></a>
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />历程Archives<span class="badge">448</span></a>
   </li>
         
         
@@ -413,7 +413,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">【OI之路】03数论-5快速乘及快速幂
+          <h2 class="post-title" itemprop="name headline">【OI之路】03数论-5文化课知识
               
             
           </h2>
@@ -455,7 +455,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改于：2018-09-28 08:45:48" itemprop="dateModified" datetime="2018-09-28T08:45:48+08:00">2018-09-28</time>
+                <time title="修改于：2019-01-19 08:55:36" itemprop="dateModified" datetime="2019-01-19T08:55:36+08:00">2019-01-19</time>
               
             
           </span>
@@ -496,7 +496,7 @@
 
           
           
-             <span id="/posts/3afc.html" class="leancloud_visitors" data-flag-title="【OI之路】03数论-5快速乘及快速幂">
+             <span id="/posts/3afc.html" class="leancloud_visitors" data-flag-title="【OI之路】03数论-5文化课知识">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -527,13 +527,13 @@
       
 
       
-        <h2 id="2-5-1分析"><a href="#2-5-1分析" class="headerlink" title="2.5.1分析"></a>2.5.1分析</h2><p>其实原理很简单，就是可以合并啦<br>作用：</p>
+        <p>文化课知识<br><a id="more"></a></p>
 <ol>
-<li>快</li>
-<li><strong>能模</strong>，我不会证明QAQ，网上找找吧<a id="more"></a>
-</li>
+<li>$e=lim_{n-&gt;\infty} (1+\frac{1}{n})^n$</li>
+<li>对于某个函数，如果能求出其导函数，那么可以通过 $f’(x)=0$ 找到极值点</li>
+<li>如果一个函数的积分存在，并且有限，则称为【可积】<br>若定积分存在，则它是一个具体的数值，而不定积分是一个函数表达式<br>定积分： $\int_{l}^{r}f(x)dx$</li>
+<li>牛顿-莱布尼茨公式： $\int_a^b f’(t)=f(b)-f(a)$<br>只要不特别纠结一些区间的开闭这种东西，还是比较好理解的</li>
 </ol>
-<h2 id="2-5-2代码"><a href="#2-5-2代码" class="headerlink" title="2.5.2代码"></a>2.5.2代码</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">lld Mod=<span class="number">10000003</span>;</div><div class="line"><span class="function">lld <span class="title">qmul</span><span class="params">(lld x,lld y)</span></div><div class="line"></span>&#123;</div><div class="line">    lld ans=<span class="number">0</span>;</div><div class="line">    <span class="keyword">while</span>(y)</div><div class="line">    &#123;</div><div class="line">        <span class="keyword">while</span>(<span class="keyword">bool</span>(y&amp;<span class="number">1</span>)==<span class="number">0</span>) x=(x+x)%Mod,y&gt;&gt;<span class="number">1</span>;</div><div class="line">        ans=(ans+x)%Mod;y--;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> ans%Mod;</div><div class="line">&#125;</div><div class="line"><span class="function">lld <span class="title">qpow</span><span class="params">(lld x,lld y)</span></div><div class="line"></span>&#123;</div><div class="line">    lld ans=<span class="number">1</span>;x=x%Mod;</div><div class="line">    <span class="keyword">while</span>(y)</div><div class="line">    &#123;</div><div class="line">        <span class="keyword">while</span>(<span class="keyword">bool</span>(y&amp;<span class="number">1</span>)==<span class="number">0</span>) x=qmul(x,x),y&gt;&gt;<span class="number">1</span>;</div><div class="line">        ans=qmul(ans,x);y--;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> ans%Mod;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -555,7 +555,7 @@
 				<p id="div-border-left-purple">
 			   <b>本文基于<a target="_blank" title="Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)" href="http://creativecommons.org/licenses/by-sa/4.0/deed.zh"> 知识共享署名-相同方式共享 4.0 </a>国际许可协议发布</b><br/>
 				<span>
-				<b>本文地址：</b><a href="/posts/3afc.html" title="【OI之路】03数论-5快速乘及快速幂">http://zory.ink/posts/3afc.html</a><br/><b>转载请注明出处，谢谢！</b>
+				<b>本文地址：</b><a href="/posts/3afc.html" title="【OI之路】03数论-5文化课知识">http://zory.ink/posts/3afc.html</a><br/><b>转载请注明出处，谢谢！</b>
 				</span>
 				</p>
 		</div>
@@ -685,17 +685,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -714,7 +705,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">449</span>
+                    <span class="site-state-item-count">448</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -1078,7 +1069,7 @@
                     
                       
                     
-                    <span class="site-state-item-count">163</span>
+                    <span class="site-state-item-count">165</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1117,22 +1108,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-5-1分析"><span class="nav-text">2.5.1分析</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-5-2代码"><span class="nav-text">2.5.2代码</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       

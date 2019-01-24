@@ -131,7 +131,7 @@
 <meta property="og:site_name" content="Zory的个人博客">
 <meta property="og:description" content="组合数学入门">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-01-12T05:33:00.116Z">
+<meta property="og:updated_time" content="2019-01-20T12:21:58.383Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【OI之路】03数论-12组合数学与计数">
 <meta name="twitter:description" content="组合数学入门">
@@ -259,7 +259,7 @@
           
           <li class="menu-item menu-item-archives">
     <a href="/archives/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />历程Archives<span class="badge">448</span></a>
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />历程Archives<span class="badge">450</span></a>
   </li>
         
         
@@ -275,7 +275,7 @@
           
           <li class="menu-item menu-item-tags">
     <a href="/tags/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签Tags<span class="badge">165</span></a>
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签Tags<span class="badge">166</span></a>
   </li>
         
         
@@ -456,7 +456,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改于：2019-01-12 13:33:00" itemprop="dateModified" datetime="2019-01-12T13:33:00+08:00">2019-01-12</time>
+                <time title="修改于：2019-01-20 20:21:58" itemprop="dateModified" datetime="2019-01-20T20:21:58+08:00">2019-01-20</time>
               
             
           </span>
@@ -533,33 +533,36 @@
 <p>$$<br>C(n,m)=\frac{P(n,m)}{P(m,m)}=\frac{n!}{m!(n-m)!}<br>$$</p>
 <h1 id="组合数的性质"><a href="#组合数的性质" class="headerlink" title="组合数的性质"></a>组合数的性质</h1><p>详见<a href="https://blog.csdn.net/litble/article/details/75913032" target="_blank" rel="noopener">这里</a><br>再补充：<br>$\sum_{k=0}^p {n \choose k} = {n + 1 \choose p}$<br>$\sum_{i=1}^n C_i^j=C_{n+1}^{j+1}$</p>
 <h1 id="多重集"><a href="#多重集" class="headerlink" title="多重集"></a>多重集</h1><p>也就是允许元素重复的广义集合<br>表示为$S={n_1 \cdot a_1,n_2 \cdot a_2,…n_k \cdot a_k}$</p>
-<h2 id="全排列"><a href="#全排列" class="headerlink" title="全排列"></a>全排列</h2><p>$\frac{n!}{n_1! \times n_2! … \times n_k!}$</p>
-<h2 id="组合"><a href="#组合" class="headerlink" title="组合"></a>组合</h2><p>设选r个<br>先考虑较为特殊的$r \leq n_i (\forall i \in [1,k])$<br>然后我们就能直接把问题转化为求 $S={r \cdot 0,k-1 \cdot 1}$ 的全排列<br>所以得到 $\frac{ (r+k-1)! }{r! \times (k-1)!}=C_{r+k-1}^{r}$</p>
+<p>全排列<br>$\frac{n!}{n_1! \times n_2! … \times n_k!}$</p>
+<p>组合<br>设选r个<br>先考虑较为特殊的$r \leq n_i (\forall i \in [1,k])$<br>然后我们就能直接把问题转化为求 $S={r \cdot 0,k-1 \cdot 1}$ 的全排列<br>所以得到 $\frac{ (r+k-1)! }{r! \times (k-1)!}=C_{r+k-1}^{r}$</p>
 <p>例题：<a href="82f7.html">Counting Swaps</a></p>
 <p>那如果不是这样特殊的r个呢？<br>对问题取补，$ans=C_{r-k+1}^{r}-非法数量$<br>而非法数量，就是说存在一个i，取的数量达到了$n_i+1$</p>
 <p>那么我们枚举出每个数的非法情况，<br>然后每个非法的数字，都先定向删除$n_i+1$个，<br>然后照常取【$r-已经删除的数量$】个</p>
 <p>因为状态的重复，联想一下小学的时候学的简单容斥，不难算出<br>如果非法数量num是奇数，就减去，偶数就补回去<br>具体实现可以枚举二进制数来搞</p>
 <p>例题：<a href="82f7.html">CF451E Devu and Flowers</a></p>
-<h1 id="Catalan数"><a href="#Catalan数" class="headerlink" title="Catalan数"></a>Catalan数</h1><h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>有多少个01序列满足【任意前缀中，0的个数不少于1的个数】</p>
-<h2 id="通项公式"><a href="#通项公式" class="headerlink" title="通项公式"></a>通项公式</h2><p>$Cat_n=\frac{C_{2n}^n}{n+1}$</p>
-<h2 id="性质"><a href="#性质" class="headerlink" title="性质"></a>性质</h2><ol>
+<h1 id="Catalan数"><a href="#Catalan数" class="headerlink" title="Catalan数"></a>Catalan数</h1><p>问题<br>有多少个01序列满足【任意前缀中，0的个数不少于1的个数】</p>
+<p>通项公式<br>$Cat_n=\frac{C_{2n}^n}{n+1}$</p>
+<p>性质</p>
+<ol>
 <li>$Cat_n=C_{2n}^n-C_{2n}^{n-1}$，可以由定义得出</li>
 <li>$Cat_n=\sum Cat_a \times Cat_{n-a-1}$</li>
 </ol>
-<h2 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h2><ol>
+<p>应用</p>
+<ol>
 <li>简单应用，例如【合法括号序列】、【出栈序列】</li>
 <li>由性质2这个递推式可知，能够解决【不同形态二叉树】</li>
 </ol>
-<h1 id="错排"><a href="#错排" class="headerlink" title="错排"></a>错排</h1><h2 id="问题-1"><a href="#问题-1" class="headerlink" title="问题"></a>问题</h2><p>求有多少个1~n的排列，满足每个$a_i \neq i$</p>
-<h2 id="递推式"><a href="#递推式" class="headerlink" title="递推式"></a>递推式</h2><p>考虑元素1，找到2~n中的k，使$a_k=1$，k有n-1种取值<br>① $a_1=k$，此时相当于剩下n-2个元素，进行错排<br>② otherwise，此时相当于剩下n-1个元素，进行错排<br>所以$D_n=(n-1)(D_{n-1}+D_{n-2})$</p>
-<h2 id="通项公式-1"><a href="#通项公式-1" class="headerlink" title="通项公式"></a>通项公式</h2><p>考虑容斥原理<br>首先，总排列数=$n!$<br>枚举i表示至少i个在正确位置<br>$D_n=\sum (-1)^i C_n^i (n-i)!=\sum (-1)^i \frac{n!}{i!}$</p>
+<h1 id="错排"><a href="#错排" class="headerlink" title="错排"></a>错排</h1><p>问题<br>求有多少个1~n的排列，满足每个$a_i \neq i$</p>
+<p>递推式<br>考虑元素1，找到2~n中的k，使$a_k=1$，k有n-1种取值<br>① $a_1=k$，此时相当于剩下n-2个元素，进行错排<br>② otherwise，此时相当于剩下n-1个元素，进行错排<br>所以$D_n=(n-1)(D_{n-1}+D_{n-2})$</p>
+<p>通项公式<br>考虑容斥原理<br>首先，总排列数=$n!$<br>枚举i表示至少i个在正确位置<br>$D_n=\sum (-1)^i C_n^i (n-i)!=\sum (-1)^i \frac{n!}{i!}$</p>
 <h1 id="差分序列与Stirling数"><a href="#差分序列与Stirling数" class="headerlink" title="差分序列与Stirling数"></a>差分序列与Stirling数</h1><p><a href="https://riteme.github.io/blog/2016-11-29/delta-and-stirling.html" target="_blank" rel="noopener">教程</a><br>差分序列结论：<br>1.<br>如果 $\Delta f(n)$ 的第0条对角线为 $c_0, c_1, c_2, c_3, \dots, c_p, 0, 0, \dots$<br>那么： $f(n) = \sum_{k=0}^p c_k{n \choose k}$</p>
 <ol>
 <li>$\sum_{k = 0}^n f(k) = \sum_{k = 0}^p c_k {n + 1 \choose k}$ （用组合数的性质）</li>
 </ol>
 <p><a href="https://www.cnblogs.com/owenyu/p/6724661.html" target="_blank" rel="noopener">Stirling数各种性质（不知道有没有用）</a></p>
 <p>第一类Stirling数（斯特林轮换数）：<br>带标号 $S_s(n,m)$ ，n次上升幂的 $x^m$ 的系数<br>不带标号 $S_u(n,m)$ ，n次下降幂的 $x^m$ 的系数<br>显然能相互转化， $S_s(n,m)=(-1)^{n+m}\cdot S_u(n,m)$<br>然后一般不说明指的是不带标号</p>
-<p>组合意义：n个不同的人，放入m个圆排列（内部顺序不同为不同方案），不能有空的方案数<br>递推式可考虑n放入新的排列，或者放在前面n-1个人中某个的右边 $S(n,m)=S(n-1,m-1)+(n-1)S(n-1,m)$<br>边界： $S(0,0)=1,S(n,0)=0 (n \geq 1)$]<br>求法（一行）：用上升幂的定义，暴力从前往后求多项式乘积，是n方log的<br>但如果分治求，发现复杂度与当前长度线性相关， $T(n)=2T(n/2)+nlogn=nlog^2n$<br>然后存在一个log的做法，主要思路是 $T(n)=T(n/2)+nlogn=nlog^2n$ ，也就是通过倍增，只分治一边<br>那么我们的目标就是求出 $f_{2n}(n)=f_n(n)f_n(n+x)$ 中的后者，考虑用前者来求<br>$$<br>\begin{aligned}<br>F_n(x+n)&amp;=\sum_{i=0}^{n-1}a_i (x+n)^i\<br>&amp;=\sum_{i=0}^{n-1}a_i\sum_{j=0}^i{i\choose j}n^{i-j}x^j\<br>&amp;=\sum_{j=0}^{n-1} ( b_j=\sum_{i=j}^{n-1} n^{i-j} {i \choose j} a_i ) x^j\<br>b_j \cdot j!&amp;=\sum_{i=j}^{n-1} \frac{n^{i-j}}{(i-j)!} i! a_i \<br>&amp;=\sum_{t=0}^{n-1-j} \frac{n^t}{t!} (j+t)! a_{j+t} \</p>
+<p>组合意义：n个不同的人，放入m个圆排列（内部顺序不同为不同方案），不能有空的方案数<br>递推式可考虑n放入新的排列，或者放在前面n-1个人中某个的右边 $S(n,m)=S(n-1,m-1)+(n-1)S(n-1,m)$<br>边界： $S(0,0)=1,S(n,0)=0 (n \geq 1)$]<br>求法（一行）：用上升幂的定义，暴力从前往后求多项式乘积，是n方log的<br>但如果分治求，发现复杂度与当前长度线性相关， $T(n)=2T(n/2)+nlogn=nlog^2n$<br>然后存在一个log的做法，主要思路是 $T(n)=T(n/2)+nlogn=nlog^2n$ ，也就是通过倍增，只分治一边<br>那么我们的目标就是求出 $f_{2n}(n)=f_n(n)f_n(n+x)$ 中的后者，考虑用前者来求</p>
+<p>$$<br>\begin{aligned}<br>F_n(x+n)&amp;=\sum_{i=0}^{n-1}a_i (x+n)^i\<br>&amp;=\sum_{i=0}^{n-1}a_i\sum_{j=0}^i{i\choose j}n^{i-j}x^j\<br>&amp;=\sum_{j=0}^{n-1} ( b_j=\sum_{i=j}^{n-1} n^{i-j} {i \choose j} a_i ) x^j\<br>b_j \cdot j!&amp;=\sum_{i=j}^{n-1} \frac{n^{i-j}}{(i-j)!} i! a_i \<br>&amp;=\sum_{t=0}^{n-1-j} \frac{n^t}{t!} (j+t)! a_{j+t} \</p>
 <p>A_i=\frac{n^i}{i!}，B_i&amp;=a_{n-1-i} \cdot (n-1-i)!，C_i=b_i (n-1-i)! \<br>C_{n-j-1}&amp;=\sum_{t=0}^{n-1-j} A_t B_{n-1-j-t}<br>\end{aligned}<br>$$</p>
 <p>第二类Stirling数（斯特林子集数）：n个不同的人，进入m个相同的房子中，不可有空房子的方案数<br>递推式可考虑n放入新排列，或者放在已有的房子中<br>$S2(n,m)=m S2(n-1,m)+S2(n-1,m-1)$<br>非递推式的话，考虑容斥即可，为了方便处理先假设m个房子互不相同<br>$S2(n,m)=\frac{1}{m!} \sum (-1)^k {m \choose k} (m-k)^n$</p>
 <h1 id="min-max容斥"><a href="#min-max容斥" class="headerlink" title="min-max容斥"></a>min-max容斥</h1><p>给定一些元素每次出现的概率，每轮随机一个放入集合中，然后求出现全集所需轮数的期望<br>定义min为最早出现，max为最晚出现<br>比较显然： $P_{min(S)}=\sum_{i \in S} Pi,E_{min(S)}=\frac{1}{\sum_{i \in S} Pi}$<br>然后有个结论： $E_{max(S)}=\sum_{s \subseteq S} E_{min(s)} \times (-1)^{|s|+1}$<br>然后min和max换一下也是成立的，不是期望而是值本身也是成立的<br><a href="https://blog.csdn.net/ez_2016gdgzoi471/article/details/81416333" target="_blank" rel="noopener">证明</a><br>例题：<a href="1e94.html">【HAOI2015】按位或</a></p>
@@ -788,7 +791,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">448</span>
+                    <span class="site-state-item-count">450</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -821,6 +824,8 @@
                 <div class="site-state-item site-state-tags">
                   <a href="/tags/index.html">
                     
+                    
+                      
                     
                       
                     
@@ -1201,7 +1206,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#组合数"><span class="nav-text">组合数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#组合数的性质"><span class="nav-text">组合数的性质</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#多重集"><span class="nav-text">多重集</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#全排列"><span class="nav-text">全排列</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#组合"><span class="nav-text">组合</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Catalan数"><span class="nav-text">Catalan数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#问题"><span class="nav-text">问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#通项公式"><span class="nav-text">通项公式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#性质"><span class="nav-text">性质</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#应用"><span class="nav-text">应用</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#错排"><span class="nav-text">错排</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#问题-1"><span class="nav-text">问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#递推式"><span class="nav-text">递推式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#通项公式-1"><span class="nav-text">通项公式</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#差分序列与Stirling数"><span class="nav-text">差分序列与Stirling数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#min-max容斥"><span class="nav-text">min-max容斥</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#组合数"><span class="nav-text">组合数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#组合数的性质"><span class="nav-text">组合数的性质</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#多重集"><span class="nav-text">多重集</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Catalan数"><span class="nav-text">Catalan数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#错排"><span class="nav-text">错排</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#差分序列与Stirling数"><span class="nav-text">差分序列与Stirling数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#min-max容斥"><span class="nav-text">min-max容斥</span></a></li></ol></div>
             
 
           </div>

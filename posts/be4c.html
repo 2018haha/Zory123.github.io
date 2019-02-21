@@ -123,17 +123,18 @@
 
 
 
-  <meta name="description" content="太菜了当时没有去，（除斗地主外）题解合集">
+  <meta name="description" content="太菜了当时没有去，（除斗地主外）题解合集感觉这套题的idea不错">
+<meta name="keywords" content="复习">
 <meta property="og:type" content="article">
 <meta property="og:title" content="PKUWC2018题解">
 <meta property="og:url" content="http://zory.ink/posts/be4c.html">
 <meta property="og:site_name" content="Zory的个人博客">
-<meta property="og:description" content="太菜了当时没有去，（除斗地主外）题解合集">
+<meta property="og:description" content="太菜了当时没有去，（除斗地主外）题解合集感觉这套题的idea不错">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-01-27T07:34:17.602Z">
+<meta property="og:updated_time" content="2019-02-20T07:47:33.496Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="PKUWC2018题解">
-<meta name="twitter:description" content="太菜了当时没有去，（除斗地主外）题解合集">
+<meta name="twitter:description" content="太菜了当时没有去，（除斗地主外）题解合集感觉这套题的idea不错">
 
 
 
@@ -258,7 +259,7 @@
           
           <li class="menu-item menu-item-archives">
     <a href="/archives/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />历程Archives<span class="badge">475</span></a>
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />历程Archives<span class="badge">486</span></a>
   </li>
         
         
@@ -274,7 +275,7 @@
           
           <li class="menu-item menu-item-tags">
     <a href="/tags/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签Tags<span class="badge">171</span></a>
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签Tags<span class="badge">170</span></a>
   </li>
         
         
@@ -463,7 +464,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改于：2019-01-27 15:34:17" itemprop="dateModified" datetime="2019-01-27T15:34:17+08:00">2019-01-27</time>
+                <time title="修改于：2019-02-20 15:47:33" itemprop="dateModified" datetime="2019-02-20T15:47:33+08:00">2019-02-20</time>
               
             
           </span>
@@ -535,12 +536,12 @@
       
 
       
-        <p>太菜了当时没有去，（除斗地主外）题解合集</p>
+        <p>太菜了当时没有去，（除斗地主外）题解合集<br>感觉这套题的idea不错</p>
 <a id="more"></a>
 <h1 id="Minimax"><a href="#Minimax" class="headerlink" title="Minimax"></a>Minimax</h1><div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
 <p>f[i][j]表示节点i，取值j的概率<br>每个节点开个动态开点的权值线段树，维护区间概率和<br>那么我们现在只要能合并两棵线段树即可</p>
-<p>对于线段树节点x(权值=l~r)<br>$$<br>PX<em>(p[left]</em>down[right][l]+down[left][l]<em>p[right])+\<br>(1-PX)</em>((p[left]<em>(1-down[right][l])+(1-down[left][l])</em>p[right]))<br>$$</p>
-<p>$$<br>p[left]<em>( PX</em>down[right][l]+(1-PX)<em>(1-down[right][l]) )+\<br>p[right]</em>( PX<em>down[left][l]+(1-PX)</em>(1-down[left][l]) )<br>$$<br>那么两边有某个为空，则打个区间乘法的标记<br>都有则暴力合并</p>
+<p>对于线段树节点x(权值=l~r)<br>$$<br>PX<em>(p[left]</em>down[right][l]+down[left][l]<em>p[right])+\\<br>(1-PX)</em>((p[left]<em>(1-down[right][l])+(1-down[left][l])</em>p[right]))<br>$$</p>
+<p>$$<br>p[left]<em>( PX</em>down[right][l]+(1-PX)<em>(1-down[right][l]) )+\\<br>p[right]</em>( PX<em>down[left][l]+(1-PX)</em>(1-down[left][l]) )<br>$$<br>那么两边有某个为空，则打个区间乘法的标记<br>都有则暴力合并</p>
 <p>那么我们计算一下线段树合并的复杂度，主要就是公共区域<br>考虑每个叶子，只会被合并一次，此后再经过其祖先不算是他的贡献，那么就是深度也就是log<br>所以说个人认为这个东西并不是由启发式保证的，而是只会被合并一次，严格和不公共的地方无关</p>
 
 </div></div>
@@ -553,6 +554,7 @@
 <p>方法一：<br>$O(n^2 2^n)$<br>设f(i,S)表示填了排列的前i个，当前独立集为S的方案数<br>然后为了避免那些无法被独立集记录但在排列中的点被重复计算，尽管他们的边集情况不同，<br>但对当前状态的影响都是相同的，那就是不能加入独立集，所以乘以【n-i-能加入S的点】就能不重不漏的计数了<br>这种做法理论上的分数为50，但在oj上可ac</p>
 <p>方法二：<br>$O(n 2^n)$<br>这时候我们不能再记录多一维了<br>尝试直接dp概率而非计数，有的时候这样好做很多<br>注意到对于一个点集，独立集=去掉独立集中的某个点以及其相邻的点后的独立集+被去掉的独立集中的点<br>直接dp当排列的集合为S时的概率，枚举最后一个被加入独立集的点，转移就像上面说的那样<br>然后【你感受一下】，觉得他们到这里的概率应该是相同的</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//Zory-2019</span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cmath&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;ctime&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdlib&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;map&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;set&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;queue&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;deque&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stack&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bitset&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;vector&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"><span class="keyword">namespace</span> mine</div><div class="line">&#123;</div><div class="line">	<span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</div><div class="line">	<span class="keyword">const</span> <span class="keyword">int</span> INF=<span class="number">0x3f3f3f3f</span>;</div><div class="line">	<span class="comment">//#define pr pair&lt;double,int&gt;</span></div><div class="line">	<span class="meta">#<span class="meta-keyword">define</span> FR first</span></div><div class="line">	<span class="meta">#<span class="meta-keyword">define</span> SE second</span></div><div class="line">	<span class="meta">#<span class="meta-keyword">define</span> MP make_pair</span></div><div class="line"></div><div class="line">	<span class="keyword">const</span> <span class="keyword">int</span> MOD=<span class="number">998244353</span>;</div><div class="line">	<span class="function"><span class="keyword">void</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> &amp;x,<span class="keyword">int</span> y)</span></div><div class="line">	</span>&#123;</div><div class="line">		x+=y;</div><div class="line">		<span class="keyword">if</span>(x&gt;=MOD) x-=MOD;</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">const</span> <span class="keyword">int</span> MAX_N=<span class="number">23</span>;</div><div class="line">	<span class="keyword">int</span> bin[MAX_N],inv[MAX_N];</div><div class="line">	<span class="keyword">int</span> mp[MAX_N];</div><div class="line">	<span class="keyword">int</span> f[<span class="number">1</span>&lt;&lt;MAX_N],mx[<span class="number">1</span>&lt;&lt;MAX_N];</div><div class="line">	<span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></div><div class="line">	</span>&#123;</div><div class="line">		bin[<span class="number">0</span>]=<span class="number">1</span>;<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;MAX_N;i++) bin[i]=bin[i<span class="number">-1</span>]&lt;&lt;<span class="number">1</span>;</div><div class="line">		inv[<span class="number">1</span>]=<span class="number">1</span>;<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">2</span>;i&lt;MAX_N;i++) inv[i]=ll(MOD-MOD/i)*inv[MOD%i]%MOD;</div><div class="line"></div><div class="line">		<span class="keyword">int</span> n,m;<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;n,&amp;m);</div><div class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=m;i++)</div><div class="line">		&#123;</div><div class="line">			<span class="keyword">int</span> x,y;<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;x,&amp;y);</div><div class="line">			mp[x<span class="number">-1</span>]|=bin[y<span class="number">-1</span>];mp[y<span class="number">-1</span>]|=bin[x<span class="number">-1</span>];</div><div class="line">		&#125;</div><div class="line">		f[<span class="number">0</span>]=<span class="number">1</span>;mx[<span class="number">0</span>]=<span class="number">0</span>;</div><div class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> s=<span class="number">1</span>;s&lt;bin[n];s++)</div><div class="line">		&#123;</div><div class="line">			<span class="keyword">int</span> tot=<span class="number">0</span>;</div><div class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++) <span class="keyword">if</span>(s&amp;bin[i])</div><div class="line">			&#123;</div><div class="line">				tot++;</div><div class="line">				<span class="keyword">int</span> s2=s^(mp[i]&amp;s)^bin[i];</div><div class="line">				<span class="keyword">if</span>(mx[s2]+<span class="number">1</span>==mx[s]) add(f[s],f[s2]);</div><div class="line">				<span class="keyword">else</span> <span class="keyword">if</span>(mx[s2]+<span class="number">1</span>&gt;mx[s]) f[s]=f[s2],mx[s]=mx[s2]+<span class="number">1</span>;</div><div class="line">			&#125;</div><div class="line">			f[s]=(ll)f[s]*inv[tot]%MOD;</div><div class="line">		&#125;</div><div class="line">		<span class="built_in">printf</span>(<span class="string">"%d"</span>,f[bin[n]<span class="number">-1</span>]);</div><div class="line">	&#125;</div><div class="line">&#125;;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></div><div class="line"></span>&#123;</div><div class="line">	srand(time(<span class="number">0</span>));</div><div class="line">	mine::main();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>方法三：<br>$O(n 2^n)$<br>这是我目前认为最靠谱的做法了<br>就是你顺便记录每个集合，最大的独立集大小<br>然后你只需要转移那些siz=mxsiz[S]的状态，也就是状态就少一维了<br>然后这个和上面的思想也是吻合的</p>
 
 </div></div>
 <h1 id="猎人杀"><a href="#猎人杀" class="headerlink" title="猎人杀"></a>猎人杀</h1><p>有n堆石子，第i堆有wi个，每次随机选一颗石子，然后把整堆拿走，问第一堆最后拿走的概率<br><div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
@@ -574,9 +576,62 @@
     
 
     
+      <div class="post-tags">
+        
+          <a href="/tags/复习/" rel="tag"># 复习</a>
+        
+      </div>
+    
 
     
       
+
+  <div class="popular-posts-header">相关文章推荐</div>
+  <ul class="popular-posts">
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="/posts/4279.html" rel="bookmark">【HDU6212】Zuma</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="/posts/6322.html" rel="bookmark">jzptab</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="/posts/f65b.html" rel="bookmark">【WC2018】州区划分</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="/posts/8125.html" rel="bookmark">【SHOI2008】汉诺塔</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="/posts/1d84.html" rel="bookmark">【Noi2011】Noi嘉年华</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="/posts/7fbd.html" rel="bookmark">【CF623E】Transforming Sequence</a></div>
+      
+    </li>
+  
+  </ul>
 
 
     
@@ -745,7 +800,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">475</span>
+                    <span class="site-state-item-count">486</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -1119,9 +1174,7 @@
                     
                       
                     
-                      
-                    
-                    <span class="site-state-item-count">168</span>
+                    <span class="site-state-item-count">170</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>

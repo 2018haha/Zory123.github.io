@@ -1935,7 +1935,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #053cff;
+  background: #1a9a42;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3214,7 +3214,6 @@ days {
     background-attachment: fixed;
     background-position: 100% 100%;
     background-size: cover;
-    cursor: url("https://zory.ink/normal.cur"), default;
   }
   footer a {
     color: #555;
@@ -3227,7 +3226,6 @@ a {
 a:hover {
   color: #a166ab;
   border-bottom-color: #a166ab;
-  cursor: url("https://zory.ink/link.cur"), pointer;
 }
 .site-description {
   font-size: 18px;

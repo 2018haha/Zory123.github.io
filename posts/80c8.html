@@ -108,7 +108,7 @@
 <meta property="og:site_name" content="Zory的个人博客">
 <meta property="og:description" content="套路集锦">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-02-23T07:06:21.381Z">
+<meta property="og:updated_time" content="2019-02-25T09:49:24.359Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【置顶】套路集锦">
 <meta name="twitter:description" content="套路集锦">
@@ -248,7 +248,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">491</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">494</span></a>
 
   </li>
         
@@ -543,7 +543,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-02-23 15:06:21" itemprop="dateModified" datetime="2019-02-23T15:06:21+08:00">2019-02-23</time>
+                <time title="修改时间：2019-02-25 17:49:24" itemprop="dateModified" datetime="2019-02-25T17:49:24+08:00">2019-02-25</time>
               
             
           </span>
@@ -624,7 +624,8 @@
 <h1 id="搜索"><a href="#搜索" class="headerlink" title="搜索"></a>搜索</h1><p>1<br>搜索去掉次序性的套路：强行限制大小关系<br>举例：<br><a href="9d2f.html">poj1011 Sticks</a><br>2 常见优化<br>优化搜索顺序<br>排除等效的决策和物体<br>可行性<br>最优性<br>记忆化<br>3<br>对于一个序列，拆分成多个序列的问题<br>有两种不同的方向：给每个元素分配组、通过组找元素<br>最好能仔细根据题目斟酌一下策略<br>本人多次用2各种剪枝，也比不过裸的1……<br>举例：<br><a href="9d2f.html">Sticks</a><br><a href="9d2f.html">Missile Defence System</a><br><a href="8404.html">Zebras</a><br>4<br>50的整数拆分约为1e6，挺有用的<br>举例：[JLOI2012]时间流逝，有题解</p>
 <h1 id="数论"><a href="#数论" class="headerlink" title="数论"></a>数论</h1><p>1 数论分块<br>当出现连续的$\lfloor \frac{n}{i} \rfloor$时，<br>值一定是单调不递增的，同值的区间可以合起来计算<br>复杂度：<br>$O(\sqrt n)$<br>① 当$i \leq \sqrt n$,分母只有$\sqrt n$种<br>② 当$i &gt; \sqrt n$,$\lfloor \frac{n}{i} \rfloor &lt; \sqrt n$<br>$last=\lfloor \frac{n}{ \lfloor \frac{n}{i} \rfloor } \rfloor$<br>举例：<br><a href="82f7.html">CQOI2007 余数求和</a><br>2<br>由调和级数<br>1+1/2+1/3…1/n=logn<br>3<br>对于一个素数P，任何P以内的x，<br>其倍数在模P意义下可以表示出所有P以内的数</p>
 <h1 id="树"><a href="#树" class="headerlink" title="树"></a>树</h1><p>1<br>点分树上，点对的LCA一定也在原树两点路径上<br>2<br>在一课树上，与该点最远的一定是直径的某个端点<br>两棵树合并起来，新的直径端点一定在两边直径端点中产生<br>3<br>一棵树上点集的联通块个数=点-边<br>4<br>很多模型能转化为树形<br>例如互不重叠只包含的区间（最近一个包含作为fa）、某个变量只有单一指向（作为fa）<br>举例：跳跳棋，写了题解</p>
-<h1 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h1><p>1<br>常见操作：后缀数组+离线+并查集</p>
+<h1 id="贪心"><a href="#贪心" class="headerlink" title="贪心"></a>贪心</h1><p>1<br>max n个数的环上相邻差<br>最小化这个，可以递增奇数+递减偶数</p>
+<h1 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h1><p>1<br>树状数组+st表<br>2<br>后缀数组+离线+并查集<br>3<br>串的计数，枚举长度，建立间隔为长度的关键点（调和级数），<br>然后每个串会经过一个关键点，枚举关键点算贡献</p>
 <h1 id="决策算法"><a href="#决策算法" class="headerlink" title="决策算法"></a>决策算法</h1><p>1<br>找前k优的区间，固定一个点后，左边的优秀情况是极值问题<br>可以用堆维护左边，取出一个位置后把左边区间拆成两半放回去<br>举例：<br><a href="e5b3.html">超级钢琴</a><br><a href="1486.html">树上的路径</a></p>
 <h1 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h1><p>1<br>有些题可以从简单情况着手<br>然后拓展到复杂情况（数学归纳法或者总结经验、模仿）<br>或者先考虑普通情况，再考虑改进来解决特殊情况<br>举例：<br>noi2015 荷马史诗<br><a href="7248.html">poj2442 Sequence</a><br>2<br>对于比较陌生的题目操作形式，可以多造几组数据来模拟，<br>找到一些性质，用这些性质转化题目为简单问题<br>3<br>目前碰到处理棘手的删除问题的方法主要有两个，基本都需要离线<br>一个是倒着做，这个对题目的要求较高<br>另一个是贪心，离线后按出现时间处理，然后按结束时间贪心<br>举例：<br><a href="a417.html">【bzoj4644】经典傻逼题【集训队互测2015】最大异或和</a><br><a href="d192.html">【bzoj5040】航线规划【bzoj4229】选择</a><br>4<br>平方形式，可以转为为数点对，或者用二次项定理拆开来（内部有东西的时候）<br>又或者可以处理其差分1,3,5,7,9,11……<br>举例：<br>NOI2009 管道取珠<br><a href="c8e3.html">蔬菜</a><br><a href="4e7e.html">学习小组</a><br>5<br>有关区间问题并用到区间最值，<br>求出l[i]和r[i]表示第一个比a[i]大的位置，<br>则l[i]+1~r[i]-1中间，用到的最大值都是a[i]<br>不过要小心最大值相等而重复的情况，可以强行把左边界改严格来限制<br><a href="b37c.html">洛谷18年7月月赛T4</a><br>6<br>需求：最大化最小值、最小化最大值<br>做法：二分答案<br>举例：一抓一大把<br>7<br>很多计数问题要求排列<br>可以时刻保证排列性，然后插入一个数，将比它大的数+1<br><a href="8a7d.html">51nod1296 有限制的排列</a></p>
 <h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><p>1<br>设cnt(x)为x二进制下1的数量<br>$cnt(a \oplus b)$ 为奇，当且仅当一个cnt为奇，另一个是偶<br>因为两个1在一起是偶，不在一起也是偶<br>2<br>需求：维护前k个（方案）<br>做法：堆维护，堆顶为最差元素<br>举例：<br><a href="673d.html">K远点对</a><br><a href="1486.html">树上的路径</a><br><a href="7248.html">Supermarket</a></p>
@@ -840,7 +841,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">491</span>
+                    <span class="site-state-item-count">494</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -1277,7 +1278,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#傻逼错误"><span class="nav-text">傻逼错误</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#不会证明的结论"><span class="nav-text">不会证明的结论</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#搜索"><span class="nav-text">搜索</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#数论"><span class="nav-text">数论</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#树"><span class="nav-text">树</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#字符串"><span class="nav-text">字符串</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#决策算法"><span class="nav-text">决策算法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#解题思路"><span class="nav-text">解题思路</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#其他"><span class="nav-text">其他</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#傻逼错误"><span class="nav-text">傻逼错误</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#不会证明的结论"><span class="nav-text">不会证明的结论</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#搜索"><span class="nav-text">搜索</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#数论"><span class="nav-text">数论</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#树"><span class="nav-text">树</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#贪心"><span class="nav-text">贪心</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#字符串"><span class="nav-text">字符串</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#决策算法"><span class="nav-text">决策算法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#解题思路"><span class="nav-text">解题思路</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#其他"><span class="nav-text">其他</span></a></li></ol></div>
             
 
           </div>

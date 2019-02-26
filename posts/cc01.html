@@ -108,7 +108,7 @@
 <meta property="og:site_name" content="Zory的个人博客">
 <meta property="og:description" content="后缀数组入门">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-12-22T01:08:41.448Z">
+<meta property="og:updated_time" content="2019-02-25T10:58:40.389Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【OI之路】06字符串-6后缀数组">
 <meta name="twitter:description" content="后缀数组入门">
@@ -248,7 +248,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">491</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">494</span></a>
 
   </li>
         
@@ -543,7 +543,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2018-12-22 09:08:41" itemprop="dateModified" datetime="2018-12-22T09:08:41+08:00">2018-12-22</time>
+                <time title="修改时间：2019-02-25 18:58:40" itemprop="dateModified" datetime="2019-02-25T18:58:40+08:00">2019-02-25</time>
               
             
           </span>
@@ -619,13 +619,13 @@
 
       
         <p>后缀数组入门<br><a id="more"></a></p>
-<h1 id="sa和rk的计算"><a href="#sa和rk的计算" class="headerlink" title="sa和rk的计算"></a>sa和rk的计算</h1><p>rk表示第i个后缀（第i个位置后面的元素）的排名<br>sa为其逆函数，即排名i的后缀，所在位置</p>
+<h1 id="sa和rk的计算"><a href="#sa和rk的计算" class="headerlink" title="sa和rk的计算"></a>sa和rk的计算</h1><p>rk表示第i个后缀（第i个位置后面的元素）的排名<br>sa为其逆函数，即排名i的后缀，所在位置<br>upd:其实并不完全是逆函数，因为rk允许重复，需要压缩相同的值</p>
 <p>采用倍增给后缀排序<br>然后多关键字的话，非常巧妙地方法：先第二关键字，然后用稳定排序来第一关键字（类似覆盖）</p>
 <h1 id="height的计算"><a href="#height的计算" class="headerlink" title="height的计算"></a>height的计算</h1><p>height[i]=LCP(后缀排名i-1，后缀排名i)<br>如果能计算出这个东西，那么询问任意两个后缀的LCP就是询问区间height最小值</p>
 <p>然后现在希望尽量快地计算出height，那和所有字符串算法一样，尽可能地优化总势能<br>考虑定义的特性，字典序的排名有什么性质？<br>通过上面利用height的方式得到启发，任意两个串的LCP能保证中间的LCP的下限</p>
-<p>具体性质： $height[rk[i]] \geq height[rk[i-1]]-1$<br>$a=i-1,b=sa[rk[i-1]-1]$<br>$c=i,d=sa[rk[i]-1]$<br>现在要证明 $LCP(c,d) \leq LCP(a,b)-1$<br>然后只考虑 $LCP(a,b) \leq 2$ 的情况，否则显然<br>c就是a去掉了开头的一个字符，设e=b+1（去头）<br>$LCP(e,c)=LCP(a,b)-1$<br>然后因为是字典序，e依然会在c前面，显然得证</p>
+<p>具体性质： $height[rk[i]] \geq height[rk[i-1]]-1$<br>$a=i-1,b=sa[rk[i-1]-1]$<br>$c=i,d=sa[rk[i]-1]$<br>现在要证明 $LCP(c,d) \leq LCP(a,b)-1$<br>然后只考虑 $LCP(a,b) \leq 2$ 的情况，否则显然<br>c就是a去掉了开头的一个字符，设e=b+1（去头）<br>$LCP(e,c)=LCP(a,b)-1$<br>然后因为是字典序，e依然会在c前面，得证</p>
 <p>按照这个做，时间复杂度就是2n的</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> MAX_N=<span class="number">310000</span>;</div><div class="line"><span class="keyword">char</span> str[MAX_N];<span class="keyword">int</span> len;</div><div class="line"><span class="keyword">struct</span> Sa</div><div class="line">&#123;</div><div class="line">    <span class="keyword">int</span> sa[MAX_N],tmp[MAX_N];</div><div class="line">    <span class="keyword">int</span> rk[<span class="number">2</span>*MAX_N],rk2[<span class="number">2</span>*MAX_N];<span class="comment">//两倍</span></div><div class="line">    <span class="keyword">int</span> ct[MAX_N];</div><div class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">diff</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b,<span class="keyword">int</span> ln)</span> </span>&#123;<span class="keyword">return</span> rk2[a]!=rk2[b] or rk2[a+ln]!=rk2[b+ln];&#125;</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">build</span><span class="params">()</span></span></div><div class="line">    &#123;</div><div class="line">        <span class="built_in">memset</span>(ct,<span class="number">0</span>,<span class="keyword">sizeof</span> ct);</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=len;i++) ct[rk[i]=str[i]]++;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=MAX_N;i++) ct[i]+=ct[i<span class="number">-1</span>];</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=len;i&gt;=<span class="number">1</span>;i--) sa[ct[rk[i]]--]=i;</div><div class="line"></div><div class="line">        <span class="keyword">int</span> ln=<span class="number">1</span>;</div><div class="line">        <span class="keyword">while</span>(ln&lt;len)</div><div class="line">        &#123;</div><div class="line">            <span class="keyword">int</span> cnt=<span class="number">0</span>;<span class="keyword">for</span>(<span class="keyword">int</span> i=len-ln+<span class="number">1</span>;i&lt;=len;i++) tmp[++cnt]=i;</div><div class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=len;i++) <span class="keyword">if</span>(sa[i]-ln&gt;=<span class="number">1</span>) tmp[++cnt]=sa[i]-ln;</div><div class="line"></div><div class="line">            <span class="built_in">memset</span>(ct,<span class="number">0</span>,<span class="keyword">sizeof</span> ct);</div><div class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=len;i++) ct[rk[tmp[i]]]++;</div><div class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;MAX_N;i++) ct[i]+=ct[i<span class="number">-1</span>];</div><div class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> i=len;i&gt;=<span class="number">1</span>;i--) sa[ct[ rk[tmp[i]] ]--]=tmp[i];</div><div class="line"></div><div class="line">            cnt=<span class="number">0</span>;<span class="built_in">memcpy</span>(rk2,rk,<span class="keyword">sizeof</span> rk);</div><div class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=len;i++)</div><div class="line">            &#123;</div><div class="line">                <span class="keyword">if</span>(diff(sa[i<span class="number">-1</span>],sa[i],ln)) cnt++;</div><div class="line">                rk[sa[i]]=cnt;</div><div class="line">            &#125;</div><div class="line"></div><div class="line">            ln*=<span class="number">2</span>;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">int</span> hei[MAX_N];</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">geth</span><span class="params">()</span></span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">int</span> lst=<span class="number">0</span>;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=len;i++)</div><div class="line">        &#123;</div><div class="line">            <span class="keyword">if</span>(rk[i]==<span class="number">1</span>) &#123;hei[<span class="number">1</span>]=<span class="number">0</span>;<span class="keyword">continue</span>;&#125;</div><div class="line">            <span class="keyword">if</span>(lst) lst--;</div><div class="line">            <span class="keyword">while</span>(max(i,sa[rk[i]<span class="number">-1</span>])+lst&lt;=len and str[sa[rk[i]<span class="number">-1</span>]+lst]==str[i+lst]) lst++;</div><div class="line">            hei[rk[i]]=lst;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;sa;</div></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">struct</span> Sa</div><div class="line">&#123;</div><div class="line">    <span class="keyword">int</span> rk[MAX_N*<span class="number">2</span>],sa[MAX_N*<span class="number">2</span>],hei[MAX_N*<span class="number">2</span>];</div><div class="line">    <span class="keyword">int</span> ct[MAX_N*<span class="number">2</span>],tmp[MAX_N*<span class="number">2</span>],wr[MAX_N*<span class="number">2</span>];</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">getsa</span><span class="params">()</span></div><div class="line">    </span>&#123;</div><div class="line">        <span class="built_in">memset</span>(ct,<span class="number">0</span>,<span class="keyword">sizeof</span> ct);</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) ct[rk[i]=a[i]]++;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;MAX_N;i++) ct[i]+=ct[i<span class="number">-1</span>];</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=n;i&gt;=<span class="number">1</span>;i--) sa[ct[rk[i]]--]=i;</div><div class="line">        <span class="keyword">int</span> ln=<span class="number">1</span>;</div><div class="line">        <span class="keyword">while</span>(ln&lt;n)</div><div class="line">        &#123;</div><div class="line">            <span class="keyword">int</span> tot=<span class="number">0</span>;<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) <span class="keyword">if</span>(sa[i]+ln&gt;n) tmp[++tot]=sa[i];</div><div class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) <span class="keyword">if</span>(sa[i]-ln&gt;=<span class="number">1</span>) tmp[++tot]=sa[i]-ln;</div><div class="line">            <span class="built_in">memset</span>(wr,<span class="number">0</span>,<span class="keyword">sizeof</span> wr);<span class="comment">//debug</span></div><div class="line">            <span class="built_in">memset</span>(ct,<span class="number">0</span>,<span class="keyword">sizeof</span> ct);</div><div class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) ct[ wr[tmp[i]]=rk[tmp[i]] ]++;</div><div class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;MAX_N;i++) ct[i]+=ct[i<span class="number">-1</span>];</div><div class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> i=n;i&gt;=<span class="number">1</span>;i--) sa[ct[wr[tmp[i]]]--]=tmp[i];</div><div class="line">            <span class="keyword">int</span> cnt=<span class="number">1</span>;rk[sa[<span class="number">1</span>]]=<span class="number">1</span>;</div><div class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">2</span>;i&lt;=n;i++)</div><div class="line">            &#123;</div><div class="line">                <span class="keyword">if</span>(wr[sa[i<span class="number">-1</span>]]!=wr[sa[i]] or wr[sa[i<span class="number">-1</span>]+ln]!=wr[sa[i]+ln]) cnt++;</div><div class="line">                rk[sa[i]]=cnt;</div><div class="line">            &#125;</div><div class="line">            ln*=<span class="number">2</span>;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">gethei</span><span class="params">()</span></div><div class="line">    </span>&#123;</div><div class="line">        <span class="keyword">int</span> lst=<span class="number">0</span>;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</div><div class="line">        &#123;</div><div class="line">            <span class="keyword">if</span>(rk[i]==<span class="number">1</span>) &#123;hei[<span class="number">1</span>]=<span class="number">0</span>;<span class="keyword">continue</span>;&#125;</div><div class="line">            <span class="keyword">int</span> j=sa[rk[i]<span class="number">-1</span>];<span class="keyword">if</span>(lst) lst--;</div><div class="line">            <span class="keyword">while</span>(max(i,j)+lst&lt;=n and a[i+lst]==a[j+lst]) lst++;</div><div class="line">            hei[rk[i]]=lst;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;sa;</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -639,14 +639,14 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/d300.html" rel="bookmark">【SP8222】NSUBSTR</a></div>
+      <div class="popular-posts-title"><a href="/posts/8cf7.html" rel="bookmark">【bzoj3277】串</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/8cf7.html" rel="bookmark">【bzoj3277】串</a></div>
+      <div class="popular-posts-title"><a href="/posts/d300.html" rel="bookmark">【SP8222】NSUBSTR</a></div>
       
     </li>
   
@@ -661,6 +661,20 @@
       
       
       <div class="popular-posts-title"><a href="/posts/333f.html" rel="bookmark">【bzoj2865】字符串识别【bzoj1396】识别子串</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="/posts/f7b4.html" rel="bookmark">【NOI2016】优秀的拆分</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="/posts/a10e.html" rel="bookmark">股市的预测</a></div>
       
     </li>
   
@@ -824,7 +838,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">491</span>
+                    <span class="site-state-item-count">494</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>

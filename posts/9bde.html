@@ -248,7 +248,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">491</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">494</span></a>
 
   </li>
         
@@ -620,7 +620,7 @@
       
         <p>哈希Hash<br><a id="more"></a></p>
 <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>这东西主要用来验重<br>而且在字符串领域比较常用<br>但其思想的应用才是其精髓<br>所以没有放在字符串分类</p>
-<h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">typedef</span> <span class="keyword">unsigned</span> <span class="keyword">long</span> <span class="keyword">long</span> ull;</div><div class="line"><span class="function">ull <span class="title">gethash</span><span class="params">(<span class="keyword">char</span> *s)</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">int</span> len=<span class="built_in">strlen</span>(s+<span class="number">1</span>);</div><div class="line">    ull ans=<span class="number">0</span>,p=<span class="number">1</span>;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=len;i++)</div><div class="line">    &#123;</div><div class="line">        ans=ans*p+s[i];</div><div class="line">        p*=<span class="number">13331</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> ans;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">typedef</span> <span class="keyword">unsigned</span> <span class="keyword">long</span> <span class="keyword">long</span> ull;</div><div class="line"><span class="function">ull <span class="title">gethash</span><span class="params">(<span class="keyword">char</span> *s)</span></div><div class="line"></span>&#123;</div><div class="line">    <span class="keyword">int</span> len=<span class="built_in">strlen</span>(s+<span class="number">1</span>);</div><div class="line">    ull ans=<span class="number">0</span>,p=<span class="number">1</span>;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=len;i++)</div><div class="line">    &#123;</div><div class="line">        ans=ans*p+s[i];</div><div class="line">        p*=<span class="number">13331</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> ans;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h2 id="其他应用"><a href="#其他应用" class="headerlink" title="其他应用"></a>其他应用</h2><h3 id="1-字符串匹配-kmp"><a href="#1-字符串匹配-kmp" class="headerlink" title="1. 字符串匹配-kmp"></a>1. 字符串匹配-kmp</h3><p>例题：<a href="eaf4.html">poj3461 Oulipo</a></p>
 <h3 id="2-字符串匹配-ac自动机"><a href="#2-字符串匹配-ac自动机" class="headerlink" title="2. 字符串匹配-ac自动机"></a>2. 字符串匹配-ac自动机</h3><p>等价于用kmp搞ac机，不推荐</p>
 <h3 id="3-字符串匹配-manacher"><a href="#3-字符串匹配-manacher" class="headerlink" title="3. 字符串匹配-manacher"></a>3. 字符串匹配-manacher</h3><p>O(nlogn)求最大回文子串<br>其实就是枚举中心点，分情况讨论，然后二分长度</p>
@@ -810,7 +810,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">491</span>
+                    <span class="site-state-item-count">494</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>

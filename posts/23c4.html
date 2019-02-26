@@ -101,7 +101,7 @@
 
 
   <meta name="description" content="Source and JudgeNOIP2013 提高组 D2T3Luogu1979Caioj1562">
-<meta name="keywords" content="原创精品,难度2,好题,bfs,spfa">
+<meta name="keywords" content="原创精品,bfs,难度2,好题,spfa">
 <meta property="og:type" content="article">
 <meta property="og:title" content="【NOIP13 D2T3】华容道">
 <meta property="og:url" content="http://zory.ink/posts/23c4.html">
@@ -251,7 +251,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">491</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">494</span></a>
 
   </li>
         
@@ -646,7 +646,7 @@
 
 </div></div>
 <h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
-undefined
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//Zory in 2018</span></div><div class="line"><span class="comment">//*******************头文件*******************</span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cmath&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;queue&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;vector&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;set&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;queue&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">mymax</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span> </span>&#123;<span class="keyword">return</span> x&gt;y?x:y;&#125;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">mymin</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span> </span>&#123;<span class="keyword">return</span> x&lt;y?x:y;&#125;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">myabs</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;<span class="keyword">return</span> x&gt;<span class="number">0</span>?x:-x;&#125;</div><div class="line"><span class="comment">//*******************全局常量*******************</span></div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> MAXN=<span class="number">31</span>;</div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> tx[<span class="number">4</span>]=&#123;<span class="number">1</span>,<span class="number">-1</span>,<span class="number">0</span>,<span class="number">0</span>&#125;;</div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> ty[<span class="number">4</span>]=&#123;<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">-1</span>&#125;;</div><div class="line"><span class="comment">//*******************全局定义*******************</span></div><div class="line"><span class="keyword">int</span> n,m;</div><div class="line"><span class="keyword">int</span> mp[MAXN][MAXN];</div><div class="line"><span class="keyword">int</span> dis[MAXN][MAXN][MAXN][MAXN][<span class="number">4</span>];<span class="comment">//不能碰到终点</span></div><div class="line"><span class="comment">//*******************预处理*******************</span></div><div class="line"><span class="keyword">struct</span> Pt</div><div class="line">&#123;</div><div class="line">	<span class="keyword">int</span> x,y;</div><div class="line">	Pt(<span class="keyword">int</span> tx=<span class="number">0</span>,<span class="keyword">int</span> ty=<span class="number">0</span>) &#123;x=tx;y=ty;&#125;</div><div class="line">&#125;;</div><div class="line"><span class="built_in">queue</span>&lt;Pt&gt; q1;</div><div class="line"><span class="keyword">int</span> tmp[MAXN][MAXN];</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">bfs</span><span class="params">(Pt st,Pt ed)</span></div><div class="line"></span>&#123;</div><div class="line">	<span class="built_in">memset</span>(tmp,<span class="number">-1</span>,<span class="keyword">sizeof</span>(tmp));</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="number">4</span>;i++) dis[st.x][st.y][ed.x][ed.y][i]=<span class="number">-1</span>;</div><div class="line">	q1.push(st);tmp[st.x][st.y]=<span class="number">0</span>;</div><div class="line">	<span class="keyword">while</span>(!q1.empty())</div><div class="line">	&#123;</div><div class="line">		Pt now=q1.front();q1.pop();</div><div class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="number">4</span>;i++)</div><div class="line">		&#123;</div><div class="line">			<span class="keyword">if</span>(ed.x+tx[i]==now.x and ed.y+ty[i]==now.y) dis[st.x][st.y][ed.x][ed.y][i]=tmp[now.x][now.y];</div><div class="line"></div><div class="line">			<span class="keyword">int</span> nx=now.x+tx[i],ny=now.y+ty[i];</div><div class="line">			<span class="keyword">if</span>(nx&lt;<span class="number">1</span> or nx&gt;n or ny&lt;<span class="number">1</span> or ny&gt;m or !mp[nx][ny]) <span class="keyword">continue</span>;</div><div class="line">			<span class="keyword">if</span>(tmp[nx][ny]!=<span class="number">-1</span> or (nx==ed.x and ny==ed.y)) <span class="keyword">continue</span>;<span class="comment">//debug</span></div><div class="line">			tmp[nx][ny]=tmp[now.x][now.y]+<span class="number">1</span>;</div><div class="line">			q1.push( Pt(nx,ny) );</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"><span class="comment">//*******************实现*******************</span></div><div class="line"><span class="keyword">struct</span> Data</div><div class="line">&#123;</div><div class="line">	Pt now;<span class="comment">//目标棋子</span></div><div class="line">	<span class="keyword">int</span> d;<span class="comment">//空白所在方向</span></div><div class="line">	<span class="keyword">int</span> g,h;<span class="comment">//实际步数、预估剩余步数</span></div><div class="line">&#125;;</div><div class="line"><span class="keyword">bool</span> <span class="keyword">operator</span> &lt; (Data a,Data b) &#123;<span class="keyword">return</span> a.g+a.h&gt;b.g+b.h;&#125;</div><div class="line">priority_queue&lt;Data&gt; q2;<span class="comment">//小根堆</span></div><div class="line"><span class="keyword">int</span> hs[MAXN][MAXN][<span class="number">4</span>];<span class="comment">//Hash表，存储g()</span></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">ins</span><span class="params">(Data x)</span></div><div class="line"></span>&#123;</div><div class="line">	<span class="keyword">if</span>(hs[x.now.x][x.now.y][x.d]&gt;x.g)</div><div class="line">	&#123;</div><div class="line">		hs[x.now.x][x.now.y][x.d]=x.g;</div><div class="line">		q2.push(x);</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line">Pt e,st,ed;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">H</span><span class="params">(Pt now)</span> </span>&#123;<span class="keyword">return</span> myabs(now.x-ed.x)+myabs(now.y-ed.y);&#125;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">solve</span><span class="params">()</span></div><div class="line"></span>&#123;</div><div class="line">	<span class="built_in">scanf</span>(<span class="string">"%d%d%d%d%d%d"</span>,&amp;e.x,&amp;e.y,&amp;st.x,&amp;st.y,&amp;ed.x,&amp;ed.y);</div><div class="line">	<span class="keyword">if</span>(st.x==ed.x and st.y==ed.y) <span class="keyword">return</span> <span class="number">0</span>;<span class="comment">//debug</span></div><div class="line"></div><div class="line">	<span class="built_in">memset</span>(hs,<span class="number">127</span>,<span class="keyword">sizeof</span>(hs));</div><div class="line">	<span class="keyword">while</span>(!q2.empty()) q2.pop();<span class="comment">//debug</span></div><div class="line"></div><div class="line">	bfs(e,st);</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="number">4</span>;i++)</div><div class="line">		<span class="keyword">if</span>(dis[e.x][e.y][st.x][st.y][i]!=<span class="number">-1</span>)</div><div class="line">			ins( (Data)&#123;st,i,dis[e.x][e.y][st.x][st.y][i],H(st)&#125; );</div><div class="line"></div><div class="line">	<span class="keyword">while</span>(!q2.empty())</div><div class="line">	&#123;</div><div class="line">		Data x=q2.top();q2.pop();</div><div class="line">		<span class="keyword">if</span>(x.now.x==ed.x and x.now.y==ed.y) <span class="keyword">return</span> x.g;</div><div class="line"></div><div class="line">		Pt kg=Pt(x.now.x+tx[x.d],x.now.y+ty[x.d]);<span class="comment">//空格位置</span></div><div class="line"></div><div class="line">		<span class="comment">//1. 空格与棋子交换，注意方向调换</span></div><div class="line">		ins( (Data)&#123;kg,x.d^<span class="number">1</span>,x.g+<span class="number">1</span>,H(kg)&#125; );</div><div class="line">		<span class="comment">//2. 空格走到棋子其他侧</span></div><div class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="number">4</span>;i++)</div><div class="line">			<span class="keyword">if</span>(dis[kg.x][kg.y][x.now.x][x.now.y][i]!=<span class="number">-1</span>)</div><div class="line">				ins( (Data)&#123;x.now,i,x.g+dis[kg.x][kg.y][x.now.x][x.now.y][i],x.h&#125; );</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">return</span> <span class="number">-1</span>;</div><div class="line">&#125;</div><div class="line"><span class="comment">//*******************主函数*******************</span></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></div><div class="line"></span>&#123;</div><div class="line">	<span class="comment">//freopen("tmp.in","r",stdin);</span></div><div class="line"></div><div class="line">	<span class="keyword">int</span> q;<span class="built_in">scanf</span>(<span class="string">"%d%d%d"</span>,&amp;n,&amp;m,&amp;q);</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</div><div class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=m;j++)</div><div class="line">			<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;mp[i][j]);</div><div class="line"></div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</div><div class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=m;j++) <span class="keyword">if</span>(mp[i][j])</div><div class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> t=<span class="number">0</span>;t&lt;<span class="number">4</span>;t++) <span class="keyword">if</span>(mp[i+tx[t]][j+ty[t]])</div><div class="line">				bfs( Pt(i,j),Pt(i+tx[t],j+ty[t]) );</div><div class="line">	<span class="keyword">while</span>(q--) <span class="built_in">printf</span>(<span class="string">"%d\n"</span>,solve());</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
 </div></div>
 
@@ -662,35 +662,21 @@ undefined
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/8065.html" rel="bookmark">【Bzoj2002】【Luogu3203】弹飞绵羊</a></div>
+      <div class="popular-posts-title"><a href="/posts/184e.html" rel="bookmark">【Bzoj1018】【Luogu4246】堵塞的交通</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/4e7e.html" rel="bookmark">学习小组</a></div>
+      <div class="popular-posts-title"><a href="/posts/4147.html" rel="bookmark">【国家集训队】跳跳棋</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/44a6.html" rel="bookmark">【Usaco05Mar】Ombrophobic Bovines</a></div>
-      
-    </li>
-  
-    <li class="popular-posts-item">
-      
-      
-      <div class="popular-posts-title"><a href="/posts/a1fb.html" rel="bookmark">【Bzoj1934】【Bzoj2768】善意的投票&冠军调查</a></div>
-      
-    </li>
-  
-    <li class="popular-posts-item">
-      
-      
-      <div class="popular-posts-title"><a href="/posts/9c9f.html" rel="bookmark">【Bzoj1001】狼抓兔子</a></div>
+      <div class="popular-posts-title"><a href="/posts/ad3d.html" rel="bookmark">【NOIP14 D1T3】飞扬的小鸟</a></div>
       
     </li>
   
@@ -698,6 +684,20 @@ undefined
       
       
       <div class="popular-posts-title"><a href="/posts/134e.html" rel="bookmark">【Luogu3113】马拉松赛跑Marathon</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="/posts/ea1.html" rel="bookmark">【Zoj3435】Ideal Puzzle Bobble</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="/posts/44a6.html" rel="bookmark">【Usaco05Mar】Ombrophobic Bovines</a></div>
       
     </li>
   
@@ -740,11 +740,11 @@ undefined
           
             <a href="/tags/原创精品/" rel="tag"># 原创精品</a>
           
+            <a href="/tags/bfs/" rel="tag"># bfs</a>
+          
             <a href="/tags/难度2/" rel="tag"># 难度2</a>
           
             <a href="/tags/好题/" rel="tag"># 好题</a>
-          
-            <a href="/tags/bfs/" rel="tag"># bfs</a>
           
             <a href="/tags/spfa/" rel="tag"># spfa</a>
           
@@ -869,7 +869,7 @@ undefined
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">491</span>
+                    <span class="site-state-item-count">494</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>

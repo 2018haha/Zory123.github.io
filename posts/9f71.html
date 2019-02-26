@@ -101,7 +101,7 @@
 
 
   <meta name="description" content="来源和评测点Poj2663Vijos1194Caioj1487">
-<meta name="keywords" content="矩阵乘法,好题,难度3">
+<meta name="keywords" content="矩阵乘法,难度3,好题">
 <meta property="og:type" content="article">
 <meta property="og:title" content="【Poj3897】【Vijos1194】Domino">
 <meta property="og:url" content="http://zory.ink/posts/9f71.html">
@@ -250,7 +250,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">491</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">494</span></a>
 
   </li>
         
@@ -632,7 +632,7 @@
 <p>至于为啥全都是双向边，逻辑上我讲不清，但从实现上看，<br>两个状态的先后对得到可达矩阵结果没有影响，所以有对称性（m[i][j]==m[j][i]）<br>不过因为状态太少，没有剪枝的必要</p>
 <p>然后规则二的可行结果比较少，手工枚举后如下：<br>00000 0<br>00011 3<br>00110 6<br>01100 12<br>01111 15<br>11000 24<br>11011 27<br>11110 30<br>搞一个常量数组就好，就8个</p>
 <p>然后，来个遗言：<br>看到pascal用longint没问题，然后调试了一个小时……<br>珍惜生命，请用longlong</p>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//Zory-2018</span></div><div class="line"><span class="comment">//*******************头文件*******************</span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</div><div class="line"><span class="comment">//*******************全局常量*******************</span></div><div class="line"><span class="comment">//*******************全局定义*******************</span></div><div class="line"><span class="keyword">struct</span> martix</div><div class="line">&#123;</div><div class="line">	ll m[<span class="number">40</span>][<span class="number">40</span>];</div><div class="line">	martix()</div><div class="line">	&#123;</div><div class="line">		<span class="built_in">memset</span>(m,<span class="number">0</span>,<span class="keyword">sizeof</span>(m));</div><div class="line">	&#125;</div><div class="line">&#125;;</div><div class="line"><span class="comment">//这次的矩阵从0开始</span></div><div class="line"><span class="keyword">int</span> mx;</div><div class="line">ll MOD;</div><div class="line"><span class="comment">//*******************接口*******************</span></div><div class="line"><span class="function">martix <span class="title">cheng</span><span class="params">(martix a,martix b)</span></span></div><div class="line">&#123;</div><div class="line">	martix c;</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;=mx;i++)</div><div class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;=mx;j++)</div><div class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> k=<span class="number">0</span>;k&lt;=mx;k++)</div><div class="line">				c.m[i][j]=(c.m[i][j]+a.m[i][k]*b.m[k][j]%MOD)%MOD;</div><div class="line">	<span class="keyword">return</span> c;</div><div class="line">&#125;</div><div class="line"><span class="function">martix <span class="title">power</span><span class="params">(martix a,<span class="keyword">int</span> e)</span></span></div><div class="line">&#123;</div><div class="line">	martix ans;<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;=mx;i++) ans.m[i][i]=<span class="number">1</span>;</div><div class="line">	<span class="keyword">while</span>(e&gt;<span class="number">0</span>)</div><div class="line">	&#123;</div><div class="line">		<span class="keyword">if</span>(e%<span class="number">2</span>==<span class="number">1</span>) ans=cheng(ans,a);</div><div class="line">		a=cheng(a,a);e/=<span class="number">2</span>;</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">return</span> ans;</div><div class="line">&#125;</div><div class="line"><span class="comment">//*******************主函数*******************</span></div><div class="line"><span class="keyword">bool</span> f[<span class="number">40</span>];</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></div><div class="line">&#123;</div><div class="line">	f[<span class="number">0</span>]=f[<span class="number">3</span>]=f[<span class="number">6</span>]=f[<span class="number">12</span>]=f[<span class="number">15</span>]=f[<span class="number">24</span>]=f[<span class="number">27</span>]=f[<span class="number">30</span>]=<span class="number">1</span>;</div><div class="line">	</div><div class="line">	<span class="keyword">int</span> m,n;<span class="built_in">scanf</span>(<span class="string">"%d%d%lld"</span>,&amp;m,&amp;n,&amp;MOD);mx=(<span class="number">1</span>&lt;&lt;m)<span class="number">-1</span>;</div><div class="line">	martix a;</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;=mx;i++)</div><div class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;=mx;j++)</div><div class="line">			a.m[i][j]=( (i|j)==mx ) and f[i&amp;j];</div><div class="line">	<span class="built_in">printf</span>(<span class="string">"%lld"</span>,power(a,n).m[mx][mx]);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//Zory-2018</span></div><div class="line"><span class="comment">//*******************头文件*******************</span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</div><div class="line"><span class="comment">//*******************全局常量*******************</span></div><div class="line"><span class="comment">//*******************全局定义*******************</span></div><div class="line"><span class="keyword">struct</span> martix</div><div class="line">&#123;</div><div class="line">	ll m[<span class="number">40</span>][<span class="number">40</span>];</div><div class="line">	martix()</div><div class="line">	&#123;</div><div class="line">		<span class="built_in">memset</span>(m,<span class="number">0</span>,<span class="keyword">sizeof</span>(m));</div><div class="line">	&#125;</div><div class="line">&#125;;</div><div class="line"><span class="comment">//这次的矩阵从0开始</span></div><div class="line"><span class="keyword">int</span> mx;</div><div class="line">ll MOD;</div><div class="line"><span class="comment">//*******************接口*******************</span></div><div class="line"><span class="function">martix <span class="title">cheng</span><span class="params">(martix a,martix b)</span></div><div class="line"></span>&#123;</div><div class="line">	martix c;</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;=mx;i++)</div><div class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;=mx;j++)</div><div class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> k=<span class="number">0</span>;k&lt;=mx;k++)</div><div class="line">				c.m[i][j]=(c.m[i][j]+a.m[i][k]*b.m[k][j]%MOD)%MOD;</div><div class="line">	<span class="keyword">return</span> c;</div><div class="line">&#125;</div><div class="line"><span class="function">martix <span class="title">power</span><span class="params">(martix a,<span class="keyword">int</span> e)</span></div><div class="line"></span>&#123;</div><div class="line">	martix ans;<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;=mx;i++) ans.m[i][i]=<span class="number">1</span>;</div><div class="line">	<span class="keyword">while</span>(e&gt;<span class="number">0</span>)</div><div class="line">	&#123;</div><div class="line">		<span class="keyword">if</span>(e%<span class="number">2</span>==<span class="number">1</span>) ans=cheng(ans,a);</div><div class="line">		a=cheng(a,a);e/=<span class="number">2</span>;</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">return</span> ans;</div><div class="line">&#125;</div><div class="line"><span class="comment">//*******************主函数*******************</span></div><div class="line"><span class="keyword">bool</span> f[<span class="number">40</span>];</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></div><div class="line"></span>&#123;</div><div class="line">	f[<span class="number">0</span>]=f[<span class="number">3</span>]=f[<span class="number">6</span>]=f[<span class="number">12</span>]=f[<span class="number">15</span>]=f[<span class="number">24</span>]=f[<span class="number">27</span>]=f[<span class="number">30</span>]=<span class="number">1</span>;</div><div class="line">	</div><div class="line">	<span class="keyword">int</span> m,n;<span class="built_in">scanf</span>(<span class="string">"%d%d%lld"</span>,&amp;m,&amp;n,&amp;MOD);mx=(<span class="number">1</span>&lt;&lt;m)<span class="number">-1</span>;</div><div class="line">	martix a;</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;=mx;i++)</div><div class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;=mx;j++)</div><div class="line">			a.m[i][j]=( (i|j)==mx ) and f[i&amp;j];</div><div class="line">	<span class="built_in">printf</span>(<span class="string">"%lld"</span>,power(a,n).m[mx][mx]);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
       
     </div>
 
@@ -652,7 +652,7 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/cbab.html" rel="bookmark">【CF590E】The Tree</a></div>
+      <div class="popular-posts-title"><a href="/posts/8cf7.html" rel="bookmark">【bzoj3277】串</a></div>
       
     </li>
   
@@ -673,14 +673,14 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/5f83.html" rel="bookmark">bzoj4230倒计时 51nod1425减减数 CF331C3The Great Julya Calendar</a></div>
+      <div class="popular-posts-title"><a href="/posts/cbab.html" rel="bookmark">【CF590E】The Tree</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/80e0.html" rel="bookmark">【NOI2014】购票</a></div>
+      <div class="popular-posts-title"><a href="/posts/5f83.html" rel="bookmark">bzoj4230倒计时 51nod1425减减数 CF331C3The Great Julya Calendar</a></div>
       
     </li>
   
@@ -723,9 +723,9 @@
           
             <a href="/tags/矩阵乘法/" rel="tag"># 矩阵乘法</a>
           
-            <a href="/tags/好题/" rel="tag"># 好题</a>
-          
             <a href="/tags/难度3/" rel="tag"># 难度3</a>
+          
+            <a href="/tags/好题/" rel="tag"># 好题</a>
           
         </div>
       
@@ -768,8 +768,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/posts/184e.html" rel="prev" title="【Bzoj1018】【Luogu4246】堵塞的交通">
-                【Bzoj1018】【Luogu4246】堵塞的交通 <i class="fa fa-chevron-right"></i>
+              <a href="/posts/c57c.html" rel="prev" title="【Bzoj3343】教主的魔法">
+                【Bzoj3343】教主的魔法 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -848,7 +848,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">491</span>
+                    <span class="site-state-item-count">494</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>

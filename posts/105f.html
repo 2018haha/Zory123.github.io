@@ -248,7 +248,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">491</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">494</span></a>
 
   </li>
         
@@ -624,7 +624,7 @@
 <h2 id="Analysis"><a href="#Analysis" class="headerlink" title="Analysis"></a>Analysis</h2><div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
 <p>考虑选哪k个，因为并集恰好为这k个，所以是不会有重复的，方案数为 ${n \choose k}$<br>然后固定这k个，其他任意选择，设并集至少多i个，则选数方案数为 ${n-k \choose i}$<br>然后，共有 $n-k-i$ 个元素， $2^{n-k-i}$ 个集合， $2^{2^{n-k-i}}-1$ 个方案（不能是空）<br>$ans={n \choose k} \sum_{i=0}^{n-k} (-1)^i {n-k \choose i } (2^{ 2^{n-k-i} }-1)$</p>
 <p>nlogn的话，注意到p是质数，所以幂的部分%(p-1)即可<br>然而这道sb题会tle……必须要 $O(n)$<br>那么随便递推一下逆元和2的次幂即可</p>
-undefined
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//Zory-2018</span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cmath&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;ctime&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdlib&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;map&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;set&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;queue&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;deque&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stack&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bitset&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;vector&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"><span class="meta">#<span class="meta-keyword">ifdef</span> DEBUG</span></div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> LOCAL=<span class="number">1</span>;</div><div class="line"><span class="meta">#<span class="meta-keyword">else</span></span></div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> LOCAL=<span class="number">0</span>;</div><div class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></div><div class="line"></div><div class="line"><span class="keyword">namespace</span> mine</div><div class="line">&#123;</div><div class="line">	<span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</div><div class="line">	<span class="keyword">const</span> <span class="keyword">int</span> INF=<span class="number">0x3f3f3f3f</span>;</div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">int</span> <span class="title">qpower</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> e,<span class="keyword">int</span> MOD)</span></div><div class="line">	</span>&#123;</div><div class="line">		<span class="keyword">int</span> ans=<span class="number">1</span>;</div><div class="line">		<span class="keyword">while</span>(e&gt;<span class="number">0</span>)</div><div class="line">		&#123;</div><div class="line">			<span class="keyword">if</span>(e&amp;<span class="number">1</span>) ans=(ll)ans*x%MOD;</div><div class="line">			x=(ll)x*x%MOD;e&gt;&gt;=<span class="number">1</span>;</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">return</span> ans;</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">const</span> <span class="keyword">int</span> MAX_N=<span class="number">1000001</span>;</div><div class="line">	<span class="keyword">const</span> <span class="keyword">int</span> MOD=<span class="number">1e9</span>+<span class="number">7</span>;</div><div class="line">	<span class="function"><span class="keyword">int</span> <span class="title">inv</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;<span class="keyword">return</span> qpower(x,MOD<span class="number">-2</span>,MOD);&#125;</div><div class="line">	<span class="keyword">int</span> fac[MAX_N],facinv[MAX_N];</div><div class="line">	<span class="function"><span class="keyword">int</span> <span class="title">C</span><span class="params">(<span class="keyword">int</span> n,<span class="keyword">int</span> m)</span> </span>&#123;<span class="keyword">return</span> (ll)fac[n]*facinv[m]%MOD*facinv[n-m]%MOD;&#125;</div><div class="line">	<span class="keyword">int</span> f[MAX_N];</div><div class="line">	<span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></div><div class="line">	</span>&#123;</div><div class="line">		fac[<span class="number">0</span>]=<span class="number">1</span>;<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;MAX_N;i++) fac[i]=(ll)fac[i<span class="number">-1</span>]*i%MOD;</div><div class="line">		facinv[MAX_N<span class="number">-1</span>]=inv(fac[MAX_N<span class="number">-1</span>]);<span class="keyword">for</span>(<span class="keyword">int</span> i=MAX_N<span class="number">-2</span>;i&gt;=<span class="number">0</span>;i--) facinv[i]=(ll)facinv[i+<span class="number">1</span>]*(i+<span class="number">1</span>)%MOD;</div><div class="line">		f[<span class="number">0</span>]=<span class="number">2</span>;<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;MAX_N;i++) f[i]=(ll)f[i<span class="number">-1</span>]*f[i<span class="number">-1</span>]%MOD;</div><div class="line"></div><div class="line">		<span class="keyword">int</span> n,k;<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;n,&amp;k);</div><div class="line">		<span class="keyword">int</span> ans=<span class="number">0</span>;</div><div class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>,t=<span class="number">1</span>;i&lt;=n-k;i++,t=-t)</div><div class="line">			ans=ans+(ll)f[n-k-i]*C(n-k,i)*t%MOD,ans%=MOD;</div><div class="line">		<span class="built_in">printf</span>(<span class="string">"%lld"</span>,ll(ans+MOD)%MOD*C(n,k)%MOD);</div><div class="line">	&#125;</div><div class="line">&#125;;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></div><div class="line"></span>&#123;</div><div class="line">	srand(time(<span class="number">0</span>));</div><div class="line">	mine::main();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
 </div></div>
 
@@ -661,21 +661,21 @@ undefined
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/8530.html" rel="bookmark">【Bzoj1911】【Luogu3628】特别行动队</a></div>
+      <div class="popular-posts-title"><a href="/posts/9f3.html" rel="bookmark">【Bzoj1833】【Luogu2602】数字计数</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/41bc.html" rel="bookmark">【Poj2112】Optimal Milking</a></div>
+      <div class="popular-posts-title"><a href="/posts/1444.html" rel="bookmark">【Luogu3005】槽的游戏The Trough Game</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/12b6.html" rel="bookmark">【Bzoj2301】【Luogu2522】Problem_b</a></div>
+      <div class="popular-posts-title"><a href="/posts/77a.html" rel="bookmark">【Bzoj3223】文艺平衡树</a></div>
       
     </li>
   
@@ -751,8 +751,8 @@ undefined
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/posts/462d.html" rel="next" title="【HNOI2012】集合选数">
-                <i class="fa fa-chevron-left"></i> 【HNOI2012】集合选数
+              <a href="/posts/a959.html" rel="next" title="【CF235E】Number Challenge">
+                <i class="fa fa-chevron-left"></i> 【CF235E】Number Challenge
               </a>
             
           </div>
@@ -841,7 +841,7 @@ undefined
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">491</span>
+                    <span class="site-state-item-count">494</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>

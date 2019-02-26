@@ -248,7 +248,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">491</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">494</span></a>
 
   </li>
         
@@ -621,7 +621,7 @@
         <h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p id="div-border-top-red"><strong>【问题大意】</strong><br>小明玩游戏时，获得了一些终极装备，但在这之前，他已经获得了一批能和终极装备媲美的装备，并且前后的数量是一致的，但人物的最大负重为M，每个装备可提升人物V[i]力量值，自身重量为W[i]（我们把这两个值称为该装备的属性），现在的目的是让人物更强大<br><strong>【输入】</strong><br>第一行3个数：M，N，T。分别为最大负重、装备数量、人物不带任何装备的能量值。<br>接下来N行，一行4个数，V1[i],W1[i],V2[i],W2[i]（前后两组装备视为同种）<br><strong>【输出】</strong><br>人物能够达到的最大力量值，并且同种装备只能选一个。<br><strong>【样例输入】</strong><br>50 3 20<br>12 18 23 19<br>17 10 30 24<br>20 20 17 20<br><strong>【样例输出】</strong><br>80<br><strong>【数据范围】</strong><br>(其实这个贴出来没什么用)<br>1&lt;=M,T&lt;=10000,1&lt;=N&lt;=200<br>1&lt;=W[i],V[i]&lt;=10000<br></p>
 
 <a id="more"></a>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span> f[<span class="number">10010</span>];<span class="comment">//f[I]=当使用I重量时，可以达到的能量</span></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc,<span class="keyword">char</span> *argv[])</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">int</span> m,n,t;</div><div class="line">    <span class="built_in">scanf</span>(<span class="string">"%d %d %d"</span>,&amp;m,&amp;n,&amp;t);</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</div><div class="line">    &#123;</div><div class="line">        <span class="keyword">int</span> a,b,c,d;</div><div class="line">        <span class="built_in">scanf</span>(<span class="string">"%d%d%d%d"</span>,&amp;a,&amp;b,&amp;c,&amp;d);</div><div class="line">        <span class="keyword">if</span>(b&gt;d) &#123; <span class="keyword">int</span> t=a;a=c;c=t;t=b;b=d;d=t; &#125;</div><div class="line">        v1[i]=a;v2[i]=c;w1[i]=b;w2[i]=d;</div><div class="line">    &#125;</div><div class="line">    <span class="built_in">memset</span>(f,<span class="number">0</span>,<span class="keyword">sizeof</span>(f));</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</div><div class="line">    &#123;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=m;j&gt;=w1[i];j--)</div><div class="line">            <span class="keyword">if</span>(j&gt;=w2[i]) f[j]=max3(f[j],f[j-w1[i]]+v1[i],f[j-w2[i]]+v2[i]);</div><div class="line">            <span class="keyword">else</span> f[j]=max2(f[j],f[j-w1[i]]+v1[i]);</div><div class="line">    &#125;  </div><div class="line">    <span class="built_in">printf</span>(<span class="string">"%d"</span>,f[m]+t);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span> f[<span class="number">10010</span>];<span class="comment">//f[I]=当使用I重量时，可以达到的能量</span></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc,<span class="keyword">char</span> *argv[])</span></div><div class="line"></span>&#123;</div><div class="line">    <span class="keyword">int</span> m,n,t;</div><div class="line">    <span class="built_in">scanf</span>(<span class="string">"%d %d %d"</span>,&amp;m,&amp;n,&amp;t);</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</div><div class="line">    &#123;</div><div class="line">        <span class="keyword">int</span> a,b,c,d;</div><div class="line">        <span class="built_in">scanf</span>(<span class="string">"%d%d%d%d"</span>,&amp;a,&amp;b,&amp;c,&amp;d);</div><div class="line">        <span class="keyword">if</span>(b&gt;d) &#123; <span class="keyword">int</span> t=a;a=c;c=t;t=b;b=d;d=t; &#125;</div><div class="line">        v1[i]=a;v2[i]=c;w1[i]=b;w2[i]=d;</div><div class="line">    &#125;</div><div class="line">    <span class="built_in">memset</span>(f,<span class="number">0</span>,<span class="keyword">sizeof</span>(f));</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</div><div class="line">    &#123;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=m;j&gt;=w1[i];j--)</div><div class="line">            <span class="keyword">if</span>(j&gt;=w2[i]) f[j]=max3(f[j],f[j-w1[i]]+v1[i],f[j-w2[i]]+v2[i]);</div><div class="line">            <span class="keyword">else</span> f[j]=max2(f[j],f[j-w1[i]]+v1[i]);</div><div class="line">    &#125;  </div><div class="line">    <span class="built_in">printf</span>(<span class="string">"%d"</span>,f[m]+t);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
       
     </div>
 
@@ -634,21 +634,21 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/e616.html" rel="bookmark">【Luogu1541】乌龟棋</a></div>
+      <div class="popular-posts-title"><a href="/posts/7e9b.html" rel="bookmark">【Luogu1006】传纸条</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/8231.html" rel="bookmark">【Luogu1064】金明的预算方案</a></div>
+      <div class="popular-posts-title"><a href="/posts/d59f.html" rel="bookmark">【cqoi2013】二进制a+b</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/ddc4.html" rel="bookmark">HDU1159最长公共子序列LCS</a></div>
+      <div class="popular-posts-title"><a href="/posts/5323.html" rel="bookmark">【Bzoj1783】【Luogu2975】轮流Taking Turns</a></div>
       
     </li>
   
@@ -662,14 +662,14 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/4670.html" rel="bookmark">【Bzoj1026】【Luogu2657】windy数</a></div>
+      <div class="popular-posts-title"><a href="/posts/87af.html" rel="bookmark">【Luogu1018】乘积最大</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/87af.html" rel="bookmark">【Luogu1018】乘积最大</a></div>
+      <div class="popular-posts-title"><a href="/posts/4670.html" rel="bookmark">【Bzoj1026】【Luogu2657】windy数</a></div>
       
     </li>
   
@@ -835,7 +835,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">491</span>
+                    <span class="site-state-item-count">494</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>

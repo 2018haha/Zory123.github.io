@@ -248,7 +248,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">491</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">494</span></a>
 
   </li>
         
@@ -629,7 +629,7 @@
 
 </div></div>
 <h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
-undefined
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> INF=<span class="number">0x3f3f3f3f</span>;</div><div class="line"><span class="keyword">int</span> a[<span class="number">110</span>],b[<span class="number">110</span>],c[<span class="number">110</span>];</div><div class="line"><span class="keyword">int</span> f[<span class="number">610000</span>];</div><div class="line"><span class="keyword">bool</span> v[<span class="number">610000</span>];</div><div class="line"><span class="comment">//****************主函数****************</span></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></div><div class="line"></span>&#123;</div><div class="line">	<span class="keyword">int</span> l,s,t,m;<span class="built_in">scanf</span>(<span class="string">"%d%d%d%d"</span>,&amp;l,&amp;s,&amp;t,&amp;m);</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=m;i++) <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;a[i]);</div><div class="line">	sort(a+<span class="number">1</span>,a+<span class="number">1</span>+m);</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=m;i++)</div><div class="line">	&#123;</div><div class="line">		b[i]=a[i]-a[i<span class="number">-1</span>];</div><div class="line">		<span class="keyword">int</span> tmp=b[i]%<span class="number">2520</span>;</div><div class="line">		<span class="keyword">if</span>(b[i]&gt;=<span class="number">2520</span> and tmp&lt;=t) tmp+=<span class="number">2520</span>;<span class="comment">//确保正确性</span></div><div class="line">		c[i]=c[i<span class="number">-1</span>]+tmp;</div><div class="line">		v[ c[i] ]=<span class="number">1</span>;</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="built_in">memset</span>(f,<span class="number">63</span>,<span class="keyword">sizeof</span>(f));f[<span class="number">0</span>]=<span class="number">0</span>;</div><div class="line">	</div><div class="line">	<span class="keyword">int</span> tmp=(l-a[m])%<span class="number">2520</span>;</div><div class="line">	<span class="keyword">if</span>((l-a[m])&gt;=<span class="number">2520</span> and tmp&lt;=t) tmp+=<span class="number">2520</span>;<span class="comment">//确保正确性</span></div><div class="line">	l=c[m]+tmp;</div><div class="line">	</div><div class="line">	<span class="keyword">int</span> ans=INF;</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=l+t<span class="number">-1</span>;i++)</div><div class="line">	&#123;</div><div class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> p=s;p&lt;=t;p++)</div><div class="line">			<span class="keyword">if</span>(i-p&gt;=<span class="number">0</span>) f[i]=min(f[i],f[i-p]+v[i]);</div><div class="line">		<span class="keyword">if</span>(i&gt;=l) ans=min(ans,f[i]);</div><div class="line">	&#125;</div><div class="line">	<span class="built_in">printf</span>(<span class="string">"%d"</span>,ans);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
 </div></div>
       
@@ -644,21 +644,14 @@ undefined
     <li class="popular-posts-item">
       
       
+      <div class="popular-posts-title"><a href="/posts/e616.html" rel="bookmark">【Luogu1541】乌龟棋</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+      
       <div class="popular-posts-title"><a href="/posts/d59f.html" rel="bookmark">【cqoi2013】二进制a+b</a></div>
-      
-    </li>
-  
-    <li class="popular-posts-item">
-      
-      
-      <div class="popular-posts-title"><a href="/posts/8231.html" rel="bookmark">【Luogu1064】金明的预算方案</a></div>
-      
-    </li>
-  
-    <li class="popular-posts-item">
-      
-      
-      <div class="popular-posts-title"><a href="/posts/ddc4.html" rel="bookmark">HDU1159最长公共子序列LCS</a></div>
       
     </li>
   
@@ -672,6 +665,13 @@ undefined
     <li class="popular-posts-item">
       
       
+      <div class="popular-posts-title"><a href="/posts/5323.html" rel="bookmark">【Bzoj1783】【Luogu2975】轮流Taking Turns</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+      
       <div class="popular-posts-title"><a href="/posts/6a8a.html" rel="bookmark">【CF946-F】Fibonacci String Subsequences</a></div>
       
     </li>
@@ -679,7 +679,7 @@ undefined
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/4670.html" rel="bookmark">【Bzoj1026】【Luogu2657】windy数</a></div>
+      <div class="popular-posts-title"><a href="/posts/87af.html" rel="bookmark">【Luogu1018】乘积最大</a></div>
       
     </li>
   
@@ -755,8 +755,8 @@ undefined
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/posts/146c.html" rel="next" title="【Luogu1054】等价表达式">
-                <i class="fa fa-chevron-left"></i> 【Luogu1054】等价表达式
+              <a href="/posts/6a62.html" rel="next" title="【Luogu1092】虫食算">
+                <i class="fa fa-chevron-left"></i> 【Luogu1092】虫食算
               </a>
             
           </div>
@@ -765,8 +765,8 @@ undefined
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/posts/6a62.html" rel="prev" title="【Luogu1092】虫食算">
-                【Luogu1092】虫食算 <i class="fa fa-chevron-right"></i>
+              <a href="/posts/146c.html" rel="prev" title="【Luogu1054】等价表达式">
+                【Luogu1054】等价表达式 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -845,7 +845,7 @@ undefined
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">491</span>
+                    <span class="site-state-item-count">494</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>

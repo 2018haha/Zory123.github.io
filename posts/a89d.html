@@ -248,7 +248,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">491</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">494</span></a>
 
   </li>
         
@@ -622,7 +622,7 @@
 <a id="more"></a>
 <p><strong>用途</strong><br>1、维护无向图的连通性。支持判断两个点是否在同一连通块内，和判断增加一条边是否会产生环。<br>2、用在求解最小生成树的Kruskal算法里。</p>
 <p><strong>初始化</strong><br>自己是自己的老大</p>
-<h2 id="3-3-2-代码"><a href="#3-3-2-代码" class="headerlink" title="3.3.2 代码"></a>3.3.2 代码</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">找老大：</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">findfa</span><span class="params">(<span class="keyword">int</span> x)</span>0</span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">if</span>(fa[x]==x) <span class="keyword">return</span> x;</div><div class="line">    <span class="keyword">return</span> fa[x]=findfa(fa[x]);</div><div class="line">&#125;</div><div class="line">合并：</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">join</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">int</span> fx=findfa(x),fy=findfa(y);</div><div class="line">    <span class="keyword">if</span>(fx!=fy) fa[fx]=fy;</div><div class="line">&#125;</div><div class="line">检测环：</div><div class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=边数;i++)</div><div class="line">&#123;</div><div class="line">    <span class="keyword">int</span> q=findfa(b[i].x);</div><div class="line">    <span class="keyword">int</span> w=findfa(b[i].y);</div><div class="line">    <span class="keyword">if</span>(q==w) <span class="keyword">return</span> <span class="number">1</span>;<span class="comment">//如果在一个集合，就找到了环</span></div><div class="line">    join(q,w);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="3-3-2-代码"><a href="#3-3-2-代码" class="headerlink" title="3.3.2 代码"></a>3.3.2 代码</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">找老大：</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">findfa</span><span class="params">(<span class="keyword">int</span> x)</span>0</div><div class="line"></span>&#123;</div><div class="line">    <span class="keyword">if</span>(fa[x]==x) <span class="keyword">return</span> x;</div><div class="line">    <span class="keyword">return</span> fa[x]=findfa(fa[x]);</div><div class="line">&#125;</div><div class="line">合并：</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">join</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span></div><div class="line"></span>&#123;</div><div class="line">    <span class="keyword">int</span> fx=findfa(x),fy=findfa(y);</div><div class="line">    <span class="keyword">if</span>(fx!=fy) fa[fx]=fy;</div><div class="line">&#125;</div><div class="line">检测环：</div><div class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=边数;i++)</div><div class="line">&#123;</div><div class="line">    <span class="keyword">int</span> q=findfa(b[i].x);</div><div class="line">    <span class="keyword">int</span> w=findfa(b[i].y);</div><div class="line">    <span class="keyword">if</span>(q==w) <span class="keyword">return</span> <span class="number">1</span>;<span class="comment">//如果在一个集合，就找到了环</span></div><div class="line">    join(q,w);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h2 id="3-3-3-进阶练习"><a href="#3-3-3-进阶练习" class="headerlink" title="3.3.3 进阶练习"></a>3.3.3 进阶练习</h2><p><a href="4672.html">魏总数星星</a><br><a href="4cfd.html">星球大战</a></p>
 <h2 id="3-3-4-所有题目"><a href="#3-3-4-所有题目" class="headerlink" title="3.3.4 所有题目"></a>3.3.4 所有题目</h2><p><a href="../tags/并查集/">Tag-并查集</a></p>
 <h2 id="拓展进阶"><a href="#拓展进阶" class="headerlink" title="拓展进阶"></a>拓展进阶</h2><p>上文用到的合并方法叫做路径压缩，均摊log<br>另外有种优化方法叫“按秩合并”，也是启发式合并的一种应用<br>就是每次把小的合并到大的里面，在这里可以用大小来表示<br>那么均摊也是log</p>
@@ -654,13 +654,6 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/aba8.html" rel="bookmark">【bzoj3319】黑白树</a></div>
-      
-    </li>
-  
-    <li class="popular-posts-item">
-      
-      
       <div class="popular-posts-title"><a href="/posts/f249.html" rel="bookmark">【Bzoj1529】【Luogu3420】ska Piggy banks</a></div>
       
     </li>
@@ -668,14 +661,21 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/8b22.html" rel="bookmark">【Luogu1525】关押罪犯</a></div>
+      <div class="popular-posts-title"><a href="/posts/4b95.html" rel="bookmark">【SCOI2013】【Bzoj3325】【Luogu3279】密码</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/4b95.html" rel="bookmark">【SCOI2013】【Bzoj3325】【Luogu3279】密码</a></div>
+      <div class="popular-posts-title"><a href="/posts/b656.html" rel="bookmark">【Luogu1073】最优贸易</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="/posts/8b22.html" rel="bookmark">【Luogu1525】关押罪犯</a></div>
       
     </li>
   
@@ -839,7 +839,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">491</span>
+                    <span class="site-state-item-count">494</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>

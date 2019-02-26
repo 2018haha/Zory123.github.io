@@ -248,7 +248,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">491</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">494</span></a>
 
   </li>
         
@@ -628,7 +628,7 @@
 
 </div></div>
 <h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
-undefined
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//Zory-2018</span></div><div class="line"><span class="comment">//*******************头文件*******************</span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cmath&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;queue&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;vector&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">ifdef</span> WIN32</span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> BIGN <span class="meta-string">"%I64d"</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">else</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> BIGN <span class="meta-string">"%lld"</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</div><div class="line"><span class="function">ll <span class="title">mymax</span><span class="params">(ll x,ll y)</span> </span>&#123;<span class="keyword">return</span> x&gt;y?x:y;&#125;</div><div class="line"><span class="comment">//*******************全局常量*******************</span></div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> MAXN=<span class="number">510000</span>;</div><div class="line"><span class="comment">//*******************全局定义*******************</span></div><div class="line"><span class="keyword">struct</span> nod</div><div class="line">&#123;</div><div class="line">	<span class="keyword">int</span> hou;</div><div class="line">	<span class="keyword">int</span> fa;</div><div class="line">	</div><div class="line">	ll dep,mx;</div><div class="line">	nod()</div><div class="line">	&#123;</div><div class="line">		hou=dep=mx=<span class="number">0</span>;</div><div class="line">	&#125;</div><div class="line">&#125;p[MAXN];</div><div class="line"><span class="keyword">struct</span> edge</div><div class="line">&#123;</div><div class="line">	<span class="keyword">int</span> y,g;</div><div class="line">	ll c;</div><div class="line">&#125;e[MAXN*<span class="number">2</span>];</div><div class="line"><span class="keyword">int</span> ln=<span class="number">0</span>;</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">ins</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y,<span class="keyword">int</span> c)</span></div><div class="line"></span>&#123;</div><div class="line">	ln++;</div><div class="line">	e[ln].y=y;e[ln].c=c;</div><div class="line">	e[ln].g=p[x].hou;p[x].hou=ln;</div><div class="line">&#125;</div><div class="line"><span class="comment">//*******************实现*******************</span></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">dfs1</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> fa)</span></div><div class="line"></span>&#123;</div><div class="line">	p[x].fa=fa;p[x].mx=p[x].dep;</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> k=p[x].hou;k&gt;<span class="number">0</span>;k=e[k].g)</div><div class="line">	&#123;</div><div class="line">		<span class="keyword">int</span> y=e[k].y;<span class="keyword">if</span>(y==fa) <span class="keyword">continue</span>;</div><div class="line">		p[y].dep=p[x].dep+e[k].c;</div><div class="line">		dfs1(y,x);</div><div class="line">		p[x].mx=mymax(p[x].mx,p[y].mx);</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line">ll mx;</div><div class="line">ll ans=<span class="number">0</span>;</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">dfs2</span><span class="params">(<span class="keyword">int</span> x,ll inc)</span></div><div class="line"></span>&#123;</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> k=p[x].hou;k&gt;<span class="number">0</span>;k=e[k].g)</div><div class="line">	&#123;</div><div class="line">		<span class="keyword">int</span> y=e[k].y;<span class="keyword">if</span>(y==p[x].fa) <span class="keyword">continue</span>;</div><div class="line">		ll d=mx-(p[y].mx+inc);</div><div class="line">		<span class="keyword">if</span>(d&gt;<span class="number">0</span>)</div><div class="line">		&#123;</div><div class="line">			ans+=d;</div><div class="line">			dfs2(y,inc+d);</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">else</span> dfs2(y,inc);</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"><span class="comment">//*******************主函数*******************</span></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></div><div class="line"></span>&#123;</div><div class="line">	<span class="keyword">int</span> n,st;<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;n,&amp;st);</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n<span class="number">-1</span>;i++)</div><div class="line">	&#123;</div><div class="line">		<span class="keyword">int</span> x,y,c;<span class="built_in">scanf</span>(<span class="string">"%d%d%d"</span>,&amp;x,&amp;y,&amp;c);</div><div class="line">		ins(x,y,c);ins(y,x,c);</div><div class="line">	&#125;</div><div class="line">	dfs1(st,<span class="number">0</span>);</div><div class="line">	mx=p[st].mx;</div><div class="line">	dfs2(st,<span class="number">0</span>);</div><div class="line">	<span class="built_in">printf</span>(BIGN,ans);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
 </div></div>
       
@@ -643,7 +643,7 @@ undefined
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/7e9b.html" rel="bookmark">【Luogu1006】传纸条</a></div>
+      <div class="popular-posts-title"><a href="/posts/10e.html" rel="bookmark">【Luogu1091】合唱队形</a></div>
       
     </li>
   
@@ -657,14 +657,14 @@ undefined
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/ddc4.html" rel="bookmark">HDU1159最长公共子序列LCS</a></div>
+      <div class="popular-posts-title"><a href="/posts/35a8.html" rel="bookmark">终极装备</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/35a8.html" rel="bookmark">终极装备</a></div>
+      <div class="popular-posts-title"><a href="/posts/5323.html" rel="bookmark">【Bzoj1783】【Luogu2975】轮流Taking Turns</a></div>
       
     </li>
   
@@ -678,7 +678,7 @@ undefined
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/4670.html" rel="bookmark">【Bzoj1026】【Luogu2657】windy数</a></div>
+      <div class="popular-posts-title"><a href="/posts/87af.html" rel="bookmark">【Luogu1018】乘积最大</a></div>
       
     </li>
   
@@ -846,7 +846,7 @@ undefined
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">491</span>
+                    <span class="site-state-item-count">494</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>

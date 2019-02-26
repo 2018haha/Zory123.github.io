@@ -248,7 +248,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">491</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">494</span></a>
 
   </li>
         
@@ -630,7 +630,7 @@
 <li>消除两块，使3个合并起来，那么中间一定只能是1个</li>
 </ol>
 <p>还有一种情况，但似乎不会是最优解？就是四个球，然后先分别消除两边，然后把2和2合并。但不知道怎么排除这种情况<br>另外，本题应该有非常多种写法</p>
-undefined
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//Zory-2019</span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cmath&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;ctime&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdlib&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;map&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;set&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;queue&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;deque&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stack&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bitset&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;vector&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"><span class="keyword">namespace</span> mine</div><div class="line">&#123;</div><div class="line">	<span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</div><div class="line">	<span class="keyword">const</span> <span class="keyword">int</span> INF=<span class="number">0x3f3f3f3f</span>;</div><div class="line">	<span class="comment">// #define pr pair&lt;int,int&gt;</span></div><div class="line">	<span class="comment">// #define FR first</span></div><div class="line">	<span class="comment">// #define SE second</span></div><div class="line">	<span class="comment">// #define MP make_pair</span></div><div class="line"></div><div class="line">	<span class="keyword">const</span> <span class="keyword">int</span> MAX_N=<span class="number">210</span>;</div><div class="line">	<span class="keyword">char</span> s[MAX_N];</div><div class="line">	<span class="keyword">int</span> a[MAX_N],sz[MAX_N];</div><div class="line">	<span class="keyword">int</span> f[MAX_N][MAX_N];</div><div class="line">	<span class="function"><span class="keyword">void</span> <span class="title">chmin</span><span class="params">(<span class="keyword">int</span> &amp;x,<span class="keyword">int</span> y)</span></span>&#123;x=x&gt;y?y:x;&#125;</div><div class="line">	<span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></div><div class="line">	</span>&#123;</div><div class="line">		<span class="keyword">int</span> T;<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;T);s[<span class="number">0</span>]=<span class="string">'h'</span>;</div><div class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> t=<span class="number">1</span>;t&lt;=T;t++)</div><div class="line">		&#123;</div><div class="line">			<span class="built_in">scanf</span>(<span class="string">"%s"</span>,s+<span class="number">1</span>);<span class="keyword">int</span> m=<span class="built_in">strlen</span>(s+<span class="number">1</span>),n=<span class="number">0</span>;</div><div class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=m;i++)</div><div class="line">				<span class="keyword">if</span>(s[i<span class="number">-1</span>]!=s[i]) a[++n]=s[i]-<span class="string">'0'</span>,sz[n]=<span class="number">1</span>;</div><div class="line">				<span class="keyword">else</span> sz[n]++;</div><div class="line">			<span class="built_in">memset</span>(f,<span class="number">63</span>,<span class="keyword">sizeof</span> f);</div><div class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) f[i][i]=<span class="number">3</span>-sz[i];</div><div class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> ln=<span class="number">2</span>;ln&lt;=n;ln++)</div><div class="line">				<span class="keyword">for</span>(<span class="keyword">int</span> l=<span class="number">1</span>,r=l+ln<span class="number">-1</span>;r&lt;=n;l++,r++)</div><div class="line">				&#123;</div><div class="line">					<span class="keyword">for</span>(<span class="keyword">int</span> k=l;k&lt;r;k++) chmin(f[l][r],f[l][k]+f[k+<span class="number">1</span>][r]);</div><div class="line">					<span class="keyword">int</span> tot=sz[l]+sz[r];</div><div class="line">					<span class="keyword">if</span>(a[l]==a[r]) chmin(f[l][r],f[l+<span class="number">1</span>][r<span class="number">-1</span>]+(tot&gt;=<span class="number">3</span>?<span class="number">0</span>:<span class="number">3</span>-tot));</div><div class="line">					<span class="keyword">if</span>(a[l]==a[r] and tot&lt;=<span class="number">3</span>) <span class="keyword">for</span>(<span class="keyword">int</span> k=l+<span class="number">1</span>;k&lt;=r<span class="number">-1</span>;k++)</div><div class="line">						<span class="keyword">if</span>(sz[k]==<span class="number">1</span> and a[l]==a[k]) chmin(f[l][r],f[l+<span class="number">1</span>][k<span class="number">-1</span>]+f[k+<span class="number">1</span>][r<span class="number">-1</span>]);</div><div class="line">				&#125;</div><div class="line">			<span class="built_in">printf</span>(<span class="string">"Case #%d: %d\n"</span>,t,f[<span class="number">1</span>][n]);</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></div><div class="line"></span>&#123;</div><div class="line">	srand(time(<span class="number">0</span>));</div><div class="line">	mine::main();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
 </div></div>
 
@@ -660,7 +660,14 @@ undefined
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/8530.html" rel="bookmark">【Bzoj1911】【Luogu3628】特别行动队</a></div>
+      <div class="popular-posts-title"><a href="/posts/304d.html" rel="bookmark">【Bzoj3679】数字之积</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="/posts/c2cf.html" rel="bookmark">【BJOI2018】治疗之雨</a></div>
       
     </li>
   
@@ -675,13 +682,6 @@ undefined
       
       
       <div class="popular-posts-title"><a href="/posts/310b.html" rel="bookmark">【CZYZ2009暑假集训提高组6】盟军敢死队</a></div>
-      
-    </li>
-  
-    <li class="popular-posts-item">
-      
-      
-      <div class="popular-posts-title"><a href="/posts/39cb.html" rel="bookmark">【CF955F】Heaps</a></div>
       
     </li>
   
@@ -849,7 +849,7 @@ undefined
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">491</span>
+                    <span class="site-state-item-count">494</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>

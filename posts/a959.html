@@ -248,7 +248,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">491</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">494</span></a>
 
   </li>
         
@@ -625,7 +625,7 @@
 <p>弟弟题：sdoi 约数个数和</p>
 <p>一直在想怎么把约数个数联系到gcd上，结果原来是个结论: <a href="7748.html">约数与欧几里得 文章末尾第5条</a></p>
 <p>$\sum \sum \sum d(n \cdot m \cdot k)$<br>$\sum \sum \sum \ \sum \sum \sum [gcd=1][gcd=1][gcd=1]$<br>直接枚举约数，降低复杂度<br>$$<br>\sum_x \sum_y \sum_z<br>\lfloor \frac{a}{x} \rfloor<br>\lfloor \frac{b}{y} \rfloor<br>\lfloor \frac{c}{z} \rfloor<br>[gcd(x,y)=1][gcd(x,z)=1][gcd(y,z)=1]<br>$$<br>然后，把mu的性质柿子带入（看到等于1，可以考虑这样搞，是个套路）<br>$$<br>\sum_x \sum_y \sum_z<br>\lfloor \frac{a}{x} \rfloor<br>\lfloor \frac{b}{y} \rfloor<br>\lfloor \frac{c}{z} \rfloor<br>( \sum_{d|x,d|y} \mu(d) )[gcd(x,z)=1][gcd(y,z)=1]<br>$$<br>这样的好处是能通过枚举d找其倍数得到x和y（从根号变为log，尽管刚带入的时候感觉复杂度变大）<br>调整一下枚举顺序，第二个好处也凸显出来了，就是取消了x和y的关系，让其可以分开求和再乘起来<br>$$<br>\sum_d \mu(d) \times<br>\sum_z (\lfloor \frac{c}{z} \rfloor  \times<br>(\Sigma_{d|x} [gcd(x,z)=1] \lfloor \frac{a}{x} \rfloor) \times<br>(\Sigma_{d|y} [gcd(y,z)=1] \lfloor \frac{b}{y} \rfloor))<br>$$<br>预处理gcd后，由调和级数可知复杂度为 $O(n^2logn)$<br>可见定理和mu的性质为本题最关键的两步</p>
-undefined
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//Zory-2018</span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cmath&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;ctime&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdlib&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;map&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;set&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;queue&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;deque&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stack&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bitset&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;vector&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"><span class="meta">#<span class="meta-keyword">ifdef</span> DEBUG</span></div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> LOCAL=<span class="number">1</span>;</div><div class="line"><span class="meta">#<span class="meta-keyword">else</span></span></div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> LOCAL=<span class="number">0</span>;</div><div class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></div><div class="line"></div><div class="line"><span class="keyword">namespace</span> mine</div><div class="line">&#123;</div><div class="line">	<span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</div><div class="line">	<span class="keyword">const</span> <span class="keyword">int</span> INF=<span class="number">0x3f3f3f3f</span>;</div><div class="line"></div><div class="line">	<span class="keyword">const</span> <span class="keyword">int</span> MAX_N=<span class="number">2100</span>;</div><div class="line">	<span class="function"><span class="keyword">int</span> <span class="title">GCD</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span></div><div class="line">	</span>&#123;</div><div class="line">		<span class="keyword">if</span>(y==<span class="number">0</span>) <span class="keyword">return</span> x;</div><div class="line">		<span class="keyword">return</span> GCD(y,x%y);</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">int</span> gcd[MAX_N][MAX_N];</div><div class="line"></div><div class="line">	<span class="keyword">bool</span> no[MAX_N];</div><div class="line">	<span class="keyword">int</span> pr=<span class="number">0</span>,prime[MAX_N];</div><div class="line">	<span class="keyword">int</span> mu[MAX_N];</div><div class="line">	<span class="function"><span class="keyword">void</span> <span class="title">pre</span><span class="params">()</span></div><div class="line">	</span>&#123;</div><div class="line">		mu[<span class="number">1</span>]=<span class="number">1</span>;</div><div class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">2</span>;i&lt;MAX_N;i++)</div><div class="line">		&#123;</div><div class="line">			<span class="keyword">if</span>(no[i]==<span class="number">0</span>) prime[++pr]=i,mu[i]=<span class="number">-1</span>;</div><div class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=pr and i*prime[j]&lt;MAX_N;j++)</div><div class="line">			&#123;</div><div class="line">				no[i*prime[j]]=<span class="number">1</span>;</div><div class="line">				<span class="keyword">if</span>(i%prime[j]==<span class="number">0</span>) &#123;mu[i*prime[j]]=<span class="number">0</span>;<span class="keyword">break</span>;&#125;</div><div class="line">				mu[i*prime[j]]=-mu[i];</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="keyword">const</span> <span class="keyword">int</span> MOD=<span class="number">1</span>&lt;&lt;<span class="number">30</span>;</div><div class="line">	<span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></div><div class="line">	</span>&#123;</div><div class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;MAX_N;i++) <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;MAX_N;j++) gcd[i][j]=GCD(i,j);</div><div class="line">		pre();</div><div class="line"></div><div class="line">		<span class="keyword">int</span> a,b,c;<span class="built_in">scanf</span>(<span class="string">"%d%d%d"</span>,&amp;a,&amp;b,&amp;c);</div><div class="line"></div><div class="line">		<span class="keyword">int</span> ans=<span class="number">0</span>;</div><div class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> d=<span class="number">1</span>;d&lt;=a and d&lt;=b;d++)</div><div class="line">		&#123;</div><div class="line">			<span class="keyword">int</span> tot=<span class="number">0</span>;</div><div class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> z=<span class="number">1</span>;z&lt;=c;z++)</div><div class="line">			&#123;</div><div class="line">				<span class="keyword">int</span> tot1=<span class="number">0</span>,tot2=<span class="number">0</span>;</div><div class="line">				<span class="keyword">for</span>(<span class="keyword">int</span> x=d;x&lt;=a;x+=d) <span class="keyword">if</span>(gcd[x][z]==<span class="number">1</span>) tot1=(tot1+a/x)%MOD;</div><div class="line">				<span class="keyword">for</span>(<span class="keyword">int</span> y=d;y&lt;=b;y+=d) <span class="keyword">if</span>(gcd[y][z]==<span class="number">1</span>) tot2=(tot2+b/y)%MOD;</div><div class="line">				tot=(tot+ll(c/z)*tot1%MOD*tot2%MOD)%MOD;</div><div class="line">			&#125;</div><div class="line">			ans=ans+tot*mu[d];<span class="comment">//debug 减法……</span></div><div class="line">			ans=(ans%MOD+MOD)%MOD;</div><div class="line">		&#125;</div><div class="line">		<span class="built_in">printf</span>(<span class="string">"%d"</span>,ans);</div><div class="line">	&#125;</div><div class="line">&#125;;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></div><div class="line"></span>&#123;</div><div class="line">	srand(time(<span class="number">0</span>));</div><div class="line">	mine::main();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
 </div></div>
 
@@ -637,13 +637,6 @@ undefined
 
   <div class="popular-posts-header">相关文章推荐</div>
   <ul class="popular-posts">
-  
-    <li class="popular-posts-item">
-      
-      
-      <div class="popular-posts-title"><a href="/posts/ea1.html" rel="bookmark">【Zoj3435】Ideal Puzzle Bobble</a></div>
-      
-    </li>
   
     <li class="popular-posts-item">
       
@@ -662,14 +655,14 @@ undefined
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/a4aa.html" rel="bookmark">【Bzoj4069】【Luogu3646】巴厘岛的雕塑</a></div>
+      <div class="popular-posts-title"><a href="/posts/ea1.html" rel="bookmark">【Zoj3435】Ideal Puzzle Bobble</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/24f8.html" rel="bookmark">【Bzoj2190】仪仗队</a></div>
+      <div class="popular-posts-title"><a href="/posts/184e.html" rel="bookmark">【Bzoj1018】【Luogu4246】堵塞的交通</a></div>
       
     </li>
   
@@ -677,6 +670,13 @@ undefined
       
       
       <div class="popular-posts-title"><a href="/posts/5aa0.html" rel="bookmark">【Bzoj2820】YY的GCD</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="/posts/24f8.html" rel="bookmark">【Bzoj2190】仪仗队</a></div>
       
     </li>
   
@@ -754,8 +754,8 @@ undefined
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/posts/6322.html" rel="next" title="jzptab">
-                <i class="fa fa-chevron-left"></i> jzptab
+              <a href="/posts/462d.html" rel="next" title="【HNOI2012】集合选数">
+                <i class="fa fa-chevron-left"></i> 【HNOI2012】集合选数
               </a>
             
           </div>
@@ -764,8 +764,8 @@ undefined
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/posts/462d.html" rel="prev" title="【HNOI2012】集合选数">
-                【HNOI2012】集合选数 <i class="fa fa-chevron-right"></i>
+              <a href="/posts/105f.html" rel="prev" title="【bzoj2839】集合计数">
+                【bzoj2839】集合计数 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -844,7 +844,7 @@ undefined
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">491</span>
+                    <span class="site-state-item-count">494</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>

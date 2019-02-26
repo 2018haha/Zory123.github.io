@@ -1,6 +1,7 @@
 /* global NexT, CONFIG */
 
-$(document).ready(function() {
+$(document).ready(function()
+{
 
   function initScrollSpy() {
     var tocSelector = '.post-toc';
@@ -28,7 +29,7 @@ $(document).ready(function() {
   }
 
   initScrollSpy();
-  
+
   $(document).on('click', '.fold_hider', function(){
       $('>.fold', this.parentNode).slideToggle();
       $('>:first', this).toggleClass('open');
@@ -36,9 +37,9 @@ $(document).ready(function() {
   //默认情况下折叠
   $("div.fold").css("display","none");
 });
-});
 
-$(document).ready(function() {
+$(document).ready(function()
+{
   var html = $('html');
   var TAB_ANIMATE_DURATION = 200;
   var hasVelocity = $.isFunction(html.velocity);

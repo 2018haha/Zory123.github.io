@@ -109,7 +109,7 @@
 <meta property="og:description" content="难点就是构图也有各种变例决策类问题的法宝之一（还有贪心等）">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://zory.ink/images/OI之路/网络流/1,png">
-<meta property="og:updated_time" content="2019-02-23T02:04:04.021Z">
+<meta property="og:updated_time" content="2019-02-28T08:36:35.455Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【OI之路】04图论-5网络流">
 <meta name="twitter:description" content="难点就是构图也有各种变例决策类问题的法宝之一（还有贪心等）">
@@ -250,7 +250,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">501</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">505</span></a>
 
   </li>
         
@@ -288,7 +288,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">175</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">177</span></a>
 
   </li>
         
@@ -413,7 +413,7 @@
             <a href="javascript:;" class="popup-trigger">
           
             
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br/>找文章强烈建议使用-搜索Search</a>
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br/>搜索Search（请耐心等待）</a>
         </li>
       
     </ul>
@@ -545,7 +545,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-02-23 10:04:04" itemprop="dateModified" datetime="2019-02-23T10:04:04+08:00">2019-02-23</time>
+                <time title="修改时间：2019-02-28 16:36:35" itemprop="dateModified" datetime="2019-02-28T16:36:35+08:00">2019-02-28</time>
               
             
           </span>
@@ -633,9 +633,8 @@
 <h1 id="当前弧优化："><a href="#当前弧优化：" class="headerlink" title="当前弧优化："></a>当前弧优化：</h1><p>当层次确定的时候，反向弧是否使用也是确定的<br>那么如果一条边流完了，可以在边链表中去除<br>（有点类似欧拉路径的优化）<br>因为是层次图，不用担心 dfs 对第一个有效边数组的影响<br>例题：<a href="956c.html">order</a></p>
 <h2 id="最大流练习"><a href="#最大流练习" class="headerlink" title="最大流练习"></a>最大流练习</h2><p>题目直观版：<a href="../tags/网络流/">Tag-网络流</a></p>
 <p>最大流：<br>Caioj1115 Poj1273<br><a href="9eca.html">Drainage Ditches</a><br>Caioj1116 Poj3281<br><a href="6d11.html">Dining</a><br>Caioj1117 Poj2455 Bzoj1733<br><a href="7731.html">Secret Milking Machine</a><br>Caioj1118 Poj2112<br><a href="41bc.html">Optimal Milking</a><br>Caioj1119 Poj2391<br><a href="44a6.html">Ombrophobic Bovines</a><br>Caioj1120 Poj3189<br><a href="b6a3.html">Steady Cow Assignment</a></p>
-<p>最小（割的容量）=最大流<br><a href="https://wenku.baidu.com/view/d9c9b9220722192e4536f6e1.html" target="_blank" rel="noopener">很规范的PPT</a><br>最小割：<br>Bzoj1934 Bzoj2768<br><a href="a1fb.html">善意的投票&amp;冠军调查</a><br>Bzoj1001<br><a href="9c9f.html">狼抓兔子</a></p>
-<p><a href="https://www.51nod.com/onlineJudge/questionCode.html#!problemId=1299" target="_blank" rel="noopener">51nod-1299</a><br>师兄刚好给我看这题，但这道题我就不做了，<br>好像正解不是最小割，会超时一半，我就说说最小割部分分的思路：<br>原图中每个点拆为左点和右点，原图的边边权为无限，左点和右点之间的边边权为1<br>从源点到犯人的左点连条边，从出口点的右点到汇点连条边，跑一遍最大流就是答案</p>
-<p>非常好的题目：【TJOI2015】线性代数，写了题解</p>
+<h1 id="最小割"><a href="#最小割" class="headerlink" title="最小割"></a>最小割</h1><p>建议看胡伯涛的论文<br>非常好的题目：【TJOI2015】线性代数，写了题解</p>
+<p>笔记：<br>割上的净流，会统计负流，但割的容量并不统计<br>定理：任意一个流，其净流=流的大小</p>
 <h2 id="费用流"><a href="#费用流" class="headerlink" title="费用流"></a>费用流</h2><blockquote>
 <p>最小费用最大流是指满足源点流出的流量最大时，总费用最小的一个网络，模板都是基于此。<br>最大费用最大流则是将所有的费用取负，然后再跑一遍最小费用最大流，<br>将最终的最小费用取负就是最大流量下的最大费用了。<br>最大费用可行流关注的是费用而非流量是否最大，暂时不会<br>最小费用可行流没有意义</p>
 </blockquote>
@@ -857,7 +856,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">501</span>
+                    <span class="site-state-item-count">505</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -1241,7 +1240,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">175</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">176</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1302,7 +1305,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#有个不错的入门教程"><span class="nav-text">有个不错的入门教程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#最大流解决方案"><span class="nav-text">最大流解决方案</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#当前弧优化："><span class="nav-text">当前弧优化：</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#最大流练习"><span class="nav-text">最大流练习</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#费用流"><span class="nav-text">费用流</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#最大权闭合子图"><span class="nav-text">最大权闭合子图</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#有个不错的入门教程"><span class="nav-text">有个不错的入门教程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#最大流解决方案"><span class="nav-text">最大流解决方案</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#当前弧优化："><span class="nav-text">当前弧优化：</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#最大流练习"><span class="nav-text">最大流练习</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#最小割"><span class="nav-text">最小割</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#费用流"><span class="nav-text">费用流</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#最大权闭合子图"><span class="nav-text">最大权闭合子图</span></a></li></ol></div>
             
 
           </div>

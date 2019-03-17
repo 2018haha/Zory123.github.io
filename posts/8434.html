@@ -108,7 +108,7 @@
 <meta property="og:site_name" content="Zory的个人博客">
 <meta property="og:description" content="集合幂级数学习笔记（vfk在15年的论文）">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-03-11T23:48:43.257Z">
+<meta property="og:updated_time" content="2019-03-15T01:06:23.374Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【OI之路】03数论-19集合幂级数">
 <meta name="twitter:description" content="集合幂级数学习笔记（vfk在15年的论文）">
@@ -248,7 +248,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">512</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">519</span></a>
 
   </li>
         
@@ -286,7 +286,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">181</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">186</span></a>
 
   </li>
         
@@ -543,7 +543,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-03-12 07:48:43" itemprop="dateModified" datetime="2019-03-12T07:48:43+08:00">2019-03-12</time>
+                <time title="修改时间：2019-03-15 09:06:23" itemprop="dateModified" datetime="2019-03-15T09:06:23+08:00">2019-03-15</time>
               
             
           </span>
@@ -620,9 +620,9 @@
       
         <p>集合幂级数学习笔记（vfk在15年的论文）<br><a id="more"></a></p>
 <p>集合幂级数 $f=\sum_{S \subseteq 2^U} f_S x^S$<br>加减法很好定义，对于乘除法，我们可以自行定义各种运算</p>
-<p>集合并卷积：<br>$[S_1 \bigcup S_2 \subseteq S]=[S_1 \subseteq S][S_2 \subseteq S]$<br>那么加减乘都资瓷了，这个卷积的逆运算的话，就是在点值表达式下直接除<br>不能理解原理的话，把check写出来，不用运行你都会发现是正确的……</p>
+<p>集合并卷积：<br>$[S_1 \bigcup S_2 \subseteq S]=[S_1 \subseteq S][S_2 \subseteq S]$<br>那么加减乘都资瓷了，这个卷积的逆运算的话，就是在点值表达式下直接除<br>不能理解原理的话，把check写出来，不用运行你都会发现是正确的……<br>甚至开高次根都是直接开……</p>
 <p>集合对称差卷积<br>$[S=\emptyset]=\frac{1}{2^n} \sum_{T \subseteq U} (-1)^{|T \bigcap S|}$<br>那么现在的柿子就是 $B_S=\sum_{T \subseteq U} (-1)^{|T \bigcap S|} A_T$<br>考虑递推，B[S][i]表示当前只统计和S的异或值为 $2^i-1$ 的子集的T<br>那么每次把这一位不同、后面相同、前面任意的统计进去（然后你会发现自己没有被统计，应作为B[S][-1]）<br>$B[S][i]=B[S][i-1]-B[S|2^i][i-1],B[S|2^i]=B[S][i-1]+B[S|2^i][i-1]$<br>然后有个更简单的写法： $B[S][i]=B[S][i-1]+B[S|2^i][i-1],B[S|2^i]=B[S][i-1]-B[S|2^i][i-1]$<br>这个就不用前面那步了，本质上是一样的，因为 B[S|2^i][i-1] 里面这一位都是1，等价于把-1放到中间去乘</p>
-<p>子集卷积<br>或为S并为空，相当于两个不重叠集合的拼接，感觉不少状压都是这种形式<br>将条件转化为 $a \bigcup b=S,|a|+|b|=|S|$<br>可以看作是一个集合幂级数的或运算（异或也行）套一个形式幂级数的乘法，暴力枚举做即可，但要去除没有意义的地方<br>然后逆运算的话，和上面思路不太一样<br>考虑每个位置在点值表达法下， $C_t=\sum A_i B_{t-i}$<br>那么现在求B的话可以递推，把其他B移到左边，除A0即可</p>
+<p>子集卷积<br>或为S并为空，相当于两个不重叠集合的拼接，感觉不少状压都是这种形式<br>将条件转化为 $a \bigcup b=S,|a|+|b|=|S|$<br>可以看作是一个集合幂级数的或运算（异或也行）套一个形式幂级数的乘法，暴力枚举做即可，但要去除没有意义的地方<br>然后逆运算的话，和上面思路不太一样<br>考虑每个位置在点值表达法下， $C_t=\sum A_i B_{t-i}$<br>那么现在求B的话可以递推，把其他B移到左边，除A0即可<br>开单个根的话也能开</p>
 
       
     </div>
@@ -828,7 +828,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">512</span>
+                    <span class="site-state-item-count">519</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -1224,7 +1224,17 @@
                     
                       
                     
-                    <span class="site-state-item-count">179</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">184</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>

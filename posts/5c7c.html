@@ -107,7 +107,7 @@
 <meta property="og:description" content="难点就是构图也有各种变例决策类问题的法宝之一（还有贪心等）">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://zory.ink/images/OI之路/网络流/1,png">
-<meta property="og:updated_time" content="2019-03-18T08:22:21.596Z">
+<meta property="og:updated_time" content="2019-03-18T13:30:12.308Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【OI之路】04图论-5网络流">
 <meta name="twitter:description" content="难点就是构图也有各种变例决策类问题的法宝之一（还有贪心等）">
@@ -248,7 +248,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">520</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">526</span></a>
 
   </li>
         
@@ -286,7 +286,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">186</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">183</span></a>
 
   </li>
         
@@ -543,7 +543,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-03-18 16:22:21" itemprop="dateModified" datetime="2019-03-18T16:22:21+08:00">2019-03-18</time>
+                <time title="修改时间：2019-03-18 21:30:12" itemprop="dateModified" datetime="2019-03-18T21:30:12+08:00">2019-03-18</time>
               
             
           </span>
@@ -636,9 +636,9 @@
 <h2 id="最大权闭合子图"><a href="#最大权闭合子图" class="headerlink" title="最大权闭合子图"></a>最大权闭合子图</h2><p>闭合子图：只进不出的子图，可用于处理依赖关系<br>很容易贪心地想到，最优情况是所有正权点，但为了闭合要有所割舍</p>
 <p>考虑有网络流决策，将点分成选和不选两种，用割的模型，以是否和S联通来标识<br>则S向所有正权点连边，边权为点权，所有负权点向T连边，边权为点权的绝对值<br>割后，设选的点集为A，不选为B，根据点权正负细分，如图所示：<br><img src="../images/OI之路/网络流/1,png" alt=""><br>如果x依赖y，则选x就要选y，此时从x到y连接一条INF的边，标识不可【选x不选y】<br>注意一个细节（因为我这菜逼一开始忽略了）：<br>这条边是允许选y不选x的，因为那种情况没有造成联通</p>
 <p>此时只要是个合法的割，A一定是一个闭合子图，现在要最大化它<br>显然割=B1-A0，而A=A1+A0<br>故A+割=A1+A2=正权和，让割最小化即可</p>
-<h2 id="有上下界网络流"><a href="#有上下界网络流" class="headerlink" title="有上下界网络流"></a>有上下界网络流</h2><p>loj上有板子题，代码可以去上面看，以最新提交为准</p>
+<h2 id="有下界网络流"><a href="#有下界网络流" class="headerlink" title="有下界网络流"></a>有下界网络流</h2><p>loj上有板子题，代码可以去上面看，以最新提交为准</p>
 <p>无源汇可行流：<br>流量平衡下， $\sum d_i=in_i-out_i=0$<br>先以下界为初始流，边的容量为mx-mi，然后我们希望得到一个流量平衡的流<br>$若d&gt;0，st-&gt;i=d_i,若d&lt;0, i-&gt;ed=-d_i$<br>这个还是比较显然的，就是给每个点一些配额去把多的流量流出去</p>
-<p>有源汇（要把去源的、到汇的边去掉）：<br>可行流：<br>ed-&gt;st=INF，于是就是无源汇的了<br>然后流量就是st-&gt;ed那条边此时的可用容量<br>最大流：<br>用可行流的方式构造新图，然后新图上的满流就是原图的可行流，在此之上的操作都能保证其依然是可行流<br>那么在这个残余网络上，再重新跑一个最大流（ans要清空，然后可行流大小会被st-&gt;ed统计到）</p>
+<p>有源汇（要把去源的、到汇的边去掉）：<br>可行流：<br>ed-&gt;st=INF，于是就是无源汇的了<br>然后流量就是st-&gt;ed那条边此时的可用容量（假装流掉的真实流大小）<br>这个思想有个不错的题目，cf708d，我写了题解<br>最大流：<br>用可行流的方式构造新图，然后新图上的满流就是原图的可行流，在此之上的操作都能保证其依然是可行流<br>那么在这个残余网络上，再重新跑一个最大流（ans要清空，然后可行流大小会被st-&gt;ed统计到）<br>费用流：<br>这里指的是不保证流最大，而是合法流的最小、大费用<br>做法没什么区别</p>
 
       
     </div>
@@ -652,13 +652,6 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/a1fb.html" rel="bookmark">【Bzoj1934】【Bzoj2768】善意的投票&冠军调查</a></div>
-      
-    </li>
-  
-    <li class="popular-posts-item">
-      
-      
       <div class="popular-posts-title"><a href="/posts/9eca.html" rel="bookmark">【Poj1273】网络流模版题Drainage Ditches</a></div>
       
     </li>
@@ -666,28 +659,35 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/44a6.html" rel="bookmark">【Usaco05Mar】Ombrophobic Bovines</a></div>
+      <div class="popular-posts-title"><a href="/posts/85f0.html" rel="bookmark">【Poi2010】Bridges</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/41bc.html" rel="bookmark">【Poj2112】Optimal Milking</a></div>
+      <div class="popular-posts-title"><a href="/posts/9d0c.html" rel="bookmark">【NOI2011】兔兔与蛋蛋游戏</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/7731.html" rel="bookmark">【Poj2455】【Bzoj1733】Secret Milking Machine</a></div>
+      <div class="popular-posts-title"><a href="/posts/3001.html" rel="bookmark">【CQOI2014】危桥</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/b6a3.html" rel="bookmark">【Poj3189】Steady Cow Assignment</a></div>
+      <div class="popular-posts-title"><a href="/posts/4e7e.html" rel="bookmark">【CQOI2014】学习小组</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="/posts/6d11.html" rel="bookmark">【Poj3281】Dining</a></div>
       
     </li>
   
@@ -851,7 +851,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">520</span>
+                    <span class="site-state-item-count">526</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -1251,13 +1251,7 @@
                     
                       
                     
-                      
-                    
-                      
-                    
-                      
-                    
-                    <span class="site-state-item-count">184</span>
+                    <span class="site-state-item-count">183</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1318,7 +1312,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#有个不错的入门教程"><span class="nav-text">有个不错的入门教程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#最大流解决方案"><span class="nav-text">最大流解决方案</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#当前弧优化："><span class="nav-text">当前弧优化：</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#最小割"><span class="nav-text">最小割</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#费用流"><span class="nav-text">费用流</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#最大权闭合子图"><span class="nav-text">最大权闭合子图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#有上下界网络流"><span class="nav-text">有上下界网络流</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#有个不错的入门教程"><span class="nav-text">有个不错的入门教程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#最大流解决方案"><span class="nav-text">最大流解决方案</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#当前弧优化："><span class="nav-text">当前弧优化：</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#最小割"><span class="nav-text">最小割</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#费用流"><span class="nav-text">费用流</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#最大权闭合子图"><span class="nav-text">最大权闭合子图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#有下界网络流"><span class="nav-text">有下界网络流</span></a></li></ol></div>
             
 
           </div>
